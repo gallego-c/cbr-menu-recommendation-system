@@ -1,0 +1,385 @@
+[
+  {
+    "id": "C001",
+    "tipo_evento": "boda",
+    "num_comensales": 100,
+    "presupuesto": 5000.0,
+    "restricciones": [
+      "vegetariano"
+    ],
+    "preferencias": [
+      "ligero",
+      "fresco"
+    ],
+    "temporada": "verano",
+    "menu": {
+      "entrante": {
+        "nombre": "Ensalada caprese",
+        "ingredientes": [
+          "tomate",
+          "mozzarella",
+          "albahaca"
+        ],
+        "tecnica_coccion": "crudo",
+        "temporada": [
+          "verano"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "principal": {
+        "nombre": "Risotto de setas",
+        "ingredientes": [
+          "arroz",
+          "setas",
+          "parmesano"
+        ],
+        "tecnica_coccion": "cocido",
+        "temporada": [
+          "otoño",
+          "primavera"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "postre": {
+        "nombre": "Tiramisú",
+        "ingredientes": [
+          "mascarpone",
+          "café",
+          "cacao"
+        ],
+        "tecnica_coccion": "montado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "mediterraneo",
+      "tradicion": "italiana"
+    },
+    "exito": 0.95
+  },
+  {
+    "id": "C002",
+    "tipo_evento": "congreso",
+    "num_comensales": 50,
+    "presupuesto": 2500.0,
+    "restricciones": [
+      "sin_cerdo"
+    ],
+    "preferencias": [
+      "tradicional",
+      "contundente"
+    ],
+    "temporada": "invierno",
+    "menu": {
+      "entrante": {
+        "nombre": "Pimientos rellenos de bacalao",
+        "ingredientes": [
+          "pimiento",
+          "bacalao",
+          "tomate"
+        ],
+        "tecnica_coccion": "horneado",
+        "temporada": [
+          "verano",
+          "otoño"
+        ],
+        "restricciones": []
+      },
+      "principal": {
+        "nombre": "Merluza a la vasca",
+        "ingredientes": [
+          "merluza",
+          "guisantes",
+          "huevo"
+        ],
+        "tecnica_coccion": "guisado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Cuajada con miel",
+        "ingredientes": [
+          "leche",
+          "cuajo",
+          "miel"
+        ],
+        "tecnica_coccion": "cuajado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "clasico",
+      "tradicion": "vasca"
+    },
+    "exito": 0.9
+  },
+  {
+    "id": "C003",
+    "tipo_evento": "banquete",
+    "num_comensales": 30,
+    "presupuesto": 6000.0,
+    "restricciones": [],
+    "preferencias": [
+      "innovador",
+      "sorprendente"
+    ],
+    "temporada": "primavera",
+    "menu": {
+      "entrante": {
+        "nombre": "Esferificación de gazpacho",
+        "ingredientes": [
+          "tomate",
+          "alginato",
+          "pepino"
+        ],
+        "tecnica_coccion": "esferificado",
+        "temporada": [
+          "verano"
+        ],
+        "restricciones": [
+          "vegetariano",
+          "vegano"
+        ]
+      },
+      "principal": {
+        "nombre": "Foie deconstruido",
+        "ingredientes": [
+          "foie",
+          "manzana",
+          "brioche"
+        ],
+        "tecnica_coccion": "deconstruido",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Nitrógeno de chocolate",
+        "ingredientes": [
+          "chocolate",
+          "nitrógeno",
+          "frambuesa"
+        ],
+        "tecnica_coccion": "congelado_flash",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "molecular",
+      "tradicion": "catalana"
+    },
+    "exito": 0.88
+  },
+  {
+    "id": "C004",
+    "tipo_evento": "familiar",
+    "num_comensales": 15,
+    "presupuesto": 800.0,
+    "restricciones": [
+      "halal"
+    ],
+    "preferencias": [
+      "especiado",
+      "compartir"
+    ],
+    "temporada": "otoño",
+    "menu": {
+      "entrante": {
+        "nombre": "Mezze variado",
+        "ingredientes": [
+          "hummus",
+          "baba_ganoush",
+          "tabule"
+        ],
+        "tecnica_coccion": "crudo_montado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "vegetariano",
+          "vegano"
+        ]
+      },
+      "principal": {
+        "nombre": "Shawarma de cordero",
+        "ingredientes": [
+          "cordero",
+          "especias",
+          "yogur"
+        ],
+        "tecnica_coccion": "asado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "halal"
+        ]
+      },
+      "postre": {
+        "nombre": "Baklava",
+        "ingredientes": [
+          "nueces",
+          "miel",
+          "phyllo"
+        ],
+        "tecnica_coccion": "horneado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "clasico",
+      "tradicion": "libanesa"
+    },
+    "exito": 0.92
+  },
+  {
+    "id": "TEST001",
+    "tipo_evento": "boda",
+    "num_comensales": 80,
+    "presupuesto": 4500.0,
+    "restricciones": [
+      "vegetariano"
+    ],
+    "preferencias": [
+      "fresco",
+      "ligero"
+    ],
+    "temporada": "verano",
+    "menu": {
+      "entrante": {
+        "nombre": "Ensalada caprese",
+        "ingredientes": [
+          "tomate",
+          "mozzarella",
+          "albahaca"
+        ],
+        "tecnica_coccion": "crudo",
+        "temporada": [
+          "verano"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "principal": {
+        "nombre": "Risotto de setas",
+        "ingredientes": [
+          "arroz",
+          "setas",
+          "parmesano"
+        ],
+        "tecnica_coccion": "cocido",
+        "temporada": [
+          "otoño",
+          "primavera"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "postre": {
+        "nombre": "Tiramisú",
+        "ingredientes": [
+          "mascarpone",
+          "café",
+          "cacao"
+        ],
+        "tecnica_coccion": "montado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "mediterraneo",
+      "tradicion": "italiana"
+    },
+    "exito": 0.9
+  },
+  {
+    "id": "TEST002",
+    "tipo_evento": "congreso",
+    "num_comensales": 300,
+    "presupuesto": 10000.0,
+    "restricciones": [
+      "vegetariano",
+      "sin_gluten"
+    ],
+    "preferencias": [
+      "fresco",
+      "ligero"
+    ],
+    "temporada": "verano",
+    "menu": {
+      "entrante": {
+        "nombre": "Ensalada caprese",
+        "ingredientes": [
+          "tomate",
+          "mozzarella",
+          "albahaca"
+        ],
+        "tecnica_coccion": "crudo",
+        "temporada": [
+          "verano"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "principal": {
+        "nombre": "Risotto de setas",
+        "ingredientes": [
+          "arroz",
+          "setas",
+          "parmesano"
+        ],
+        "tecnica_coccion": "cocido",
+        "temporada": [
+          "otoño",
+          "primavera"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "postre": {
+        "nombre": "Tiramisú",
+        "ingredientes": [
+          "mascarpone",
+          "café",
+          "cacao"
+        ],
+        "tecnica_coccion": "montado",
+        "temporada": [
+          "todo"
+        ],
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "mediterraneo",
+      "tradicion": "italiana"
+    },
+    "exito": 0.9
+  }
+]
