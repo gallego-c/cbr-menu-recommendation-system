@@ -24,6 +24,8 @@
         "temporada": [
           "verano"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -40,6 +42,8 @@
           "otoño",
           "primavera"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -55,6 +59,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -62,7 +68,9 @@
       "estilo": "mediterraneo",
       "tradicion": "italiana"
     },
-    "exito": 0.95
+    "exito": 0.95,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C002",
@@ -90,6 +98,8 @@
           "verano",
           "otoño"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": []
       },
       "principal": {
@@ -103,6 +113,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": []
       },
       "postre": {
@@ -116,6 +128,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -123,7 +137,9 @@
       "estilo": "clasico",
       "tradicion": "vasca"
     },
-    "exito": 0.9
+    "exito": 0.9,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C003",
@@ -148,6 +164,8 @@
         "temporada": [
           "verano"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano",
           "vegano"
@@ -164,6 +182,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": []
       },
       "postre": {
@@ -177,6 +197,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -184,7 +206,9 @@
       "estilo": "molecular",
       "tradicion": "catalana"
     },
-    "exito": 0.88
+    "exito": 0.88,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C004",
@@ -211,6 +235,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano",
           "vegano"
@@ -227,6 +253,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "halal"
         ]
@@ -242,6 +270,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -249,7 +279,9 @@
       "estilo": "clasico",
       "tradicion": "libanesa"
     },
-    "exito": 0.92
+    "exito": 0.92,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "TEST001",
@@ -276,6 +308,8 @@
         "temporada": [
           "verano"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -292,6 +326,8 @@
           "otoño",
           "primavera"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -307,6 +343,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -314,7 +352,9 @@
       "estilo": "mediterraneo",
       "tradicion": "italiana"
     },
-    "exito": 0.9
+    "exito": 0.9,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "TEST002",
@@ -342,6 +382,8 @@
         "temporada": [
           "verano"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -358,6 +400,8 @@
           "otoño",
           "primavera"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -373,6 +417,8 @@
         "temporada": [
           "todo"
         ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
         "restricciones": [
           "vegetariano"
         ]
@@ -380,6 +426,658 @@
       "estilo": "mediterraneo",
       "tradicion": "italiana"
     },
-    "exito": 0.9
+    "exito": 0.9,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C007",
+    "tipo_evento": "boda",
+    "num_comensales": 120,
+    "presupuesto": 6000.0,
+    "restricciones": [
+      "vegetariano"
+    ],
+    "preferencias": [
+      "elegante",
+      "fresco"
+    ],
+    "temporada": "verano",
+    "menu": {
+      "entrante": {
+        "nombre": "Ensalada caprese",
+        "ingredientes": [
+          "tomate",
+          "mozzarella",
+          "albahaca"
+        ],
+        "tecnica_coccion": "crudo",
+        "temporada": [
+          "verano"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "principal": {
+        "nombre": "Risotto de setas",
+        "ingredientes": [
+          "arroz",
+          "setas",
+          "parmesano",
+          "tomate"
+        ],
+        "tecnica_coccion": "cocido",
+        "temporada": [
+          "verano"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "postre": {
+        "nombre": "Tiramisú",
+        "ingredientes": [
+          "mascarpone",
+          "café",
+          "cacao"
+        ],
+        "tecnica_coccion": "montado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "mediterraneo",
+      "tradicion": "italiana"
+    },
+    "exito": 0.9,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [
+      "AJUSTAR-TEXTURA: principal ahora tiene textura crujiente",
+      "AJUSTAR-SABOR: principal ahora tiene sabor dulce",
+      "ADAPTAR-TEMPORADA: añadido tomate a principal"
+    ]
+  },
+  {
+    "id": "C008",
+    "tipo_evento": "congreso",
+    "num_comensales": 80,
+    "presupuesto": 3000.0,
+    "restricciones": [
+      "halal"
+    ],
+    "preferencias": [
+      "tradicional",
+      "sustancioso"
+    ],
+    "temporada": "otoño",
+    "menu": {
+      "entrante": {
+        "nombre": "Pimientos rellenos de bacalao",
+        "ingredientes": [
+          "pimiento",
+          "bacalao",
+          "tomate"
+        ],
+        "tecnica_coccion": "horneado",
+        "temporada": [
+          "verano",
+          "otoño"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": []
+      },
+      "principal": {
+        "nombre": "Merluza a la vasca",
+        "ingredientes": [
+          "merluza",
+          "guisantes",
+          "huevo"
+        ],
+        "tecnica_coccion": "guisado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Cuajada con miel",
+        "ingredientes": [
+          "leche",
+          "cuajo",
+          "miel"
+        ],
+        "tecnica_coccion": "cuajado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "clasico",
+      "tradicion": "vasca"
+    },
+    "exito": 0.9,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [
+      "AJUSTAR-TEXTURA: principal ahora tiene textura crujiente",
+      "AJUSTAR-SABOR: principal ahora tiene sabor dulce"
+    ]
+  },
+  {
+    "id": "C009",
+    "tipo_evento": "banquete",
+    "num_comensales": 40,
+    "presupuesto": 8000.0,
+    "restricciones": [],
+    "preferencias": [
+      "vanguardista",
+      "sorprendente",
+      "espectacular"
+    ],
+    "temporada": "primavera",
+    "menu": {
+      "entrante": {
+        "nombre": "Esferificación de gazpacho",
+        "ingredientes": [
+          "tomate",
+          "alginato",
+          "pepino",
+          "esparragos"
+        ],
+        "tecnica_coccion": "esferificado",
+        "temporada": [
+          "primavera"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano",
+          "vegano"
+        ]
+      },
+      "principal": {
+        "nombre": "Foie deconstruido",
+        "ingredientes": [
+          "foie",
+          "manzana",
+          "brioche"
+        ],
+        "tecnica_coccion": "deconstruido",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Nitrógeno de chocolate",
+        "ingredientes": [
+          "chocolate",
+          "nitrógeno",
+          "frambuesa"
+        ],
+        "tecnica_coccion": "congelado_flash",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "molecular",
+      "tradicion": "catalana"
+    },
+    "exito": 0.9,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [
+      "AJUSTAR-TEXTURA: principal ahora tiene textura crujiente",
+      "AJUSTAR-SABOR: principal ahora tiene sabor dulce",
+      "ADAPTAR-TEMPORADA: añadido esparragos a entrante"
+    ]
+  },
+  {
+    "id": "C010",
+    "tipo_evento": "boda",
+    "num_comensales": 120,
+    "presupuesto": 6000.0,
+    "restricciones": [
+      "vegetariano"
+    ],
+    "preferencias": [
+      "elegante",
+      "fresco"
+    ],
+    "temporada": "verano",
+    "menu": {
+      "entrante": {
+        "nombre": "Ensalada caprese",
+        "ingredientes": [
+          "tomate",
+          "mozzarella",
+          "albahaca"
+        ],
+        "tecnica_coccion": "crudo",
+        "temporada": [
+          "verano"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "principal": {
+        "nombre": "Risotto de setas",
+        "ingredientes": [
+          "arroz",
+          "setas",
+          "parmesano",
+          "tomate"
+        ],
+        "tecnica_coccion": "cocido",
+        "temporada": [
+          "verano"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "postre": {
+        "nombre": "Tiramisú",
+        "ingredientes": [
+          "mascarpone",
+          "café",
+          "cacao"
+        ],
+        "tecnica_coccion": "montado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "mediterraneo",
+      "tradicion": "italiana"
+    },
+    "exito": 1.0,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C011",
+    "tipo_evento": "congreso",
+    "num_comensales": 80,
+    "presupuesto": 3000.0,
+    "restricciones": [
+      "halal"
+    ],
+    "preferencias": [
+      "tradicional",
+      "sustancioso"
+    ],
+    "temporada": "otoño",
+    "menu": {
+      "entrante": {
+        "nombre": "Pimientos rellenos de bacalao",
+        "ingredientes": [
+          "pimiento",
+          "bacalao",
+          "tomate"
+        ],
+        "tecnica_coccion": "horneado",
+        "temporada": [
+          "verano",
+          "otoño"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": []
+      },
+      "principal": {
+        "nombre": "Merluza a la vasca",
+        "ingredientes": [
+          "merluza",
+          "guisantes",
+          "huevo"
+        ],
+        "tecnica_coccion": "guisado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Cuajada con miel",
+        "ingredientes": [
+          "leche",
+          "cuajo",
+          "miel"
+        ],
+        "tecnica_coccion": "cuajado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "clasico",
+      "tradicion": "vasca"
+    },
+    "exito": 1.0,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C012",
+    "tipo_evento": "banquete",
+    "num_comensales": 40,
+    "presupuesto": 8000.0,
+    "restricciones": [],
+    "preferencias": [
+      "vanguardista",
+      "sorprendente",
+      "espectacular"
+    ],
+    "temporada": "primavera",
+    "menu": {
+      "entrante": {
+        "nombre": "Esferificación de gazpacho",
+        "ingredientes": [
+          "tomate",
+          "alginato",
+          "pepino",
+          "esparragos"
+        ],
+        "tecnica_coccion": "esferificado",
+        "temporada": [
+          "primavera"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano",
+          "vegano"
+        ]
+      },
+      "principal": {
+        "nombre": "Foie deconstruido",
+        "ingredientes": [
+          "foie",
+          "manzana",
+          "brioche"
+        ],
+        "tecnica_coccion": "deconstruido",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Nitrógeno de chocolate",
+        "ingredientes": [
+          "chocolate",
+          "nitrógeno",
+          "frambuesa"
+        ],
+        "tecnica_coccion": "congelado_flash",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "molecular",
+      "tradicion": "catalana"
+    },
+    "exito": 1.0,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C013",
+    "tipo_evento": "boda",
+    "num_comensales": 120,
+    "presupuesto": 6000.0,
+    "restricciones": [
+      "vegetariano"
+    ],
+    "preferencias": [
+      "elegante",
+      "fresco"
+    ],
+    "temporada": "verano",
+    "menu": {
+      "entrante": {
+        "nombre": "Ensalada caprese",
+        "ingredientes": [
+          "tomate",
+          "mozzarella",
+          "albahaca"
+        ],
+        "tecnica_coccion": "crudo",
+        "temporada": [
+          "verano"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "principal": {
+        "nombre": "Risotto de setas",
+        "ingredientes": [
+          "arroz",
+          "setas",
+          "parmesano",
+          "tomate"
+        ],
+        "tecnica_coccion": "cocido",
+        "temporada": [
+          "verano"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "postre": {
+        "nombre": "Tiramisú",
+        "ingredientes": [
+          "mascarpone",
+          "café",
+          "cacao"
+        ],
+        "tecnica_coccion": "montado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "mediterraneo",
+      "tradicion": "italiana"
+    },
+    "exito": 1.0,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C014",
+    "tipo_evento": "congreso",
+    "num_comensales": 80,
+    "presupuesto": 3000.0,
+    "restricciones": [
+      "halal"
+    ],
+    "preferencias": [
+      "tradicional",
+      "sustancioso"
+    ],
+    "temporada": "otoño",
+    "menu": {
+      "entrante": {
+        "nombre": "Pimientos rellenos de bacalao",
+        "ingredientes": [
+          "pimiento",
+          "bacalao",
+          "tomate"
+        ],
+        "tecnica_coccion": "horneado",
+        "temporada": [
+          "verano",
+          "otoño"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": []
+      },
+      "principal": {
+        "nombre": "Merluza a la vasca",
+        "ingredientes": [
+          "merluza",
+          "guisantes",
+          "huevo"
+        ],
+        "tecnica_coccion": "guisado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Cuajada con miel",
+        "ingredientes": [
+          "leche",
+          "cuajo",
+          "miel"
+        ],
+        "tecnica_coccion": "cuajado",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "clasico",
+      "tradicion": "vasca"
+    },
+    "exito": 1.0,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C015",
+    "tipo_evento": "banquete",
+    "num_comensales": 40,
+    "presupuesto": 8000.0,
+    "restricciones": [],
+    "preferencias": [
+      "vanguardista",
+      "sorprendente",
+      "espectacular"
+    ],
+    "temporada": "primavera",
+    "menu": {
+      "entrante": {
+        "nombre": "Esferificación de gazpacho",
+        "ingredientes": [
+          "tomate",
+          "alginato",
+          "pepino",
+          "esparragos"
+        ],
+        "tecnica_coccion": "esferificado",
+        "temporada": [
+          "primavera"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano",
+          "vegano"
+        ]
+      },
+      "principal": {
+        "nombre": "Foie deconstruido",
+        "ingredientes": [
+          "foie",
+          "manzana",
+          "brioche"
+        ],
+        "tecnica_coccion": "deconstruido",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "crujiente",
+        "sabor_dominante": "dulce",
+        "restricciones": []
+      },
+      "postre": {
+        "nombre": "Nitrógeno de chocolate",
+        "ingredientes": [
+          "chocolate",
+          "nitrógeno",
+          "frambuesa"
+        ],
+        "tecnica_coccion": "congelado_flash",
+        "temporada": [
+          "todo"
+        ],
+        "textura": "suave",
+        "sabor_dominante": "salado",
+        "restricciones": [
+          "vegetariano"
+        ]
+      },
+      "estilo": "molecular",
+      "tradicion": "catalana"
+    },
+    "exito": 1.0,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   }
 ]
