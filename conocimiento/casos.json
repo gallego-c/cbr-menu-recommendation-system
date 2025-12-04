@@ -1,0 +1,50 @@
+[
+  {
+    "id": "C001",
+    "restricciones": ["vegano"],
+    "temporada": "verano",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Ensalada de Tomate",
+      "principal": "Arroz con Verduras", 
+      "postre": "Frutas de Verano"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C002",
+    "restricciones": ["sin_lactosa"],
+    "temporada": "otoño",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Sopa de Calabaza",
+      "principal": "Pollo con Setas",
+      "postre": "Compota de Manzana"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C003",
+    "restricciones": [],
+    "temporada": "primavera",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Guacamole con Tortillas",
+      "principal": "Tacos de Pollo",
+      "postre": "Flan de Coco"
+    },
+    "estilo": "molecular",
+    "tradicion": "mexicana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  }
+]

@@ -1,0 +1,134 @@
+[
+  {
+    "nombre": "tomate",
+    "categoria": "vegetal",
+    "temporada": ["verano"],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "aceite_oliva",
+    "categoria": "condimento",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sal",
+    "categoria": "condimento",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "arroz",
+    "categoria": "cereal",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pimiento",
+    "categoria": "vegetal",
+    "temporada": ["verano"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cebolla",
+    "categoria": "vegetal",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "melon",
+    "categoria": "fruta",
+    "temporada": ["verano"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "sandia",
+    "categoria": "fruta",
+    "temporada": ["verano"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "calabaza",
+    "categoria": "vegetal",
+    "temporada": ["otoño"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pollo",
+    "categoria": "animal",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "setas",
+    "categoria": "hongo",
+    "temporada": ["otoño"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ajo",
+    "categoria": "condimento",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "manzana",
+    "categoria": "fruta",
+    "temporada": ["otoño"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "canela",
+    "categoria": "condimento",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "azucar",
+    "categoria": "condimento",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "aguacate",
+    "categoria": "fruta",
+    "temporada": ["primavera", "verano"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "limon",
+    "categoria": "fruta",
+    "temporada": ["primavera"],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "chile",
+    "categoria": "condimento",
+    "temporada": ["verano"],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "tortilla_maiz",
+    "categoria": "cereal",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cilantro",
+    "categoria": "condimento",
+    "temporada": ["primavera"],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "coco",
+    "categoria": "fruta",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "leche",
+    "categoria": "lacteo",
+    "temporada": ["primavera", "verano", "otoño", "invierno"],
+    "sabor": "dulce"
+  }
+]
