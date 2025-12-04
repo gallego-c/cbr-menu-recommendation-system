@@ -14,13 +14,12 @@ Para agregar nuevas opciones, edita los archivos JSON en conocimiento/:
 - restricciones.json: Define nuevas restricciones dietéticas
 - tradiciones.json: Define nuevas tradiciones culinarias
 - estilos.json: Define nuevos estilos (incluye técnicas permitidas/prohibidas)
-- tecnicas.json: Define técnicas disponibles (usado por estilos)
 
-NOTA: Las técnicas de cocción NO se validan como preferencia independiente,
-solo se validan en el contexto del estilo culinario elegido por el usuario.
+NOTA: Las técnicas de cocción están definidas como TecnicaCoccion en conocimiento/models.py
+y se validan en el contexto del estilo culinario elegido por el usuario.
 """
 
-from .base import ResultadoValidacion, ReglaValidacion
+from .base import ResultadoValidacion, ReglaValidacion, convertir_a_string
 from .restricciones import ValidadorRestriccion
 from .temporada import ValidadorTemporada
 from .tradicion import ValidadorTradicion
@@ -31,6 +30,7 @@ from .validador import ValidadorCompleto
 __all__ = [
     'ResultadoValidacion',
     'ReglaValidacion',
+    'convertir_a_string',
     'ValidadorRestriccion',
     'ValidadorTemporada',
     'ValidadorTradicion',

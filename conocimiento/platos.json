@@ -1,0 +1,119 @@
+[
+  {
+    "nombre": "Ensalada de Tomate",
+    "ingredientes": [
+      "tomate",
+      "aceite_oliva",
+      "sal"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "tomate"
+  },
+  {
+    "nombre": "Arroz con Verduras",
+    "ingredientes": [
+      "arroz",
+      "pimiento",
+      "cebolla"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "arroz"
+  },
+  {
+    "nombre": "Frutas de Verano",
+    "ingredientes": [
+      "melon",
+      "sandia"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "melon"
+  },
+  {
+    "nombre": "Sopa de Calabaza",
+    "ingredientes": [
+      "calabaza",
+      "cebolla",
+      "sal"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "calabaza"
+  },
+  {
+    "nombre": "Pollo con Setas",
+    "ingredientes": [
+      "pollo",
+      "setas",
+      "ajo"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "setas"
+  },
+  {
+    "nombre": "Compota de Manzana",
+    "ingredientes": [
+      "manzana",
+      "canela",
+      "azucar"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "azucar"
+  },
+  {
+    "nombre": "Guacamole con Tortillas",
+    "ingredientes": [
+      "aguacate",
+      "limon",
+      "chile",
+      "tortilla_maiz"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "aguacate"
+  },
+  {
+    "nombre": "Flan de Coco",
+    "ingredientes": [
+      "coco",
+      "azucar",
+      "leche"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "coco"
+  },
+  {
+    "nombre": "Ceviche Molecular",
+    "ingredientes": [
+      "pescado",
+      "limon",
+      "cebolla"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "limon"
+  }
+]

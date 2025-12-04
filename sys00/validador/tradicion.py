@@ -4,7 +4,7 @@ Validador genérico de tradición culinaria basado en datos
 
 from typing import Dict, Any
 from conocimiento.models import Plato
-from .base import ReglaValidacion, ResultadoValidacion
+from .base import ReglaValidacion, ResultadoValidacion, convertir_a_string
 
 
 class ValidadorTradicion(ReglaValidacion):
@@ -34,8 +34,12 @@ class ValidadorTradicion(ReglaValidacion):
         return "tradicion"
     
     def validar(self, plato: Plato, contexto: Dict[str, Any]) -> ResultadoValidacion:
-        """Valida que un plato respete la tradición culinaria"""
-        ingredientes_plato = {ing.nombre for ing in plato.ingredientes}
+        """
+        Valida que un plato respete la tradición culinaria.
+        plato.ingredientes es List[str] - nombres de ingredientes.
+        """
+        # plato.ingredientes ya es List[str], convertir a set directamente
+        ingredientes_plato = set(plato.ingredientes)
         ingredientes_esperados = self._ingredientes_caracteristicos
         ingredientes_encontrados = ingredientes_plato.intersection(ingredientes_esperados)
         
@@ -94,8 +98,3 @@ class ValidadorTradicion(ReglaValidacion):
             advertencias=advertencias,
             detalles=detalles
         )
-    
-    def _obtener_tradicion_string(self, tradicion) -> str:
-        if hasattr(tradicion, 'value'):
-            return tradicion.value
-        return str(tradicion).lower()

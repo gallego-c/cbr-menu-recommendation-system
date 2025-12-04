@@ -4,7 +4,7 @@ Validador genérico de restricciones dietéticas basado en datos
 
 from typing import Dict, Any
 from conocimiento.models import Plato
-from .base import ReglaValidacion, ResultadoValidacion
+from .base import ReglaValidacion, ResultadoValidacion, convertir_a_string
 
 
 class ValidadorRestriccion(ReglaValidacion):
@@ -34,7 +34,10 @@ class ValidadorRestriccion(ReglaValidacion):
         return "restriccion"
     
     def validar(self, plato: Plato, contexto: Dict[str, Any]) -> ResultadoValidacion:
-        """Valida que un plato cumpla con la restricción"""
+        """
+        Valida que un plato cumpla con la restricción.
+        Trabaja directamente con plato.ingredientes como List[str].
+        """
         errores = []
         detalles = {
             'restriccion': self._nombre,
@@ -43,29 +46,36 @@ class ValidadorRestriccion(ReglaValidacion):
             'descripcion': self._descripcion
         }
         
-        for ingrediente in plato.ingredientes:
+        # plato.ingredientes es List[str] - nombres de ingredientes
+        for nombre_ingrediente in plato.ingredientes:
             # Verificar si el ingrediente está explícitamente prohibido
-            if ingrediente.nombre in self._ingredientes_prohibidos:
+            if nombre_ingrediente in self._ingredientes_prohibidos:
                 errores.append(
-                    f"Ingrediente prohibido para {self._nombre}: {ingrediente.nombre}"
+                    f"Ingrediente prohibido para {self._nombre}: {nombre_ingrediente}"
                 )
                 detalles['ingredientes_problematicos'].append({
-                    'nombre': ingrediente.nombre,
+                    'nombre': nombre_ingrediente,
                     'motivo': 'ingrediente_especifico_prohibido'
                 })
                 continue
             
+            # Buscar información del ingrediente en la base de datos
+            info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
+            if not info_ingrediente:
+                # Si no está en la DB, asumir que es válido (no podemos validar)
+                continue
+            
             # Verificar categoría del ingrediente
-            categoria = self._obtener_categoria_string(ingrediente.categoria)
+            categoria = info_ingrediente.get('categoria', 'vegetal')
             
             # Si hay categorías prohibidas, verificar que no esté en ellas
             if self._categorias_prohibidas and categoria in self._categorias_prohibidas:
                 errores.append(
                     f"Ingrediente con categoría prohibida para {self._nombre}: "
-                    f"{ingrediente.nombre} (categoría: {categoria})"
+                    f"{nombre_ingrediente} (categoría: {categoria})"
                 )
                 detalles['ingredientes_problematicos'].append({
-                    'nombre': ingrediente.nombre,
+                    'nombre': nombre_ingrediente,
                     'categoria': categoria,
                     'motivo': 'categoria_prohibida'
                 })
@@ -76,10 +86,10 @@ class ValidadorRestriccion(ReglaValidacion):
             elif self._categorias_permitidas and categoria not in self._categorias_permitidas:
                 errores.append(
                     f"Ingrediente con categoría no permitida para {self._nombre}: "
-                    f"{ingrediente.nombre} (categoría: {categoria})"
+                    f"{nombre_ingrediente} (categoría: {categoria})"
                 )
                 detalles['ingredientes_problematicos'].append({
-                    'nombre': ingrediente.nombre,
+                    'nombre': nombre_ingrediente,
                     'categoria': categoria,
                     'motivo': 'categoria_no_permitida'
                 })
@@ -91,9 +101,3 @@ class ValidadorRestriccion(ReglaValidacion):
             errores=errores,
             detalles=detalles
         )
-    
-    def _obtener_categoria_string(self, categoria) -> str:
-        """Convierte categoría a string independientemente del tipo"""
-        if hasattr(categoria, 'value'):
-            return categoria.value
-        return str(categoria)

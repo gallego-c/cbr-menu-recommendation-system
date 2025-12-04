@@ -4,7 +4,7 @@ Validador de temporada de ingredientes
 
 from typing import Dict, Any, List
 from conocimiento.models import Plato
-from .base import ReglaValidacion, ResultadoValidacion
+from .base import ReglaValidacion, ResultadoValidacion, convertir_a_string
 
 
 class ValidadorTemporada(ReglaValidacion):
@@ -30,7 +30,7 @@ class ValidadorTemporada(ReglaValidacion):
                 errores=["No se especificó temporada objetivo para validar"]
             )
         
-        temporada_str = self._obtener_temporada_string(temporada_objetivo)
+        temporada_str = convertir_a_string(temporada_objetivo)
         errores = []
         advertencias = []
         detalles = {
@@ -38,8 +38,9 @@ class ValidadorTemporada(ReglaValidacion):
             'temporada_objetivo': temporada_str
         }
         
-        for ingrediente in plato.ingredientes:
-            info_ingrediente = self.ingredientes_db.get(ingrediente.nombre)
+        # plato.ingredientes es List[str] - nombres de ingredientes
+        for nombre_ingrediente in plato.ingredientes:
+            info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
             
             if info_ingrediente:
                 temporadas_ingrediente = info_ingrediente.get('temporada', [])
@@ -50,22 +51,22 @@ class ValidadorTemporada(ReglaValidacion):
                     
                     if categoria in ['vegetal', 'fruta']:
                         errores.append(
-                            f"Ingrediente fuera de temporada: {ingrediente.nombre} "
+                            f"Ingrediente fuera de temporada: {nombre_ingrediente} "
                             f"(disponible en: {', '.join(temporadas_ingrediente)})"
                         )
                     else:
                         advertencias.append(
-                            f"Condimento/cereal fuera de temporada: {ingrediente.nombre}"
+                            f"Condimento/cereal fuera de temporada: {nombre_ingrediente}"
                         )
                     
                     detalles['ingredientes_fuera_temporada'].append({
-                        'nombre': ingrediente.nombre,
+                        'nombre': nombre_ingrediente,
                         'categoria': categoria,
                         'temporadas_disponibles': temporadas_ingrediente,
                         'severidad': 'error' if categoria in ['vegetal', 'fruta'] else 'advertencia'
                     })
             else:
-                advertencias.append(f"Ingrediente no encontrado en DB: {ingrediente.nombre}")
+                advertencias.append(f"Ingrediente no encontrado en DB: {nombre_ingrediente}")
         
         return ResultadoValidacion(
             valido=len(errores) == 0,
@@ -73,8 +74,3 @@ class ValidadorTemporada(ReglaValidacion):
             advertencias=advertencias,
             detalles=detalles
         )
-    
-    def _obtener_temporada_string(self, temporada) -> str:
-        if hasattr(temporada, 'value'):
-            return temporada.value
-        return str(temporada).lower()

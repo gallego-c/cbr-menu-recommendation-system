@@ -10,45 +10,26 @@ Soporta dos métodos:
 
 import json
 import os
-from typing import List, Dict, Optional, Any, Union
-from dataclasses import dataclass, field
+from typing import List, Dict, Optional, Any, NamedTuple
 from enum import Enum
 
+from conocimiento import Caso
 from .similitud_ponderada import CalculadorSimilitudPonderada, PesosSimilitud
 from .similitud_vectorial import CalculadorSimilitudVectorial, MetricaDistancia
 
 
 class MetodoSimilitud(Enum):
     """Métodos de similitud disponibles."""
-    PONDERADA = "ponderada"      # Similitud ponderada clásica (por defecto)
-    VECTORIAL = "vectorial"      # Similitud basada en vectorización
+    PONDERADA = "ponderada"
+    VECTORIAL = "vectorial"
 
 
-@dataclass
-class ResultadoRecuperacion:
-    """Representa el resultado de una operación de recuperación."""
+class ResultadoRecuperacion(NamedTuple):
+    """Resultado de una recuperación con similitud."""
     caso: Dict
     similitud: float
-    explicacion: Dict[str, float] = field(default_factory=dict)
-    indice_original: int = -1
-
-
-@dataclass
-class ConfiguracionRecuperacion:
-    """Configuración para el proceso de recuperación."""
-    k: int = 3  # Número de casos a recuperar
-    umbral_minimo: float = 0.0  # Similitud mínima requerida
-    explicar_similitud: bool = False  # Si incluir explicación detallada
-    
-    # Configuración de método de similitud
-    metodo: MetodoSimilitud = MetodoSimilitud.PONDERADA  # Método de cálculo (por defecto: ponderada)
-    
-    # Configuración para método PONDERADA
-    pesos_similitud: Optional[PesosSimilitud] = None
-    
-    # Configuración para método VECTORIAL
-    metrica_distancia: MetricaDistancia = MetricaDistancia.EUCLIDIANA
-    p_minkowski: float = 2.0  # Parámetro p para Minkowski
+    explicacion: Dict[str, float] = {}
+    indice: int = -1
 
 
 class ModuloRecuperacion:
@@ -56,28 +37,29 @@ class ModuloRecuperacion:
     Módulo de recuperación de casos similares.
     
     Busca los k casos más similares usando la métrica configurada.
-    Simple y directo sin filtros complejos.
     """
     
-    def __init__(self, config: ConfiguracionRecuperacion = None):
+    def __init__(self, 
+                 metodo: MetodoSimilitud = MetodoSimilitud.PONDERADA,
+                 pesos: PesosSimilitud = None,
+                 metrica_distancia: MetricaDistancia = MetricaDistancia.EUCLIDIANA,
+                 p_minkowski: float = 2.0):
         """
         Inicializa el módulo de recuperación.
         
         Args:
-            config: Configuración del módulo
+            metodo: Método de similitud a usar (PONDERADA o VECTORIAL)
+            pesos: Pesos para método ponderado (opcional)
+            metrica_distancia: Métrica para método vectorial
+            p_minkowski: Parámetro p para Minkowski
         """
-        self.config = config or ConfiguracionRecuperacion()
+        self.metodo = metodo
         
-        # Inicializar calculador según método elegido
-        if self.config.metodo == MetodoSimilitud.PONDERADA:
-            self.calculador = CalculadorSimilitudPonderada(
-                pesos=self.config.pesos_similitud
-            )
-        else:  # VECTORIAL
-            self.calculador = CalculadorSimilitudVectorial(
-                metrica=self.config.metrica_distancia,
-                p_minkowski=self.config.p_minkowski
-            )
+        # Inicializar calculador según método
+        if metodo == MetodoSimilitud.PONDERADA:
+            self.calculador = CalculadorSimilitudPonderada(pesos)
+        else:
+            self.calculador = CalculadorSimilitudVectorial(metrica_distancia, p_minkowski)
         
         self.casos = []
         self._cargar_base_casos()
@@ -94,97 +76,52 @@ class ModuloRecuperacion:
         except json.JSONDecodeError:
             self.casos = []
     
-    def recuperar(self, caso_nuevo: Dict, config_personalizada: ConfiguracionRecuperacion = None) -> List[ResultadoRecuperacion]:
+    def recuperar(self, caso_nuevo: Dict, k: int = 3, umbral_minimo: float = 0.0,
+                 explicar: bool = False) -> List[ResultadoRecuperacion]:
         """
         Recupera los k casos más similares al caso nuevo.
         
-        Calcula similitud con TODOS los casos y retorna los k mejores.
-        No aplica filtros previos.
-        
         Args:
             caso_nuevo: Diccionario con las características del caso a buscar
-            config_personalizada: Configuración específica para esta búsqueda
+            k: Número de casos a recuperar (default: 3)
+            umbral_minimo: Similitud mínima requerida (default: 0.0)
+            explicar: Si incluir explicación detallada (default: False)
             
         Returns:
             Lista de ResultadoRecuperacion ordenados por similitud descendente
         """
-        config = config_personalizada or self.config
-        
         if not self.casos:
             return []
         
-        # Calcular similitud con TODOS los casos
-        resultados = []
-        for idx, caso_base in enumerate(self.casos):
-            similitud = self.calculador.similitud_casos(caso_nuevo, caso_base)
-            
-            # Filtrar solo por umbral mínimo
-            if similitud >= config.umbral_minimo:
-                resultado = ResultadoRecuperacion(
-                    caso=caso_base,
-                    similitud=similitud,
-                    indice_original=idx
-                )
-                
-                # Agregar explicación si se solicita
-                if config.explicar_similitud:
-                    resultado.explicacion = self.calculador.explicar_similitud(caso_nuevo, caso_base)
-                
-                resultados.append(resultado)
+        # Calcular similitud con todos los casos y filtrar por umbral
+        resultados = [
+            ResultadoRecuperacion(
+                caso=caso_base,
+                similitud=sim,
+                explicacion=self.calculador.explicar_similitud(caso_nuevo, caso_base) if explicar else {},
+                indice=idx
+            )
+            for idx, caso_base in enumerate(self.casos)
+            if (sim := self.calculador.similitud_casos(caso_nuevo, caso_base)) >= umbral_minimo
+        ]
         
-        # Ordenar por similitud descendente
+        # Ordenar y limitar
         resultados.sort(key=lambda x: x.similitud, reverse=True)
-        
-        # Limitar a k resultados
-        return resultados[:config.k]
+        return resultados[:k]
     
     def estadisticas_base_casos(self) -> Dict[str, Any]:
-        """
-        Proporciona estadísticas sobre la base de casos cargada.
-        
-        Returns:
-            Diccionario con estadísticas de la base de casos
-        """
+        """Proporciona estadísticas sobre la base de casos cargada."""
         if not self.casos:
             return {'total_casos': 0}
         
-        estadisticas = {
+        from collections import Counter
+        
+        return {
             'total_casos': len(self.casos),
-            'tipos_evento': {},
-            'temporadas': {},
-            'estilos': {},
-            'tradiciones': {},
-            'restricciones': {},
-            'casos_exitosos': 0
+            'tipos_evento': dict(Counter(c.get('tipo_evento') for c in self.casos if c.get('tipo_evento'))),
+            'temporadas': dict(Counter(c.get('temporada') for c in self.casos if c.get('temporada'))),
+            'estilos': dict(Counter(c.get('estilo') for c in self.casos if c.get('estilo'))),
+            'tradiciones': dict(Counter(c.get('tradicion') for c in self.casos if c.get('tradicion'))),
+            'restricciones': dict(Counter(r for c in self.casos for r in c.get('restricciones', []))),
+            'casos_exitosos': sum(1 for c in self.casos if c.get('exito', False))
         }
-        
-        for caso in self.casos:
-            # Contar tipos de evento
-            tipo = caso.get('tipo_evento')
-            if tipo:
-                estadisticas['tipos_evento'][tipo] = estadisticas['tipos_evento'].get(tipo, 0) + 1
-            
-            # Contar temporadas
-            temporada = caso.get('temporada')
-            if temporada:
-                estadisticas['temporadas'][temporada] = estadisticas['temporadas'].get(temporada, 0) + 1
-            
-            # Contar estilos
-            estilo = caso.get('estilo')
-            if estilo:
-                estadisticas['estilos'][estilo] = estadisticas['estilos'].get(estilo, 0) + 1
-            
-            # Contar tradiciones
-            tradicion = caso.get('tradicion')
-            if tradicion:
-                estadisticas['tradiciones'][tradicion] = estadisticas['tradiciones'].get(tradicion, 0) + 1
-            
-            # Contar restricciones
-            for restriccion in caso.get('restricciones', []):
-                estadisticas['restricciones'][restriccion] = estadisticas['restricciones'].get(restriccion, 0) + 1
-            
-            # Contar casos exitosos
-            if caso.get('exito', False):
-                estadisticas['casos_exitosos'] += 1
-        
-        return estadisticas

@@ -4,8 +4,9 @@ Validador completo que coordina todas las validaciones
 
 import json
 import os
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 from conocimiento.models import Plato
+from conocimiento import cargador
 from .base import ResultadoValidacion
 from .fabrica import FabricaValidadores
 
@@ -13,30 +14,36 @@ from .fabrica import FabricaValidadores
 class ValidadorCompleto:
     """Validador principal que coordina todas las validaciones"""
     
-    def __init__(self):
-        """Inicializa el validador cargando el conocimiento"""
-        self.ingredientes_db = self._cargar_ingredientes()
-        self.fabrica = FabricaValidadores(self.ingredientes_db)
-    
-    def _cargar_ingredientes(self) -> Dict[str, Dict]:
-        """Carga la base de datos de ingredientes"""
-        try:
-            ruta_ingredientes = os.path.join(
-                os.path.dirname(os.path.dirname(__file__)), 
-                'conocimiento', 
-                'ingredientes.json'
-            )
-            with open(ruta_ingredientes, 'r', encoding='utf-8') as f:
-                ingredientes_lista = json.load(f)
-            
-            return {ing['nombre']: ing for ing in ingredientes_lista}
+    def __init__(
+        self,
+        ingredientes_db: Optional[Dict[str, Dict]] = None,
+        restricciones_config: Optional[List[Dict]] = None,
+        tradiciones_config: Optional[List[Dict]] = None,
+        estilos_config: Optional[List[Dict]] = None
+    ):
+        """
+        Inicializa el validador con configuraciones opcionales pre-cargadas.
+        Si no se proporcionan, las carga automáticamente usando el cargador centralizado.
         
-        except FileNotFoundError:
-            print("Error: Archivo ingredientes.json no encontrado")
-            return {}
-        except json.JSONDecodeError as e:
-            print(f"Error al cargar ingredientes.json: {e}")
-            return {}
+        Args:
+            ingredientes_db: Base de datos de ingredientes
+            restricciones_config: Configuración de restricciones
+            tradiciones_config: Configuración de tradiciones
+            estilos_config: Configuración de estilos
+        """
+        # Cargar datos si no se proporcionan usando el cargador centralizado
+        self.ingredientes_db = ingredientes_db or cargador.cargar_ingredientes()
+        restricciones = restricciones_config or cargador.cargar_restricciones()
+        tradiciones = tradiciones_config or cargador.cargar_tradiciones()
+        estilos = estilos_config or cargador.cargar_estilos()
+        
+        # Crear fábrica con datos pre-cargados
+        self.fabrica = FabricaValidadores(
+            self.ingredientes_db,
+            restricciones,
+            tradiciones,
+            estilos
+        )
     
     def validar_plato_restricciones(self, plato: Plato, restricciones: List[str]) -> Dict[str, ResultadoValidacion]:
         """
@@ -190,3 +197,55 @@ class ValidadorCompleto:
             'ingredientes_en_db': list(self.ingredientes_db.keys()),
             'nota': 'Las técnicas se validan automáticamente dentro del estilo culinario'
         }
+    
+    @staticmethod
+    def agrupar_errores_por_plato(errores: List[str]) -> Dict[str, List[str]]:
+        """
+        Agrupa errores por nombre de plato.
+        
+        Args:
+            errores: Lista de errores en formato "tipo (Nombre del Plato): error"
+            
+        Returns:
+            Diccionario con errores agrupados por nombre de plato
+        """
+        errores_agrupados = {}
+        
+        for error in errores:
+            # Extraer nombre del plato del error (formato: "tipo (Nombre del Plato): error")
+            if '(' in error and ')' in error:
+                inicio = error.find('(') + 1
+                fin = error.find(')')
+                nombre_plato = error[inicio:fin]
+                
+                if nombre_plato not in errores_agrupados:
+                    errores_agrupados[nombre_plato] = []
+                errores_agrupados[nombre_plato].append(error)
+        
+        return errores_agrupados
+    
+    @staticmethod
+    def extraer_tipo_problema(error: str) -> str:
+        """
+        Extrae el tipo de problema de un mensaje de error.
+        
+        Args:
+            error: Mensaje de error
+            
+        Returns:
+            Tipo de problema: 'restricciones', 'temporada', 'tradicion', 'coherencia', 'sabor'
+        """
+        error_lower = error.lower()
+        
+        if 'restricción' in error_lower or 'restriccion' in error_lower:
+            return 'restricciones'
+        elif 'temporada' in error_lower:
+            return 'temporada'
+        elif 'tradición' in error_lower or 'tradicion' in error_lower:
+            return 'tradicion'
+        elif 'estilo' in error_lower:
+            return 'coherencia'
+        elif 'sabor' in error_lower:
+            return 'sabor'
+        else:
+            return 'restricciones'  # Por defecto

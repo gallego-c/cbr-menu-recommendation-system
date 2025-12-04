@@ -127,14 +127,10 @@
       "hervido"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "tomate",
-    "tradicion": "general",
-    "temporada": [
-      "verano"
-    ]
+    "ingrediente_sabor": "tomate"
   },
   {
-    "nombre": "Compota de Manzana con Melon y Aceite_oliva",
+    "nombre": "Compota de Manzana con Melon con Aceite_oliva",
     "ingredientes": [
       "melon",
       "canela",
@@ -145,10 +141,33 @@
       "hervido"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "azucar",
-    "tradicion": "general",
-    "temporada": [
-      "verano"
-    ]
+    "ingrediente_sabor": "azucar"
+  },
+  {
+    "nombre": "Arroz con Verduras con Aceite_oliva",
+    "ingredientes": [
+      "arroz",
+      "pimiento",
+      "cebolla",
+      "aceite_oliva"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "arroz"
+  },
+  {
+    "nombre": "Frutas de Verano con Aceite_oliva",
+    "ingredientes": [
+      "melon",
+      "sandia",
+      "aceite_oliva"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "melon"
   }
 ]

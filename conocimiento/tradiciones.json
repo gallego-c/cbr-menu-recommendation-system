@@ -1,0 +1,18 @@
+[
+  {
+    "nombre": "catalana",
+    "descripcion": "Cocina tradicional de Cataluña",
+    "ingredientes_caracteristicos": ["aceite_oliva", "ajo", "tomate", "sal"],
+    "ingredientes_tipicos": ["pan_tomate", "butifarra", "escalivada", "romesco", "alioli"],
+    "tecnicas_preferidas": ["asado", "guisado", "frito"],
+    "coherencia_minima": 0.2
+  },
+  {
+    "nombre": "mexicana",
+    "descripcion": "Cocina tradicional de México",
+    "ingredientes_caracteristicos": ["chile", "cilantro", "aguacate", "tortilla_maiz", "limon"],
+    "ingredientes_tipicos": ["frijoles", "maiz", "tomate", "cebolla", "comino"],
+    "tecnicas_preferidas": ["asado", "frito", "cocido"],
+    "coherencia_minima": 0.2
+  }
+]

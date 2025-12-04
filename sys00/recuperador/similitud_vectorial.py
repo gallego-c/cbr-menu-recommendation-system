@@ -48,17 +48,23 @@ class CalculadorSimilitudVectorial:
         self._inicializar_codificaciones()
     
     def _cargar_conocimiento(self):
-        """Carga el conocimiento de los archivos JSON."""
-        conocimiento_dir = os.path.join(os.path.dirname(__file__), '..', 'conocimiento')
+        """Carga el conocimiento usando el cargador centralizado."""
+        # Añadir el directorio padre al path para importar
+        import sys
+        sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+        from conocimiento import cargador
         
-        with open(os.path.join(conocimiento_dir, 'ingredientes.json'), 'r', encoding='utf-8') as f:
-            self.ingredientes_data = json.load(f)
+        # Cargar usando el cargador centralizado
+        ingredientes_dict = cargador.cargar_ingredientes()
+        platos_dict = cargador.cargar_platos()
         
-        with open(os.path.join(conocimiento_dir, 'platos.json'), 'r', encoding='utf-8') as f:
-            self.platos_data = json.load(f)
+        # Convertir a listas para compatibilidad
+        self.ingredientes_data = list(ingredientes_dict.values())
+        self.platos_data = list(platos_dict.values())
         
-        self.ingredientes_por_nombre = {ing['nombre']: ing for ing in self.ingredientes_data}
-        self.platos_por_nombre = {plato['nombre']: plato for plato in self.platos_data}
+        # Crear índices
+        self.ingredientes_por_nombre = ingredientes_dict
+        self.platos_por_nombre = platos_dict
     
     def _inicializar_codificaciones(self):
         """Inicializa los mapeos de valores categóricos a numéricos."""

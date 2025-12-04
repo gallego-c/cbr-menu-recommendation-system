@@ -1,0 +1,14 @@
+[
+  {
+    "nombre": "vegano",
+    "descripcion": "No contiene productos de origen animal ni lácteos",
+    "categorias_prohibidas": ["animal", "lacteo"],
+    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "condimento", "especia"]
+  },
+  {
+    "nombre": "sin_lactosa",
+    "descripcion": "No contiene productos lácteos",
+    "categorias_prohibidas": ["lacteo"],
+    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "animal", "condimento", "especia"]
+  }
+]

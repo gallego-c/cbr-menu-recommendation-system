@@ -4,19 +4,18 @@ Validador genérico de estilo culinario basado en datos
 
 from typing import Dict, Any
 from conocimiento.models import Plato
-from .base import ReglaValidacion, ResultadoValidacion
+from .base import ReglaValidacion, ResultadoValidacion, convertir_a_string
 
 
 class ValidadorEstilo(ReglaValidacion):
     """Validador genérico de estilos que lee configuración de estilos.json"""
     
-    def __init__(self, config_estilo: Dict[str, Any], tecnicas_db: Dict[str, Dict]):
+    def __init__(self, config_estilo: Dict[str, Any]):
         """
         Inicializa el validador con la configuración de un estilo
         
         Args:
             config_estilo: Diccionario con la configuración del estilo específico
-            tecnicas_db: Base de datos de técnicas de cocción
         """
         self._nombre = config_estilo['nombre']
         self._descripcion = config_estilo['descripcion']
@@ -25,7 +24,6 @@ class ValidadorEstilo(ReglaValidacion):
         self._tecnicas_excluidas = set(config_estilo.get('tecnicas_excluidas', []))
         self._ingredientes_tipicos = set(config_estilo.get('ingredientes_tipicos', []))
         self._caracteristicas = config_estilo.get('caracteristicas', [])
-        self.tecnicas_db = tecnicas_db
     
     @property
     def nombre(self) -> str:
@@ -37,7 +35,7 @@ class ValidadorEstilo(ReglaValidacion):
     
     def validar(self, plato: Plato, contexto: Dict[str, Any]) -> ResultadoValidacion:
         """Valida que un plato respete el estilo culinario"""
-        tecnica_plato_str = self._obtener_tecnica_string(plato.tecnica_coccion)
+        tecnica_plato_str = convertir_a_string(plato.tecnica_coccion)
         
         errores = []
         advertencias = []
@@ -77,8 +75,9 @@ class ValidadorEstilo(ReglaValidacion):
                 )
         
         # Verificar ingredientes típicos (informativo)
+        # plato.ingredientes es List[str] - nombres de ingredientes
         if self._ingredientes_tipicos:
-            ingredientes_plato = {ing.nombre for ing in plato.ingredientes}
+            ingredientes_plato = set(plato.ingredientes)
             ingredientes_tipicos_encontrados = ingredientes_plato.intersection(self._ingredientes_tipicos)
             
             detalles['ingredientes_tipicos_encontrados'] = list(ingredientes_tipicos_encontrados)
@@ -92,19 +91,3 @@ class ValidadorEstilo(ReglaValidacion):
             advertencias=advertencias,
             detalles=detalles
         )
-    
-    def _obtener_tecnica_string(self, tecnica_coccion) -> str:
-        """Obtiene la técnica como string, manejando listas y enums"""
-        # Si es una lista, tomar el primer elemento
-        if isinstance(tecnica_coccion, list):
-            if len(tecnica_coccion) > 0:
-                tecnica = tecnica_coccion[0]
-            else:
-                return "desconocida"
-        else:
-            tecnica = tecnica_coccion
-        
-        # Convertir enum a string
-        if hasattr(tecnica, 'value'):
-            return tecnica.value
-        return str(tecnica).lower()

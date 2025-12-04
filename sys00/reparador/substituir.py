@@ -10,6 +10,7 @@ from typing import Dict, List, Optional, Any
 # Añadir el directorio padre al path para importar models
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from conocimiento.models import Plato, Menu, Caso, Temporada, CategoriaIngrediente, Ingrediente, TecnicaCoccion, TradicionCultural, Sabor
+from conocimiento import cargador
 
 
 class SubstitutorPlatos:
@@ -32,39 +33,10 @@ class SubstitutorPlatos:
             'tradicion': 0.2,
             'tecnica': 0.1
         }
-        # Cargar conocimiento desde archivos
-        self.ingredientes_db = self._cargar_ingredientes()
-        self.platos_db = self._cargar_platos()
-    
-    def _cargar_ingredientes(self) -> Dict[str, Dict]:
-        """Carga la base de datos de ingredientes desde ingredientes.json"""
-        try:
-            ruta_ingredientes = os.path.join(
-                os.path.dirname(__file__), '..', 'conocimiento', 'ingredientes.json'
-            )
-            with open(ruta_ingredientes, 'r', encoding='utf-8') as f:
-                ingredientes_lista = json.load(f)
-            
-            return {ing['nombre']: ing for ing in ingredientes_lista}
-        
-        except FileNotFoundError:
-            return {}
-        except json.JSONDecodeError as e:
-            return {}
-    
-    def _cargar_platos(self) -> List[Dict]:
-        """Carga la base de datos de platos desde platos.json"""
-        try:
-            ruta_platos = os.path.join(
-                os.path.dirname(__file__), '..', 'conocimiento', 'platos.json'
-            )
-            with open(ruta_platos, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        
-        except FileNotFoundError:
-            return []
-        except json.JSONDecodeError as e:
-            return []
+        # Cargar conocimiento usando el cargador centralizado
+        self.ingredientes_db = cargador.cargar_ingredientes()
+        platos_lista = cargador.cargar_platos()
+        self.platos_db = list(platos_lista.values())
     
     def buscar_plato_substitucion(self, plato_problematico: Plato, menu: Menu,
                                  tipo_problema: str, problema_especifico: str) -> Dict[str, Any]:
@@ -208,25 +180,8 @@ class SubstitutorPlatos:
             return None
     
     def _crear_ingrediente_desde_db(self, info_ingrediente: Dict) -> Ingrediente:
-        """Crea un objeto Ingrediente desde la información de la base de datos"""
-        
-        # Convertir temporadas string a enums
-        temporadas = []
-        for temp_str in info_ingrediente.get('temporada', []):
-            temporada_enum = self._string_a_temporada(temp_str)
-            if temporada_enum:
-                temporadas.append(temporada_enum)
-        
-        # Convertir categoría y sabor
-        categoria_enum = self._string_a_categoria(info_ingrediente.get('categoria', 'condimento'))
-        sabor_enum = self._string_a_sabor(info_ingrediente.get('sabor', 'umami'))
-        
-        return Ingrediente(
-            nombre=info_ingrediente['nombre'],
-            temporada=temporadas,
-            categoria=categoria_enum,
-            sabor=sabor_enum
-        )
+        """Crea un objeto Ingrediente desde la información de la base de datos usando from_dict"""
+        return Ingrediente.from_dict(info_ingrediente)
     
     def _string_a_temporada(self, temporada_str: str) -> Optional[Temporada]:
         """Convierte string de temporada a enum"""
@@ -499,3 +454,32 @@ class SubstitutorPlatos:
             tradicion2 = str(plato2.tradicion)
         
         return 1.0 if tradicion1 == tradicion2 else 0.0
+    
+    def buscar_alternativa_simple(self, nombre_plato: str, preferencias: Dict, 
+                                   tipo_plato: Optional[str] = None) -> Optional[str]:
+        """
+        Busca un plato alternativo simple que cumpla las preferencias.
+        Versión simplificada que retorna el primer plato del mismo tipo.
+        
+        Args:
+            nombre_plato: Nombre del plato original
+            preferencias: Preferencias a cumplir (no usado en esta versión simple)
+            tipo_plato: Tipo de plato ('entrante', 'principal', 'postre')
+            
+        Returns:
+            Nombre del plato alternativo o None
+        """
+        # Buscar en la base de platos
+        for plato_data in self.platos_db:
+            # Si se especifica tipo, filtrar por tipo
+            if tipo_plato and plato_data.get('tipo') != tipo_plato:
+                continue
+            
+            # No incluir el plato original
+            if plato_data['nombre'] == nombre_plato:
+                continue
+            
+            # Retornar el primer plato válido encontrado
+            return plato_data['nombre']
+        
+        return None

@@ -16,10 +16,11 @@ from dataclasses import dataclass, field
 from datetime import datetime
 
 # Importar módulos del sistema CBR
-from recuperador import ModuloRecuperacion, ConfiguracionRecuperacion
+from recuperador import ModuloRecuperacion
 from validador import ValidadorCompleto
 from reparador import Reparador
-from actualizador import ActualizadorConocimiento, NuevoMenu
+from actualizador import ActualizadorConocimiento
+from conocimiento import Menu, Caso, cargador, Plato, Ingrediente
 
 
 @dataclass
@@ -92,13 +93,8 @@ class SistemaCBR:
     def _inicializar_modulos(self):
         """Inicializa todos los módulos del sistema CBR."""
         try:
-            # Configurar recuperador
-            config_recuperacion = ConfiguracionRecuperacion(
-                k=self.config.k_casos_recuperar,
-                umbral_minimo=self.config.umbral_similitud_minimo,
-                explicar_similitud=self.config.usar_explicaciones
-            )
-            self.recuperador = ModuloRecuperacion(config_recuperacion)
+            # Inicializar módulos (configuración se pasa en recuperar())
+            self.recuperador = ModuloRecuperacion()
             self.validador = ValidadorCompleto()
             self.reparador = Reparador()
             self.actualizador = ActualizadorConocimiento()
@@ -154,7 +150,7 @@ class SistemaCBR:
                     'explicacion': resultado_rec.explicacion
                 }
                 
-                # Validar caso (sin mostrar título, ya lo mostramos arriba)
+                # Validar caso
                 validacion = self._fase_validacion(resultado_rec_dict, preferencias, 
                                                    mostrar_titulo=False)
                 
@@ -163,7 +159,7 @@ class SistemaCBR:
                     'validacion': validacion
                 })
             
-            # Paso 3: Reparar los casos que no son válidos
+            # Paso 3: Reparar los 3 casos (todos, no solo los inválidos)
             print("\n" + "="*70)
             print("FASE 3: REPARACIÓN DE LOS MENÚS")
             print("="*70)
@@ -171,7 +167,7 @@ class SistemaCBR:
             casos_procesados = []
             for caso_val in casos_validados:
                 if not caso_val['validacion']['valido']:
-                    # Reparar caso
+                    # Reparar caso inválido
                     resultado_reparacion = self._fase_reparacion(caso_val['caso'], preferencias, 
                                                                  caso_val['validacion'],
                                                                  mostrar_titulo=False)
@@ -205,29 +201,79 @@ class SistemaCBR:
                     'validacion': caso_val['validacion']
                 })
             
-            # Paso 4: Seleccionar el mejor caso procesado (primero válido o el de mayor similitud)
+            # Paso 4: Seleccionar el mejor caso procesado que no esté duplicado
             print("\n" + "="*70)
-            print("SELECCIÓN DEL MEJOR CASO")
+            print("SELECCIÓN DEL MEJOR MENÚ")
             print("="*70)
             
             caso_seleccionado = None
-            for caso_proc in casos_procesados:
+            casos_duplicados = []
+            posicion_caso = 0  # Para rastrear la posición del caso seleccionado
+            
+            for i, caso_proc in enumerate(casos_procesados):
                 if caso_proc['valido']:
+                    # Verificar si el caso ya está duplicado en la base (usar actualizador)
+                    menu_dict = caso_proc['menu_final']
+                    menu_obj = Menu(
+                        entrante=menu_dict.get('entrante', ''),
+                        principal=menu_dict.get('principal', ''),
+                        postre=menu_dict.get('postre', '')
+                    )
+                    es_duplicado = self.actualizador.verificar_duplicado(
+                        menu_obj,
+                        preferencias.tipo_evento,
+                        preferencias.temporada,
+                        preferencias.restricciones,
+                        preferencias.estilo,
+                        preferencias.tradicion
+                    )
+                    
+                    if es_duplicado:
+                        casos_duplicados.append({
+                            'id': caso_proc['caso']['caso']['id'],
+                            'similitud': caso_proc['caso']['similitud'],
+                            'menu': caso_proc['menu_final'],
+                            'reparaciones': len(caso_proc['reparaciones']),
+                            'caso_proc': caso_proc  # Guardar referencia completa
+                        })
+                        continue
+                    
+                    # Caso válido y no duplicado - seleccionarlo
                     caso_seleccionado = caso_proc
-                    print(f"\nCaso seleccionado: {caso_proc['caso']['caso']['id']} (VÁLIDO)")
+                    posicion_caso = i + 1  # Posición 1-indexed
+                    
+                    # Determinar el texto de posición
+                    numeros_ordinales = {
+                        1: "primer",
+                        2: "segundo", 
+                        3: "tercer"
+                    }
+                    texto_posicion = numeros_ordinales.get(posicion_caso, f"{posicion_caso}º")
+                    
+                    print(f"\nCaso seleccionado: {caso_proc['caso']['caso']['id']} ({texto_posicion} caso - VÁLIDO)")
                     print(f"  Similitud: {caso_proc['caso']['similitud']:.3f}")
                     print(f"  Reparaciones aplicadas: {len(caso_proc['reparaciones'])}")
                     break
+            
+            # Si todos los casos válidos están duplicados, seleccionar el mejor de todos modos
+            if not caso_seleccionado and casos_duplicados:
+                print(f"\n⚠ Todos los casos válidos ya existen en la base de datos")
+                print(f"   Seleccionando el de mayor similitud (no se agregará a la base)...\n")
+                
+                # Seleccionar el caso duplicado con mayor similitud (el primero de la lista)
+                mejor_caso_dup = casos_duplicados[0]
+                caso_seleccionado = mejor_caso_dup['caso_proc']
+                
+                print(f"Caso seleccionado: {mejor_caso_dup['id']}")
+                print(f"  Similitud: {mejor_caso_dup['similitud']:.3f}")
+                if mejor_caso_dup['reparaciones'] > 0:
+                    print(f"  Reparaciones aplicadas: {mejor_caso_dup['reparaciones']}")
             
             # Si ninguno es válido, usar el de mayor similitud (el primero)
             if not caso_seleccionado:
                 caso_seleccionado = casos_procesados[0]
                 print(f"\nNingún caso pudo ser validado/reparado exitosamente.")
                 print(f"Usando caso con mayor similitud: {caso_seleccionado['caso']['caso']['id']}")
-                return self._crear_resultado_fallo(
-                    f"No se pudo obtener un menú válido después de validar y reparar los {len(casos_procesados)} casos",
-                    caso_seleccionado['validacion']
-                )
             
             # Extraer datos del caso seleccionado
             menu_final = caso_seleccionado['menu_final']
@@ -240,8 +286,63 @@ class SistemaCBR:
                 self.estadisticas['casos_reparados'] += 1
                 self.estadisticas['reparaciones_totales'] += len(reparaciones)
             
-            # Paso 5: Actualización de la base de conocimiento (solo el mejor caso)
-            nuevo_caso_id = self._fase_actualizacion(menu_final, preferencias, True, reparaciones)
+            # Paso 5: Actualización de la base de conocimiento
+            print("\n" + "="*70)
+            print("FASE 4: ACTUALIZACIÓN DE LA BASE DE CASOS")
+            print("="*70)
+            
+            # Paso 4.1: Guardar platos nuevos en la base de datos
+            if reparaciones:
+                print("\n--- Guardando platos nuevos ---")
+                platos_nuevos = [rep['plato_nuevo'] for rep in reparaciones 
+                               if rep.get('plato_nuevo') and rep['plato_nuevo'] != rep.get('plato_original')]
+                
+                if platos_nuevos:
+                    print(f"Guardando {len(platos_nuevos)} platos nuevos en la base de datos...")
+                    self.actualizador.gestor_platos.agregar(platos_nuevos, reparaciones)
+                    print(f"  ✓ Platos guardados correctamente")
+                else:
+                    print("  No hay platos nuevos que guardar")
+            
+            # Paso 4.2: Validar el menú seleccionado
+            print("\n--- Validación del menú seleccionado ---")
+            validacion_final = self._fase_validacion_silenciosa(menu_final, preferencias)
+            
+            if validacion_final['errores']:
+                print(f"⚠ El menú todavía tiene {len(validacion_final['errores'])} errores:")
+                for error in validacion_final['errores']:
+                    print(f"  • {error}")
+                print("\n⚠ El caso seleccionado no es completamente válido.")
+                print("   No se agregará a la base de casos.")
+                return self._crear_resultado_fallo(
+                    f"No se pudo obtener un menú válido después de validar y reparar los {len(casos_procesados)} casos",
+                    validacion_final
+                )
+            else:
+                print("✓ El menú seleccionado es completamente válido")
+            
+            # Paso 4.3: Verificar duplicado y actualizar base de casos
+            print("\n--- Actualizando base de casos ---")
+            # Verificar duplicado usando actualizador
+            menu_obj = Menu(
+                entrante=menu_final.get('entrante', ''),
+                principal=menu_final.get('principal', ''),
+                postre=menu_final.get('postre', '')
+            )
+            es_duplicado_final = self.actualizador.verificar_duplicado(
+                menu_obj,
+                preferencias.tipo_evento,
+                preferencias.temporada,
+                preferencias.restricciones,
+                preferencias.estilo,
+                preferencias.tradicion
+            )
+            if es_duplicado_final:
+                nuevo_caso_id = None
+                print("\n⚠ El menú generado ya existe en la base de casos")
+                print("   No se agregará como caso nuevo")
+            else:
+                nuevo_caso_id = self._fase_actualizacion_interna(menu_final, preferencias, True, reparaciones)
             
             # Crear resultado exitoso
             resultado = ResultadoCBR(
@@ -296,7 +397,12 @@ class SistemaCBR:
         }
         
         # Recuperar casos similares
-        resultados = self.recuperador.recuperar(consulta)
+        resultados = self.recuperador.recuperar(
+            consulta,
+            k=self.config.k_casos_recuperar,
+            umbral_minimo=self.config.umbral_similitud_minimo,
+            explicar=self.config.usar_explicaciones
+        )
         
         if not resultados:
             print("No se encontraron casos similares")
@@ -351,52 +457,15 @@ class SistemaCBR:
                     if not nombre_plato or nombre_plato.strip() == '':
                         continue
                     
-                    # Buscar plato en base de datos
-                    plato_info = next((p for p in platos_db if p['nombre'] == nombre_plato), None)
+                    # Cargar plato desde JSON (como dict, no convertir a objetos)
+                    plato_dict = next((p for p in platos_db if p['nombre'] == nombre_plato), None)
                     
-                    if not plato_info:
+                    if not plato_dict:
                         errores.append(f"{tipo_plato}: Plato '{nombre_plato}' no encontrado en base de datos")
                         continue
                     
-                    # Crear objeto Plato para validación
-                    ingredientes_plato = []
-                    ingrediente_sabor_obj = None
-                    
-                    for ing_nombre in plato_info.get('ingredientes', []):
-                        ing_info = next((i for i in ingredientes_db if i['nombre'] == ing_nombre), None)
-                        if ing_info:
-                            ing_obj = Ingrediente(
-                                nombre=ing_info['nombre'],
-                                temporada=ing_info.get('temporada', []),
-                                categoria=ing_info.get('categoria', 'vegetal'),
-                                sabor=ing_info.get('sabor', 'salado')
-                            )
-                            ingredientes_plato.append(ing_obj)
-                            
-                            # Buscar el ingrediente que da el sabor dominante
-                            if ing_nombre == plato_info.get('ingrediente_sabor'):
-                                ingrediente_sabor_obj = ing_obj
-                    
-                    # Si no encontramos el ingrediente de sabor, usar el primero
-                    if not ingrediente_sabor_obj and ingredientes_plato:
-                        ingrediente_sabor_obj = ingredientes_plato[0]
-                    
-                    # Si aún no hay ingrediente de sabor, crear uno por defecto
-                    if not ingrediente_sabor_obj:
-                        ingrediente_sabor_obj = Ingrediente(
-                            nombre='ingrediente_generico',
-                            temporada=[],
-                            categoria='vegetal',
-                            sabor='salado'
-                        )
-                    
-                    plato = Plato(
-                        nombre=plato_info['nombre'],
-                        ingredientes=ingredientes_plato,
-                        tecnica_coccion=plato_info.get('tecnica_coccion', []),
-                        sabor_dominante=plato_info.get('sabor_dominante', 'salado'),
-                        ingrediente_sabor=ingrediente_sabor_obj
-                    )
+                    # Crear objeto Plato directamente desde dict (sin convertir ingredientes a objetos)
+                    plato = Plato.from_dict(plato_dict)
                     
                     # Validar con ValidadorCompleto
                     contexto = {
@@ -472,8 +541,8 @@ class SistemaCBR:
         intentos = 0
         max_intentos = self.config.max_intentos_reparacion
         
-        # Procesar cada error
-        errores_por_plato = self._agrupar_errores_por_plato(validacion.get('errores', []))
+        # Procesar cada error (usar validador para agrupar)
+        errores_por_plato = ValidadorCompleto.agrupar_errores_por_plato(validacion.get('errores', []))
         
         for plato_nombre, errores_plato in errores_por_plato.items():
             intentos += 1
@@ -485,24 +554,104 @@ class SistemaCBR:
             for error in errores_plato:
                 print(f"    - {error}")
             
-            # ESTRATEGIA 1: Intentar substitución completa del plato
-            print(f"    [1/2] Intentando substitución...")
-            plato_alternativo = self._buscar_plato_alternativo(
-                plato_nombre, 
-                preferencias,
-                menu_reparado
-            )
+            # Determinar tipo de plato
+            tipo_plato_busqueda = None
+            if plato_nombre == menu_original.get('entrante', ''):
+                tipo_plato_busqueda = 'entrante'
+            elif plato_nombre == menu_original.get('principal', ''):
+                tipo_plato_busqueda = 'principal'
+            elif plato_nombre == menu_original.get('postre', ''):
+                tipo_plato_busqueda = 'postre'
             
-            if plato_alternativo:
-                # Actualizar el plato en el menú
+            # Preparar preferencias para el substitutor
+            prefs_dict = {
+                'restricciones': preferencias.restricciones,
+                'temporada': preferencias.temporada,
+                'tradicion': preferencias.tradicion,
+                'estilo': preferencias.estilo
+            }
+            
+            # Procesar TODOS los errores del plato, no solo el primero
+            nombre_plato_actual = plato_nombre
+            plato_obj_actual = None  # Mantener objeto Plato en memoria
+            reparacion_exitosa = False
+            errores_resueltos_acumulados = []
+            modificaciones_acumuladas = []  # Guardar las modificaciones reales
+            
+            for idx, error_actual in enumerate(errores_plato):
+                print(f"    [{idx+1}/{len(errores_plato)}] Procesando error: {error_actual}")
+                
+                # Extraer tipo de problema de este error específico
+                tipo_problema = ValidadorCompleto.extraer_tipo_problema(error_actual)
+                
+                # Intentar reparar este error específico
+                # Si ya tenemos un objeto Plato modificado, usarlo; si no, buscar por nombre
+                if plato_obj_actual:
+                    # Reparar el objeto Plato existente
+                    resultado_reparacion = self.reparador.reparar_plato_objeto(
+                        plato_obj_actual,
+                        tipo_problema,
+                        error_actual,
+                        prefs_dict
+                    )
+                else:
+                    # Primera reparación, buscar por nombre
+                    resultado_reparacion = self.reparador.reparar_por_nombre(
+                        nombre_plato_actual,
+                        tipo_problema,
+                        error_actual,
+                        prefs_dict
+                    )
+                
+                if resultado_reparacion['exito']:
+                    plato_resultado = resultado_reparacion['plato_resultado']
+                    estrategia = resultado_reparacion['estrategia']
+                    
+                    # Extraer nombre y objeto del plato (puede ser objeto Plato o string)
+                    if isinstance(plato_resultado, str):
+                        nombre_plato_nuevo = plato_resultado
+                        # Si es string (substitución), cargar el plato como objeto para continuar
+                        # con más modificaciones si hay más errores
+                        from conocimiento import cargador
+                        from conocimiento.models import Plato
+                        platos_db = cargador.cargar_platos()
+                        plato_info = platos_db.get(nombre_plato_nuevo) if isinstance(platos_db, dict) else \
+                                     next((p for p in platos_db if p.get('nombre') == nombre_plato_nuevo), None)
+                        if plato_info:
+                            plato_obj_actual = Plato.from_dict(plato_info)
+                        else:
+                            plato_obj_actual = None
+                    else:
+                        # Es un objeto Plato, extraer el nombre y mantener el objeto
+                        nombre_plato_nuevo = plato_resultado.nombre
+                        plato_obj_actual = plato_resultado  # Guardar para siguiente iteración
+                    
+                    # Actualizar el nombre para el siguiente error
+                    nombre_plato_actual = nombre_plato_nuevo
+                    reparacion_exitosa = True
+                    errores_resueltos_acumulados.append(error_actual)
+                    
+                    # Recolectar mensajes de modificación (substituciones, adiciones, etc.)
+                    modificaciones_acumuladas.extend(resultado_reparacion['mensajes'])
+                    
+                    for mensaje in resultado_reparacion['mensajes']:
+                        print(f"      ✓ {mensaje}")
+                else:
+                    print(f"      ✗ No se pudo reparar este error")
+                    # Si no se pudo reparar, agregar a problemas no resueltos
+                    problemas_no_resueltos.append(error_actual)
+            
+            # Si hubo al menos una reparación exitosa, actualizar el menú
+            if reparacion_exitosa:
+                # Actualizar el plato en el menú (siempre con string, no objeto)
                 if 'entrante' in plato_nombre.lower() or plato_nombre == menu_original.get('entrante', ''):
-                    menu_reparado['entrante'] = plato_alternativo
+                    menu_reparado['entrante'] = nombre_plato_actual
                     tipo_plato = 'entrante'
                 elif 'principal' in plato_nombre.lower() or plato_nombre == menu_original.get('principal', ''):
-                    menu_reparado['principal'] = plato_alternativo
+                    menu_reparado['principal'] = nombre_plato_actual
                     tipo_plato = 'principal'
                 elif 'postre' in plato_nombre.lower() or plato_nombre == menu_original.get('postre', ''):
-                    menu_reparado['postre'] = plato_alternativo
+                    menu_reparado['postre'] = nombre_plato_actual
                     tipo_plato = 'postre'
                 else:
                     tipo_plato = 'desconocido'
@@ -510,57 +659,17 @@ class SistemaCBR:
                 reparaciones_aplicadas.append({
                     'tipo_plato': tipo_plato,
                     'plato_original': plato_nombre,
-                    'plato_nuevo': plato_alternativo,
-                    'accion': 'substitucion',
-                    'errores_resueltos': errores_plato
+                    'plato_nuevo': nombre_plato_actual,
+                    'accion': 'modificacion',
+                    'modificaciones': modificaciones_acumuladas,  # Usar las modificaciones reales
+                    'errores_resueltos': errores_resueltos_acumulados
                 })
-                print(f"    ✓ Substituido por: {plato_alternativo}")
             else:
-                # ESTRATEGIA 2: Intentar modificar ingredientes del plato
-                print(f"    [2/2] Intentando modificación de ingredientes...")
-                try:
-                    resultado_modificacion = self._intentar_modificacion_plato(
-                        plato_nombre,
-                        errores_plato,
-                        preferencias,
-                        menu_reparado
-                    )
-                except Exception as e:
-                    print(f"    ✗ Error en modificación: {e}")
-                    resultado_modificacion = {'exito': False}
-                
-                if resultado_modificacion['exito']:
-                    # Actualizar el plato en el menú con el plato modificado
-                    plato_modificado_nombre = resultado_modificacion['plato_modificado']
-                    
-                    if 'entrante' in plato_nombre.lower() or plato_nombre == menu_original.get('entrante', ''):
-                        menu_reparado['entrante'] = plato_modificado_nombre
-                        tipo_plato = 'entrante'
-                    elif 'principal' in plato_nombre.lower() or plato_nombre == menu_original.get('principal', ''):
-                        menu_reparado['principal'] = plato_modificado_nombre
-                        tipo_plato = 'principal'
-                    elif 'postre' in plato_nombre.lower() or plato_nombre == menu_original.get('postre', ''):
-                        menu_reparado['postre'] = plato_modificado_nombre
-                        tipo_plato = 'postre'
-                    else:
-                        tipo_plato = 'desconocido'
-                    
-                    reparaciones_aplicadas.append({
-                        'tipo_plato': tipo_plato,
-                        'plato_original': plato_nombre,
-                        'plato_modificado': plato_modificado_nombre,
-                        'accion': 'modificacion',
-                        'modificaciones': resultado_modificacion['modificaciones'],
-                        'errores_resueltos': errores_plato
-                    })
-                    
-                    for modificacion in resultado_modificacion['modificaciones']:
-                        print(f"    ✓ {modificacion}")
-                else:
-                    problemas_no_resueltos.extend(errores_plato)
-                    print(f"    ✗ No se pudo reparar el plato")
+                    # No se pudo reparar ningún error
+                print(f"    ✗ No se pudo reparar el plato")
+                problemas_no_resueltos.extend(errores_plato)
         
-        # Resultado de la reparación
+        # Resultado de la reparación (NO validar aquí, se hará después de seleccionar)
         exito = len(problemas_no_resueltos) == 0
         
         resultado = {
@@ -583,390 +692,107 @@ class SistemaCBR:
         
         return resultado
     
-    def _intentar_modificacion_plato(self, plato_nombre: str, errores: List[str],
-                                    preferencias: PreferenciasUsuario, 
-                                    menu_actual: Dict) -> Dict:
+    # NOTA: Todas las funciones auxiliares y de dominio han sido movidas a los módulos correspondientes:
+    # - agrupar_errores_por_plato() -> validador.ValidadorCompleto.agrupar_errores_por_plato()
+    # - extraer_tipo_problema() -> validador.ValidadorCompleto.extraer_tipo_problema()
+    # - generar_nombre_plato_modificado() -> reparador.Reparador.generar_nombre_plato_modificado()
+    # - buscar_plato_alternativo() -> reparador.substitutor_platos.buscar_alternativa_simple()
+    # - buscar_info_ingrediente() -> cargador.cargar_ingredientes()
+    # - intentar_modificacion_plato() -> reparador.Reparador.reparar_por_nombre()
+    
+    def _fase_validacion_silenciosa(self, menu: Dict, preferencias: PreferenciasUsuario) -> Dict:
         """
-        Intenta modificar un plato cambiando ingredientes problemáticos.
+        Valida un menú sin imprimir encabezados (para validación final post-reparación).
+        Reutiliza la función _validar_plato_con_objetos del módulo validador.
         
         Returns:
-            Dict con 'exito', 'plato_modificado', 'modificaciones'
+            Dict con 'errores' (lista de strings) y 'valido' (bool)
         """
-        from reparador.modificar import ModificadorPlatos
-        from conocimiento.models import Plato, Ingrediente, TecnicaCoccion, CategoriaIngrediente
-        import json
-        import os
+        errores = []
         
-        # Cargar reglas de reparación
-        ruta_reglas = os.path.join(os.path.dirname(__file__), 'conocimiento', 'reparaciones.json')
-        try:
-            with open(ruta_reglas, 'r', encoding='utf-8') as f:
-                reglas = json.load(f)
-        except Exception as e:
-            return {'exito': False, 'plato_modificado': plato_nombre, 'modificaciones': []}
+        # Validar que todos los platos estén presentes
+        platos_requeridos = ['entrante', 'principal', 'postre']
+        for tipo_plato in platos_requeridos:
+            if tipo_plato not in menu or not menu[tipo_plato] or menu[tipo_plato].strip() == '':
+                errores.append(f"Falta {tipo_plato}")
         
-        # Cargar info del plato
-        ruta_platos = os.path.join(os.path.dirname(__file__), 'conocimiento', 'platos.json')
-        try:
-            with open(ruta_platos, 'r', encoding='utf-8') as f:
-                platos = json.load(f)
-        except Exception as e:
-            return {'exito': False, 'plato_modificado': plato_nombre, 'modificaciones': []}
-        
-        # Buscar el plato
-        plato_data = None
-        for p in platos:
-            if p['nombre'] == plato_nombre:
-                plato_data = p
-                break
-        
-        if not plato_data:
-            return {'exito': False, 'plato_modificado': plato_nombre, 'modificaciones': []}
-        
-        # Crear objeto Plato
-        try:
-            ingredientes = []
-            for ing_nombre in plato_data.get('ingredientes', []):
-                ing_info = self._buscar_info_ingrediente(ing_nombre)
-                if ing_info:
-                    from conocimiento.models import Temporada, Sabor
-                    
-                    # Categoría
-                    cat_str = ing_info.get('categoria', 'condimento')
-                    try:
-                        categoria = cat_str
-                    except:
-                        categoria = 'condimento'
-                    
-                    # Temporadas
-                    temporadas = []
-                    for temp_str in ing_info.get('temporada', []):
-                        try:
-                            temporadas.append(Temporada(temp_str))
-                        except:
-                            pass
-                    if not temporadas:
-                        temporadas = [Temporada.PRIMAVERA, Temporada.VERANO, Temporada.OTONO, Temporada.INVIERNO]
-                    
-                    # Sabor
-                    sabor_str = ing_info.get('sabor', 'umami')
-                    try:
-                        sabor = Sabor(sabor_str)
-                    except:
-                        sabor = Sabor.UMAMI
-                    
-                    ingredientes.append(Ingrediente(
-                        nombre=ing_nombre,
-                        temporada=temporadas,
-                        categoria=categoria,
-                        sabor=sabor
-                    ))
-            
-            # Técnica de cocción
-            tecnicas = []
-            tecnica_str = plato_data.get('tecnica', 'horneado')
+        # Si hay restricciones o criterios específicos, usar ValidadorCompleto
+        if preferencias.restricciones or self.config.validar_estricto:
             try:
-                tecnicas.append(TecnicaCoccion(tecnica_str))
-            except:
-                tecnicas.append(TecnicaCoccion.HORNEADO)
-            
-            # Sabor dominante (usar el primer ingrediente como referencia)
-            sabor_dominante = ingredientes[0].sabor if ingredientes else Sabor.UMAMI
-            ingrediente_sabor = ingredientes[0] if ingredientes else None
-            
-            plato = Plato(
-                nombre=plato_data['nombre'],
-                ingredientes=ingredientes,
-                tecnica_coccion=tecnicas,
-                sabor_dominante=sabor_dominante,
-                ingrediente_sabor=ingrediente_sabor
-            )
-        except Exception as e:
-            return {'exito': False, 'plato_modificado': plato_nombre, 'modificaciones': []}
-        
-        # Crear modificador
-        modificador = ModificadorPlatos(reglas)
-        
-        # Determinar tipo de problema de los errores
-        modificaciones_realizadas = []
-        for error in errores:
-            tipo_problema = self._extraer_tipo_problema(error)
-            problema_especifico = error
-            
-            print(f"        → Tipo '{tipo_problema}': {error[:70]}...")
-            
-            # Aplicar modificación
-            resultado = modificador.aplicar_modificaciones(plato, tipo_problema, problema_especifico)
-            
-            print(f"        → Resultado: exito={resultado['exito']}")
-            if 'mensajes' in resultado and resultado['mensajes']:
-                print(f"        → Modificaciones aplicadas:")
-                for msg in resultado['mensajes']:
-                    print(f"           • {msg}")
-            if 'motivo_fallo' in resultado:
-                print(f"        → Motivo fallo: {resultado['motivo_fallo']}")
-            if 'regla_aplicada' in resultado:
-                print(f"        → Regla aplicada: {resultado['regla_aplicada'].get('modo_aplicacion', 'N/A')}")
-            
-            if resultado['exito']:
-                modificaciones_realizadas.extend(resultado['mensajes'])
-        
-        # Si se realizaron modificaciones, validar el plato modificado
-        if modificaciones_realizadas:
-            # Crear nuevo nombre para el plato modificado
-            nuevo_nombre = self._generar_nombre_plato_modificado(plato_nombre, modificaciones_realizadas)
-            plato.nombre = nuevo_nombre
-            
-            print(f"        → Nuevo nombre del plato: {nuevo_nombre}")
-            
-            contexto = {
-                'restricciones': preferencias.restricciones,
-                'temporada': preferencias.temporada,
-                'tradicion': preferencias.tradicion,
-                'estilo': preferencias.estilo
-            }
-            
-            resultados_validacion = self.validador.validar_plato_completo(plato, contexto)
-            
-            # Si ahora es válido, retornar éxito
-            if all(r.valido for r in resultados_validacion.values()):
-                print(f"        → ✓ El plato modificado ES VÁLIDO")
-                return {
-                    'exito': True,
-                    'plato_modificado': plato.nombre,
-                    'modificaciones': modificaciones_realizadas
-                }
-            else:
-                print(f"        → ✗ El plato modificado AÚN NO es válido")
-                errores_restantes = []
-                for tipo, resultado in resultados_validacion.items():
-                    if not resultado.valido:
-                        errores_restantes.extend(resultado.errores)
-                print(f"        → Errores restantes: {len(errores_restantes)}")
-                for err in errores_restantes[:3]:  # Mostrar máximo 3
-                    print(f"           - {err}")
-        
-        return {'exito': False, 'plato_modificado': plato_nombre, 'modificaciones': modificaciones_realizadas}
-    
-    def _generar_nombre_plato_modificado(self, nombre_original: str, modificaciones: List[str]) -> str:
-        """
-        Genera un nuevo nombre para el plato basado en las modificaciones aplicadas.
-        """
-        # Extraer ingredientes añadidos o substituidos
-        ingredientes_nuevos = []
-        for mod in modificaciones:
-            if "Substituido" in mod:
-                # Formato: "Substituido X por Y"
-                partes = mod.split(" por ")
-                if len(partes) == 2:
-                    ingrediente_nuevo = partes[1].strip()
-                    ingredientes_nuevos.append(ingrediente_nuevo.capitalize())
-            elif "Añadido ingrediente" in mod:
-                # Formato: "Añadido ingrediente X"
-                partes = mod.split("ingrediente ")
-                if len(partes) == 2:
-                    ingrediente_nuevo = partes[1].strip()
-                    ingredientes_nuevos.append(ingrediente_nuevo.capitalize())
-        
-        # Si hay ingredientes nuevos destacables, crear nombre descriptivo
-        if ingredientes_nuevos:
-            # Tomar los primeros 2 ingredientes más relevantes
-            ingredientes_destacados = ingredientes_nuevos[:2]
-            if len(ingredientes_destacados) == 1:
-                nuevo_nombre = f"{nombre_original} con {ingredientes_destacados[0]}"
-            else:
-                nuevo_nombre = f"{nombre_original} con {' y '.join(ingredientes_destacados)}"
-        else:
-            nuevo_nombre = f"{nombre_original} (Modificado)"
-        
-        return nuevo_nombre
-    
-    def _extraer_tipo_problema(self, error: str) -> str:
-        """Extrae el tipo de problema de un mensaje de error."""
-        error_lower = error.lower()
-        
-        if 'restricción' in error_lower or 'restriccion' in error_lower:
-            return 'restricciones'
-        elif 'temporada' in error_lower:
-            return 'temporada'
-        elif 'tradición' in error_lower or 'tradicion' in error_lower:
-            return 'tradicion'
-        elif 'estilo' in error_lower:
-            return 'coherencia'
-        elif 'sabor' in error_lower:
-            return 'sabor'
-        else:
-            return 'restricciones'  # Por defecto
-    
-    def _agrupar_errores_por_plato(self, errores: List[str]) -> Dict[str, List[str]]:
-        """Agrupa errores por nombre de plato."""
-        errores_agrupados = {}
-        
-        for error in errores:
-            # Extraer nombre del plato del error (formato: "tipo (Nombre del Plato): error")
-            if '(' in error and ')' in error:
-                inicio = error.find('(') + 1
-                fin = error.find(')')
-                nombre_plato = error[inicio:fin]
+                # Leer directamente del archivo JSON para obtener platos recién guardados
+                # (no usar cargador porque puede tener caché)
+                import json
+                import os
+                platos_path = os.path.join(os.path.dirname(__file__), 'conocimiento', 'platos.json')
+                with open(platos_path, 'r', encoding='utf-8') as f:
+                    platos_lista = json.load(f)
+                # Convertir lista a dict para búsqueda rápida
+                platos_db = {p['nombre']: p for p in platos_lista}
                 
-                if nombre_plato not in errores_agrupados:
-                    errores_agrupados[nombre_plato] = []
-                errores_agrupados[nombre_plato].append(error)
-        
-        return errores_agrupados
-    
-    def _buscar_plato_alternativo(self, plato_original: str, preferencias: PreferenciasUsuario, 
-                                  menu_actual: Dict) -> Optional[str]:
-        """Busca un plato alternativo que cumpla las preferencias."""
-        # Cargar base de platos
-        import json
-        import os
-        
-        ruta_platos = os.path.join(os.path.dirname(__file__), 'conocimiento', 'platos.json')
-        try:
-            with open(ruta_platos, 'r', encoding='utf-8') as f:
-                platos = json.load(f)
-        except:
-            return None
-        
-        # Determinar tipo de plato
-        tipo_plato = None
-        if plato_original == menu_actual.get('entrante', ''):
-            tipo_plato = 'entrante'
-        elif plato_original == menu_actual.get('principal', ''):
-            tipo_plato = 'principal'
-        elif plato_original == menu_actual.get('postre', ''):
-            tipo_plato = 'postre'
-        
-        if not tipo_plato:
-            return None
-        
-        # Buscar platos alternativos del mismo tipo
-        platos_alternativos = [p for p in platos if p.get('tipo') == tipo_plato and p['nombre'] != plato_original]
-        
-        # Validar cada alternativa
-        for plato_data in platos_alternativos:
-            # Crear objeto Plato para validar
-            from conocimiento.models import Plato, Ingrediente, TecnicaCoccion, CategoriaIngrediente, Temporada, TradicionCultural
-            
-            try:
-                ingredientes = []
-                for ing_nombre in plato_data.get('ingredientes', []):
-                    # Buscar info del ingrediente
-                    ing_info = self._buscar_info_ingrediente(ing_nombre)
-                    if ing_info:
-                        from conocimiento.models import Sabor
-                        
-                        # Categoría
-                        categoria = ing_info.get('categoria', 'condimento')
-                        
-                        # Temporadas
-                        temporadas = []
-                        for temp_str in ing_info.get('temporada', []):
-                            try:
-                                temporadas.append(Temporada(temp_str))
-                            except:
-                                pass
-                        if not temporadas:
-                            temporadas = [Temporada.PRIMAVERA, Temporada.VERANO, Temporada.OTONO, Temporada.INVIERNO]
-                        
-                        # Sabor
-                        sabor_str = ing_info.get('sabor', 'umami')
-                        try:
-                            sabor = Sabor(sabor_str)
-                        except:
-                            sabor = Sabor.UMAMI
-                        
-                        ingredientes.append(Ingrediente(
-                            nombre=ing_nombre,
-                            temporada=temporadas,
-                            categoria=categoria,
-                            sabor=sabor
-                        ))
+                # Validar cada plato del menú
+                for tipo_plato, nombre_plato in menu.items():
+                    if not nombre_plato or nombre_plato.strip() == '':
+                        continue
+                    
+                    # Cargar plato desde dict (cargador devuelve Dict[str, Dict])
+                    plato_dict = platos_db.get(nombre_plato)
+                    
+                    if not plato_dict:
+                        errores.append(f"{tipo_plato} ({nombre_plato}): Plato no encontrado en base de datos")
+                        continue
+                    
+                    # Crear objeto Plato directamente desde dict (ingredientes quedan como List[str])
+                    plato = Plato.from_dict(plato_dict)
+                    
+                    # Crear contexto de validación
+                    contexto = {
+                        'restricciones': preferencias.restricciones,
+                        'temporada': preferencias.temporada,
+                        'tradicion': preferencias.tradicion,
+                        'estilo': preferencias.estilo,
+                        'tipo_evento': preferencias.tipo_evento
+                    }
+                    
+                    # Validar usando el validador completo
+                    resultados_validacion = self.validador.validar_plato_completo(plato, contexto)
+                    
+                    # Recopilar errores
+                    for regla_nombre, resultado in resultados_validacion.items():
+                        if not resultado.valido:
+                            for error in resultado.errores:
+                                errores.append(f"{tipo_plato} ({nombre_plato}): {error}")
                 
-                # Crear plato
-                tecnicas = []
-                tecnica_str = plato_data.get('tecnica', 'horneado')
-                try:
-                    tecnicas.append(TecnicaCoccion(tecnica_str))
-                except:
-                    tecnicas.append(TecnicaCoccion.HORNEADO)
-                
-                # Sabor dominante (usar el primer ingrediente como referencia)
-                sabor_dominante = ingredientes[0].sabor if ingredientes else Sabor.UMAMI
-                ingrediente_sabor = ingredientes[0] if ingredientes else None
-                
-                plato = Plato(
-                    nombre=plato_data['nombre'],
-                    ingredientes=ingredientes,
-                    tecnica_coccion=tecnicas,
-                    sabor_dominante=sabor_dominante,
-                    ingrediente_sabor=ingrediente_sabor
-                )
-                
-                # Validar este plato
-                contexto = {
-                    'restricciones': preferencias.restricciones,
-                    'temporada': preferencias.temporada,
-                    'tradicion': preferencias.tradicion,
-                    'estilo': preferencias.estilo
-                }
-                
-                resultados_validacion = self.validador.validar_plato_completo(plato, contexto)
-                
-                # Si pasa todas las validaciones, retornar este plato
-                if all(r.valido for r in resultados_validacion.values()):
-                    return plato_data['nombre']
-            
             except Exception as e:
-                continue
+                errores.append(f"Error durante validación: {str(e)}")
         
-        return None
+        return {
+            'errores': errores,
+            'valido': len(errores) == 0
+        }
     
-    def _buscar_info_ingrediente(self, nombre_ingrediente: str) -> Optional[Dict]:
-        """Busca información de un ingrediente en la base de conocimiento."""
-        import json
-        import os
-        
-        ruta_ingredientes = os.path.join(os.path.dirname(__file__), 'conocimiento', 'ingredientes.json')
-        try:
-            with open(ruta_ingredientes, 'r', encoding='utf-8') as f:
-                ingredientes = json.load(f)
-                for ing in ingredientes:
-                    if ing['nombre'] == nombre_ingrediente:
-                        return ing
-        except:
-            pass
-        
-        return None
-    
-    def _fase_actualizacion(self, menu: Dict, preferencias: PreferenciasUsuario, 
+    def _fase_actualizacion_interna(self, menu: Dict, preferencias: PreferenciasUsuario, 
                            exito: bool, reparaciones_aplicadas: List[Dict] = None) -> Optional[str]:
-        """Ejecuta la fase de actualización de la base de conocimiento."""
-        print("\n" + "="*70)
-        print("FASE 4: ACTUALIZACIÓN DE LA BASE DE CONOCIMIENTO")
-        print("="*70)
-        
-        # Crear nuevo menú para actualización
-        nuevo_menu = NuevoMenu(
+        """Ejecuta la actualización interna de la base de conocimiento (sin imprimir encabezado)."""
+        # Crear objeto Menu para actualización
+        menu_obj = Menu(
             entrante=menu.get('entrante', ''),
             principal=menu.get('principal', ''),
-            postre=menu.get('postre', ''),
-            tipo_evento=preferencias.tipo_evento,
-            temporada=preferencias.temporada,
-            restricciones=preferencias.restricciones,
-            estilo=preferencias.estilo,
-            tradicion=preferencias.tradicion,
-            exito=exito,
-            feedback=f"Generado por sistema CBR - {'Exitoso' if exito else 'Fallido'}",
-            reparaciones_aplicadas=reparaciones_aplicadas
+            postre=menu.get('postre', '')
         )
         
         print("\nActualizando base de casos...")
         
         # Procesar actualización
         actualizaciones = self.actualizador.procesar_nuevo_menu(
-            nuevo_menu, 
+            menu=menu_obj,
+            tipo_evento=preferencias.tipo_evento,
+            temporada=preferencias.temporada,
+            restricciones=preferencias.restricciones,
+            estilo=preferencias.estilo,
+            tradicion=preferencias.tradicion,
+            exito=exito,
+            reparaciones_aplicadas=reparaciones_aplicadas,
+            feedback=f"Generado por sistema CBR - {'Exitoso' if exito else 'Fallido'}",
             crear_backup=self.config.crear_backup
         )
         

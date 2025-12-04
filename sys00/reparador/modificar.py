@@ -10,6 +10,7 @@ from typing import List, Dict, Any, Optional
 # Añadir el directorio padre al path para importar models
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from conocimiento.models import Plato, Ingrediente, TipoRegla, Temporada, Sabor, CategoriaIngrediente
+from conocimiento import cargador
 
 
 class ModificadorPlatos:
@@ -25,42 +26,9 @@ class ModificadorPlatos:
             reglas_modificacion: Reglas cargadas desde reparaciones.json
         """
         self.reglas = reglas_modificacion
-        self.ingredientes_db = self._cargar_ingredientes()
-        self.platos_db = self._cargar_platos()
-    
-    def _cargar_ingredientes(self) -> Dict[str, Dict]:
-        """Carga la base de datos de ingredientes desde ingredientes.json"""
-        try:
-            ruta_ingredientes = os.path.join(
-                os.path.dirname(__file__), '..', 'conocimiento', 'ingredientes.json'
-            )
-            with open(ruta_ingredientes, 'r', encoding='utf-8') as f:
-                ingredientes_lista = json.load(f)
-            
-            # Convertir a diccionario para búsqueda rápida por nombre
-            return {ing['nombre']: ing for ing in ingredientes_lista}
-        
-        except FileNotFoundError:
-            return {}
-        except json.JSONDecodeError as e:
-            return {}
-    
-    def _cargar_platos(self) -> Dict[str, Dict]:
-        """Carga la base de datos de platos desde platos.json"""
-        try:
-            ruta_platos = os.path.join(
-                os.path.dirname(__file__), '..', 'conocimiento', 'platos.json'
-            )
-            with open(ruta_platos, 'r', encoding='utf-8') as f:
-                platos_lista = json.load(f)
-            
-            # Convertir a diccionario para búsqueda rápida por nombre
-            return {plato['nombre']: plato for plato in platos_lista}
-        
-        except FileNotFoundError:
-            return {}
-        except json.JSONDecodeError as e:
-            return {}
+        # Cargar conocimiento usando el cargador centralizado
+        self.ingredientes_db = cargador.cargar_ingredientes()
+        self.platos_db = cargador.cargar_platos()
     
     def aplicar_modificaciones(self, plato: Plato, tipo_problema: str, 
                              problema_especifico: str) -> Dict[str, Any]:
@@ -254,7 +222,8 @@ class ModificadorPlatos:
                                   acciones_por_ingrediente: List[Dict]) -> List[str]:
         """Aplica acciones sobre todos los ingredientes problemáticos encontrados"""
         mensajes = []
-        nombres_ingredientes = [ing.nombre for ing in plato.ingredientes]
+        # plato.ingredientes es List[str] - nombres de ingredientes
+        nombres_ingredientes = plato.ingredientes
         
         for accion_grupo in acciones_por_ingrediente:
             ingrediente_objetivo = accion_grupo.get("ingrediente")
@@ -274,7 +243,8 @@ class ModificadorPlatos:
                                           acciones_por_ingrediente: List[Dict]) -> List[str]:
         """Para cada ingrediente encontrado, aplica solo una de las opciones"""
         mensajes = []
-        nombres_ingredientes = [ing.nombre for ing in plato.ingredientes]
+        # plato.ingredientes es List[str]
+        nombres_ingredientes = plato.ingredientes
         
         for accion_grupo in acciones_por_ingrediente:
             ingrediente_objetivo = accion_grupo.get("ingrediente")
@@ -291,9 +261,15 @@ class ModificadorPlatos:
     
     def _aplicar_una_sola_accion(self, plato: Plato, 
                                acciones_por_ingrediente: List[Dict]) -> List[str]:
-        """Aplica solo una acción relevante"""
+        """
+        Aplica acciones según el tipo de problema.
+        Para restricciones, aplica todas las acciones necesarias (múltiples ingredientes problemáticos).
+        Para otros tipos, aplica solo una acción.
+        """
         mensajes = []
         
+        # Para restricciones, debemos procesar todos los ingredientes problemáticos
+        # Para otros tipos, solo una acción
         for accion_grupo in acciones_por_ingrediente:
             opciones = accion_grupo.get("opciones", [])
             ingrediente_objetivo = accion_grupo.get("ingrediente")
@@ -303,7 +279,7 @@ class ModificadorPlatos:
                 mensaje = self._aplicar_accion_individual(plato, opcion_elegida, ingrediente_objetivo)
                 if mensaje:
                     mensajes.append(mensaje)
-                    break  # Solo aplicar una acción
+                    # No hacer break - continuar procesando todos los ingredientes problemáticos
         
         return mensajes
     
@@ -325,21 +301,18 @@ class ModificadorPlatos:
         ingrediente_origen = substitucion.get("de")
         ingrediente_destino = substitucion.get("por")
         
-        # Buscar y reemplazar en la lista de ingredientes
-        for i, ingrediente in enumerate(plato.ingredientes):
-            if ingrediente.nombre == ingrediente_origen:
+        # plato.ingredientes es List[str] - nombres de ingredientes
+        # Buscar y reemplazar en la lista
+        for i, ing_nombre in enumerate(plato.ingredientes):
+            if ing_nombre == ingrediente_origen:
                 # Verificar que el destino no esté ya presente
-                nombres_actuales = [ing.nombre for ing in plato.ingredientes]
-                if ingrediente_destino in nombres_actuales:
+                if ingrediente_destino in plato.ingredientes:
                     # Si ya está presente, solo eliminamos el original
                     plato.ingredientes.pop(i)
                     return f"Eliminado {ingrediente_origen} (ya existe {ingrediente_destino})"
                 else:
-                    # Crear nuevo ingrediente usando la base de datos
-                    nuevo_ingrediente = self._crear_ingrediente_substitucion(
-                        ingrediente_destino, ingrediente
-                    )
-                    plato.ingredientes[i] = nuevo_ingrediente
+                    # Reemplazar directamente el nombre
+                    plato.ingredientes[i] = ingrediente_destino
                     return f"Substituido {ingrediente_origen} por {ingrediente_destino}"
         
         return f"No se encontró {ingrediente_origen} para substituir"
@@ -347,8 +320,9 @@ class ModificadorPlatos:
     def _quitar_ingrediente(self, plato: Plato, ingrediente_nombre: str) -> str:
         """Quita un ingrediente del plato"""
         ingredientes_originales = len(plato.ingredientes)
-        plato.ingredientes = [ing for ing in plato.ingredientes 
-                            if ing.nombre != ingrediente_nombre]
+        # plato.ingredientes es List[str]
+        plato.ingredientes = [ing_nombre for ing_nombre in plato.ingredientes 
+                            if ing_nombre != ingrediente_nombre]
         
         if len(plato.ingredientes) < ingredientes_originales:
             return f"Eliminado ingrediente {ingrediente_nombre}"
@@ -358,106 +332,10 @@ class ModificadorPlatos:
     def _añadir_ingrediente(self, plato: Plato, ingrediente_nombre: str) -> str:
         """Añade un ingrediente al plato"""
         # Verificar que no esté ya en el plato
-        nombres_actuales = [ing.nombre for ing in plato.ingredientes]
-        if ingrediente_nombre in nombres_actuales:
+        # plato.ingredientes es List[str]
+        if ingrediente_nombre in plato.ingredientes:
             return f"El ingrediente {ingrediente_nombre} ya está presente"
         
-        # Crear nuevo ingrediente
-        nuevo_ingrediente = self._crear_ingrediente_nuevo(ingrediente_nombre)
-        plato.ingredientes.append(nuevo_ingrediente)
+        # Añadir el nombre del ingrediente directamente
+        plato.ingredientes.append(ingrediente_nombre)
         return f"Añadido ingrediente {ingrediente_nombre}"
-    
-    def _crear_ingrediente_substitucion(self, nombre_nuevo: str, 
-                                      ingrediente_original: Ingrediente) -> Ingrediente:
-        """Crea un ingrediente para substitución usando la base de datos de ingredientes"""
-        # Buscar en la base de datos de ingredientes
-        info_ingrediente = self.ingredientes_db.get(nombre_nuevo)
-        
-        if info_ingrediente:
-            return self._crear_ingrediente_desde_db(info_ingrediente)
-        else:
-            # Si no está en la DB, mantener propiedades del original y solo cambiar nombre
-            print(f"Advertencia: Ingrediente '{nombre_nuevo}' no encontrado en la base de datos")
-            return Ingrediente(
-                nombre=nombre_nuevo,
-                temporada=ingrediente_original.temporada,
-                categoria=ingrediente_original.categoria,
-                sabor=ingrediente_original.sabor
-            )
-    
-    def _crear_ingrediente_nuevo(self, nombre: str) -> Ingrediente:
-        """Crea un nuevo ingrediente usando la base de datos de ingredientes"""
-        # Buscar en la base de datos
-        info_ingrediente = self.ingredientes_db.get(nombre)
-        
-        if info_ingrediente:
-            return self._crear_ingrediente_desde_db(info_ingrediente)
-        else:
-            print(f"Error: Ingrediente '{nombre}' no encontrado en la base de datos")
-            # Crear ingrediente básico como fallback
-            return Ingrediente(
-                nombre=nombre,
-                temporada=[Temporada.PRIMAVERA, Temporada.VERANO, 
-                          Temporada.OTONO, Temporada.INVIERNO],
-                categoria=CategoriaIngrediente.CONDIMENTO,
-                sabor=Sabor.UMAMI
-            )
-    
-    def _crear_ingrediente_desde_db(self, info_ingrediente: Dict) -> Ingrediente:
-        """Crea un objeto Ingrediente desde la información de la base de datos"""
-        
-        # Convertir temporadas string a enums
-        temporadas = []
-        for temp_str in info_ingrediente.get('temporada', []):
-            temporada_enum = self._string_a_temporada(temp_str)
-            if temporada_enum:
-                temporadas.append(temporada_enum)
-        
-        # Convertir categoría string a enum
-        categoria_enum = self._string_a_categoria(info_ingrediente.get('categoria', 'condimento'))
-        
-        # Convertir sabor string a enum
-        sabor_enum = self._string_a_sabor(info_ingrediente.get('sabor', 'umami'))
-        
-        return Ingrediente(
-            nombre=info_ingrediente['nombre'],
-            temporada=temporadas,
-            categoria=categoria_enum,
-            sabor=sabor_enum
-        )
-    
-    def _string_a_temporada(self, temporada_str: str) -> Optional[Temporada]:
-        """Convierte string de temporada a enum"""
-        mapeo = {
-            'primavera': Temporada.PRIMAVERA,
-            'verano': Temporada.VERANO,
-            'otoño': Temporada.OTONO,
-            'otono': Temporada.OTONO,
-            'invierno': Temporada.INVIERNO
-        }
-        return mapeo.get(temporada_str.lower())
-    
-    def _string_a_categoria(self, categoria_str: str) -> CategoriaIngrediente:
-        """Convierte string de categoría a enum"""
-        mapeo = {
-            'vegetal': CategoriaIngrediente.VEGETAL,
-            'fruta': CategoriaIngrediente.FRUTA,
-            'hongo': CategoriaIngrediente.HONGO,
-            'animal': CategoriaIngrediente.ANIMAL,
-            'cereal': CategoriaIngrediente.CEREAL,
-            'lacteo': CategoriaIngrediente.LACTEO,
-            'condimento': CategoriaIngrediente.CONDIMENTO
-        }
-        return mapeo.get(categoria_str.lower(), CategoriaIngrediente.CONDIMENTO)
-    
-    def _string_a_sabor(self, sabor_str: str) -> Sabor:
-        """Convierte string de sabor a enum"""
-        mapeo = {
-            'dulce': Sabor.DULCE,
-            'salado': Sabor.SALADO,
-            'umami': Sabor.UMAMI,
-            'ácido': Sabor.ACIDO,
-            'acido': Sabor.ACIDO,
-            'amargo': Sabor.AMARGO
-        }
-        return mapeo.get(sabor_str.lower(), Sabor.UMAMI)

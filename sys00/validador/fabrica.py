@@ -2,8 +2,6 @@
 Fábrica de validadores basada en datos
 """
 
-import json
-import os
 from typing import Dict, Optional, List
 from .base import ReglaValidacion
 from .restricciones import ValidadorRestriccion
@@ -15,48 +13,31 @@ from .estilo import ValidadorEstilo
 class FabricaValidadores:
     """Factory para crear validadores genéricos desde bases de conocimiento"""
     
-    def __init__(self, ingredientes_db: Dict[str, Dict]):
+    def __init__(
+        self,
+        ingredientes_db: Dict[str, Dict],
+        restricciones_config: List[Dict],
+        tradiciones_config: List[Dict],
+        estilos_config: List[Dict]
+    ):
+        """
+        Inicializa la fábrica con configuraciones pre-cargadas.
+        
+        Args:
+            ingredientes_db: Base de datos de ingredientes
+            restricciones_config: Lista de restricciones desde restricciones.json
+            tradiciones_config: Lista de tradiciones desde tradiciones.json
+            estilos_config: Lista de estilos desde estilos.json
+        """
         self.ingredientes_db = ingredientes_db
         
-        # Cargar configuraciones desde archivos JSON
-        self._restricciones_config = self._cargar_json('restricciones.json')
-        self._tradiciones_config = self._cargar_json('tradiciones.json')
-        self._tecnicas_config = self._cargar_json('tecnicas.json')
-        self._estilos_config = self._cargar_json('estilos.json')
-        
         # Crear índices por nombre para acceso rápido
-        self._restricciones_por_nombre = {
-            r['nombre']: r for r in self._restricciones_config
-        }
-        self._tradiciones_por_nombre = {
-            t['nombre']: t for t in self._tradiciones_config
-        }
-        self._tecnicas_por_nombre = {
-            t['nombre']: t for t in self._tecnicas_config
-        }
-        self._estilos_por_nombre = {
-            e['nombre']: e for e in self._estilos_config
-        }
+        self._restricciones_por_nombre = {r['nombre']: r for r in restricciones_config}
+        self._tradiciones_por_nombre = {t['nombre']: t for t in tradiciones_config}
+        self._estilos_por_nombre = {e['nombre']: e for e in estilos_config}
         
         # Validadores singleton
         self._validador_temporada = ValidadorTemporada(ingredientes_db)
-    
-    def _cargar_json(self, filename: str) -> List[Dict]:
-        """Carga un archivo JSON de la carpeta conocimiento"""
-        try:
-            ruta = os.path.join(
-                os.path.dirname(os.path.dirname(__file__)),
-                'conocimiento',
-                filename
-            )
-            with open(ruta, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            print(f"Advertencia: {filename} no encontrado")
-            return []
-        except json.JSONDecodeError as e:
-            print(f"Error al cargar {filename}: {e}")
-            return []
     
     def crear_validador_restriccion(self, restriccion: str) -> Optional[ReglaValidacion]:
         """Crea validador para una restricción específica desde la configuración"""
@@ -84,15 +65,11 @@ class FabricaValidadores:
         """Lista todas las tradiciones que pueden validarse"""
         return list(self._tradiciones_por_nombre.keys())
     
-    def listar_tecnicas_disponibles(self) -> List[str]:
-        """Lista todas las técnicas disponibles"""
-        return list(self._tecnicas_por_nombre.keys())
-    
     def crear_validador_estilo(self, estilo: str) -> Optional[ReglaValidacion]:
         """Crea validador para un estilo específico desde la configuración"""
         config = self._estilos_por_nombre.get(estilo.lower())
         if config:
-            return ValidadorEstilo(config, self._tecnicas_por_nombre)
+            return ValidadorEstilo(config)
         return None
     
     def listar_estilos_disponibles(self) -> List[str]:
@@ -106,10 +83,6 @@ class FabricaValidadores:
     def obtener_info_tradicion(self, tradicion: str) -> Optional[Dict]:
         """Obtiene información sobre una tradición"""
         return self._tradiciones_por_nombre.get(tradicion.lower())
-    
-    def obtener_info_tecnica(self, tecnica: str) -> Optional[Dict]:
-        """Obtiene información sobre una técnica"""
-        return self._tecnicas_por_nombre.get(tecnica.lower())
     
     def obtener_info_estilo(self, estilo: str) -> Optional[Dict]:
         """Obtiene información sobre un estilo"""

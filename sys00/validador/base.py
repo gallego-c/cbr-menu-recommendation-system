@@ -2,26 +2,26 @@
 Clases base para el sistema de validación
 """
 
-from typing import List, Dict, Any
-from dataclasses import dataclass
+from typing import List, Dict, Any, NamedTuple, Union
 from abc import ABC, abstractmethod
 
 
-@dataclass
-class ResultadoValidacion:
+class ResultadoValidacion(NamedTuple):
     """Resultado de una validación"""
     valido: bool
-    errores: List[str] = None
-    advertencias: List[str] = None
-    detalles: Dict[str, Any] = None
-    
-    def __post_init__(self):
-        if self.errores is None:
-            self.errores = []
-        if self.advertencias is None:
-            self.advertencias = []
-        if self.detalles is None:
-            self.detalles = {}
+    errores: List[str] = []
+    advertencias: List[str] = []
+    detalles: Dict[str, Any] = {}
+
+
+def convertir_a_string(valor: Any) -> str:
+    """
+    Convierte enums, listas u objetos a string.
+    Función común para evitar duplicación en validadores.
+    """
+    if isinstance(valor, list):
+        return convertir_a_string(valor[0]) if valor else "desconocido"
+    return valor.value if hasattr(valor, 'value') else str(valor).lower()
 
 
 class ReglaValidacion(ABC):
