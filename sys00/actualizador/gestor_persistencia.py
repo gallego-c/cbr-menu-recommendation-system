@@ -14,10 +14,13 @@ class GestorPersistencia:
     
     def __init__(self, directorio_conocimiento: str):
         self.dir_conocimiento = directorio_conocimiento
+        # Usar el cargador centralizado para lectura
+        from conocimiento import cargador
+        self.cargador = cargador
     
     def cargar_json(self, nombre_archivo: str) -> Any:
         """
-        Carga un archivo JSON desde el directorio de conocimiento.
+        Carga un archivo JSON usando el cargador centralizado.
         
         Args:
             nombre_archivo: Nombre del archivo (ej: 'ingredientes.json')
@@ -25,15 +28,7 @@ class GestorPersistencia:
         Returns:
             Contenido del archivo JSON (lista o diccionario)
         """
-        ruta = os.path.join(self.dir_conocimiento, nombre_archivo)
-        default = {} if nombre_archivo == 'reparaciones.json' else []
-        
-        try:
-            with open(ruta, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except (FileNotFoundError, json.JSONDecodeError) as e:
-            print(f"Advertencia: {nombre_archivo} - {type(e).__name__}")
-            return default
+        return self.cargador.cargar_json(nombre_archivo)
     
     def guardar_json(self, nombre_archivo: str, datos: Any) -> bool:
         """

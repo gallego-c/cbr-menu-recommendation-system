@@ -441,16 +441,12 @@ class SistemaCBR:
         # Si hay restricciones o criterios específicos, usar ValidadorCompleto
         if preferencias.restricciones or self.config.validar_estricto:
             from conocimiento.models import Menu, Plato, Ingrediente
+            from conocimiento import cargador
             
-            # Cargar información de platos desde conocimiento
+            # Cargar información de platos desde conocimiento usando el cargador
             try:
-                platos_path = os.path.join(os.path.dirname(__file__), 'conocimiento', 'platos.json')
-                with open(platos_path, 'r', encoding='utf-8') as f:
-                    platos_db = json.load(f)
-                
-                ingredientes_path = os.path.join(os.path.dirname(__file__), 'conocimiento', 'ingredientes.json')
-                with open(ingredientes_path, 'r', encoding='utf-8') as f:
-                    ingredientes_db = json.load(f)
+                platos_db = cargador.cargar_json('platos.json')
+                ingredientes_db = cargador.cargar_ingredientes()
                 
                 # Validar cada plato del menú con restricciones
                 for tipo_plato, nombre_plato in menu.items():
@@ -720,14 +716,8 @@ class SistemaCBR:
         if preferencias.restricciones or self.config.validar_estricto:
             try:
                 # Leer directamente del archivo JSON para obtener platos recién guardados
-                # (no usar cargador porque puede tener caché)
-                import json
-                import os
-                platos_path = os.path.join(os.path.dirname(__file__), 'conocimiento', 'platos.json')
-                with open(platos_path, 'r', encoding='utf-8') as f:
-                    platos_lista = json.load(f)
-                # Convertir lista a dict para búsqueda rápida
-                platos_db = {p['nombre']: p for p in platos_lista}
+                from conocimiento import cargador
+                platos_db = cargador.cargar_platos()
                 
                 # Validar cada plato del menú
                 for tipo_plato, nombre_plato in menu.items():

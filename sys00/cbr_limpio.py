@@ -31,19 +31,10 @@ def generar_menu_simple(tipo_evento='familiar', temporada='verano', restriccione
 
 def ejemplo_uso():
     """Ejemplo de uso del sistema."""
-    
     print("=== SISTEMA CBR LIMPIO ===")
     
-    # Caso 1: Evento familiar
+    # Caso 1: Evento familiar en verano con tradición catalana
     resultado1 = generar_menu_simple()
-    
-    # # Caso 2: Boda vegana
-    # resultado2 = generar_menu_simple('boda', 'verano', ['vegano'])
-    # print(f"Caso 2: {resultado2['menu']} (similitud: {resultado2['similitud']:.3f})")
-    
-    # # Caso 3: Congreso molecular
-    # resultado3 = generar_menu_simple('congreso', 'otoño', [], 'molecular', 'peruana')
-    # print(f"Caso 3: {resultado3['menu']} (similitud: {resultado3['similitud']:.3f})")
     
     print("=== SISTEMA FUNCIONANDO ===")
 

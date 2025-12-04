@@ -12,7 +12,7 @@ Uso típico:
     resultado = reparador.reparar_plato(plato_problematico, menu, "restricciones", "vegano")
 """
 
-from .reparador_global_nuevo import Reparador
+from .reparador import Reparador
 from .substituir import SubstitutorPlatos
 from .modificar import ModificadorPlatos
 

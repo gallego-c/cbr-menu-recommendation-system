@@ -1,11 +1,11 @@
-import json
+import sys
 import os
 from typing import List, Dict, Any, Optional
-import sys
 
 # Añadir el directorio padre al path para importar models
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from conocimiento.models import Plato, Ingrediente, TipoRegla, Temporada, Sabor, Menu, Caso
+from conocimiento import cargador
 
 # Importar clases especializadas
 from .substituir import SubstitutorPlatos
@@ -26,40 +26,12 @@ class Reparador:
             archivo_reglas: Archivo JSON con reglas de modificación de platos
             archivo_casos: Archivo JSON con casos base para substitución de platos
         """
-        self.reglas_modificacion = self._cargar_reglas(archivo_reglas)
-        self.casos_base = self._cargar_casos(archivo_casos)
+        self.reglas_modificacion = cargador.cargar_json(archivo_reglas)
+        self.casos_base = cargador.cargar_casos()
         
         # Componentes especializados
         self.substitutor_platos = SubstitutorPlatos(self.casos_base)
         self.modificador_platos = ModificadorPlatos(self.reglas_modificacion)
-    
-    def _cargar_reglas(self, archivo: str) -> Dict[str, Any]:
-        """Carga las reglas de modificación desde el archivo JSON"""
-        try:
-            ruta_archivo = os.path.join(os.path.dirname(__file__), '..', 'conocimiento', archivo)
-            with open(ruta_archivo, 'r', encoding='utf-8') as f:
-                return json.load(f)
-        except FileNotFoundError:
-            return {}
-        except json.JSONDecodeError as e:
-            return {}
-    
-    def _cargar_casos(self, archivo: str) -> List[Caso]:
-        """Carga los casos base desde el archivo JSON"""
-        try:
-            ruta_archivo = os.path.join(os.path.dirname(__file__), '..', 'conocimiento', archivo)
-            with open(ruta_archivo, 'r', encoding='utf-8') as f:
-                datos = json.load(f)
-                # Convertir datos JSON a objetos Caso
-                casos = []
-                for caso_data in datos:
-                    # Aquí se podría usar un deserializador más sofisticado
-                    casos.append(caso_data)
-                return casos
-        except FileNotFoundError:
-            return []
-        except json.JSONDecodeError as e:
-            return []
     
     def reparar_plato(self, plato_problematico: Plato, menu: Menu, 
                      tipo_problema: str, problema_especifico: str) -> Dict[str, Any]:

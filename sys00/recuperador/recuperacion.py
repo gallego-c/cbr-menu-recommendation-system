@@ -8,8 +8,6 @@ Soporta dos métodos:
 - Similitud vectorial: Vectoriza casos y usa métricas de distancia reales
 """
 
-import json
-import os
 from typing import List, Dict, Optional, Any, NamedTuple
 from enum import Enum
 
@@ -66,15 +64,8 @@ class ModuloRecuperacion:
     
     def _cargar_base_casos(self):
         """Carga los casos de la base de conocimiento."""
-        casos_path = os.path.join(os.path.dirname(__file__), '..', 'conocimiento', 'casos.json')
-        
-        try:
-            with open(casos_path, 'r', encoding='utf-8') as f:
-                self.casos = json.load(f)
-        except FileNotFoundError:
-            self.casos = []
-        except json.JSONDecodeError:
-            self.casos = []
+        from conocimiento import cargador
+        self.casos = cargador.cargar_casos()
     
     def recuperar(self, caso_nuevo: Dict, k: int = 3, umbral_minimo: float = 0.0,
                  explicar: bool = False) -> List[ResultadoRecuperacion]:
