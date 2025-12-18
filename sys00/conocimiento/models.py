@@ -13,6 +13,11 @@ class TipoEvento(Enum):
 class EstiloCulinario(Enum):
     MOLECULAR = "molecular"
     CLASICO = "clasico"
+    GOURMET = "gourmet"
+    COMFORT_FOOD = "comfort_food"
+    PICANTE = "picante"
+    FUSION = "fusion"
+    SALUDABLE = "saludable"
 
 class Temporada(Enum):
     PRIMAVERA = "primavera"
@@ -23,6 +28,10 @@ class Temporada(Enum):
 class TradicionCultural(Enum):
     CATALANA = "catalana"
     MEXICANA = "mexicana"
+    ITALIANA = "italiana"
+    FRANCESA = "francesa"
+    CHINA = "china"
+    MEDITERRANEA = "mediterranea"
 
 class Sabor(Enum):
     DULCE = "dulce"
@@ -40,6 +49,11 @@ class TecnicaCoccion(Enum):
     HORNEADO = "horneado" 
     ESFERIFICACION = "esferificacion"
     HERVIDO = "hervido"
+    ASADO = "asado"
+    SALTEADO = "salteado"
+    FRITO = "frito"
+    GUISADO = "guisado"
+    AL_VAPOR = "al_vapor"
 
 class TipoRegla(Enum):
     RESTRICCIONES = "reglas_restricciones"
@@ -56,8 +70,10 @@ class CategoriaIngrediente(Enum):
     ANIMAL = "animal"
     CEREAL = "cereal"
     LEGUMINOSA = "leguminosa"
+    LEGUMBRE = "legumbre"
     LACTEO = "lacteo"
     CONDIMENTO = "condimento"
+    FRUTO_SECO = "fruto_seco"
 
 
 @dataclass

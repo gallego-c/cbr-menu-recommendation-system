@@ -1,14 +1,34 @@
 [
   {
+    "nombre": "vegetariano",
+    "descripcion": "No contiene carne ni pescado",
+    "categorias_prohibidas": ["animal"],
+    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "lacteo", "condimento", "especia", "hongo", "leguminosa", "fruto_seco"]
+  },
+  {
     "nombre": "vegano",
     "descripcion": "No contiene productos de origen animal ni lácteos",
     "categorias_prohibidas": ["animal", "lacteo"],
-    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "condimento", "especia"]
+    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "leguminosa", "condimento", "especia", "hongo", "fruto_seco"]
+  },
+  {
+    "nombre": "sin_gluten",
+    "descripcion": "No contiene gluten (sin trigo, cebada, centeno)",
+    "categorias_prohibidas": [],
+    "ingredientes_prohibidos": ["wheat", "flour", "all_purpose_flour", "plain_flour", "bread", "pasta", "spaghetti", "linguine", "penne_pasta", "pappardelle", "gnocchi", "noodles", "lo_mein_noodles", "rice_noodles", "egg_roll_wrappers", "flour_tortillas", "hoagie_rolls", "pizza_crust", "italian_bread", "sourdough", "egg_bread", "white_bread", "bread_slices", "panko_breadcrumbs", "bread_crumbs", "soy_sauce", "sodium_soy_sauce", "light_soy_sauce", "dark_soy_sauce", "tamari_soy_sauce"],
+    "categorias_permitidas": ["vegetal", "fruta", "animal", "lacteo", "condimento", "especia", "hongo", "leguminosa", "legumbre", "fruto_seco"]
   },
   {
     "nombre": "sin_lactosa",
     "descripcion": "No contiene productos lácteos",
     "categorias_prohibidas": ["lacteo"],
-    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "animal", "condimento", "especia"]
+    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "leguminosa", "animal", "condimento", "especia", "hongo", "fruto_seco"]
+  },
+  {
+    "nombre": "sin_huevo",
+    "descripcion": "No contiene huevos ni productos derivados",
+    "categorias_prohibidas": [],
+    "ingredientes_prohibidos": ["eggs", "egg_yolks", "mayonnaise", "mayonaise"],
+    "categorias_permitidas": ["vegetal", "fruta", "cereal", "legumbre", "leguminosa", "animal", "lacteo", "condimento", "especia", "hongo", "fruto_seco"]
   }
 ]
