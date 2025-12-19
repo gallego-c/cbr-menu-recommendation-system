@@ -4037,5 +4037,155 @@
     ],
     "sabor_dominante": "ácido",
     "ingrediente_sabor": "green_tomatoes"
+  },
+  {
+    "nombre": "Escalivada Catalana",
+    "ingredientes": [
+      "red_bell_pepper",
+      "eggplant",
+      "onions",
+      "tomatoes",
+      "olive_oil",
+      "garlic",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "asado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "red_bell_pepper"
+  },
+  {
+    "nombre": "Pa Amb Tomaquet",
+    "ingredientes": [
+      "bread",
+      "tomatoes",
+      "olive_oil",
+      "garlic",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes"
+  },
+  {
+    "nombre": "Suquet De Peix",
+    "ingredientes": [
+      "fish",
+      "potatoes",
+      "onions",
+      "tomatoes",
+      "garlic",
+      "olive_oil",
+      "almonds",
+      "parsley",
+      "white_wine",
+      "saffron",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "fish"
+  },
+  {
+    "nombre": "Butifarra Con Mongetes",
+    "ingredientes": [
+      "sausages",
+      "white_beans",
+      "onions",
+      "garlic",
+      "olive_oil",
+      "bay_leaf",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "asado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "sausages"
+  },
+  {
+    "nombre": "Cannelloni A La Catalana",
+    "ingredientes": [
+      "pasta",
+      "ground_beef",
+      "ground_pork",
+      "onions",
+      "tomatoes",
+      "milk",
+      "butter",
+      "flour",
+      "cheese",
+      "olive_oil",
+      "garlic",
+      "nutmeg",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "ground_beef"
+  },
+  {
+    "nombre": "Fideuà De Mariscos",
+    "ingredientes": [
+      "pasta",
+      "shrimp",
+      "mussels",
+      "squid",
+      "fish",
+      "onions",
+      "tomatoes",
+      "garlic",
+      "olive_oil",
+      "fish_stock",
+      "saffron",
+      "paprika",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "shrimp"
+  },
+  {
+    "nombre": "Coca De Recapte",
+    "ingredientes": [
+      "bread_dough",
+      "red_bell_pepper",
+      "eggplant",
+      "onions",
+      "olive_oil",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "red_bell_pepper"
+  },
+  {
+    "nombre": "Mel I Mató",
+    "ingredientes": [
+      "fresh_cheese",
+      "honey",
+      "walnuts"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "honey"
   }
 ]

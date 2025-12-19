@@ -88,7 +88,11 @@ class CalculadorSimilitudVectorial:
         self.estilo_map = {
             'clasico': 0,
             'molecular': 1,
-            'fusion': 2
+            'gourmet': 2,
+            'comfort_food': 4,
+            'picante': 5,
+            'fusion': 6,
+            'saludable': 7
         }
         
         # Codificación de tradiciones
@@ -96,8 +100,10 @@ class CalculadorSimilitudVectorial:
             'catalana': 0,
             'mexicana': 1,
             'italiana': 2,
-            'francesa': 3,
-            'japonesa': 4
+            'india': 3,
+            'francesa': 4,
+            'china': 5,
+            'mediterranea': 6
         }
         
         # Crear vocabulario de ingredientes para one-hot encoding
@@ -106,11 +112,11 @@ class CalculadorSimilitudVectorial:
         
         # Crear vocabulario de restricciones
         self.restricciones_vocabulario = {
-            'vegano': 0,
-            'vegetariano': 1,
+            'vegetariano': 0,
+            'vegano': 1,
             'sin_gluten': 2,
             'sin_lactosa': 3,
-            'sin_frutos_secos': 4
+            'sin_huevo': 4
         }
     
     def similitud_casos(self, caso_nuevo: Dict, caso_base: Dict) -> float:

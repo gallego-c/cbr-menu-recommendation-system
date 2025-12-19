@@ -43,18 +43,20 @@ class ValidadorTradicion(ReglaValidacion):
         ingredientes_esperados = self._ingredientes_caracteristicos
         ingredientes_encontrados = ingredientes_plato.intersection(ingredientes_esperados)
         
-        # Buscar ingredientes de otras tradiciones (conflictos)
+        # Todos los ingredientes de la tradición actual (característicos + típicos)
+        todos_ingredientes_tradicion = self._ingredientes_caracteristicos.union(self._ingredientes_tipicos)
+        
+        # Buscar ingredientes de otras tradiciones que NO están en la tradición actual
         ingredientes_conflicto = []
         for otra_tradicion, config_otra in self._todas_tradiciones.items():
             if otra_tradicion != self._nombre:
                 ingredientes_otra = set(config_otra.get('ingredientes_caracteristicos', []))
-                conflictos = ingredientes_plato.intersection(ingredientes_otra)
-                # Solo reportar conflictos si no son comunes (como sal, aceite)
-                conflictos_reales = conflictos - {'sal', 'aceite_oliva', 'ajo', 'cebolla', 'tomate'}
-                if conflictos_reales:
+                # Solo son conflictos si están en otra tradición pero NO en la actual
+                conflictos = ingredientes_plato.intersection(ingredientes_otra) - todos_ingredientes_tradicion
+                if conflictos:
                     ingredientes_conflicto.extend([
                         {'ingrediente': ing, 'tradicion_conflicto': otra_tradicion}
-                        for ing in conflictos_reales
+                        for ing in conflictos
                     ])
         
         errores = []
@@ -85,9 +87,9 @@ class ValidadorTradicion(ReglaValidacion):
                     f"Coherencia baja con tradición {self._nombre}: {coherencia:.1%}"
                 )
         
-        # Reportar conflictos significativos
+        # Reportar solo conflictos reales (ingredientes de otras tradiciones no presentes en la actual)
         for conflicto in ingredientes_conflicto:
-            errores.append(
+            advertencias.append(
                 f"Ingrediente de tradición {conflicto['tradicion_conflicto']}: "
                 f"{conflicto['ingrediente']}"
             )

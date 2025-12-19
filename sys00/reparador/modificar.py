@@ -163,11 +163,12 @@ class ModificadorPlatos:
             # Formato 2: "Muy pocos ingredientes de tradición catalana" (necesita añadir ingredientes)
             # En este caso, buscar reglas que añadan ingredientes de la tradición actual
             if "muy pocos ingredientes" in problema_lower or "pocos ingredientes" in problema_lower:
-                # Extraer la tradición del problema (ej: "catalana", "mexicana")
+                # Extraer la tradición del problema (cualquier tradición válida)
                 tradicion_buscada = None
+                tradiciones_validas = ['catalana', 'mexicana', 'italiana', 'india', 'francesa', 'china', 'mediterranea']
                 for palabra in problema_especifico.split():
                     palabra_lower = palabra.strip(':.,').lower()
-                    if palabra_lower in ['catalana', 'mexicana', 'catalana:', 'mexicana:']:
+                    if palabra_lower in tradiciones_validas or palabra_lower.rstrip(':') in tradiciones_validas:
                         tradicion_buscada = palabra_lower.strip(':')
                         break
                 

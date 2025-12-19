@@ -2,17 +2,17 @@
   {
     "nombre": "catalana",
     "descripcion": "Cocina tradicional de Cataluña",
-    "ingredientes_caracteristicos": ["aceite_oliva", "ajo", "tomate", "sal"],
-    "ingredientes_tipicos": ["pan_tomate", "butifarra", "escalivada", "romesco", "alioli"],
-    "tecnicas_preferidas": ["asado", "guisado", "frito"],
+    "ingredientes_caracteristicos": ["olive_oil", "garlic", "tomatoes", "salt", "bread", "onions", "red_bell_pepper", "almonds", "fresh_cheese", "honey"],
+    "ingredientes_tipicos": ["sausages", "white_beans", "eggplant", "parsley", "fish", "potatoes", "pepper", "cheese"],
+    "tecnicas_preferidas": ["asado", "guisado", "horneado"],
     "coherencia_minima": 0.2
   },
   {
     "nombre": "mexicana",
     "descripcion": "Cocina tradicional de México",
-    "ingredientes_caracteristicos": ["chile", "cilantro", "aguacate", "tortilla_maiz", "limon"],
-    "ingredientes_tipicos": ["frijoles", "maiz", "tomate", "cebolla", "comino"],
-    "tecnicas_preferidas": ["asado", "frito", "cocido"],
+    "ingredientes_caracteristicos": ["chili_powder", "cilantro", "avocado", "lime", "jalapeno_chilies"],
+    "ingredientes_tipicos": ["black_beans", "corn", "tomatoes", "onions", "cumin", "tortillas", "cheese"],
+    "tecnicas_preferidas": ["asado", "frito", "salteado"],
     "coherencia_minima": 0.2
   },
   {
@@ -45,14 +45,6 @@
     "ingredientes_caracteristicos": ["soy_sauce", "ginger", "garlic", "sesame_oil", "rice_vinegar"],
     "ingredientes_tipicos": ["green_onions", "oyster_sauce", "corn_starch", "rice", "noodles"],
     "tecnicas_preferidas": ["salteado", "al_vapor", "frito"],
-    "coherencia_minima": 0.2
-  },
-  {
-    "nombre": "mediterranea",
-    "descripcion": "Cocina del Mediterráneo",
-    "ingredientes_caracteristicos": ["olive_oil", "tomatoes", "lemon", "garlic", "herbs"],
-    "ingredientes_tipicos": ["fish", "vegetables", "olives", "feta_cheese", "oregano"],
-    "tecnicas_preferidas": ["asado", "crudo", "guisado"],
     "coherencia_minima": 0.2
   }
 ]
