@@ -177,6 +177,10 @@ class Caso:
     """
     Representa un caso completo en la base de conocimiento.
     Todos los campos son estrictos y tipados correctamente.
+    
+    Campos nuevos para retención (v2):
+    - satisfaccion: Información de satisfacción del usuario
+    - modification_count: Conteo de modificaciones aplicadas
     """
     id: str
     restricciones: List[str]
@@ -190,10 +194,13 @@ class Caso:
     reparaciones_aplicadas: List[Any] = field(default_factory=list)
     timestamp: Optional[str] = None
     feedback: Optional[str] = None
+    # Campos nuevos para retención (backward-compatible: default None)
+    satisfaccion: Optional[Dict[str, Any]] = None  # SatisfaccionCaso.to_dict()
+    modification_count: Optional[int] = None  # Conteo de modificaciones
 
     def to_dict(self) -> Dict[str, Any]:
         """Convierte el caso a diccionario para JSON"""
-        return {
+        result = {
             'id': self.id,
             'restricciones': self.restricciones,
             'temporada': self.temporada,
@@ -207,10 +214,16 @@ class Caso:
             'timestamp': self.timestamp,
             'feedback': self.feedback
         }
+        # Incluir campos de retención solo si tienen valor (backward-compatible)
+        if self.satisfaccion is not None:
+            result['satisfaccion'] = self.satisfaccion
+        if self.modification_count is not None:
+            result['modification_count'] = self.modification_count
+        return result
     
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'Caso':
-        """Crea un Caso desde un diccionario JSON"""
+        """Crea un Caso desde un diccionario JSON (backward-compatible)"""
         menu_data = data.get('menu', {})
         menu = Menu.from_dict(menu_data) if isinstance(menu_data, dict) else Menu('', '', '')
         
@@ -226,5 +239,8 @@ class Caso:
             fallos_detectados=data.get('fallos_detectados', []),
             reparaciones_aplicadas=data.get('reparaciones_aplicadas', []),
             timestamp=data.get('timestamp'),
-            feedback=data.get('feedback')
+            feedback=data.get('feedback'),
+            # Campos nuevos para retención (backward-compatible: default None)
+            satisfaccion=data.get('satisfaccion'),
+            modification_count=data.get('modification_count')
         )

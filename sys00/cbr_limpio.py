@@ -34,7 +34,7 @@ def ejemplo_uso():
     print("=== SISTEMA CBR LIMPIO ===")
     
     # Caso 1: Evento familiar en verano con tradición catalana
-    resultado1 = generar_menu_simple()
+    resultado1 = generar_menu_simple('congreso', 'invierno', ['sin gluten'], 'moderno', 'mexicana')
     
     print("=== SISTEMA FUNCIONANDO ===")
 

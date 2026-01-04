@@ -6,7 +6,7 @@ Sistema Case-Based Reasoning que integra todos los módulos desarrollados:
 - Recuperador: Encuentra casos similares
 - Validador: Verifica restricciones y criterios
 - Reparador: Arregla problemas encontrados
-- Actualizador: Mantiene la base de conocimiento actualizada
+- Actualizador: Mantiene la base de conocimiento actualizada (v2 con retención)
 """
 
 import json
@@ -19,7 +19,7 @@ from datetime import datetime
 from recuperador import ModuloRecuperacion
 from validador import ValidadorCompleto
 from reparador import Reparador
-from actualizador import ActualizadorConocimiento
+from actualizador import ActualizadorConocimiento, ConfiguracionRetencion
 from conocimiento import Menu, Caso, cargador, Plato, Ingrediente
 
 
@@ -59,6 +59,9 @@ class ConfiguracionCBR:
     usar_explicaciones: bool = True
     crear_backup: bool = False
     validar_estricto: bool = True
+    # Configuración de retención
+    config_retencion: Optional[ConfiguracionRetencion] = None
+    habilitar_ratings: bool = True  # Si False, no pedir ratings (modo legacy)
 
 
 class SistemaCBR:
@@ -87,17 +90,20 @@ class SistemaCBR:
             'casos_exitosos': 0,
             'casos_reparados': 0,
             'casos_fallidos': 0,
-            'reparaciones_totales': 0
+            'reparaciones_totales': 0,
+            'ratings_recolectados': 0
         }
     
     def _inicializar_modulos(self):
         """Inicializa todos los módulos del sistema CBR."""
         try:
-            # Inicializar módulos (configuración se pasa en recuperar())
+            # Inicializar módulos con configuración de retención
             self.recuperador = ModuloRecuperacion()
             self.validador = ValidadorCompleto()
             self.reparador = Reparador()
-            self.actualizador = ActualizadorConocimiento()
+            self.actualizador = ActualizadorConocimiento(
+                config_retencion=self.config.config_retencion
+            )
             
         except Exception as e:
             raise Exception(f"Error inicializando módulos: {e}")
@@ -762,7 +768,7 @@ class SistemaCBR:
     
     def _fase_actualizacion_interna(self, menu: Dict, preferencias: PreferenciasUsuario, 
                            exito: bool, reparaciones_aplicadas: List[Dict] = None) -> Optional[str]:
-        """Ejecuta la actualización interna de la base de conocimiento (sin imprimir encabezado)."""
+        """Ejecuta la actualización interna de la base de conocimiento (con rating si está habilitado)."""
         # Crear objeto Menu para actualización
         menu_obj = Menu(
             entrante=menu.get('entrante', ''),
@@ -772,26 +778,48 @@ class SistemaCBR:
         
         print("\nActualizando base de casos...")
         
-        # Procesar actualización
-        actualizaciones = self.actualizador.procesar_nuevo_menu(
-            menu=menu_obj,
-            tipo_evento=preferencias.tipo_evento,
-            temporada=preferencias.temporada,
-            restricciones=preferencias.restricciones,
-            estilo=preferencias.estilo,
-            tradicion=preferencias.tradicion,
-            exito=exito,
-            reparaciones_aplicadas=reparaciones_aplicadas,
-            feedback=f"Generado por sistema CBR - {'Exitoso' if exito else 'Fallido'}",
-            crear_backup=self.config.crear_backup
-        )
-        
-        nuevo_caso_id = actualizaciones.get('casos_agregados', [None])[0]
-        
-        if nuevo_caso_id:
-            print(f"Nuevo caso agregado: {nuevo_caso_id}")
-        
-        return nuevo_caso_id
+        # Si los ratings están habilitados, usar el flujo con rating
+        if self.config.habilitar_ratings and exito:
+            resultado = self.actualizador.recolectar_y_procesar_con_rating(
+                menu=menu_obj,
+                tipo_evento=preferencias.tipo_evento,
+                temporada=preferencias.temporada,
+                restricciones=preferencias.restricciones,
+                estilo=preferencias.estilo,
+                tradicion=preferencias.tradicion,
+                reparaciones_aplicadas=reparaciones_aplicadas,
+                crear_backup=self.config.crear_backup
+            )
+            
+            if resultado.get('caso_guardado'):
+                self.estadisticas['ratings_recolectados'] += 1
+                caso_id = resultado['actualizaciones'].get('casos_agregados', [None])[0]
+                print(f"Nuevo caso agregado con rating: {caso_id}")
+                return caso_id
+            else:
+                print("Caso no guardado (política de rating no cumplida)")
+                return None
+        else:
+            # Modo legacy sin rating
+            actualizaciones = self.actualizador.procesar_nuevo_menu(
+                menu=menu_obj,
+                tipo_evento=preferencias.tipo_evento,
+                temporada=preferencias.temporada,
+                restricciones=preferencias.restricciones,
+                estilo=preferencias.estilo,
+                tradicion=preferencias.tradicion,
+                exito=exito,
+                reparaciones_aplicadas=reparaciones_aplicadas,
+                feedback=f"Generado por sistema CBR - {'Exitoso' if exito else 'Fallido'}",
+                crear_backup=self.config.crear_backup
+            )
+            
+            nuevo_caso_id = actualizaciones.get('casos_agregados', [None])[0]
+            
+            if nuevo_caso_id:
+                print(f"Nuevo caso agregado: {nuevo_caso_id}")
+            
+            return nuevo_caso_id
     
     def _crear_resultado_fallo(self, mensaje: str, detalles: Dict = None) -> ResultadoCBR:
         """Crea un resultado de fallo y actualiza estadísticas."""
