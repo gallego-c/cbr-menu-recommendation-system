@@ -181,6 +181,12 @@ class Caso:
     """
     Representa un caso completo en la base de conocimiento.
     Todos los campos son estrictos y tipados correctamente.
+    
+    Satisfaction fields (backward-compatible with old cases):
+    - satisfaction_score: Overall satisfaction rating (1-5 or None)
+    - satisfaction_per_menu: Individual ratings for entrante/principal/postre (optional)
+    - rating_timestamp: When the rating was collected
+    - modification_count: Number of modifications applied (for retention priority)
     """
     id: str
     restricciones: List[str]
@@ -194,10 +200,16 @@ class Caso:
     reparaciones_aplicadas: List[Any] = field(default_factory=list)
     timestamp: Optional[str] = None
     feedback: Optional[str] = None
+    
+    # NEW: Satisfaction and retention fields (backward-compatible)
+    satisfaction_score: Optional[float] = None  # Overall satisfaction (1-5)
+    satisfaction_per_menu: Optional[Dict[str, float]] = None  # Individual menu ratings
+    rating_timestamp: Optional[str] = None
+    modification_count: int = 0  # Number of modifications applied
 
     def to_dict(self) -> Dict[str, Any]:
         """Convierte el caso a diccionario para JSON"""
-        return {
+        result = {
             'id': self.id,
             'restricciones': self.restricciones,
             'temporada': self.temporada,
@@ -211,10 +223,22 @@ class Caso:
             'timestamp': self.timestamp,
             'feedback': self.feedback
         }
+        
+        # Add satisfaction fields only if they exist (backward-compatible)
+        if self.satisfaction_score is not None:
+            result['satisfaction_score'] = self.satisfaction_score
+        if self.satisfaction_per_menu is not None:
+            result['satisfaction_per_menu'] = self.satisfaction_per_menu
+        if self.rating_timestamp is not None:
+            result['rating_timestamp'] = self.rating_timestamp
+        if self.modification_count > 0:
+            result['modification_count'] = self.modification_count
+            
+        return result
     
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> 'Caso':
-        """Crea un Caso desde un diccionario JSON"""
+        """Crea un Caso desde un diccionario JSON (backward-compatible)"""
         menu_data = data.get('menu', {})
         menu = Menu.from_dict(menu_data) if isinstance(menu_data, dict) else Menu('', '', '')
         
@@ -230,5 +254,10 @@ class Caso:
             fallos_detectados=data.get('fallos_detectados', []),
             reparaciones_aplicadas=data.get('reparaciones_aplicadas', []),
             timestamp=data.get('timestamp'),
-            feedback=data.get('feedback')
+            feedback=data.get('feedback'),
+            # Backward-compatible: default to None if not present
+            satisfaction_score=data.get('satisfaction_score'),
+            satisfaction_per_menu=data.get('satisfaction_per_menu'),
+            rating_timestamp=data.get('rating_timestamp'),
+            modification_count=data.get('modification_count', 0)
         )

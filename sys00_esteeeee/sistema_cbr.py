@@ -336,30 +336,48 @@ class SistemaCBR:
             else:
                 print("[OK] El menú seleccionado es completamente válido")
             
-            # Paso 4.3: Verificar duplicado y actualizar base de casos
-            # ACTUALIZACIÓN DESACTIVADA - No se guardan nuevos casos
-            # print("\n--- Actualizando base de casos ---")
-            # # Verificar duplicado usando actualizador
-            # menu_obj = Menu(
-            #     entrante=menu_final.get('entrante', ''),
-            #     principal=menu_final.get('principal', ''),
-            #     postre=menu_final.get('postre', '')
-            # )
-            # es_duplicado_final = self.actualizador.verificar_duplicado(
-            #     menu_obj,
-            #     preferencias.tipo_evento,
-            #     preferencias.temporada,
-            #     preferencias.restricciones,
-            #     preferencias.estilo,
-            #     preferencias.tradicion
-            # )
-            # if es_duplicado_final:
-            #     nuevo_caso_id = None
-            #     print("\n[!] El menú generado ya existe en la base de casos")
-            #     print("   No se agregará como caso nuevo")
-            # else:
-            #     nuevo_caso_id = self._fase_actualizacion_interna(menu_final, preferencias, True, reparaciones)
-            nuevo_caso_id = None  # No se guardan nuevos casos
+            # Paso 4.3: Actualizar base de casos con sistema de retención inteligente
+            print("\n--- Actualizando base de casos (Sistema de Retención) ---")
+            
+            # Crear objeto Menu para actualización
+            menu_obj = Menu(
+                entrante=menu_final.get('entrante', ''),
+                principal=menu_final.get('principal', ''),
+                postre=menu_final.get('postre', '')
+            )
+            
+            # Usar el nuevo sistema de retención si está habilitado
+            if self.actualizador.enable_retention:
+                # Limpiar objetos Plato de las reparaciones antes de guardar
+                reparaciones_to_save = []
+                if reparaciones:
+                    for rep in reparaciones:
+                        rep_copy = rep.copy()
+                        if 'plato_modificado_obj' in rep_copy:
+                            del rep_copy['plato_modificado_obj']
+                        reparaciones_to_save.append(rep_copy)
+                
+                # Procesar con retención inteligente
+                nuevo_caso_id, resultado_retencion = self.actualizador.procesar_caso_con_retencion(
+                    menu=menu_obj,
+                    tipo_evento=preferencias.tipo_evento,
+                    temporada=preferencias.temporada,
+                    restricciones=preferencias.restricciones,
+                    estilo=preferencias.estilo,
+                    tradicion=preferencias.tradicion,
+                    exito=True,  # Only valid cases reach this point
+                    reparaciones_aplicadas=reparaciones_to_save,
+                    feedback=f"Generado por sistema CBR - Exitoso",
+                    collect_rating=True,  # Ask for user rating
+                    crear_backup=self.config.crear_backup
+                )
+                
+                if not resultado_retencion['retained']:
+                    print(f"\n[INFO] Caso no retenido: {resultado_retencion['reason']}")
+            else:
+                # Old behavior - don't save
+                nuevo_caso_id = None
+                print("[INFO] Sistema de retención desactivado - no se guardan casos")
             
             # Crear resultado exitoso
             resultado = ResultadoCBR(

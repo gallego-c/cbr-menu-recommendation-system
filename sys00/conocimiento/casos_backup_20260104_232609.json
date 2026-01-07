@@ -671,6 +671,22 @@
     "reparaciones_aplicadas": []
   },
   {
+    "id": "C039",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Atole Cremoso De Caf Con Kahl A",
+      "principal": "Spicy Southern Cheesy Grits Bake",
+      "postre": "Penne Piccante Con Salsiccia Miele E Peperoni Arrostiti"
+    },
+    "estilo": "comfort_food",
+    "tradicion": "francesa",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
     "id": "C040",
     "restricciones": [
       "vegetariano",
@@ -704,6 +720,42 @@
     },
     "estilo": "comfort_food",
     "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C042",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Haricots Blancs La Proven Ale",
+      "principal": "Penne Alla Marinara Con Mozzarella Y Albahaca Fresca",
+      "postre": "Gratin De Pommes De Terre Cr Meux Au Gruy Re"
+    },
+    "estilo": "comfort_food",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C043",
+    "restricciones": [
+      "sin_huevo"
+    ],
+    "temporada": "primavera",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Estofado Criollo De Andouille Y Frijoles Rojos Ahumados",
+      "principal": "Greek Lemon Oregano Pork Chops",
+      "postre": "Miyeokguk Sopa Coreana De Algas Y Carne"
+    },
+    "estilo": "comfort_food",
+    "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": []
@@ -894,6 +946,24 @@
     "reparaciones_aplicadas": []
   },
   {
+    "id": "C054",
+    "restricciones": [
+      "sin_gluten"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Southern Creole Cheesy Shrimp Cauliflower",
+      "principal": "Ternera China Al Coco Y Curry Con Jengibre",
+      "postre": "Zesty Creole Shrimp With Green Tomato Remoulade"
+    },
+    "estilo": "clasico",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
     "id": "C055",
     "restricciones": [
       "sin_gluten",
@@ -907,6 +977,45 @@
       "postre": "Gyeran Guk Sopa Coreana Reconfortante De Huevo Y Caldo"
     },
     "estilo": "molecular",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C056",
+    "restricciones": [
+      "vegetariano",
+      "sin_gluten",
+      "sin_lactosa"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Southern Sweet Tangy Dressing",
+      "principal": "Jajangmyeon De Cerdo Con Bok Choy Y Patata",
+      "postre": "Curried Pearl Barley Pilaf With Almonds And Raisins"
+    },
+    "estilo": "picante",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C057",
+    "restricciones": [
+      "sin_lactosa",
+      "sin_huevo"
+    ],
+    "temporada": "primavera",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Pa Amb Tomaquet",
+      "principal": "Cerdo Coreano Picante Con Marinada De Pera Y Kiwi",
+      "postre": "Pozole Rojo De Pollo Con Aguacate"
+    },
+    "estilo": "clasico",
     "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
@@ -984,6 +1093,26 @@
     },
     "estilo": "molecular",
     "tradicion": "mexicana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C062",
+    "restricciones": [
+      "vegetariano",
+      "sin_gluten",
+      "sin_huevo"
+    ],
+    "temporada": "invierno",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Traditional Tofu Wakame Miso Soup",
+      "principal": "Spiced Spring Fingerling Potatoes With Fenugreek And Ramps",
+      "postre": "Quesadillas Vegetarianas De Frijol Y Queso Cheddar"
+    },
+    "estilo": "fusion",
+    "tradicion": "mediterranea",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": []
@@ -1072,6 +1201,22 @@
     },
     "estilo": "saludable",
     "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C068",
+    "restricciones": [],
+    "temporada": "otoño",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Pollo Jamaicano Picante Con Coco Y Arroz De Frijoles Rojos",
+      "principal": "Spicy Southern Buttermilk Fried Chicken",
+      "postre": "Pa Amb Tomaquet"
+    },
+    "estilo": "saludable",
+    "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": []
@@ -1179,6 +1324,25 @@
     "reparaciones_aplicadas": []
   },
   {
+    "id": "C075",
+    "restricciones": [
+      "vegano",
+      "sin_gluten"
+    ],
+    "temporada": "primavera",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Cajun Mango Red Chili Stew",
+      "principal": "Ternera Lo Mein Con Setas Y Brotes De Soja",
+      "postre": "Moroccan Aromatic Spice Blend"
+    },
+    "estilo": "fusion",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
     "id": "C076",
     "restricciones": [
       "vegetariano"
@@ -1251,6 +1415,22 @@
     "reparaciones_aplicadas": []
   },
   {
+    "id": "C080",
+    "restricciones": [],
+    "temporada": "primavera",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Delizia Di Castagne Al Caff E Mascarpone",
+      "principal": "Pollo Chino Picante Con Jengibre Y Col Napa",
+      "postre": "Lasagna Cremosa De Pollo Con Ranch"
+    },
+    "estilo": "picante",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
     "id": "C081",
     "restricciones": [
       "vegano",
@@ -1284,6 +1464,22 @@
     },
     "estilo": "fusion",
     "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C083",
+    "restricciones": [],
+    "temporada": "verano",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Gratin De Pommes De Terre Cr Meux Au Gruy Re",
+      "principal": "Pollo Jamaicano Picante Con Coco Y Arroz De Frijoles Rojos",
+      "postre": "Asperges Et Lardons Avec Uf Au Parmesan"
+    },
+    "estilo": "gourmet",
+    "tradicion": "francesa",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": []
@@ -1655,6 +1851,63 @@
     "reparaciones_aplicadas": []
   },
   {
+    "id": "C104",
+    "restricciones": [
+      "sin_gluten"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Suquet De Peix",
+      "principal": "Southern Braised Ribs And Collard Greens With Smoky Ham Hock",
+      "postre": "Ternera China Al Coco Y Curry Con Jengibre"
+    },
+    "estilo": "clasico",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C105",
+    "restricciones": [
+      "sin_gluten",
+      "sin_lactosa"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Pozole Rojo De Pollo Con Aguacate",
+      "principal": "Estofado Criollo De Andouille Y Frijoles Rojos Ahumados",
+      "postre": "Salteado Thai De Pollo Y Tofu Con Papaya Verde Y Cacahuetes"
+    },
+    "estilo": "molecular",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C106",
+    "restricciones": [
+      "vegetariano",
+      "sin_gluten",
+      "sin_lactosa"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Sukiyaki De Solomillo Con Fideos De Cristal",
+      "principal": "Traditional Chinese Pork And Vegetable Egg Rolls",
+      "postre": "Ternera Lo Mein Con Setas Y Brotes De Soja"
+    },
+    "estilo": "picante",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
     "id": "C107",
     "restricciones": [
       "sin_lactosa",
@@ -1687,6 +1940,25 @@
       "postre": "Pasta Integral Con Espinacas Tomates Cherry Y Champi Ones Al Asiago"
     },
     "estilo": "picante",
+    "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C109",
+    "restricciones": [
+      "sin_lactosa",
+      "sin_huevo"
+    ],
+    "temporada": "primavera",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Muslos De Pollo Japoneses Glaseados Con Jengibre Y Sake",
+      "principal": "Estofado De Pollo Adobado Con Chipotle Y Ma Z",
+      "postre": "Cajun Chicken Shrimp Andouille Stew"
+    },
+    "estilo": "gourmet",
     "tradicion": "italiana",
     "exito": true,
     "fallos_detectados": [],
@@ -1889,6 +2161,24 @@
     "reparaciones_aplicadas": []
   },
   {
+    "id": "C121",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": "invierno",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Gratin De Pommes De Terre Cr Meux Au Gruy Re",
+      "principal": "Penne Alla Marinara Con Mozzarella Y Albahaca Fresca",
+      "postre": "Caf Helado Vietnamita Tradicional"
+    },
+    "estilo": "clasico",
+    "tradicion": "francesa",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
     "id": "C122",
     "restricciones": [
       "sin_gluten"
@@ -1934,6 +2224,25 @@
     },
     "estilo": "molecular",
     "tradicion": "mexicana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C125",
+    "restricciones": [
+      "vegano",
+      "sin_gluten"
+    ],
+    "temporada": "primavera",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Pollo Chino Picante Con Jengibre Y Col Napa",
+      "principal": "Moroccan Aromatic Spice Blend",
+      "postre": "Aromatic Tofu And Shiitake Rice Bowl"
+    },
+    "estilo": "fusion",
+    "tradicion": "china",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": []

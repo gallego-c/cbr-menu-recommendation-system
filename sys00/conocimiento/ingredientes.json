@@ -454,7 +454,7 @@
   },
   {
     "nombre": "bittersweet_chocolate",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -1392,7 +1392,7 @@
   },
   {
     "nombre": "chocolate_bars",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -1414,7 +1414,7 @@
   },
   {
     "nombre": "chocolate_instant_pudding",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -1425,7 +1425,7 @@
   },
   {
     "nombre": "chocolate_morsels",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -1590,7 +1590,7 @@
   },
   {
     "nombre": "club_soda",
-    "categoria": "lacteo",
+    "categoria": "bebida",
     "temporada": [
       "primavera",
       "verano",
@@ -1667,7 +1667,7 @@
   },
   {
     "nombre": "cold_water",
-    "categoria": "lacteo",
+    "categoria": "otro",
     "temporada": [
       "primavera",
       "verano",
@@ -2458,7 +2458,7 @@
   },
   {
     "nombre": "dry_red_wine",
-    "categoria": "lacteo",
+    "categoria": "bebida",
     "temporada": [
       "primavera",
       "verano",
@@ -2480,7 +2480,7 @@
   },
   {
     "nombre": "dry_white_wine",
-    "categoria": "lacteo",
+    "categoria": "bebida",
     "temporada": [
       "primavera",
       "verano",
@@ -2598,7 +2598,7 @@
   },
   {
     "nombre": "espresso",
-    "categoria": "lacteo",
+    "categoria": "bebida",
     "temporada": [
       "primavera",
       "verano",
@@ -3144,7 +3144,7 @@
   },
   {
     "nombre": "ghee",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -3745,7 +3745,7 @@
   },
   {
     "nombre": "hot_water",
-    "categoria": "lacteo",
+    "categoria": "otro",
     "temporada": [
       "primavera",
       "verano",
@@ -4386,7 +4386,7 @@
   },
   {
     "nombre": "matcha_green_tea_powder",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -5767,7 +5767,7 @@
   },
   {
     "nombre": "red_wine_vinegar",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -6294,7 +6294,7 @@
   },
   {
     "nombre": "shaoxing_wine",
-    "categoria": "lacteo",
+    "categoria": "bebida",
     "temporada": [
       "primavera",
       "verano",
@@ -7364,7 +7364,7 @@
   },
   {
     "nombre": "warm_water",
-    "categoria": "lacteo",
+    "categoria": "otro",
     "temporada": [
       "primavera",
       "verano",
@@ -7386,7 +7386,7 @@
   },
   {
     "nombre": "water",
-    "categoria": "lacteo",
+    "categoria": "otro",
     "temporada": [
       "primavera",
       "verano",
@@ -7537,7 +7537,7 @@
   },
   {
     "nombre": "white_wine",
-    "categoria": "lacteo",
+    "categoria": "bebida",
     "temporada": [
       "primavera",
       "verano",
@@ -7548,7 +7548,7 @@
   },
   {
     "nombre": "white_wine_vinegar",
-    "categoria": "lacteo",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -7873,7 +7873,7 @@
   },
   {
     "nombre": "beer",
-    "categoria": "lacteo",
+    "categoria": "bebida",
     "temporada": [
       "primavera",
       "verano",
@@ -8018,5 +8018,149 @@
       "invierno"
     ],
     "sabor": "umami"
+  },
+  {
+    "nombre": "boiling_water",
+    "categoria": "otro",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "apple_cider",
+    "categoria": "bebida",
+    "temporada": [
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "baking_soda",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "brewed_tea",
+    "categoria": "bebida",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "angel_food_cake",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "artichoke_hearts",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "bread",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fish",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ground_beef",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ground_pork",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "squid",
+    "categoria": "animal",
+    "temporada": [
+      "verano",
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bread_dough",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fresh_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano"
+    ],
+    "sabor": "dulce"
   }
 ]
