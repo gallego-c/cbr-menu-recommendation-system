@@ -12,6 +12,21 @@ from .substituir import SubstitutorPlatos
 from .modificar import ModificadorPlatos
 from .ingredient_substitutor import IngredientSubstitutor
 
+# Control de debug (se puede activar desde fuera)
+_DEBUG_MODE = False
+
+
+def set_debug_mode(enabled: bool):
+    """Activa o desactiva el modo debug."""
+    global _DEBUG_MODE
+    _DEBUG_MODE = enabled
+
+
+def _debug_print(*args, **kwargs):
+    """Imprime solo si el modo debug está activado."""
+    if _DEBUG_MODE:
+        print(*args, **kwargs)
+
 
 class Reparador:
     """
@@ -65,12 +80,12 @@ class Reparador:
         # OPTIMIZACIÓN: Para problemas de restricciones dietarias, ir directo a sustitución de ingredientes
         # Para problemas de tradición, verificar si es "plato de tradición incorrecta" o "ingredientes incorrectos"
         if tipo_problema.lower() == 'restricciones':
-            print(f"        [DEBUG] Problema de restricciones - saltando a ESTRATEGIA 2 (ingredientes)")
+            _debug_print(f"        [DEBUG] Problema de restricciones - saltando a ESTRATEGIA 2 (ingredientes)")
             resultado_ingredientes = self.substitutor_ingredientes.intentar_reparacion_por_ingredientes(
                 plato_problematico, menu, tipo_problema, problema_especifico
             )
             
-            print(f"        [DEBUG] Resultado ESTRATEGIA 2: exito={resultado_ingredientes['exito']}")
+            _debug_print(f"        [DEBUG] Resultado ESTRATEGIA 2: exito={resultado_ingredientes['exito']}")
             
             if resultado_ingredientes['exito']:
                 return {
@@ -97,16 +112,16 @@ class Reparador:
             # Si el problema es "El plato X pertenece a la tradición Y", es un plato de tradición incorrecta
             # En este caso, usar ESTRATEGIA 1 (sustituir plato completo)
             if 'pertenece a la tradición' in problema_especifico or 'pertenece a la tradici' in problema_especifico:
-                print(f"        [DEBUG] Plato de tradición incorrecta - usando ESTRATEGIA 1 (sustituir plato completo)")
+                _debug_print(f"        [DEBUG] Plato de tradición incorrecta - usando ESTRATEGIA 1 (sustituir plato completo)")
                 # Continuar con ESTRATEGIA 1 normal (no hacer return aquí)
             else:
                 # El problema es solo de ingredientes, usar ESTRATEGIA 2
-                print(f"        [DEBUG] Problema de ingredientes de tradición - saltando a ESTRATEGIA 2 (ingredientes)")
+                _debug_print(f"        [DEBUG] Problema de ingredientes de tradición - saltando a ESTRATEGIA 2 (ingredientes)")
                 resultado_ingredientes = self.substitutor_ingredientes.intentar_reparacion_por_ingredientes(
                     plato_problematico, menu, tipo_problema, problema_especifico
                 )
                 
-                print(f"        [DEBUG] Resultado ESTRATEGIA 2: exito={resultado_ingredientes['exito']}")
+                _debug_print(f"        [DEBUG] Resultado ESTRATEGIA 2: exito={resultado_ingredientes['exito']}")
                 
                 if resultado_ingredientes['exito']:
                     return {
@@ -128,15 +143,12 @@ class Reparador:
                         'exito': False
                     }
         
-        print(f"        [DEBUG] Intentando ESTRATEGIA 1: Sustitución de plato completo")
         # ESTRATEGIA 1: Intentar sustituir el plato completo
         # Ventaja: Si hay un plato que cumple todo, es la solución más limpia
         # Validación: El nuevo plato debe tener al menos 2 ingredientes compatibles con el resto del menú
         resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
             plato_problematico, menu, tipo_problema, problema_especifico
         )
-        
-        print(f"        [DEBUG] Resultado ESTRATEGIA 1: exito={resultado_substitucion['exito']}")
         
         if resultado_substitucion['exito']:
             return {
@@ -150,15 +162,12 @@ class Reparador:
                 'exito': True
             }
         
-        print(f"        [DEBUG] Intentando ESTRATEGIA 2: Sustitución de ingredientes individuales")
         # ESTRATEGIA 2: Intentar reparar sustituyendo ingredientes individuales
         # Ventaja: Preserva el plato original, solo cambia ingredientes problemáticos
         resultado_ingredientes = self.substitutor_ingredientes.intentar_reparacion_por_ingredientes(
             plato_problematico, menu, tipo_problema, problema_especifico
         )
-        
-        print(f"        [DEBUG] Resultado ESTRATEGIA 2: exito={resultado_ingredientes['exito']}")
-        
+               
         if resultado_ingredientes['exito']:
             return {
                 'estrategia': 'ingredientes',
@@ -295,128 +304,80 @@ class Reparador:
     
     def reparar_menu_completo(self, menu: Menu) -> Dict[str, Any]:
         """
+        [OBSOLETO - NO USAR]
+        Este método asume un modelo de Menu extendido que no existe.
+        El flujo actual usa reparar_plato() y reparar_por_nombre() directamente.
+        
         Repara todos los platos problemáticos de un menú
         
         Args:
-            menu: Menú completo a reparar
+            menu: Menú completo a reparar (debe tener atributo 'platos')
             
         Returns:
             Diccionario con resultados de todas las reparaciones
-        """
-        resultados = {
-            'menu_reparado': menu,
-            'reparaciones_aplicadas': [],
-            'platos_sin_solucion': [],
-            'exito_general': True
-        }
-        
-        # Analizar cada plato del menú
-        for i, plato in enumerate(menu.platos):
-            problemas = self._detectar_problemas_plato(plato, menu)
             
-            if problemas:
-                for problema in problemas:
-                    resultado = self.reparar_plato(
-                        plato, menu, problema['tipo'], problema['descripcion']
-                    )
-                    
-                    if resultado['exito']:
-                        # Actualizar el plato en el menú
-                        menu.platos[i] = resultado['plato_resultado']
-                        resultados['reparaciones_aplicadas'].append({
-                            'plato_original': plato.nombre,
-                            'problema': problema,
-                            'solucion': resultado
-                        })
-                    else:
-                        resultados['platos_sin_solucion'].append({
-                            'plato': plato.nombre,
-                            'problema': problema,
-                            'intentos_fallidos': resultado
-                        })
-                        resultados['exito_general'] = False
-        
-        return resultados
+        Raises:
+            AttributeError: Si menu no tiene el atributo 'platos'
+        """
+        raise NotImplementedError(
+            "Este método está obsoleto. El modelo Menu solo tiene entrante, principal, postre. "
+            "Use reparar_plato() o reparar_por_nombre() para reparar platos individuales."
+        )
     
     def _detectar_problemas_plato(self, plato: Plato, menu: Menu) -> List[Dict[str, str]]:
         """
-        Detecta problemas en un plato según las preferencias del menú
+        [OBSOLETO - NO USAR]
+        Este método asume un modelo de Menu extendido (con restricciones, temporada, tradicion, 
+        tecnica_preferida) que no existe. El modelo Menu actual solo tiene entrante, principal, postre.
+        
+        El flujo actual usa el ValidadorCompleto para detectar problemas.
         
         Args:
             plato: Plato a analizar
-            menu: Menú con las preferencias
+            menu: Menú con las preferencias (requiere atributos extendidos)
             
         Returns:
-            Lista de problemas encontrados
+            Lista vacía (método obsoleto)
         """
-        problemas = []
-        
-        # Verificar restricciones dietéticas
-        if menu.restricciones:
-            for restriccion in menu.restricciones:
-                if not self._cumple_restriccion(plato, restriccion):
-                    problemas.append({
-                        'tipo': 'restricciones',
-                        'descripcion': f"No cumple restricción: {restriccion.value}"
-                    })
-        
-        # Verificar temporada
-        if menu.temporada:
-            if not self._es_temporada_apropiada(plato, menu.temporada):
-                problemas.append({
-                    'tipo': 'temporada',
-                    'descripcion': f"Ingredientes fuera de temporada: {menu.temporada.value}"
-                })
-        
-        # Verificar tradición culinaria
-        if menu.tradicion and plato.tradicion != menu.tradicion:
-            problemas.append({
-                'tipo': 'tradicion',
-                'descripcion': f"Tradición incorrecta: {plato.tradicion.value} -> {menu.tradicion.value}"
-            })
-        
-        # Verificar técnica de cocción preferida
-        if menu.tecnica_preferida and plato.tecnica != menu.tecnica_preferida:
-            problemas.append({
-                'tipo': 'coherencia',
-                'descripcion': f"Técnica incorrecta: {plato.tecnica.value} -> {menu.tecnica_preferida.value}"
-            })
-        
-        return problemas
+        # Este método está obsoleto - retornar lista vacía
+        # El flujo actual usa ValidadorCompleto.validar_plato_completo() en sistema_cbr.py
+        return []
     
     def _cumple_restriccion(self, plato: Plato, restriccion) -> bool:
-        """Verifica si un plato cumple una restricción dietética"""
-        # Lógica específica para cada restricción
-        if restriccion.value == "vegano":
-            categorias_no_veganas = ["animal", "lacteo"]
-            for ingrediente in plato.ingredientes:
-                if hasattr(ingrediente.categoria, 'value'):
-                    if ingrediente.categoria.value in categorias_no_veganas:
-                        return False
-                elif str(ingrediente.categoria) in categorias_no_veganas:
-                    return False
+        """Verifica si un plato cumple una restricción dietética.
         
-        elif restriccion.value == "sin_lactosa":
-            for ingrediente in plato.ingredientes:
-                if hasattr(ingrediente.categoria, 'value'):
-                    if ingrediente.categoria.value == "lacteo":
-                        return False
-                elif str(ingrediente.categoria) == "lacteo":
-                    return False
+        NOTA: plato.ingredientes es List[str], se usa FoodBank para verificar.
+        """
+        restriccion_str = restriccion.value if hasattr(restriccion, 'value') else str(restriccion)
+        
+        # Usar FoodBank para verificar cada ingrediente
+        for nombre_ingrediente in plato.ingredientes:
+            if self.substitutor_ingredientes.food_bank.ingrediente_viola_restriccion(
+                nombre_ingrediente, restriccion_str
+            ):
+                return False
         
         return True
     
     def _es_temporada_apropiada(self, plato: Plato, temporada_deseada) -> bool:
-        """Verifica si los ingredientes del plato son apropiados para la temporada"""
-        for ingrediente in plato.ingredientes:
-            if temporada_deseada not in ingrediente.temporada:
-                # Si algún ingrediente principal no está en temporada
-                if hasattr(ingrediente.categoria, 'value'):
-                    categoria = ingrediente.categoria.value
-                else:
-                    categoria = str(ingrediente.categoria)
-                
-                if categoria in ["vegetal", "fruta"]:  # Solo verificar vegetales y frutas
+        """Verifica si los ingredientes del plato son apropiados para la temporada.
+        
+        NOTA: plato.ingredientes es List[str], se usa FoodBank para obtener info.
+        """
+        temporada_str = temporada_deseada.value if hasattr(temporada_deseada, 'value') else str(temporada_deseada)
+        temporada_lower = temporada_str.lower()
+        
+        for nombre_ingrediente in plato.ingredientes:
+            info_ing = self.substitutor_ingredientes.food_bank.ingredientes_db.get(nombre_ingrediente)
+            if not info_ing:
+                continue
+            
+            temporadas_ing = [t.lower() for t in info_ing.get('temporada', [])]
+            categoria = info_ing.get('categoria', '')
+            
+            if temporada_lower not in temporadas_ing:
+                # Solo verificar vegetales y frutas
+                if categoria in ["vegetal", "fruta"]:
                     return False
         
         return True

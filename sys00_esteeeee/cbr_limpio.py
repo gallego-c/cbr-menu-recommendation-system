@@ -4,8 +4,8 @@ Sistema CBR Limpio - Solo funcionalidad esencial
 
 from sistema_cbr import SistemaCBR, PreferenciasUsuario
 
-def generar_menu_simple(tipo_evento='familiar', temporada='invierno', restricciones=['vegano'], 
-                       estilo='clasico', tradicion='italiana'):
+def generar_menu_simple(tipo_evento='familiar', temporada='invierno', restricciones=[], 
+                       estilo='clasico', tradicion='mexicana'):
     """Función simple para generar menús sin prints decorativos."""
     
     sistema = SistemaCBR()
@@ -36,7 +36,8 @@ def ejemplo_uso():
     try:
         # Caso 1: Evento familiar en verano con tradición catalana
         resultado1 = generar_menu_simple()
-        print(f"\n\n[DEBUG] Resultado: {resultado1}")
+        # El resultado detallado se puede ver descomentando la siguiente línea:
+        # print(f"\n\n[DEBUG] Resultado: {resultado1}")
     except Exception as e:
         import traceback
         print(f"\n\n[ERROR] Excepción capturada:")

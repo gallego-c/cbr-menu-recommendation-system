@@ -115,7 +115,7 @@
       "strawberries": ["chocolate", "cream", "sugar", "mint", "balsamic_vinegar"],
       "avocado": ["lemon", "tomatoes", "cilantro", "onions", "red_pepper_flakes"],
       "mango": ["red_pepper_flakes", "lemon", "cilantro", "ginger", "yogurt"],
-      "oranges": ["chocolate", "vanilla_extract", "cinnamon", "ginger"],
+      "oranges": ["chocolate", "vanilla_extract", "cinnamon", "ginger", "white_sugar", "yelcake_mix"],
       "blueberries": ["lemon", "sugar", "vanilla_extract", "yogurt"]
     },
     "frutos_secos": {
@@ -211,6 +211,64 @@
       "worcestershire_sauce": ["soy_sauce", "tamari"],
       "egg_roll_wrappers": ["rice_paper"],
       "gelatin": ["agar_agar"]
+    },
+    "sustituciones_por_temporada": {
+      "descripcion": "Sustituciones de ingredientes de una temporada a otra manteniendo función culinaria similar",
+      "verano_a_invierno": {
+        "tomatoes": ["canned_tomatoes", "sun_dried_tomatoes", "roasted_peppers"],
+        "plum_tomatoes": ["canned_tomatoes", "sun_dried_tomatoes", "roasted_peppers"],
+        "roma_tomatoes": ["canned_tomatoes", "sun_dried_tomatoes", "roasted_peppers"],
+        "cherry_tomatoes": ["canned_tomatoes", "sun_dried_tomatoes"],
+        "fresh_tomatoes": ["canned_tomatoes", "sun_dried_tomatoes"],
+        "tomato_paste": ["canned_tomatoes", "sun_dried_tomatoes"],
+        "tomato_sauce": ["canned_tomatoes", "passata"],
+        "cucumber": ["celery", "fennel", "jicama"],
+        "zucchini": ["butternut_squash", "pumpkin", "sweet_potatoes"],
+        "bell_pepper": ["roasted_peppers", "canned_peppers", "carrots"],
+        "green_bell_pepper": ["roasted_peppers", "celery", "cabbage"],
+        "red_bell_pepper": ["roasted_peppers", "canned_peppers", "beets"],
+        "eggplant": ["mushrooms", "portobello_mushrooms", "cauliflower"],
+        "corn": ["canned_corn", "frozen_corn", "hominy"],
+        "fresh_basil": ["dried_basil", "oregano", "parsley"],
+        "basil": ["dried_basil", "oregano", "parsley"],
+        "strawberries": ["apples", "pears", "frozen_berries"],
+        "blueberries": ["dried_blueberries", "cranberries", "raisins"],
+        "watermelon": ["apples", "pears", "oranges"],
+        "peaches": ["canned_peaches", "apples", "pears"],
+        "mango": ["canned_mango", "dried_mango", "oranges"],
+        "avocado": ["hummus", "white_beans_puree"],
+        "lettuce": ["cabbage", "kale", "spinach"],
+        "asparagus": ["green_beans", "broccoli", "brussels_sprouts"]
+      },
+      "invierno_a_verano": {
+        "butternut_squash": ["zucchini", "yellow_squash"],
+        "pumpkin": ["zucchini", "yellow_squash"],
+        "sweet_potatoes": ["new_potatoes", "corn"],
+        "cabbage": ["lettuce", "spinach"],
+        "kale": ["spinach", "arugula", "lettuce"],
+        "brussels_sprouts": ["asparagus", "green_beans"],
+        "parsnips": ["carrots", "zucchini"],
+        "turnips": ["radishes", "zucchini"],
+        "apples": ["peaches", "nectarines", "plums"],
+        "pears": ["peaches", "nectarines", "apricots"],
+        "oranges": ["strawberries", "watermelon", "mango"],
+        "mandarin_oranges": ["strawberries", "peaches", "apricots"],
+        "cranberries": ["strawberries", "raspberries", "blueberries"],
+        "dried_fruits": ["fresh_berries", "stone_fruits"]
+      },
+      "otono_a_invierno": {
+        "grapes": ["apples", "pears"],
+        "figs": ["dried_figs", "dates"],
+        "pomegranate": ["cranberries", "dried_cranberries"],
+        "persimmons": ["apples", "pears"]
+      },
+      "primavera_a_invierno": {
+        "artichokes": ["canned_artichokes", "mushrooms"],
+        "peas": ["frozen_peas", "chickpeas"],
+        "fava_beans": ["white_beans", "lima_beans"],
+        "ramps": ["leeks", "green_onions"],
+        "rhubarb": ["apples", "cranberries"]
+      }
     }
   },
   "incompatibilidades": {

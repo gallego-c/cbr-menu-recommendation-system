@@ -1,5 +1,7 @@
 """
 Módulo para substituir platos completos basado en similitud y preferencias del menú
+
+Usa FoodBank como fuente centralizada para verificación de restricciones y compatibilidad.
 """
 
 import sys
@@ -17,7 +19,8 @@ from .food_bank import FoodBank
 class SubstitutorPlatos:
     """
     Clase para substituir platos completos buscando alternativas 
-    que cumplan todas las preferencias del menú
+    que cumplan todas las preferencias del menú.
+    Usa FoodBank para verificación centralizada de restricciones.
     """
     
     def __init__(self, casos_base: List[Any]):
@@ -34,12 +37,17 @@ class SubstitutorPlatos:
             'tradicion': 0.2,
             'tecnica': 0.1
         }
-        # Cargar conocimiento usando el cargador centralizado
-        self.ingredientes_db = cargador.cargar_ingredientes()
+        # Inicializar Food Bank (fuente centralizada para ingredientes y restricciones)
+        self.food_bank = FoodBank()
+        # Cargar platos
+        self.cargador = cargador
         platos_lista = cargador.cargar_platos()
         self.platos_db = list(platos_lista.values())
-        # Inicializar Food Bank para validación de compatibilidad
-        self.food_bank = FoodBank()
+    
+    @property
+    def ingredientes_db(self) -> Dict:
+        """Acceso a ingredientes_db a través de FoodBank (evita duplicación)."""
+        return self.food_bank.ingredientes_db
     
     def buscar_plato_substitucion(self, plato_problematico: Plato, menu: Menu,
                                  tipo_problema: str, problema_especifico: str) -> Dict[str, Any]:
@@ -280,8 +288,8 @@ class SubstitutorPlatos:
             if not self._tiene_ingredientes_tipicos_tradicion(plato, menu.tradicion):
                 return False
         
-        # Verificar técnica preferida
-        if menu.tecnica_preferida:
+        # Verificar técnica preferida (solo si existe el atributo)
+        if hasattr(menu, 'tecnica_preferida') and menu.tecnica_preferida:
             if hasattr(plato, 'tecnica_coccion') and plato.tecnica_coccion:
                 tecnica_plato = plato.tecnica_coccion[0] if isinstance(plato.tecnica_coccion, list) else str(plato.tecnica_coccion)
             else:
@@ -298,97 +306,53 @@ class SubstitutorPlatos:
         return True
     
     def _cumple_restriccion_dietetica(self, plato: Plato, restriccion) -> bool:
-        """Verifica si un plato cumple una restricción dietética específica"""
+        """
+        Verifica si un plato cumple una restricción dietética específica.
+        Usa FoodBank como fuente centralizada para verificación de restricciones.
         
+        Args:
+            plato: Plato a verificar
+            restriccion: Restricción dietética a verificar
+            
+        Returns:
+            True si el plato cumple la restricción
+        """
         if hasattr(restriccion, 'value'):
             restriccion_valor = restriccion.value
         else:
             restriccion_valor = str(restriccion).lower()
         
-        # Cargar la configuración de restricciones desde restricciones.json
-        restricciones_config = self.cargador.cargar_restricciones()
-        
-        for restriccion_config in restricciones_config:
-            if restriccion_config.get('nombre', '').lower() == restriccion_valor:
-                ingredientes_prohibidos = restriccion_config.get('ingredientes_prohibidos', [])
-                categorias_prohibidas = restriccion_config.get('categorias_prohibidas', [])
-                
-                # plato.ingredientes es List[str] según models.py
-                for nombre_ingrediente in plato.ingredientes:
-                    # Verificar si está en la lista de ingredientes prohibidos
-                    if nombre_ingrediente in ingredientes_prohibidos:
-                        return False
-                    
-                    # Verificar categoría (consultar ingredientes_db)
-                    info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
-                    if info_ingrediente:
-                        categoria = info_ingrediente.get('categoria', '')
-                        if categoria in categorias_prohibidas:
-                            # Para vegetariano: permitir huevos aunque sean categoría 'animal'
-                            if restriccion_valor == 'vegetariano' and nombre_ingrediente in ['eggs', 'egg', 'egg_yolks', 'egg_whites']:
-                                continue
-                            return False
-                
-                return True
-        
-        # Fallback al mapeo antiguo si no se encuentra en restricciones.json
-        if restriccion_valor == "vegano":
-            categorias_no_veganas = ["animal", "lacteo"]
-            for nombre_ingrediente in plato.ingredientes:
-                info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
-                if info_ingrediente:
-                    categoria = info_ingrediente.get('categoria', '')
-                    if categoria in categorias_no_veganas:
-                        return False
-        
-        elif restriccion_valor == "vegetariano":
-            # Vegetarianos NO pueden comer carne/pescado pero SÍ huevos y lácteos
-            for nombre_ingrediente in plato.ingredientes:
-                # Permitir explícitamente huevos
-                if nombre_ingrediente in ['eggs', 'egg', 'egg_yolks', 'egg_whites']:
-                    continue
-                    
-                info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
-                if info_ingrediente:
-                    categoria = info_ingrediente.get('categoria', '')
-                    # Solo prohibir 'animal' (carne/pescado), no lácteos
-                    if categoria == 'animal':
-                        return False
-        
-        elif restriccion_valor == "sin_lactosa":
-            for nombre_ingrediente in plato.ingredientes:
-                info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
-                if info_ingrediente:
-                    categoria = info_ingrediente.get('categoria', '')
-                    if categoria == "lacteo":
-                        return False
+        # plato.ingredientes es List[str] según models.py
+        # Verificar cada ingrediente usando el método centralizado de FoodBank
+        for nombre_ingrediente in plato.ingredientes:
+            if self.food_bank.ingrediente_viola_restriccion(nombre_ingrediente, restriccion_valor):
+                return False
         
         return True
     
     def _es_temporada_apropiada(self, plato: Plato, temporada_deseada) -> bool:
-        """Verifica si los ingredientes del plato son apropiados para la temporada"""
+        """Verifica si los ingredientes del plato son apropiados para la temporada.
         
+        NOTA: plato.ingredientes es List[str], no List[Ingrediente]
+        """
         if hasattr(temporada_deseada, 'value'):
-            temporada_valor = temporada_deseada.value
+            temporada_valor = temporada_deseada.value.lower()
         else:
-            temporada_valor = str(temporada_deseada)
+            temporada_valor = str(temporada_deseada).lower()
         
-        for ingrediente in plato.ingredientes:
-            # Verificar si la temporada está en la lista de temporadas del ingrediente
-            temporadas_ingrediente = []
-            for temp in ingrediente.temporada:
-                if hasattr(temp, 'value'):
-                    temporadas_ingrediente.append(temp.value)
-                else:
-                    temporadas_ingrediente.append(str(temp))
+        # plato.ingredientes es List[str] (nombres de ingredientes)
+        for nombre_ingrediente in plato.ingredientes:
+            # Buscar información del ingrediente en la base de datos (via FoodBank)
+            info_ing = self.ingredientes_db.get(nombre_ingrediente)
+            if not info_ing:
+                continue
+            
+            # Obtener temporadas del ingrediente
+            temporadas_ingrediente = [t.lower() for t in info_ing.get('temporada', [])]
             
             if temporada_valor not in temporadas_ingrediente:
                 # Solo verificar ingredientes principales (vegetales y frutas)
-                if hasattr(ingrediente.categoria, 'value'):
-                    categoria = ingrediente.categoria.value
-                else:
-                    categoria = str(ingrediente.categoria)
-                
+                categoria = info_ing.get('categoria', '')
                 if categoria in ["vegetal", "fruta"]:
                     return False
         
@@ -445,9 +409,13 @@ class SubstitutorPlatos:
         return similitud_total
     
     def _similitud_ingredientes(self, plato1: Plato, plato2: Plato) -> float:
-        """Calcula similitud de ingredientes entre dos platos"""
-        ingredientes1 = {ing.nombre for ing in plato1.ingredientes}
-        ingredientes2 = {ing.nombre for ing in plato2.ingredientes}
+        """Calcula similitud de ingredientes entre dos platos.
+        
+        NOTA: plato.ingredientes es List[str], no List[Ingrediente]
+        """
+        # plato.ingredientes ya es List[str]
+        ingredientes1 = set(plato1.ingredientes)
+        ingredientes2 = set(plato2.ingredientes)
         
         if not ingredientes1 and not ingredientes2:
             return 1.0
@@ -458,30 +426,23 @@ class SubstitutorPlatos:
         return interseccion / union if union > 0 else 0.0
     
     def _similitud_tecnica(self, plato1: Plato, plato2: Plato) -> float:
-        """Calcula similitud de técnica de cocción"""
-        if hasattr(plato1.tecnica, 'value'):
-            tecnica1 = plato1.tecnica.value
-        else:
-            tecnica1 = str(plato1.tecnica)
-            
-        if hasattr(plato2.tecnica, 'value'):
-            tecnica2 = plato2.tecnica.value
-        else:
-            tecnica2 = str(plato2.tecnica)
+        """Calcula similitud de técnica de cocción.
+        
+        NOTA: Plato usa tecnica_coccion (List[str]), no tecnica
+        """
+        # Obtener primera técnica de cada plato
+        tecnica1 = plato1.tecnica_coccion[0] if plato1.tecnica_coccion else ''
+        tecnica2 = plato2.tecnica_coccion[0] if plato2.tecnica_coccion else ''
         
         return 1.0 if tecnica1 == tecnica2 else 0.0
     
     def _similitud_tradicion(self, plato1: Plato, plato2: Plato) -> float:
-        """Calcula similitud de tradición culinaria"""
-        if hasattr(plato1.tradicion, 'value'):
-            tradicion1 = plato1.tradicion.value
-        else:
-            tradicion1 = str(plato1.tradicion)
-            
-        if hasattr(plato2.tradicion, 'value'):
-            tradicion2 = plato2.tradicion.value
-        else:
-            tradicion2 = str(plato2.tradicion)
+        """Calcula similitud de tradición culinaria.
+        
+        NOTA: Plato.tradicion es str, no enum
+        """
+        tradicion1 = str(plato1.tradicion).lower() if plato1.tradicion else ''
+        tradicion2 = str(plato2.tradicion).lower() if plato2.tradicion else ''
         
         return 1.0 if tradicion1 == tradicion2 else 0.0
     
@@ -518,8 +479,11 @@ class SubstitutorPlatos:
         """
         Obtiene los nombres de todos los ingredientes del menú excepto los del plato a excluir.
         
+        NOTA: Menu solo tiene entrante, principal, postre como strings (nombres de platos).
+        Debemos cargar los platos de la base de datos para obtener sus ingredientes.
+        
         Args:
-            menu: Menú completo
+            menu: Menú completo (con nombres de platos como strings)
             plato_excluir: Plato que no se debe incluir
             
         Returns:
@@ -527,16 +491,24 @@ class SubstitutorPlatos:
         """
         ingredientes_menu = []
         
-        # Obtener platos del menú
-        if hasattr(menu, 'platos'):
-            for plato in menu.platos:
-                # Saltar el plato que estamos excluyendo
-                if plato.nombre == plato_excluir.nombre:
-                    continue
-                
-                # Añadir nombres de ingredientes
-                for ingrediente in plato.ingredientes:
-                    ingredientes_menu.append(ingrediente.nombre)
+        # Menu tiene entrante, principal, postre como strings (nombres de platos)
+        nombres_platos = [menu.entrante, menu.principal, menu.postre]
+        
+        for nombre_plato in nombres_platos:
+            # Saltar platos vacíos
+            if not nombre_plato:
+                continue
+            
+            # Saltar el plato que estamos excluyendo
+            if nombre_plato == plato_excluir.nombre:
+                continue
+            
+            # Buscar el plato en la base de datos
+            plato_info = next((p for p in self.platos_db if p.get('nombre') == nombre_plato), None)
+            if plato_info:
+                # plato_info['ingredientes'] es List[str] (nombres de ingredientes)
+                for ingrediente in plato_info.get('ingredientes', []):
+                    ingredientes_menu.append(ingrediente)
         
         return ingredientes_menu
     

@@ -59,6 +59,23 @@ class ConfiguracionCBR:
     usar_explicaciones: bool = True
     crear_backup: bool = False
     validar_estricto: bool = True
+    debug: bool = False  # Activar para ver mensajes de depuración
+
+
+# Variable global para modo debug (usada por otros módulos)
+DEBUG_MODE = False
+
+
+def set_debug_mode(enabled: bool):
+    """Activa o desactiva el modo debug globalmente."""
+    global DEBUG_MODE
+    DEBUG_MODE = enabled
+
+
+def debug_print(*args, **kwargs):
+    """Imprime solo si el modo debug está activado."""
+    if DEBUG_MODE:
+        print(*args, **kwargs)
 
 
 class SistemaCBR:
@@ -77,6 +94,9 @@ class SistemaCBR:
             config: Configuración del sistema CBR
         """
         self.config = config or ConfiguracionCBR()
+        
+        # Configurar modo debug global
+        set_debug_mode(self.config.debug)
         
         # Inicializar módulos
         self._inicializar_modulos()
@@ -310,17 +330,17 @@ class SistemaCBR:
             # Construir un diccionario con los platos modificados para la validación
             # CLAVE: usar el nombre del plato (que puede ser original si solo se modificaron ingredientes)
             platos_modificados = {}
-            print(f"  [DEBUG] Total de reparaciones: {len(reparaciones)}")
+            debug_print(f"  [DEBUG] Total de reparaciones: {len(reparaciones)}")
             for idx, rep in enumerate(reparaciones):
-                print(f"  [DEBUG] Reparacion {idx+1}: plato_nuevo={rep.get('plato_nuevo')}, tiene_obj={('plato_modificado_obj' in rep)}")
+                debug_print(f"  [DEBUG] Reparacion {idx+1}: plato_nuevo={rep.get('plato_nuevo')}, tiene_obj={('plato_modificado_obj' in rep)}")
                 if 'plato_modificado_obj' in rep and rep['plato_modificado_obj']:
                     # Usar el nombre del plato (original o nuevo, depende de la estrategia)
                     nombre_plato = rep['plato_nuevo']
                     platos_modificados[nombre_plato] = rep['plato_modificado_obj']
-                    print(f"  [DEBUG] Usando plato modificado para validación: {nombre_plato}")
-                    print(f"  [DEBUG]   Ingredientes: {rep['plato_modificado_obj'].ingredientes[:5]}...")
+                    debug_print(f"  [DEBUG] Usando plato modificado para validación: {nombre_plato}")
+                    debug_print(f"  [DEBUG]   Ingredientes: {rep['plato_modificado_obj'].ingredientes[:5]}...")
             
-            print(f"  [DEBUG] Total platos modificados para validación: {len(platos_modificados)}")
+            debug_print(f"  [DEBUG] Total platos modificados para validación: {len(platos_modificados)}")
             validacion_final = self._fase_validacion_silenciosa(menu_final, preferencias, platos_modificados)
             
             if validacion_final['errores']:
@@ -336,48 +356,30 @@ class SistemaCBR:
             else:
                 print("[OK] El menú seleccionado es completamente válido")
             
-            # Paso 4.3: Actualizar base de casos con sistema de retención inteligente
-            print("\n--- Actualizando base de casos (Sistema de Retención) ---")
-            
-            # Crear objeto Menu para actualización
-            menu_obj = Menu(
-                entrante=menu_final.get('entrante', ''),
-                principal=menu_final.get('principal', ''),
-                postre=menu_final.get('postre', '')
-            )
-            
-            # Usar el nuevo sistema de retención si está habilitado
-            if self.actualizador.enable_retention:
-                # Limpiar objetos Plato de las reparaciones antes de guardar
-                reparaciones_to_save = []
-                if reparaciones:
-                    for rep in reparaciones:
-                        rep_copy = rep.copy()
-                        if 'plato_modificado_obj' in rep_copy:
-                            del rep_copy['plato_modificado_obj']
-                        reparaciones_to_save.append(rep_copy)
-                
-                # Procesar con retención inteligente
-                nuevo_caso_id, resultado_retencion = self.actualizador.procesar_caso_con_retencion(
-                    menu=menu_obj,
-                    tipo_evento=preferencias.tipo_evento,
-                    temporada=preferencias.temporada,
-                    restricciones=preferencias.restricciones,
-                    estilo=preferencias.estilo,
-                    tradicion=preferencias.tradicion,
-                    exito=True,  # Only valid cases reach this point
-                    reparaciones_aplicadas=reparaciones_to_save,
-                    feedback=f"Generado por sistema CBR - Exitoso",
-                    collect_rating=True,  # Ask for user rating
-                    crear_backup=self.config.crear_backup
-                )
-                
-                if not resultado_retencion['retained']:
-                    print(f"\n[INFO] Caso no retenido: {resultado_retencion['reason']}")
-            else:
-                # Old behavior - don't save
-                nuevo_caso_id = None
-                print("[INFO] Sistema de retención desactivado - no se guardan casos")
+            # Paso 4.3: Verificar duplicado y actualizar base de casos
+            # ACTUALIZACIÓN DESACTIVADA - No se guardan nuevos casos
+            # print("\n--- Actualizando base de casos ---")
+            # # Verificar duplicado usando actualizador
+            # menu_obj = Menu(
+            #     entrante=menu_final.get('entrante', ''),
+            #     principal=menu_final.get('principal', ''),
+            #     postre=menu_final.get('postre', '')
+            # )
+            # es_duplicado_final = self.actualizador.verificar_duplicado(
+            #     menu_obj,
+            #     preferencias.tipo_evento,
+            #     preferencias.temporada,
+            #     preferencias.restricciones,
+            #     preferencias.estilo,
+            #     preferencias.tradicion
+            # )
+            # if es_duplicado_final:
+            #     nuevo_caso_id = None
+            #     print("\n[!] El menú generado ya existe en la base de casos")
+            #     print("   No se agregará como caso nuevo")
+            # else:
+            #     nuevo_caso_id = self._fase_actualizacion_interna(menu_final, preferencias, True, reparaciones)
+            nuevo_caso_id = None  # No se guardan nuevos casos
             
             # Crear resultado exitoso
             resultado = ResultadoCBR(
@@ -535,6 +537,35 @@ class SistemaCBR:
         
         return resultado
     
+    def _extraer_ingrediente_de_error(self, error: str) -> Optional[str]:
+        """
+        Extrae el nombre del ingrediente mencionado en un mensaje de error.
+        
+        Args:
+            error: Mensaje de error de validación
+            
+        Returns:
+            Nombre del ingrediente o None si no se encuentra
+        """
+        import re
+        
+        # Patrones para extraer ingredientes de mensajes de error
+        patrones = [
+            r'Ingrediente prohibido para \w+: (\w+)',
+            r'Ingrediente con categoría prohibida para \w+: (\w+)',
+            r'Ingrediente fuera de temporada: (\w+)',
+            r'Ingrediente (\w+) viola',
+            r': (\w+) \(categoría:',
+            r': (\w+) \(disponible en:',
+        ]
+        
+        for patron in patrones:
+            match = re.search(patron, error)
+            if match:
+                return match.group(1)
+        
+        return None
+    
     def _fase_reparacion(self, caso_recuperado: Dict, preferencias: PreferenciasUsuario, 
                         validacion: Dict, mostrar_titulo: bool = True) -> Dict:
         """Ejecuta la fase de reparación del menú."""
@@ -612,6 +643,14 @@ class SistemaCBR:
             for idx, error_actual in enumerate(errores_plato):
                 print(f"    [{idx+1}/{len(errores_plato)}] Procesando error: {error_actual}")
                 
+                # Verificar si este error ya fue resuelto por una reparación anterior
+                # (cuando se sustituyen múltiples ingredientes a la vez)
+                ingrediente_en_error = self._extraer_ingrediente_de_error(error_actual)
+                if ingrediente_en_error and any(ingrediente_en_error in msg for msg in modificaciones_acumuladas):
+                    print(f"      [OK] Ya reparado en sustitución anterior ({ingrediente_en_error})")
+                    errores_resueltos_acumulados.append(error_actual)
+                    continue
+                
                 # Extraer tipo de problema de este error específico
                 tipo_problema = ValidadorCompleto.extraer_tipo_problema(error_actual)
                 
@@ -667,7 +706,11 @@ class SistemaCBR:
                     modificaciones_acumuladas.extend(resultado_reparacion['mensajes'])
                     
                     for mensaje in resultado_reparacion['mensajes']:
-                        print(f"      [OK] {mensaje}")
+                        # No añadir [OK] adicional si el mensaje ya lo tiene
+                        if mensaje.startswith('[OK]') or mensaje.startswith('[~]'):
+                            print(f"      {mensaje}")
+                        else:
+                            print(f"      [OK] {mensaje}")
                 else:
                     print(f"      [X] No se pudo reparar este error")
                     # Si no se pudo reparar, agregar a problemas no resueltos
@@ -680,8 +723,8 @@ class SistemaCBR:
                 if plato_obj_actual:
                     # El plato fue modificado (objeto Plato), guardarlo
                     plato_modificado_obj = plato_obj_actual
-                    print(f"      [DEBUG] Plato modificado guardado: {nombre_plato_actual}")
-                    print(f"      [DEBUG]   - Ingredientes modificados: {len(plato_obj_actual.ingredientes)}")
+                    debug_print(f"      [DEBUG] Plato modificado guardado: {nombre_plato_actual}")
+                    debug_print(f"      [DEBUG]   - Ingredientes modificados: {len(plato_obj_actual.ingredientes)}")
                 
                 # Actualizar el plato en el menú (siempre con string, no objeto)
                 if 'entrante' in plato_nombre.lower() or plato_nombre == menu_original.get('entrante', ''):
@@ -779,7 +822,7 @@ class SistemaCBR:
                     
                     # Si el plato fue modificado, usar el objeto modificado
                     if nombre_plato in platos_modificados:
-                        print(f"  [DEBUG] Validando plato modificado: {nombre_plato}")
+                        debug_print(f"  [DEBUG] Validando plato modificado: {nombre_plato}")
                         plato_obj = platos_modificados[nombre_plato]
                     else:
                         # Cargar plato desde dict (cargador devuelve Dict[str, Dict])

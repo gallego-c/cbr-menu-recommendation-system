@@ -1,17 +1,22 @@
 """
-Módulo FoodBank - Gestiona la compatibilidad entre ingredientes
-================================================================
+Módulo FoodBank - Gestiona la compatibilidad y sustitución de ingredientes
+===========================================================================
 
-Este módulo proporciona funcionalidad para:
+Este módulo proporciona funcionalidad centralizada para:
 - Evaluar si dos ingredientes son compatibles
 - Encontrar sustituciones para ingredientes
 - Calcular puntuaciones de compatibilidad
+- Verificar restricciones dietéticas (vegano, vegetariano, sin lactosa, etc.)
+- Proporcionar sustituciones específicas por restricción
+
+NOTA: Este es el módulo central para toda la lógica de sustitución de ingredientes.
+Otros módulos deben usar FoodBank en lugar de implementar su propia lógica.
 """
 
 import sys
 import os
 import json
-from typing import List, Dict, Optional, Set, Tuple
+from typing import List, Dict, Optional, Set, Tuple, Any
 
 # Añadir el directorio padre al path para importar models
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
@@ -399,3 +404,314 @@ class FoodBank:
         # Ordenar por puntuación y retornar los mejores
         candidatos.sort(key=lambda x: x[1], reverse=True)
         return candidatos[:max_sustitutos]
+
+    # ==========================================================================
+    # MÉTODOS CENTRALIZADOS DE VERIFICACIÓN DE RESTRICCIONES
+    # ==========================================================================
+    
+    def obtener_restricciones_config(self) -> List[Dict]:
+        """
+        Obtiene la configuración de restricciones dietéticas desde restricciones.json.
+        
+        Returns:
+            Lista de configuraciones de restricciones
+        """
+        if not hasattr(self, '_restricciones_config'):
+            self._restricciones_config = cargador.cargar_restricciones()
+        return self._restricciones_config
+    
+    def ingrediente_viola_restriccion(self, nombre_ingrediente: str, restriccion: str) -> bool:
+        """
+        Verifica si un ingrediente viola una restricción dietética específica.
+        MÉTODO CENTRAL - usar este en lugar de implementar lógica propia.
+        
+        Args:
+            nombre_ingrediente: Nombre del ingrediente a verificar
+            restriccion: Restricción a verificar (vegano, vegetariano, sin_lactosa, etc.)
+            
+        Returns:
+            True si el ingrediente viola la restricción
+        """
+        restriccion_lower = restriccion.lower() if isinstance(restriccion, str) else str(restriccion).lower()
+        
+        # Obtener información del ingrediente
+        info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
+        if not info_ingrediente:
+            return False  # Sin información, asumimos que no viola
+        
+        categoria_ing = info_ingrediente.get('categoria', '')
+        
+        # Primero intentar usar restricciones.json
+        restricciones_config = self.obtener_restricciones_config()
+        for restriccion_config in restricciones_config:
+            if restriccion_config.get('nombre', '').lower() == restriccion_lower:
+                ingredientes_prohibidos = restriccion_config.get('ingredientes_prohibidos', [])
+                categorias_prohibidas = restriccion_config.get('categorias_prohibidas', [])
+                
+                # Verificar ingredientes prohibidos
+                if nombre_ingrediente in ingredientes_prohibidos:
+                    return True
+                
+                # Verificar categorías prohibidas
+                if categoria_ing in categorias_prohibidas:
+                    # Excepción: vegetariano permite huevos
+                    if restriccion_lower == 'vegetariano' and nombre_ingrediente in ['eggs', 'egg', 'egg_yolks', 'egg_whites']:
+                        return False
+                    return True
+                
+                return False
+        
+        # Fallback: mapeo simplificado de restricciones
+        mapeo_restricciones = {
+            'vegetariano': {
+                'categorias_prohibidas': ['animal'],
+                'excepciones': ['eggs', 'egg', 'egg_yolks', 'egg_whites']
+            },
+            'vegano': {
+                'categorias_prohibidas': ['animal', 'lacteo'],
+                'excepciones': []
+            },
+            'sin_lactosa': {
+                'categorias_prohibidas': ['lacteo'],
+                'excepciones': []
+            },
+            'sin_gluten': {
+                'categorias_prohibidas': ['cereal'],
+                'excepciones': []
+            }
+        }
+        
+        if restriccion_lower in mapeo_restricciones:
+            config = mapeo_restricciones[restriccion_lower]
+            
+            # Verificar excepciones primero
+            if nombre_ingrediente in config['excepciones']:
+                return False
+            
+            # Verificar categorías prohibidas
+            if categoria_ing in config['categorias_prohibidas']:
+                return True
+        
+        return False
+    
+    def ingrediente_cumple_preferencias(self, nombre_ingrediente: str, restricciones: List[str], 
+                                        temporada: str = None) -> bool:
+        """
+        Verifica si un ingrediente cumple con todas las restricciones y preferencias.
+        MÉTODO CENTRAL - usar este en lugar de implementar lógica propia.
+        
+        Args:
+            nombre_ingrediente: Nombre del ingrediente
+            restricciones: Lista de restricciones a verificar
+            temporada: Temporada requerida (opcional)
+            
+        Returns:
+            True si cumple todas las preferencias
+        """
+        # Verificar restricciones
+        for restriccion in restricciones:
+            if self.ingrediente_viola_restriccion(nombre_ingrediente, restriccion):
+                return False
+        
+        # Verificar temporada si se especifica
+        if temporada:
+            info_ing = self.ingredientes_db.get(nombre_ingrediente)
+            if info_ing:
+                temporadas_ing = info_ing.get('temporada', [])
+                temporadas_lower = [t.lower() for t in temporadas_ing]
+                if temporada.lower() not in temporadas_lower:
+                    return False
+        
+        return True
+    
+    def encontrar_sustituto_por_restriccion(self, nombre_ingrediente: str, 
+                                           restricciones: List[str],
+                                           otros_ingredientes: List[str] = None,
+                                           temporada: str = None) -> Tuple[bool, str, float]:
+        """
+        Encuentra un sustituto para un ingrediente considerando restricciones dietéticas.
+        MÉTODO CENTRAL - unifica la lógica de sustitución vegetariana/vegana/etc.
+        
+        Args:
+            nombre_ingrediente: Ingrediente a sustituir
+            restricciones: Lista de restricciones del menú
+            otros_ingredientes: Otros ingredientes del plato para evaluar compatibilidad
+            temporada: Temporada requerida (opcional)
+            
+        Returns:
+            Tupla (exito: bool, sustituto: str, puntuacion: float)
+        """
+        otros_ingredientes = otros_ingredientes or []
+        
+        # Determinar tipo de restricción
+        es_vegano = any('vegano' in r.lower() for r in restricciones)
+        es_vegetariano = any('vegetarian' in r.lower() or 'vegetariano' in r.lower() for r in restricciones)
+        
+        # Verificar si el ingrediente original es de origen animal
+        info_original = self.ingredientes_db.get(nombre_ingrediente)
+        es_animal = info_original and info_original.get('categoria') == 'animal'
+        es_lacteo = info_original and info_original.get('categoria') == 'lacteo'
+        
+        candidatos = []
+        
+        # VEGANO: sustituir carne, pescado, lácteos, huevos, miel
+        if es_vegano:
+            candidatos_veganos = self.encontrar_sustitutos_veganos(
+                nombre_ingrediente, otros_ingredientes
+            )
+            if candidatos_veganos:
+                # Filtrar por temporada si aplica
+                for sustituto, puntuacion in candidatos_veganos:
+                    if self.ingrediente_cumple_preferencias(sustituto, restricciones, temporada):
+                        return True, sustituto, puntuacion
+        
+        # VEGETARIANO: solo sustituir carne/pescado
+        elif es_vegetariano and es_animal:
+            candidatos_veg = self.encontrar_sustitutos_vegetarianos(
+                nombre_ingrediente, otros_ingredientes
+            )
+            if candidatos_veg:
+                for sustituto, puntuacion in candidatos_veg:
+                    if self.ingrediente_cumple_preferencias(sustituto, restricciones, temporada):
+                        return True, sustituto, puntuacion
+        
+        # SIN LACTOSA: sustituir lácteos
+        elif any('sin_lactosa' in r.lower() or 'sin lactosa' in r.lower() for r in restricciones) and es_lacteo:
+            # Buscar sustitutos sin lactosa en sustituciones veganas
+            candidatos_lacteos = self.encontrar_sustitutos_veganos(
+                nombre_ingrediente, otros_ingredientes
+            )
+            if candidatos_lacteos:
+                for sustituto, puntuacion in candidatos_lacteos:
+                    if self.ingrediente_cumple_preferencias(sustituto, restricciones, temporada):
+                        return True, sustituto, puntuacion
+        
+        # Buscar sustitutos generales
+        candidatos_generales = self.encontrar_sustitutos(
+            nombre_ingrediente, otros_ingredientes, max_sustitutos=10
+        )
+        
+        for sustituto, puntuacion in candidatos_generales:
+            if self.ingrediente_cumple_preferencias(sustituto, restricciones, temporada):
+                return True, sustituto, puntuacion
+        
+        return False, None, 0.0
+    
+    def obtener_info_ingrediente(self, nombre_ingrediente: str) -> Optional[Dict]:
+        """
+        Obtiene información de un ingrediente de la base de datos.
+        
+        Args:
+            nombre_ingrediente: Nombre del ingrediente
+            
+        Returns:
+            Diccionario con información del ingrediente o None
+        """
+        return self.ingredientes_db.get(nombre_ingrediente)
+    
+    def encontrar_sustituto_por_temporada(self, nombre_ingrediente: str,
+                                          temporada_origen: str,
+                                          temporada_destino: str,
+                                          otros_ingredientes: List[str] = None,
+                                          restricciones: List[str] = None) -> Tuple[bool, str, float]:
+        """
+        Encuentra un sustituto para un ingrediente que no está en temporada.
+        Busca un ingrediente similar pero disponible en la temporada requerida.
+        
+        Args:
+            nombre_ingrediente: Ingrediente fuera de temporada
+            temporada_origen: Temporada del ingrediente original
+            temporada_destino: Temporada requerida por el menú
+            otros_ingredientes: Otros ingredientes del plato
+            restricciones: Restricciones dietéticas a cumplir
+            
+        Returns:
+            Tupla (exito: bool, sustituto: str, puntuacion: float)
+        """
+        otros_ingredientes = otros_ingredientes or []
+        restricciones = restricciones or []
+        
+        # Mapeo de temporadas
+        mapeo_temporadas = {
+            ('verano', 'invierno'): 'verano_a_invierno',
+            ('verano', 'otoño'): 'verano_a_invierno',  # Usar mismas sustituciones
+            ('verano', 'otono'): 'verano_a_invierno',
+            ('invierno', 'verano'): 'invierno_a_verano',
+            ('invierno', 'primavera'): 'invierno_a_verano',
+            ('otoño', 'invierno'): 'otono_a_invierno',
+            ('otono', 'invierno'): 'otono_a_invierno',
+            ('primavera', 'invierno'): 'primavera_a_invierno',
+        }
+        
+        # Obtener sustituciones por temporada
+        sustituciones_temp = self.compatibilidades.get('sustituciones_por_temporada', {})
+        
+        # Determinar qué mapa usar
+        origen_lower = temporada_origen.lower() if temporada_origen else ''
+        destino_lower = temporada_destino.lower() if temporada_destino else ''
+        
+        clave_mapa = mapeo_temporadas.get((origen_lower, destino_lower))
+        
+        candidatos = []
+        
+        # Buscar en el mapa específico de temporada
+        if clave_mapa and clave_mapa in sustituciones_temp:
+            mapa = sustituciones_temp[clave_mapa]
+            if nombre_ingrediente in mapa:
+                for sustituto in mapa[nombre_ingrediente]:
+                    # Verificar que cumple restricciones
+                    if self.ingrediente_cumple_preferencias(sustituto, restricciones, destino_lower):
+                        # Evaluar compatibilidad con otros ingredientes
+                        puntuacion = self._evaluar_sustituto(sustituto, otros_ingredientes) if otros_ingredientes else 0.8
+                        candidatos.append((sustituto, puntuacion + 0.2))  # Bonus por ser sustitución específica
+        
+        # Fallback: buscar en la misma categoría ingredientes de la temporada correcta
+        if not candidatos:
+            info_original = self.ingredientes_db.get(nombre_ingrediente)
+            if info_original:
+                categoria_original = info_original.get('categoria', '')
+                
+                # Buscar ingredientes de la misma categoría en la temporada correcta
+                for ing_nombre, ing_info in self.ingredientes_db.items():
+                    if ing_nombre == nombre_ingrediente:
+                        continue
+                    
+                    # Misma categoría
+                    if ing_info.get('categoria') != categoria_original:
+                        continue
+                    
+                    # Verificar temporada
+                    temporadas_ing = [t.lower() for t in ing_info.get('temporada', [])]
+                    if destino_lower not in temporadas_ing:
+                        continue
+                    
+                    # Verificar restricciones
+                    if not self.ingrediente_cumple_preferencias(ing_nombre, restricciones, destino_lower):
+                        continue
+                    
+                    # Evaluar compatibilidad
+                    puntuacion = self._evaluar_sustituto(ing_nombre, otros_ingredientes) if otros_ingredientes else 0.6
+                    candidatos.append((ing_nombre, puntuacion))
+        
+        # Ordenar por puntuación y retornar el mejor
+        if candidatos:
+            candidatos.sort(key=lambda x: x[1], reverse=True)
+            mejor = candidatos[0]
+            return True, mejor[0], mejor[1]
+        
+        return False, None, 0.0
+    
+    def obtener_temporada_ingrediente(self, nombre_ingrediente: str) -> List[str]:
+        """
+        Obtiene las temporadas en las que un ingrediente está disponible.
+        
+        Args:
+            nombre_ingrediente: Nombre del ingrediente
+            
+        Returns:
+            Lista de temporadas (strings en minúsculas)
+        """
+        info = self.ingredientes_db.get(nombre_ingrediente)
+        if info:
+            return [t.lower() for t in info.get('temporada', [])]
+        return []

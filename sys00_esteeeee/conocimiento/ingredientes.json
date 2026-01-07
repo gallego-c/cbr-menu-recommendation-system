@@ -8288,5 +8288,49 @@
       "invierno"
     ],
     "tipo_coccion": []
+  },
+  {
+    "nombre": "canned_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "sun_dried_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "roasted_peppers",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "passata",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
   }
 ]

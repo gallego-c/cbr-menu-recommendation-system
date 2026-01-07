@@ -41,7 +41,7 @@ class ActualizadorConocimiento:
     - MemoryCurator: Manages bounded memory with intelligent retention
     """
     
-    def __init__(self, directorio_conocimiento: str = None, 
+    def __init__(self, directorio_conocimiento: str = None,
                  retention_config: RetentionConfig = None,
                  enable_retention: bool = True):
         """
@@ -314,7 +314,7 @@ class ActualizadorConocimiento:
             'casos_totales': len(self.casos),
             'backups_disponibles': len(self.persistencia.listar_backups())
         }
-    
+
     # =========================================================================
     # NEW: RETENTION SYSTEM METHODS
     # =========================================================================

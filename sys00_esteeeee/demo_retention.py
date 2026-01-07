@@ -114,11 +114,11 @@ def demo_memory_curation():
     # Generate several menus to trigger curation
     test_preferences = [
         {'tipo_evento': 'boda', 'temporada': 'primavera', 'restricciones': ['sin_gluten'], 
-         'estilo': 'gourmet', 'tradicion': 'francesa'},
+         'estilo': 'clasico', 'tradicion': 'francesa'},
         {'tipo_evento': 'congreso', 'temporada': 'otoño', 'restricciones': ['vegano'], 
-         'estilo': 'saludable', 'tradicion': 'mediterranea'},
+         'estilo': 'molecular', 'tradicion': 'italiana'},
         {'tipo_evento': 'familiar', 'temporada': 'invierno', 'restricciones': [], 
-         'estilo': 'comfort_food', 'tradicion': 'mexicana'},
+         'estilo': 'clasico', 'tradicion': 'mexicana'},
     ]
     
     for i, prefs in enumerate(test_preferences, 1):

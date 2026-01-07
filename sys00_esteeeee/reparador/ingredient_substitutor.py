@@ -7,7 +7,7 @@ por alternativas compatibles antes de recurrir a sustituir el plato completo.
 
 NOTA: Este módulo trabaja con la estructura de Plato definida en models.py:
 - Plato.ingredientes es List[str] (lista de nombres de ingredientes)
-- Se consulta ingredientes_db para obtener información detallada
+- Usa FoodBank como fuente central para sustituciones y verificación de restricciones
 """
 
 import sys
@@ -20,19 +20,38 @@ from conocimiento.models import Plato, Menu
 from conocimiento import cargador
 from .food_bank import FoodBank
 
+# Control de debug (se puede activar desde fuera)
+_DEBUG_MODE = False
+
+
+def set_debug_mode(enabled: bool):
+    """Activa o desactiva el modo debug."""
+    global _DEBUG_MODE
+    _DEBUG_MODE = enabled
+
+
+def _debug_print(*args, **kwargs):
+    """Imprime solo si el modo debug está activado."""
+    if _DEBUG_MODE:
+        print(*args, **kwargs)
+
 
 class IngredientSubstitutor:
     """
     Clase para sustituir ingredientes individuales de un plato problemático
-    usando el Food Bank para encontrar sustituciones compatibles.
+    usando el Food Bank como fuente centralizada para encontrar sustituciones compatibles.
     """
     
     def __init__(self):
-        """Inicializa el sustituto de ingredientes con el Food Bank."""
+        """Inicializa el sustituto de ingredientes con el Food Bank centralizado."""
         self.food_bank = FoodBank()
-        self.ingredientes_db = cargador.cargar_ingredientes()
         self.tradiciones_db = cargador.cargar_tradiciones()
         self.cargador = cargador
+    
+    @property
+    def ingredientes_db(self) -> Dict:
+        """Acceso a ingredientes_db a través de FoodBank (evita duplicación)."""
+        return self.food_bank.ingredientes_db
     
     def intentar_reparacion_por_ingredientes(self, plato: Plato, menu: Menu,
                                             tipo_problema: str, 
@@ -87,7 +106,8 @@ class IngredientSubstitutor:
             resultado_sustitucion = self._sustituir_ingrediente(
                 nombre_ingrediente_prob, 
                 plato_modificado,
-                menu
+                menu,
+                tipo_problema  # Pasar el tipo de problema para sustituciones específicas
             )
             
             if resultado_sustitucion['exito']:
@@ -175,62 +195,19 @@ class IngredientSubstitutor:
         return problematicos
     
     def _ingredientes_violan_restricciones(self, plato: Plato, menu: Menu) -> List[str]:
-        """Identifica ingredientes que violan restricciones dietéticas."""
+        """Identifica ingredientes que violan restricciones dietéticas.
+        Usa FoodBank como fuente centralizada para verificación de restricciones."""
         problematicos = []
         
         for nombre_ingrediente in plato.ingredientes:
-            # Obtener información del ingrediente
-            info_ing = self.ingredientes_db.get(nombre_ingrediente)
-            if not info_ing:
-                continue
-            
-            # Verificar cada restricción del menú
+            # Verificar cada restricción del menú usando FoodBank
             for restriccion in menu.restricciones:
-                if self._ingrediente_viola_restriccion(info_ing, restriccion):
+                restriccion_str = restriccion if isinstance(restriccion, str) else str(restriccion)
+                if self.food_bank.ingrediente_viola_restriccion(nombre_ingrediente, restriccion_str):
                     problematicos.append(nombre_ingrediente)
                     break
         
         return problematicos
-    
-    def _ingrediente_viola_restriccion(self, info_ingrediente: Dict, restriccion: str) -> bool:
-        """Verifica si un ingrediente viola una restricción específica."""
-        restriccion_lower = restriccion.lower()
-        nombre_ingrediente = info_ingrediente.get('nombre', '')
-        categoria_ing = info_ingrediente.get('categoria', '')
-        
-        # Mapeo simplificado de restricciones
-        mapeo_restricciones = {
-            'vegetariano': {
-                'categorias_prohibidas': ['animal'],
-                'excepciones': ['eggs', 'egg', 'egg_yolks', 'egg_whites']
-            },
-            'vegano': {
-                'categorias_prohibidas': ['animal', 'lacteo'],
-                'excepciones': []
-            },
-            'sin_lactosa': {
-                'categorias_prohibidas': ['lacteo'],
-                'excepciones': []
-            },
-            'sin_gluten': {
-                'categorias_prohibidas': ['cereal'],
-                'excepciones': []
-            }
-        }
-        
-        # Verificar si la restricción está en el mapeo
-        if restriccion_lower in mapeo_restricciones:
-            config = mapeo_restricciones[restriccion_lower]
-            
-            # Verificar excepciones primero
-            if nombre_ingrediente in config['excepciones']:
-                return False
-            
-            # Verificar categorías prohibidas
-            if categoria_ing in config['categorias_prohibidas']:
-                return True
-        
-        return False
     
     def _ingredientes_fuera_temporada(self, plato: Plato, menu: Menu) -> List[str]:
         """Identifica ingredientes que no están en la temporada del menú."""
@@ -379,18 +356,20 @@ class IngredientSubstitutor:
         return problematicos
     
     def _sustituir_ingrediente(self, nombre_ingrediente_original: str, 
-                              plato: Plato, menu: Menu) -> Dict[str, Any]:
+                              plato: Plato, menu: Menu,
+                              tipo_problema: str = None) -> Dict[str, Any]:
         """
         Encuentra un sustituto apropiado para un ingrediente.
-        Prioriza sustitutos específicos según restricciones (ej: tofu para carne si es vegetariano)
+        Prioriza sustitutos específicos según el tipo de problema y restricciones.
         
         Args:
             nombre_ingrediente_original: Nombre del ingrediente a sustituir
             plato: Plato completo (para contexto)
             menu: Menú con preferencias
+            tipo_problema: Tipo de problema (restricciones, temporada, etc.)
             
         Returns:
-            {'exito': bool, 'sustituto': str (nombre), 'puntuacion': float}
+            {'exito': bool, 'sustituto': str (nombre), 'puntuacion': float, 'razon': str}
         """
         # PRIMERO: Verificar si el ingrediente aún existe en el plato
         if nombre_ingrediente_original not in plato.ingredientes:
@@ -406,11 +385,42 @@ class IngredientSubstitutor:
         otros_ingredientes = [ing for ing in plato.ingredientes 
                              if ing != nombre_ingrediente_original]
         
+        # Obtener restricciones como lista de strings
+        restricciones = []
+        if hasattr(menu, 'restricciones') and menu.restricciones:
+            restricciones = [r if isinstance(r, str) else str(r) for r in menu.restricciones]
+        
+        temporada_menu = None
+        if hasattr(menu, 'temporada') and menu.temporada:
+            temporada_menu = menu.temporada.lower() if isinstance(menu.temporada, str) else str(menu.temporada).lower()
+        
         candidatos = []
+        
+        # 0. PRIORIDAD MÁXIMA: Si es problema de TEMPORADA, usar sustitución por temporada
+        if tipo_problema == 'temporada':
+            # Obtener temporadas del ingrediente original
+            temporadas_orig = self.food_bank.obtener_temporada_ingrediente(nombre_ingrediente_original)
+            temporada_origen = temporadas_orig[0] if temporadas_orig else 'verano'
+            
+            exito, sustituto, puntuacion = self.food_bank.encontrar_sustituto_por_temporada(
+                nombre_ingrediente_original,
+                temporada_origen,
+                temporada_menu,
+                otros_ingredientes,
+                restricciones
+            )
+            
+            if exito:
+                return {
+                    'exito': True,
+                    'sustituto': sustituto,
+                    'puntuacion': puntuacion,
+                    'razon': 'sustitucion_temporada'
+                }
         
         # 1. PRIORIDAD: Si hay restricción vegetariana/vegana y el ingrediente es de origen animal,
         #    buscar sustitutos específicos primero
-        if hasattr(menu, 'restricciones'):
+        if restricciones:
             es_vegano = False
             es_vegetariano = False
             
@@ -464,7 +474,7 @@ class IngredientSubstitutor:
         # 1b. PRIORIDAD: Si es problema de tradición, buscar sustitutos de la tradición correcta
         if hasattr(menu, 'tradicion') and menu.tradicion:
             tradicion_requerida = menu.tradicion.lower()
-            print(f"        [DEBUG] Buscando sustitutos de tradición {tradicion_requerida}")
+            _debug_print(f"        [DEBUG] Buscando sustitutos de tradición {tradicion_requerida}")
             
             # Buscar información de la tradición en tradiciones.json
             tradicion_info = None
@@ -501,9 +511,9 @@ class IngredientSubstitutor:
                 
                 # Ordenar por compatibilidad descendente
                 candidatos_tradicion.sort(key=lambda x: x[1], reverse=True)
-                print(f"        [DEBUG] Candidatos de tradición {tradicion_requerida}: {len(candidatos_tradicion)}")
+                _debug_print(f"        [DEBUG] Candidatos de tradición {tradicion_requerida}: {len(candidatos_tradicion)}")
                 if candidatos_tradicion:
-                    print(f"        [DEBUG] Top 3 candidatos: {candidatos_tradicion[:3]}")
+                    _debug_print(f"        [DEBUG] Top 3 candidatos: {candidatos_tradicion[:3]}")
                     candidatos.extend(candidatos_tradicion[:10])  # Tomar los 10 más compatibles
         
         # 2. Buscar sustitutos generales usando el Food Bank
@@ -521,12 +531,12 @@ class IngredientSubstitutor:
                                             for r in getattr(menu, 'restricciones', []))
         UMBRAL_COMPATIBILIDAD_MINIMA = 0.4 if tiene_candidatos_vegetarianos else 0.6
         
-        print(f"        [DEBUG] Total candidatos antes de filtrar: {len(candidatos)}")
+        _debug_print(f"        [DEBUG] Total candidatos antes de filtrar: {len(candidatos)}")
         for nombre_candidato, puntuacion in candidatos:
-            print(f"        [DEBUG] Evaluando candidato: {nombre_candidato} (puntuacion={puntuacion})")
+            _debug_print(f"        [DEBUG] Evaluando candidato: {nombre_candidato} (puntuacion={puntuacion})")
             # Saltar candidatos con baja compatibilidad
             if puntuacion < UMBRAL_COMPATIBILIDAD_MINIMA:
-                print(f"        [DEBUG]   -> Rechazado por baja compatibilidad ({puntuacion} < {UMBRAL_COMPATIBILIDAD_MINIMA})")
+                _debug_print(f"        [DEBUG]   -> Rechazado por baja compatibilidad ({puntuacion} < {UMBRAL_COMPATIBILIDAD_MINIMA})")
                 continue
                 
             # Buscar información del candidato en la base de datos
@@ -535,7 +545,7 @@ class IngredientSubstitutor:
             if info_candidato:
                 # Verificar que cumpla con restricciones y temporada
                 cumple = self._ingrediente_cumple_preferencias(info_candidato, menu)
-                print(f"        [DEBUG]   -> Cumple preferencias: {cumple}")
+                _debug_print(f"        [DEBUG]   -> Cumple preferencias: {cumple}")
                 if cumple:
                     return {
                         'exito': True,
@@ -545,7 +555,7 @@ class IngredientSubstitutor:
             else:
                 # Si no está en ingredientes_db pero viene de food_bank.encontrar_sustitutos_vegetarianos,
                 # asumimos que es válido (tempeh, seitan, etc. pueden no estar en la BD)
-                print(f"        [DEBUG]   -> NO encontrado en ingredientes_db, pero aceptando por ser sustituto vegetariano")
+                _debug_print(f"        [DEBUG]   -> NO encontrado en ingredientes_db, pero aceptando por ser sustituto vegetariano")
                 return {
                     'exito': True,
                     'sustituto': nombre_candidato,
@@ -562,6 +572,7 @@ class IngredientSubstitutor:
     def _ingrediente_cumple_preferencias(self, info_ingrediente: Dict, menu: Menu) -> bool:
         """
         Verifica si un ingrediente cumple con las preferencias del menú.
+        Usa FoodBank como fuente centralizada.
         
         Args:
             info_ingrediente: Diccionario con información del ingrediente
@@ -570,22 +581,20 @@ class IngredientSubstitutor:
         Returns:
             True si cumple todas las preferencias
         """
-        # Verificar restricciones
+        nombre_ingrediente = info_ingrediente.get('nombre', '')
+        restricciones = []
+        temporada = None
+        
+        # Obtener restricciones del menú
         if hasattr(menu, 'restricciones'):
-            for restriccion in menu.restricciones:
-                if self._ingrediente_viola_restriccion(info_ingrediente, restriccion):
-                    return False
+            restricciones = [r if isinstance(r, str) else str(r) for r in menu.restricciones]
         
-        # Verificar temporada
-        if hasattr(menu, 'temporada'):
-            temporada_menu = menu.temporada.lower()
-            temporadas_ing = info_ingrediente.get('temporada', [])
-            temporadas_lower = [t.lower() for t in temporadas_ing]
-            
-            if temporada_menu not in temporadas_lower:
-                return False
+        # Obtener temporada del menú
+        if hasattr(menu, 'temporada') and menu.temporada:
+            temporada = menu.temporada.lower() if isinstance(menu.temporada, str) else str(menu.temporada).lower()
         
-        return True
+        # Usar método centralizado de FoodBank
+        return self.food_bank.ingrediente_cumple_preferencias(nombre_ingrediente, restricciones, temporada)
     
     def _aplicar_sustitucion(self, plato: Plato, nombre_ingrediente_original: str,
                            nombre_ingrediente_sustituto: str):
@@ -613,6 +622,7 @@ class IngredientSubstitutor:
         """
         Valida que el plato modificado cumpla con las preferencias CRÍTICAS del menú.
         Solo verifica restricciones dietéticas, NO temporada ni otros criterios.
+        Usa FoodBank como fuente centralizada.
         
         Args:
             plato: Plato modificado
@@ -625,23 +635,22 @@ class IngredientSubstitutor:
         # (no verificar temporada ni otros criterios para ser menos estrictos)
         if hasattr(menu, 'restricciones'):
             for nombre_ingrediente in plato.ingredientes:
-                info_ing = self.ingredientes_db.get(nombre_ingrediente)
-                if info_ing:
-                    # Verificar solo restricciones
-                    for restriccion in menu.restricciones:
-                        if self._ingrediente_viola_restriccion(info_ing, restriccion):
-                            print(f"        [DEBUG] Ingrediente {nombre_ingrediente} VIOLA restricción {restriccion}")
-                            return False
+                # Verificar solo restricciones usando FoodBank
+                for restriccion in menu.restricciones:
+                    restriccion_str = restriccion if isinstance(restriccion, str) else str(restriccion)
+                    if self.food_bank.ingrediente_viola_restriccion(nombre_ingrediente, restriccion_str):
+                        _debug_print(f"        [DEBUG] Ingrediente {nombre_ingrediente} VIOLA restricción {restriccion}")
+                        return False
         
         # Verificar compatibilidad general del plato
         try:
             compatibilidad = self.food_bank.calcular_compatibilidad_plato(plato.ingredientes)
-            print(f"        [DEBUG] Compatibilidad del plato: {compatibilidad} (mínimo: 0.5)")
+            _debug_print(f"        [DEBUG] Compatibilidad del plato: {compatibilidad} (mínimo: 0.5)")
             # Umbral mínimo de compatibilidad
             return compatibilidad >= 0.5
         except:
             # Si falla el cálculo de compatibilidad, aceptar el plato
-            print(f"        [DEBUG] Error calculando compatibilidad - aceptando plato")
+            _debug_print(f"        [DEBUG] Error calculando compatibilidad - aceptando plato")
             return True
     
     def _validar_coherencia_sabores(self, plato: Plato) -> bool:
@@ -682,6 +691,26 @@ class IngredientSubstitutor:
                 return False
         
         return True
+    
+    def _ingrediente_pertenece_a_alguna_tradicion(self, nombre_ingrediente: str) -> bool:
+        """
+        Verifica si un ingrediente pertenece a alguna tradición específica.
+        Si no aparece en ninguna tradición, se considera universal.
+        
+        Args:
+            nombre_ingrediente: Nombre del ingrediente
+            
+        Returns:
+            True si pertenece a alguna tradición específica, False si es universal
+        """
+        for tradicion in self.tradiciones_db:
+            ingredientes_caracteristicos = set(tradicion.get('ingredientes_caracteristicos', []))
+            ingredientes_tipicos = set(tradicion.get('ingredientes_tipicos', []))
+            
+            if nombre_ingrediente in ingredientes_caracteristicos or nombre_ingrediente in ingredientes_tipicos:
+                return True
+        
+        return False
     
     def _clonar_plato(self, plato: Plato) -> Plato:
         """

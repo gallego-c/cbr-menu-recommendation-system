@@ -15,9 +15,7 @@
     "tradicion": "italiana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C002",
@@ -35,9 +33,7 @@
     "tradicion": "india",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C003",
@@ -56,9 +52,7 @@
     "tradicion": "mediterranea",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C004",
@@ -76,9 +70,7 @@
     "tradicion": "francesa",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C005",
@@ -96,9 +88,7 @@
     "tradicion": "china",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C006",
@@ -116,9 +106,7 @@
     "tradicion": "italiana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C007",
@@ -136,9 +124,7 @@
     "tradicion": "india",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C008",
@@ -156,9 +142,7 @@
     "tradicion": "mediterranea",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C009",
@@ -174,9 +158,7 @@
     "tradicion": "francesa",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C010",
@@ -194,9 +176,7 @@
     "tradicion": "china",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C011",
@@ -214,9 +194,23 @@
     "tradicion": "mexicana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C012",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+      "principal": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
+      "postre": "Pizza Italiana De Pesto Y Tomates Ciruela"
+    },
+    "estilo": "clasico",
+    "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C013",
@@ -234,9 +228,7 @@
     "tradicion": "india",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C014",
@@ -254,9 +246,25 @@
     "tradicion": "francesa",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C015",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+      "principal": "Linguine Mediterr Neo Picante",
+      "postre": "Salsa Pomodoro E Basilico Fresco"
+    },
+    "estilo": "clasico",
+    "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C016",
@@ -272,9 +280,7 @@
     "tradicion": "china",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C017",
@@ -292,9 +298,7 @@
     "tradicion": "mediterranea",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C018",
@@ -313,9 +317,7 @@
     "tradicion": "india",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C019",
@@ -333,9 +335,23 @@
     "tradicion": "mexicana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
+  },
+  {
+    "id": "C020",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Salade De Fenouil Aux Agrumes",
+      "principal": "Foie Gras Sellado Con Persim N Y Reducci N Al Madeira",
+      "postre": "Cr Me P Tissi Re Classique La Vanille"
+    },
+    "estilo": "molecular",
+    "tradicion": "francesa",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C021",
@@ -353,9 +369,7 @@
     "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C022",
@@ -371,9 +385,7 @@
     "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C023",
@@ -391,9 +403,7 @@
     "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C024",
@@ -409,9 +419,7 @@
     "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "timestamp": null,
-    "feedback": null
+    "reparaciones_aplicadas": []
   },
   {
     "id": "C025",
@@ -430,72 +438,5 @@
     "reparaciones_aplicadas": [],
     "timestamp": "2025-12-19T15:28:13.513660",
     "feedback": "Generado por sistema CBR - Exitoso"
-  },
-  {
-    "id": "C027",
-    "restricciones": [
-      "vegano"
-    ],
-    "temporada": "invierno",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
-      "principal": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
-      "postre": "Pizza Italiana De Pesto Y Tomates Ciruela"
-    },
-    "estilo": "clasico",
-    "tradicion": "italiana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [
-      {
-        "tipo_plato": "principal",
-        "plato_original": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
-        "plato_nuevo": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
-        "accion": "modificacion",
-        "modificaciones": [
-          "[OK] Plato reparado sustituyendo ingredientes:",
-          "  Plato: Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
-          "Sustituciones exitosas: 6",
-          "parmesan_cheese -> nutritional_yeast",
-          "butter -> olive_oil",
-          "free_less_sodium_chicken_broth -> vegetable_broth",
-          "gruyere_cheese -> nutritional_yeast",
-          "bacon_slices -> tempeh",
-          "free_milk -> soy_milk"
-        ],
-        "errores_resueltos": [
-          "principal (Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi): Ingrediente prohibido para vegano: parmesan_cheese"
-        ]
-      },
-      {
-        "tipo_plato": "postre",
-        "plato_original": "Pizza Italiana De Pesto Y Tomates Ciruela",
-        "plato_nuevo": "Pizza Italiana De Pesto Y Tomates Ciruela",
-        "accion": "modificacion",
-        "modificaciones": [
-          "[OK] Plato reparado sustituyendo ingredientes:",
-          "  Plato: Pizza Italiana De Pesto Y Tomates Ciruela",
-          "Sustituciones exitosas: 1",
-          "part_skim_mozzarella_cheese -> tofu",
-          "Sustituciones exitosas: 1",
-          "plum_tomatoes -> tofu"
-        ],
-        "errores_resueltos": [
-          "postre (Pizza Italiana De Pesto Y Tomates Ciruela): Ingrediente prohibido para vegano: part_skim_mozzarella_cheese",
-          "postre (Pizza Italiana De Pesto Y Tomates Ciruela): Ingrediente fuera de temporada: plum_tomatoes (disponible en: verano)"
-        ]
-      }
-    ],
-    "timestamp": "2026-01-07T21:18:44.179245",
-    "feedback": "Generado por sistema CBR - Exitoso",
-    "satisfaction_score": 5.0,
-    "satisfaction_per_menu": {
-      "entrante": 5.0,
-      "principal": 5.0,
-      "postre": 5.0
-    },
-    "rating_timestamp": "2026-01-07T21:18:29.593882",
-    "modification_count": 2
   }
 ]
