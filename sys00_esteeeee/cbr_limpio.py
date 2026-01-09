@@ -4,8 +4,8 @@ Sistema CBR Limpio - Solo funcionalidad esencial
 
 from sistema_cbr import SistemaCBR, PreferenciasUsuario
 
-def generar_menu_simple(tipo_evento='familiar', temporada='invierno', restricciones=[], 
-                       estilo='clasico', tradicion='mexicana'):
+def generar_menu_simple(tipo_evento='familiar', temporada=None, restricciones=[], 
+                       estilo='clasico', tradicion='italiana'):
     """Función simple para generar menús sin prints decorativos."""
     
     sistema = SistemaCBR()

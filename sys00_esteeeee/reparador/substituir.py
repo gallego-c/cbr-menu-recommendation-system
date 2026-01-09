@@ -64,9 +64,13 @@ class SubstitutorPlatos:
         Returns:
             Resultado de la búsqueda con plato substitucion o fallo
         """
+        # DEBUG: Ver tradición del menú
+        # tradicion_menu = getattr(menu, 'tradicion', 'NO TIENE')
+        # print(f"[DEBUG] buscar_plato_substitucion: tipo_problema={tipo_problema}, tradicion_menu={tradicion_menu}")
         
         # 1. Filtrar candidatos que cumplan TODAS las preferencias del menú
         candidatos_validos = self._filtrar_candidatos_validos(menu)
+        # print(f"[DEBUG] Candidatos válidos encontrados: {len(candidatos_validos)}")
         
         if not candidatos_validos:
             return {
@@ -79,12 +83,22 @@ class SubstitutorPlatos:
         # 2. Obtener ingredientes del resto del menú (otros platos)
         ingredientes_menu = self._obtener_ingredientes_resto_menu(menu, plato_problematico)
         
-        # 3. Filtrar candidatos que tengan al menos 2 ingredientes compatibles
-        candidatos_compatibles = self._filtrar_por_compatibilidad_menu(
-            candidatos_validos, 
-            ingredientes_menu,
-            min_ingredientes_compatibles=2
-        )
+        # 3. Filtrar candidatos que tengan al menos N ingredientes compatibles
+        # Para problemas de tradición, el plato original es de otra cultura
+        # y no tiene sentido exigir compatibilidad de ingredientes
+        tipo_problema_lower = tipo_problema.lower()
+        es_problema_tradicion = 'tradicion' in tipo_problema_lower or 'tradición' in tipo_problema_lower
+        
+        if es_problema_tradicion:
+            # Para tradición: no filtrar por compatibilidad, solo usar platos válidos
+            candidatos_compatibles = candidatos_validos
+        else:
+            # Para otros problemas: exigir al menos 2 ingredientes compatibles
+            candidatos_compatibles = self._filtrar_por_compatibilidad_menu(
+                candidatos_validos, 
+                ingredientes_menu,
+                min_ingredientes_compatibles=2
+            )
         
         if not candidatos_compatibles:
             return {
@@ -99,11 +113,33 @@ class SubstitutorPlatos:
             plato_problematico, candidatos_compatibles
         )
         
+        # 4.5. EXCLUIR el plato problemático de los candidatos (no se puede sustituir por sí mismo)
+        candidatos_con_similitud = [
+            c for c in candidatos_con_similitud 
+            if c['plato'].nombre != plato_problematico.nombre
+        ]
+        
+        if not candidatos_con_similitud:
+            return {
+                'exito': False,
+                'plato_substitucion': None,
+                'mensajes': ['No hay platos alternativos disponibles (excluyendo el plato problemático)'],
+                'motivo_fallo': 'sin_alternativas'
+            }
+        
         # 5. Seleccionar el más similar
+        mejor_candidato = max(candidatos_con_similitud, key=lambda x: x['similitud'])
         mejor_candidato = max(candidatos_con_similitud, key=lambda x: x['similitud'])
         
         # 6. Verificar que la similitud sea suficiente
-        umbral_minimo = 0.6  # Umbral mínimo de similitud
+        # Para problemas de TRADICIÓN, usar un umbral más bajo porque el plato original
+        # es de otra cultura y no tiene sentido buscar algo muy similar
+        tipo_problema_lower = tipo_problema.lower()
+        if 'tradicion' in tipo_problema_lower or 'tradición' in tipo_problema_lower:
+            umbral_minimo = 0.2  # Umbral muy bajo para tradición (lo importante es que sea de la tradición correcta)
+        else:
+            umbral_minimo = 0.6  # Umbral normal para otros tipos de problemas
+            
         if mejor_candidato['similitud'] < umbral_minimo:
             return {
                 'exito': False,
@@ -580,14 +616,15 @@ class SubstitutorPlatos:
     
     def _tiene_ingredientes_tipicos_tradicion(self, plato: Plato, tradicion_menu) -> bool:
         """
-        Verifica si un plato tiene suficientes ingredientes típicos de una tradición.
+        Verifica si un plato PERTENECE a la tradición requerida.
+        Solo acepta platos que estén en la lista 'platos_tipicos' de la tradición.
         
         Args:
             plato: Plato a verificar
             tradicion_menu: Tradición requerida
             
         Returns:
-            True si el plato tiene al menos 20% de ingredientes de la tradición
+            True si el plato está en platos_tipicos de la tradición
         """
         # Cargar tradiciones
         tradiciones_data = cargador.cargar_tradiciones()
@@ -608,24 +645,8 @@ class SubstitutorPlatos:
         if not tradicion_info:
             return False
         
-        # Obtener ingredientes típicos de esta tradición
-        ingredientes_caracteristicos = set(tradicion_info.get('ingredientes_caracteristicos', []))
-        ingredientes_tipicos = set(tradicion_info.get('ingredientes_tipicos', []))
-        todos_ingredientes_tradicion = ingredientes_caracteristicos | ingredientes_tipicos
+        # El plato DEBE estar en la lista de platos_tipicos de la tradición
+        platos_tipicos = tradicion_info.get('platos_tipicos', [])
         
-        if not todos_ingredientes_tradicion:
-            return False
-        
-        # Contar cuántos ingredientes del plato son de esta tradición
-        ingredientes_plato_set = set(plato.ingredientes)
-        ingredientes_de_tradicion = ingredientes_plato_set & todos_ingredientes_tradicion
-        
-        # Calcular porcentaje
-        if len(plato.ingredientes) == 0:
-            return False
-        
-        porcentaje = len(ingredientes_de_tradicion) / len(plato.ingredientes)
-        
-        # Requerir al menos 20% de ingredientes de la tradición
-        # (más relajado que el 20% que se valida después de la reparación)
-        return porcentaje >= 0.15  # 15% para dar más opciones en la búsqueda
+        # Verificar si el nombre del plato está en los platos típicos
+        return plato.nombre in platos_tipicos

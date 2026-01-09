@@ -433,11 +433,38 @@ class FoodBank:
             True si el ingrediente viola la restricción
         """
         restriccion_lower = restriccion.lower() if isinstance(restriccion, str) else str(restriccion).lower()
+        nombre_lower = nombre_ingrediente.lower()
         
         # Obtener información del ingrediente
         info_ingrediente = self.ingredientes_db.get(nombre_ingrediente)
+        
+        # Si no encontramos el ingrediente, intentar detectar por palabras clave
         if not info_ingrediente:
-            return False  # Sin información, asumimos que no viola
+            # Detectar carnes por palabras clave
+            palabras_carne = ['beef', 'pork', 'chicken', 'lamb', 'turkey', 'duck', 
+                             'bacon', 'ham', 'sausage', 'meat', 'steak', 'ribs',
+                             'veal', 'venison', 'rabbit', 'goat', 'mutton',
+                             'chorizo', 'salami', 'prosciutto', 'pancetta']
+            palabras_pescado = ['fish', 'salmon', 'tuna', 'cod', 'shrimp', 'prawn',
+                               'lobster', 'crab', 'squid', 'octopus', 'anchovy',
+                               'sardine', 'mackerel', 'trout', 'bass', 'halibut']
+            palabras_lacteos = ['milk', 'cheese', 'cream', 'butter', 'yogurt', 'whey']
+            
+            es_carne = any(palabra in nombre_lower for palabra in palabras_carne)
+            es_pescado = any(palabra in nombre_lower for palabra in palabras_pescado)
+            es_lacteo = any(palabra in nombre_lower for palabra in palabras_lacteos)
+            
+            if restriccion_lower in ['vegetariano', 'vegano']:
+                if es_carne or es_pescado:
+                    return True
+            if restriccion_lower == 'vegano':
+                if es_lacteo:
+                    return True
+            if restriccion_lower == 'sin_lactosa':
+                if es_lacteo:
+                    return True
+            
+            return False  # Sin información suficiente
         
         categoria_ing = info_ingrediente.get('categoria', '')
         

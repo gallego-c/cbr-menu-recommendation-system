@@ -22,12 +22,16 @@ class ValidadorTemporada(ReglaValidacion):
         return "temporada"
     
     def validar(self, plato: Plato, contexto: Dict[str, Any]) -> ResultadoValidacion:
-        """Valida que los ingredientes sean de la temporada especificada"""
+        """Valida que los ingredientes sean de la temporada especificada.
+        Si no se especifica temporada (None o ''), se acepta cualquier ingrediente.
+        """
         temporada_objetivo = contexto.get('temporada')
-        if not temporada_objetivo:
+        if not temporada_objetivo or temporada_objetivo == '':
+            # Sin restricción de temporada - todo válido
             return ResultadoValidacion(
-                valido=False,
-                errores=["No se especificó temporada objetivo para validar"]
+                valido=True,
+                errores=[],
+                detalles={'temporada_objetivo': 'todas'}
             )
         
         temporada_str = convertir_a_string(temporada_objetivo)

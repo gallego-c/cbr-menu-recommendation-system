@@ -77,15 +77,15 @@ class Reparador:
             }
         """
         
-        # OPTIMIZACIÓN: Para problemas de restricciones dietarias, ir directo a sustitución de ingredientes
-        # Para problemas de tradición, verificar si es "plato de tradición incorrecta" o "ingredientes incorrectos"
+        # OPTIMIZACIÓN: Para problemas de restricciones dietarias, intentar primero sustitución de ingredientes
+        # Si falla, intentar substitución del plato completo
         if tipo_problema.lower() == 'restricciones':
-            _debug_print(f"        [DEBUG] Problema de restricciones - saltando a ESTRATEGIA 2 (ingredientes)")
+            _debug_print(f"        [DEBUG] Problema de restricciones - intentando ESTRATEGIA 1 (ingredientes)")
             resultado_ingredientes = self.substitutor_ingredientes.intentar_reparacion_por_ingredientes(
                 plato_problematico, menu, tipo_problema, problema_especifico
             )
             
-            _debug_print(f"        [DEBUG] Resultado ESTRATEGIA 2: exito={resultado_ingredientes['exito']}")
+            _debug_print(f"        [DEBUG] Resultado ESTRATEGIA 1 (ingredientes): exito={resultado_ingredientes['exito']}")
             
             if resultado_ingredientes['exito']:
                 return {
@@ -99,29 +99,79 @@ class Reparador:
                     'ingredientes_sustituidos': resultado_ingredientes['ingredientes_sustituidos']
                 }
             else:
-                # Si falla sustitución de ingredientes, fallar (no intentar otras estrategias)
-                return {
-                    'estrategia': None,
-                    'plato_resultado': None,
-                    'mensajes': ['No se pudo reparar sustituyendo ingredientes'],
-                    'exito': False
-                }
+                # Si falla sustitución de ingredientes, intentar substitución del plato completo
+                _debug_print(f"        [DEBUG] Ingredientes fallaron, intentando ESTRATEGIA 2 (plato completo)")
+                resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
+                    plato_problematico, menu, tipo_problema, problema_especifico
+                )
+                
+                if resultado_substitucion['exito']:
+                    return {
+                        'estrategia': 'substitucion',
+                        'plato_resultado': resultado_substitucion['plato_substitucion'],
+                        'mensajes': [
+                            f"[OK] Plato completo substituido:",
+                            f"  Original: {plato_problematico.nombre}",
+                            f"  Nuevo: {resultado_substitucion['plato_substitucion'].nombre}"
+                        ] + resultado_substitucion['mensajes'],
+                        'exito': True
+                    }
+                else:
+                    # Ambas estrategias fallaron
+                    return {
+                        'estrategia': None,
+                        'plato_resultado': None,
+                        'mensajes': ['No se pudo reparar ni sustituyendo ingredientes ni cambiando el plato completo'],
+                        'exito': False
+                    }
         
-        # Para problemas de tradición, verificar si el plato pertenece a otra tradición
+        # Para problemas de tradición, decidir estrategia según el tipo de error
         if 'tradicion' in tipo_problema.lower() or 'tradición' in tipo_problema.lower():
-            # Si el problema es "El plato X pertenece a la tradición Y", es un plato de tradición incorrecta
-            # En este caso, usar ESTRATEGIA 1 (sustituir plato completo)
-            if 'pertenece a la tradición' in problema_especifico or 'pertenece a la tradici' in problema_especifico:
-                _debug_print(f"        [DEBUG] Plato de tradición incorrecta - usando ESTRATEGIA 1 (sustituir plato completo)")
-                # Continuar con ESTRATEGIA 1 normal (no hacer return aquí)
+            # Detectar si es un plato de tradición completamente incorrecta
+            es_plato_tradicion_incorrecta = (
+                'pertenece a la tradición' in problema_especifico or 
+                'pertenece a la tradici' in problema_especifico or
+                'no a ' in problema_especifico  # "...pertenece a X, no a Y"
+            )
+            
+            if es_plato_tradicion_incorrecta:
+                # El plato es de otra tradición -> PRIMERO intentar sustituir el plato completo
+                _debug_print(f"        [DEBUG] Plato de tradición incorrecta - intentando ESTRATEGIA 1 (sustituir plato completo)")
+                resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
+                    plato_problematico, menu, tipo_problema, problema_especifico
+                )
+                
+                if resultado_substitucion['exito']:
+                    return {
+                        'estrategia': 'substitucion',
+                        'plato_resultado': resultado_substitucion['plato_substitucion'],
+                        'mensajes': [
+                            f"[OK] Plato completo substituido:",
+                            f"  Original: {plato_problematico.nombre}",
+                            f"  Nuevo: {resultado_substitucion['plato_substitucion'].nombre}"
+                        ] + resultado_substitucion['mensajes'],
+                        'exito': True
+                    }
+                else:
+                    # Si no hay plato alternativo, fallar (no tiene sentido cambiar ingredientes
+                    # de un plato que pertenece a otra tradición cultural)
+                    return {
+                        'estrategia': None,
+                        'plato_resultado': None,
+                        'mensajes': [
+                            f"No se encontró un plato de sustitución de la tradición requerida",
+                            f"El plato '{plato_problematico.nombre}' pertenece a otra tradición cultural"
+                        ],
+                        'exito': False
+                    }
             else:
-                # El problema es solo de ingredientes, usar ESTRATEGIA 2
-                _debug_print(f"        [DEBUG] Problema de ingredientes de tradición - saltando a ESTRATEGIA 2 (ingredientes)")
+                # El problema es de ingredientes de tradición -> intentar sustituir ingredientes primero
+                _debug_print(f"        [DEBUG] Problema de ingredientes de tradición - intentando ESTRATEGIA 1 (ingredientes)")
                 resultado_ingredientes = self.substitutor_ingredientes.intentar_reparacion_por_ingredientes(
                     plato_problematico, menu, tipo_problema, problema_especifico
                 )
                 
-                _debug_print(f"        [DEBUG] Resultado ESTRATEGIA 2: exito={resultado_ingredientes['exito']}")
+                _debug_print(f"        [DEBUG] Resultado ESTRATEGIA 1 (ingredientes): exito={resultado_ingredientes['exito']}")
                 
                 if resultado_ingredientes['exito']:
                     return {
@@ -135,13 +185,30 @@ class Reparador:
                         'ingredientes_sustituidos': resultado_ingredientes['ingredientes_sustituidos']
                     }
                 else:
-                    # Si falla sustitución de ingredientes, fallar (no intentar otras estrategias)
-                    return {
-                        'estrategia': None,
-                        'plato_resultado': None,
-                        'mensajes': ['No se pudo reparar sustituyendo ingredientes'],
-                        'exito': False
-                    }
+                    # Si falla ingredientes, intentar sustituir el plato completo
+                    _debug_print(f"        [DEBUG] Ingredientes fallaron, intentando ESTRATEGIA 2 (plato completo)")
+                    resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
+                        plato_problematico, menu, tipo_problema, problema_especifico
+                    )
+                    
+                    if resultado_substitucion['exito']:
+                        return {
+                            'estrategia': 'substitucion',
+                            'plato_resultado': resultado_substitucion['plato_substitucion'],
+                            'mensajes': [
+                                f"[OK] Plato completo substituido:",
+                                f"  Original: {plato_problematico.nombre}",
+                                f"  Nuevo: {resultado_substitucion['plato_substitucion'].nombre}"
+                            ] + resultado_substitucion['mensajes'],
+                            'exito': True
+                        }
+                    else:
+                        return {
+                            'estrategia': None,
+                            'plato_resultado': None,
+                            'mensajes': ['No se pudo reparar ni sustituyendo ingredientes ni cambiando el plato completo'],
+                            'exito': False
+                        }
         
         # ESTRATEGIA 1: Intentar sustituir el plato completo
         # Ventaja: Si hay un plato que cumple todo, es la solución más limpia
@@ -477,8 +544,9 @@ class Reparador:
         No busca en la base de datos, trabaja directamente con el objeto proporcionado.
         
         IMPLEMENTA LA MISMA ESTRATEGIA EN CASCADA que reparar_plato():
-        1. Intentar sustituir ingredientes individuales (si son restricciones)
-        2. Si falla, intentar modificar el plato actual según reglas (NO para tradición)
+        1. Intentar sustituir ingredientes individuales
+        2. Si falla, intentar sustituir el plato completo
+        3. Si falla, intentar modificar el plato actual según reglas (NO para tradición)
         
         Args:
             plato_obj: Objeto Plato a reparar (se modifica in-place)
@@ -507,6 +575,43 @@ class Reparador:
             if 'estilo' in preferencias:
                 menu_obj.estilo = preferencias['estilo']
             
+            # Detectar si es un problema de plato de tradición incorrecta
+            es_plato_tradicion_incorrecta = (
+                ('tradicion' in tipo_problema.lower() or 'tradición' in tipo_problema.lower()) and
+                ('pertenece a la tradición' in problema_especifico or 
+                 'pertenece a la tradici' in problema_especifico or
+                 'no a ' in problema_especifico)
+            )
+            
+            # Para platos de tradición incorrecta, ir directo a sustitución de plato completo
+            if es_plato_tradicion_incorrecta:
+                _debug_print(f"        [DEBUG] Plato de tradición incorrecta - intentando sustitución de plato completo")
+                resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
+                    plato_obj, menu_obj, tipo_problema, problema_especifico
+                )
+                
+                if resultado_substitucion['exito']:
+                    return {
+                        'exito': True,
+                        'plato_resultado': resultado_substitucion['plato_substitucion'],
+                        'mensajes': [
+                            f"[OK] Plato completo substituido:",
+                            f"  Original: {plato_obj.nombre}",
+                            f"  Nuevo: {resultado_substitucion['plato_substitucion'].nombre}"
+                        ] + resultado_substitucion['mensajes'],
+                        'estrategia': 'substitucion'
+                    }
+                else:
+                    return {
+                        'exito': False,
+                        'plato_resultado': plato_obj,
+                        'mensajes': [
+                            f"[X] No se encontró plato de sustitución de la tradición requerida",
+                            f"  El plato '{plato_obj.nombre}' pertenece a otra tradición cultural"
+                        ],
+                        'estrategia': 'ninguna'
+                    }
+            
             # ESTRATEGIA 1: Intentar reparar sustituyendo ingredientes individuales
             # (especialmente útil para problemas de restricciones como vegetariano)
             resultado_ingredientes = self.substitutor_ingredientes.intentar_reparacion_por_ingredientes(
@@ -523,7 +628,25 @@ class Reparador:
                     'ingredientes_sustituidos': resultado_ingredientes['ingredientes_sustituidos']
                 }
             
-            # ESTRATEGIA 2: Intentar modificar el plato actual según reglas
+            # ESTRATEGIA 2: Intentar sustituir el plato completo
+            _debug_print(f"        [DEBUG] Ingredientes fallaron, intentando sustitución de plato completo")
+            resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
+                plato_obj, menu_obj, tipo_problema, problema_especifico
+            )
+            
+            if resultado_substitucion['exito']:
+                return {
+                    'exito': True,
+                    'plato_resultado': resultado_substitucion['plato_substitucion'],
+                    'mensajes': [
+                        f"[OK] Plato completo substituido:",
+                        f"  Original: {plato_obj.nombre}",
+                        f"  Nuevo: {resultado_substitucion['plato_substitucion'].nombre}"
+                    ] + resultado_substitucion['mensajes'],
+                    'estrategia': 'substitucion'
+                }
+            
+            # ESTRATEGIA 3: Intentar modificar el plato actual según reglas
             # IMPORTANTE: NO usar modificaciones basadas en reglas para problemas de tradición
             # (añadir chili_powder a un plato catalán no tiene sentido culinario)
             if tipo_problema.lower() == 'tradicion' or 'tradición' in tipo_problema.lower():
@@ -533,7 +656,7 @@ class Reparador:
                     'mensajes': [
                         f"[X] No se pudo reparar el plato:",
                         f"  El plato '{plato_obj.nombre}' no es de la tradición requerida",
-                        f"  No hay sustituciones de ingredientes disponibles",
+                        f"  No hay sustituciones de ingredientes ni platos disponibles",
                         f"  No se aplicaron modificaciones para preservar coherencia culinaria"
                     ],
                     'estrategia': 'ninguna'

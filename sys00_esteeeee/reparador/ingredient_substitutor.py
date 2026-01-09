@@ -435,6 +435,18 @@ class IngredientSubstitutor:
             info_original = self.ingredientes_db.get(nombre_ingrediente_original)
             es_animal = info_original and info_original.get('categoria') == 'animal'
             
+            # Si no está en la base de datos, detectar por palabras clave
+            if not es_animal and not info_original:
+                nombre_lower = nombre_ingrediente_original.lower()
+                palabras_carne = ['beef', 'pork', 'chicken', 'lamb', 'turkey', 'duck', 
+                                 'bacon', 'ham', 'sausage', 'meat', 'steak', 'ribs',
+                                 'veal', 'venison', 'rabbit', 'goat', 'mutton',
+                                 'chorizo', 'salami', 'prosciutto', 'pancetta']
+                palabras_pescado = ['fish', 'salmon', 'tuna', 'cod', 'shrimp', 'prawn',
+                                   'lobster', 'crab', 'squid', 'octopus', 'anchovy',
+                                   'sardine', 'mackerel', 'trout', 'bass', 'halibut']
+                es_animal = any(palabra in nombre_lower for palabra in palabras_carne + palabras_pescado)
+            
             # VEGANO: sustituir carne, pescado, lácteos, huevos, miel
             if es_vegano:
                 # Buscar sustitutos veganos en food_bank
