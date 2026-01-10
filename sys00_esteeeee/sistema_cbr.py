@@ -926,3 +926,77 @@ class SistemaCBR:
             'tasa_exito': (self.estadisticas['casos_exitosos'] / 
                           max(1, self.estadisticas['casos_procesados'])) * 100
         }
+    
+    def recolectar_y_guardar_rating(self, menu: Dict[str, str], caso_id: str = None,
+                                    guardar_en_base: bool = True) -> Optional[float]:
+        """
+        Recolecta el rating del usuario para un menú y opcionalmente lo guarda.
+        
+        Args:
+            menu: Diccionario con el menú generado
+            caso_id: ID del caso a actualizar con el rating
+            guardar_en_base: Si guardar el rating en la base de casos
+            
+        Returns:
+            Rating recolectado o None si se omitió
+        """
+        # Usar el rating collector si está disponible
+        if hasattr(self.actualizador, 'rating_collector') and self.actualizador.rating_collector:
+            aggregate_score, per_menu_scores, timestamp = \
+                self.actualizador.rating_collector.collect_menu_rating(menu, caso_id)
+            
+            # Si se recolectó un rating y se debe guardar
+            if aggregate_score is not None and guardar_en_base and caso_id:
+                self._actualizar_rating_caso(caso_id, aggregate_score, per_menu_scores, timestamp)
+                print(f"\n[✓] Rating guardado en el caso {caso_id}")
+            
+            return aggregate_score
+        else:
+            print("\n[!] Sistema de rating no disponible")
+            return None
+    
+    def _actualizar_rating_caso(self, caso_id: str, rating: float, 
+                                per_menu_scores: Optional[Dict[str, float]],
+                                timestamp: str):
+        """
+        Actualiza el rating de un caso existente en la base de conocimiento.
+        
+        Args:
+            caso_id: ID del caso a actualizar
+            rating: Rating agregado (1-5)
+            per_menu_scores: Ratings individuales por plato
+            timestamp: Timestamp del rating
+        """
+        import json
+        import os
+        
+        # Cargar casos actuales
+        casos_path = os.path.join(self.actualizador.dir_conocimiento, 'casos.json')
+        
+        try:
+            with open(casos_path, 'r', encoding='utf-8') as f:
+                casos = json.load(f)
+            
+            # Buscar el caso y actualizarlo
+            caso_encontrado = False
+            for caso in casos:
+                if caso.get('id') == caso_id:
+                    caso['satisfaction_score'] = rating
+                    caso['rating_timestamp'] = timestamp
+                    if per_menu_scores:
+                        caso['satisfaction_per_menu'] = per_menu_scores
+                    caso_encontrado = True
+                    break
+            
+            if caso_encontrado:
+                # Guardar casos actualizados
+                with open(casos_path, 'w', encoding='utf-8') as f:
+                    json.dump(casos, f, indent=2, ensure_ascii=False)
+                
+                # Recargar casos en el recuperador
+                self.recuperador._cargar_base_casos()
+            else:
+                print(f"[!] Advertencia: No se encontró el caso {caso_id} para actualizar rating")
+        
+        except Exception as e:
+            print(f"[!] Error al actualizar rating: {str(e)}")

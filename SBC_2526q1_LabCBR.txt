@@ -1,0 +1,638 @@
+                                        2025/2026 1Q
+
+   Práctica de Sistemas
+     Basados en Casos
+
+
+
+
+Sistemes Basats
+     en el
+ Coneixement
+
+                cbea
+
+
+Departament de Ciències de la Computació
+  Grau en Intel·ligència Artificial - UPC
+Índice general
+
+
+
+1. Organización, evaluación y entrega                     2
+
+2. Objetivos de aprendizaje                               4
+
+3. El problema                                            5
+
+4. Guión de la práctica                                   8
+
+5. Planificación de tareas                               11
+
+6. Rúbrica de evaluación                                 13
+
+7. Competencia “Treball en equip”                        16
+
+8. Competencia “Ús solvent dels recursos d’informació”   17
+
+
+
+
+                                            1
+Capı́tulo    1
+Organización, evaluación y entrega
+
+   Esta es la documentación de la práctica de sistemas basados en Razonamiento Basado en Casos (CBR),
+en este documento tenéis:
+
+      Los objetivos de aprendizaje de la práctica correspondientes al temario de la asignatura
+
+      La descripción del problema que debéis resolver
+
+      Lo que tenéis que incluir en el informe que deberéis entregar como resultado de la práctica
+
+      La planificación semanal de la práctica incluyendo los objetivos que debéis ir cubriendo cada semana
+      y la dedicación en horas estimada.
+
+      Rúbrica de evaluación de la práctica
+
+    La práctica se debe hacer preferentemente en grupos de tres. Intentad no hacerla solos ya que os
+llevará mucho más trabajo.
+   La práctica se debe desarrollar en Python. Podéis utilizar las librerías que creáis conveniente y docu-
+mentar vuestra elección y el uso de ellas que hace el sistema que construyáis.
+
+    Planificad bien el desarrollo de la práctica y no lo dejéis todo para el último día, ya que no seréis capaces
+de acabarla y hacer un buen trabajo. En este documento tenéis indicaciones sobre el desarrollo de la práctica
+que os ayudarán a planificar el trabajo.
+
+    La valoración de la práctica dependerá de la calidad del análisis del problema, de la adecuación de la co-
+bertura de la ontología al problema y de la calidad de la solución. Leed el capítulo de la rúbrica de evaluación
+para una descripción detallada de los criterios de evaluación. La garantía de una buena nota es seguir los
+criterios que aparecen en la rúbrica.
+
+   La entrega de la documentación será el día 22 de Diciembre en formato electrónico según las ins-
+trucciones que aparecerán en el Racó.
+
+    Se hará una entrega presencial de la práctica durante los días 7 y 8 de Enero, vuestro profesor corrector
+establecerá el día y la hora de entrega.
+
+
+
+
+                                                       2
+Bibliografía
+
+
+[1] Bergmann, R., Brand, F., Lenz, M., Malburg, L. (2025). EXAR: A Unified Experience-Grounded Agentic
+    Reasoning Architecture. In: Proceedings of ICCBR 2025, Springer LNAI 15662.
+
+[2] Lenz, M., Hoffmann, M., Bergmann, R. (2025). LLsiM: Large Language Models for Similarity Assessment
+    in Case-Based Reasoning. In: Proceedings of ICCBR 2025, Springer LNAI 15662.
+
+[3] González-Monge, M., Díaz-Agudo, B., Recio-García, J. A. (2025). Explaining Translational Embedding
+    Models in Recommender Systems Using Knowledge Graphs and Language Models. In: Proceedings of
+    ICCBR 2025, Springer LNAI 15662.
+
+
+
+
+                                                  3
+Capı́tulo   2
+Objetivos de aprendizaje
+
+    El objetivo de esta práctica es enfrentarse a un problema que necesita conocimiento experto para ser
+solucionado y hacerlo aplicando Razonamiento Basado en Casos (CBR, abreviación de Case Based Reaso-
+ning). El problema que se plantea necesita resolver tareas de análisis e identificación y construcción de una
+solución.
+   Los objetivos específicos de esta práctica son:
+
+     Analizar la naturaleza del problema e identificar las fuentes de conocimiento necesarias para solucio-
+     narlo.
+
+     Poner en práctica una metodología sencilla para el análisis e implementación de sistemas basados en
+     el conocimiento y desarrollados con Razonamiento Basado en Casos.
+
+     Formalizar y representar el conocimiento necesario para solucionar el problema. Se ha de demostrar una
+     aproximación metodológica correcta en su construcción y una adecuada justificación de las decisiones.
+     El resultado deberá ser un sistema que implemente el ciclo completo del Razonamiento Basado en
+     Casos y se demuestre su eficacia en la solución del problema que se propone; en concreto, su aplicación
+     a la tarea de recomendación, personalización y construcción de recorridos de visita de museos, ya
+     explorada en la primera práctica del curso.
+
+     Implementar las diversas operaciones del ciclo de Razonamiento Basado en Casos para el problema
+     que se propone.
+
+     Aplicar una metodología de desarrollo basada en prototipado rápido y diseño incremental.
+
+     Seleccionar los criterios de evaluación del sistema de CBR construido. Justificar su elección y aplicarlos
+     a las pruebas pertinentes.
+
+     En relación al punto previo, escoger juegos de prueba (casos) suficientemente representativos para
+     demostrar el funcionamiento del sistema y explicar los resultados.
+
+    Respecto a la evaluación, tenéis disponible una rúbrica que indica los criterios que se usarán para
+valorar la práctica y una descripción de cada uno de los niveles de valoración para cada criterio.
+
+
+
+
+                                                      4
+Capı́tulo    3
+El problema
+
+   En la primera práctica del curso habéis implementado en CLIPS un sistema de elaboración de menús
+para celebraciones familiares y eventos institucionales (bodas, congresos, banquetes, etc.). En esta segunda
+práctica, el reto consiste en rediseñar aquel sistema bajo el paradigma del Razonamiento Basado en
+Casos (CBR), ampliando su capacidad creativa, adaptativa y explicativa.
+    El nuevo sistema actuará como un chef digital capaz de proponer menús inspirados no sólo en las
+restricciones y preferencias de los clientes, sino también en estilos culinarios reconocibles —desde la
+innovación molecular de Ferran Adrià o la cocina de autor de Arzak, hasta la elegancia clásica de Bocuse
+o la sensibilidad nórdica de Noma—, integrando además tradiciones culturales gastronómicas como la
+cocina griega, italiana, catalana, vasca, gallega, marroquí, turca, libanesa, somalí, etíope o rusa, entre otras.
+    Cada caso de la base de conocimiento representará una combinación única de contexto gastronómico,
+ingredientes, técnicas de cocción y estilo de presentación, de modo que el sistema pueda recuperar y adaptar
+experiencias previas para generar nuevas propuestas culinarias coherentes con la situación actual del usuario.
+    El objetivo de la práctica es desarrollar un sistema que recomiende hasta tres menús personalizados
+que satisfagan las restricciones del cliente, justificando su elección con argumentos comprensibles: dispo-
+nibilidad de productos de temporada, coherencia con el tipo de evento, afinidad cultural o gastronómica,
+equilibrio sensorial, o adecuación al número de comensales. El sistema deberá explicar brevemente por qué
+ciertos menús son descartados o modificados durante el proceso de adaptación.
+
+
+
+Extensión avanzada: integración de técnicas actuales de CBR
+   A partir de la base establecida, se propone una extensión avanzada inspirada en los enfoques más recientes
+presentados en el 33rd International Conference on Case-Based Reasoning (ICCBR 2025, Biarritz) [1, 2, 3].
+Para aspirar a un calificación de 10 hay que integrar una o todas las propuestas avanzadas.
+
+label=(a) Adaptación sofisticada mediante razonamiento complejo. Incorporad un módulo de adap-
+          tación basado en reglas, analogías o agentes especializados que transformen menús recuperados
+          hacia el nuevo contexto (por ejemplo, adaptar una receta japonesa a ingredientes mediterráneos).
+          Podéis inspiraros en la arquitectura EXAR (Experience-Grounded Agentic Reasoning) de Berg-
+          mann et al. (2025), que sustituye el ciclo rígido 4R por una orquestación dinámica de agentes de
+          recuperación, adaptación, generación y validación.
+lbbel=(b) Mejora de la función de similitud con modelos profundos y LLMs. Siguiendo las líneas
+          del trabajo LLsiM (Lenz, Hoffmann & Bergmann, 2025), podéis utilizar representaciones semán-
+          ticas embebidas o modelos de lenguaje para calcular similitudes más ricas entre casos, evaluando
+          afinidad entre descripciones de eventos, estilos culinarios y perfiles sensoriales.
+lcbel=(c) Aprendizaje y evolución de la base de casos. Inspirándoos en las propuestas de González-
+          Monge et al. (2025) y en las memorias persistentes del marco EXAR, añadid un componente de
+          meta-aprendizaje que actualice el conocimiento del sistema a partir del feedback de los usuarios
+
+                                                       5
+           (p. ej. puntuaciones de satisfacción, éxito o rechazo de las propuestas), reorganizando la base de
+           casos y refinando los pesos de similitud.
+
+
+
+
+Consideraciones de diseño
+   El diseño del sistema deberá especificar:
+
+     la estructura de los casos (atributos esenciales, ontología gastronómica, representación de estilos y
+     tradiciones culturales);
+
+     la función de similitud inicial y sus posibles extensiones con embeddings o LLMs;
+
+     la estrategia de adaptación y justificación de resultados;
+
+     el mecanismo de retroalimentación y aprendizaje.
+
+    La calidad del trabajo se valorará por la coherencia entre representación, razonamiento y crea-
+tividad culinaria, así como por la capacidad del sistema para explicar su proceso de decisión y
+aprender de la experiencia, en consonancia con los sistemas de CBR contemporáneos.
+   La documentación deberá reflejar el análisis del problema siguiendo las diferentes fases de la meto-
+dología de ingeniería del conocimiento explicada en clase (identificación, conceptualización, formalización,
+implementación y prueba). Deberéis detallar estas fases en la documentación.
+   Esa documentación deberá incluir:
+
+     Decisiones de diseño de vuestro sistema CBR:
+
+        • Qué es un caso y por qué
+        • Representación del caso
+        • Estructuración de la base de casos y justificación de la organización escogida
+        • Uso de conocimiento del dominio (relacional, causal...)
+        • Características e implementación de las diferentes fases del CBR
+
+     Qué base de casos de prueba habéis creado y a partir de qué fuentes la habéis construido?
+
+     Criterios de evaluación de vuestro sistema
+
+     Resultados experimentales
+
+     Código fuente comentado del sistema que habéis implementado
+
+     Vuestra base de casos de prueba.
+
+    La valoración de la práctica dependerá de la calidad del análisis del problema, de la calidad de la solución
+así como del proceso de prueba seguido. Leed las rúbricas de evaluación para una descripción detallada de
+los criterios de evaluación.
+
+
+Uso de expertos humanos y de modelos de lenguaje
+   Dado que probablemente no seréis expertos en el dominio, una posibilidad es que uséis el sentido común
+para obtener el conocimiento con el que desarrollar la práctica.
+   Otra posibilidad es tener un experto/experta humano como fuente para hacer esa extracción de conoci-
+miento. Si tenéis contactos de expertos humanos en el mundo de la restauración podéis extraer conocimiento
+mediante entrevistas. En este caso debéis añadir dentro del apartado de conceptualización del documento
+
+
+                                                       6
+un subapartado que explique qué conocimiento se ha obtenido del experto humano y el tipo de preguntas
+que se le han hecho.
+    Una posibilidad extra es utilizar cualquiera de los modelos de lenguaje que existen actualmente (ChatGPT,
+Gemini...). para que simulen la interacción con un experto humano para adquirir el conocimiento necesario
+en la fase de conceptualización del problema, y luego usar el conocimiento adquirido para la fase de formaliza-
+ción. No es necesario utilizar todo lo que se obtenga del modelo de lenguaje, se puede añadir/quitar/modificar
+lo necesario para adaptarlo al sistema que queremos construir. El objetivo es hacer una fase de conceptua-
+lización más realista que inventarse el conocimiento.
+    En el caso de usar modelos de lenguaje se tendrá que documentar qué preguntas se le han hecho al modelo
+de lenguaje y que conocimiento se ha extraído de las respuestas dentro del apartado de conceptualización.
+    NOTA IMPORTANTE: en esta práctica permitimos el uso de modelos de lenguaje en la fase de con-
+ceptualización, no en la formalización automática de casos o de ontologías en OWL a partir de modelos de
+lenguaje.
+
+
+
+
+                                                      7
+Capı́tulo   4
+Guión de la práctica
+
+Primera semana: Enunciado (10/11)
+   Esta primera semana la deberéis dedicar a leer el enunciado, a iniciar la búsqueda de las fuentes de
+conocimiento y revisar todos los aspectos de los sistemas CBR explicados hasta el momento.
+    Estaría bien que empezárais a buscar fuentes de información de las que extraeréis conocimiento del
+dominio de la práctica, en concreto intentad conocer lo mejor posibles diversos sistemas CBR, seleccionar
+los que os parezcan que desarrollen tareas de recomendación o asimilables a la recomendación e intentar ver
+cómo se han diseñado. Las referencias que os hemos dado al final de las transparencias de CBR son útiles y
+también hemos añadido dos textos sobre CBR (uno más conciso y otro más amplio) donde podéis encontrar
+fuentes de inspiración.
+    También os serán útiles referencias sobre Filtraje Collaborativo (Collaborative Filtering), que es una
+estrategia muy utilizada en recomendación.
+  Documentad qué fuentes habéis consultado y qué habéis obtenido de ellas así cómo os sugieren aproxi-
+maciones de trabajo sobre vuestro problema.
+
+
+ Segunda semana: Análisis de fuentes de información y primera especifi-
+cación del problema (17/11)
+    Esta semana debéis hacer ya el análisis de los sistemas que hayáis escogido. Debéis documentar todo
+este proceso, ya que forma parte del documento a entregar, y es la base para evaluar la competencia de ”Ús
+solvent dels recursos d’informació”.
+   Sería conveniente también que considerarais el uso que podéis darle en vuestro sistema CBR a la ontología
+que hayáis desarrollado en la primera práctica puesto que ahí, tal y como está o bien expandiéndola, podéis
+representar conocimiento del dominio que os pueda ser útil en alguna fase del CBR (por ejemplo, en la de
+adaptación). Recordad que el conocimiento de dominio en los CBR no se agota en un ontología simple sino
+que en la mayoría de ellos se introduce un notable conjunto de conocimientos sobre razonamiento causal
+propio del dominio.
+   Es el momento también de decidirse por una primera medida de similitud que podréis mejorar o com-
+plementar más adelante.
+   Empezad a documentar vuestras decisiones y su justificación.
+
+
+Tercera Semana: Decisiones sobre la arquitectura del sistema/ Prototipo
+inicial (24/11)
+   Esta semana deberíais completar la especificación del problema y tener una versión clara de todos los
+componentes de CBR que vais a utilizar: cómo se indexa, cómo se recupera, cómo se adapta, si hay olvido
+
+                                                     8
+o no, se hace un seguimiento de casos fracasados y exitosos o no, cómo se utiliza este conocimiento, etc.
+    Es conveniente también que aquí ya preparéis cómo váis a evaluar los diversos aspectos de competencia
+del sistema CBR que decidáis: eficiencia en tiempo y espacio, consistencia, corrección, completud, etc.
+    Y last but not least deberiáis tener ya muy definida la forma en que el sistema se articula en torno a les
+4 R’s del CBR: Retrieve, Reuse, Revise y Retain, según la propuesta de Aamodt y Plaza (ver referencias en
+el material de teoría).
+    Tened en cuenta que a la hora de escribir la documentación deberéis explicar muy detalladamente cómo
+se articula el sistema CBR en sus componentes y fases, así como su arquitectura.
+    A partir de todo esto podéis crear un prototipo mínimo que os permita comprobar las relaciones entre
+los diversos componentes y fases. Como todo prototipo inicial, va sufrir numerosas revisiones y mejoras pero
+ya os permitirá evaluar vuestras decisiones y os guiará sobre cómo debéis completarlo. El objetivo de este
+prototipo inicial es detectar posibles problemas del diseño lo antes posible.
+    En esta semana es muy importante que dividáis bien el trabajo entre los miembros del grupo. Te-
+ned siempre en consideración el desarrollo incremental, dividid el problema en módulos y subproblemas y
+focalizaros en obtener un pequeño prototipo inicial del que partir. Es una buena idea plantearos unos pocos
+casos que el sistema debería ser capaz de resolver.
+   En este momento o antes ya deberías tener claro las responsabilidades de cada persona del grupo, el
+ámbito de desarrollo que será su responsabilidad y cómo resolver conflictos (no cumplir con las tareas y
+plazos acordados entre vosotros etc.) Es importante que gestionéis esto bien, porque os evitará conflictos
+mayores en semanas posteriores.
+   Documentad.
+
+
+Cuarta semana: Extensión del prototipo (1/12)
+   Ya deberíais tener una idea bastante clara del sistema y haber validado las decisiones que habéis ido
+tomando.
+
+     La descomposición del sistema en fases de CBR os debería haber dado los módulos que necesitáis
+     implementar para la cuatro R’s.
+
+     La definición de qué consideráis un caso os habrá dado ya una primera idea para representarlo
+
+     La definición de qué consideráis un caso os habrá dado ya una primera idea de cómo representarlo
+     (vector, objeto estructurado, etc.)
+
+     De forma similar ya habréis decidido sobre la organización de la biblioteca de casos (plana, indexada,
+     etc.)
+
+     Tendréis un conjunto de casos a partir de los cuales desarrollar el prototipo inicial
+
+     Tendréis un prototipo limitado que funciona.
+
+   Ahora deberéis ampliar el prototipo para incluir nuevos casos. Estos nuevos casos deberéis dirigirlos hacia
+obtener un conjunto de juegos de prueba suficientemente variados que os permitan probar las posibilidades
+con las que se puede encontrar el sistema.
+
+
+Quinta semana: Prototipo definitivo, juegos de prueba y documentación
+(9/12)
+   A estas alturas ya deberíais haber fijado todas las decisiones de la práctica.
+   Deberéis plantearos los casos que queréis probar y mirar que los resultados que esperáis sean los correctos.
+Haced una lista de casos pensando los diferentes escenarios que es capaz de resolver vuestro sistema.
+
+
+
+                                                      9
+    Pensad que los casos han de ser suficientemente variados tanto en lo que respecta a elementos que
+intervienen como su complejidad. Tened en cuenta que estos casos os servirán de juegos de prueba, por lo
+que estáis matando dos pájaros de un tiro. Aprovechad para guardar los resultados y documentarlos.
+   También deberíais ser capaces de explicar los resultados que obtenéis.
+    Documentad!. Esta semana también deberíais dedicarla a generar los juegos de prueba que debéis incluir
+en la documentación. Para ellos solo tenéis que ejecutar los diferentes casos que hayáis escogido durante el
+proceso de desarrollo y las diferentes políticas de recuperación y adaptación. Podéis tomar como referencia
+lo discutido en clase de teoría en referencia a la evaluación de sistemas CBR.
+   Las pruebas deberíais documentarlas adecuadamente explicando cual es el escenario de la prueba y cuales
+son los resultados que da el sistema.
+    El resto de la documentación debería explicar todo el proceso de desarrollo siguiendo las diferentes fases
+que tiene la metodología vista en teoría. La documentación debería estar estructurada también siguiendo
+estas fases de desarrollo.
+
+
+Sexta semana: revisión final de juegos de prueba y documentación (15/12)
+    Realizad los últimos ajustes después de analizar los resultados con los juegos de prueba y terminad los
+últimos aspectos de la documentación.
+
+
+
+
+                                                     10
+Capı́tulo   5
+Planificación de tareas
+
+   Esta planificación os puede servir como orientación para organizar y repartir el trabajo de la práctica.
+Tened en cuenta que una planificación adecuada beneficiará la calidad de vuestra práctica.
+   Las tareas a desarrollar dentro de las semanas que indica el guión son las que aparecen en la siguiente
+tabla. También se indican las horas de dedicación aproximada del grupo en conjunto. Tened en cuenta que
+son horas de dedicación de un alumno medio para hacer la práctica a un nivel aceptable (digamos que una
+nota de notable) para llegar al sobresaliente hace falta algo más de dedicación.
+
+ Semana 1 (2h lab + 10 horas trabajo externo)
+   1. Revisar todo el material de CBR visto en teoría
+   2. Seleccionar sistemas que puedan ser útiles para el vuestro
+   3. Documentar
+ Semana 2 (2h lab + 12 horas trabajo externo)
+   1. Definir componentes y fases de vuestro CBR
+   2. Decidir si aumentáis vuestra ontología o no
+   3. Plantearse la resolución del problema desde el punto de vista del experto
+ Semana 3 (2h lab + 12 horas trabajo externo)
+    1. Plantearse un conjunto de problemas a resolver por el sistema y como los resolvería un experto
+    2. Plantearse la resolución del problema desde el punto de vista del ingeniero del conocimiento (me-
+       todologías de resolución de problemas, descomposición/modularización de la resolución)
+    3. Documentar los fases y componentes de CBR que usará el sistema y como encaja su descomposición
+       en esa metodología
+    4. Documentar dimensiones y criterios de evaluación de vuestro sistema CBR
+    5. Decidir el uso/extensión de la ontología previa
+    6. Documentar la estructuracion de componentes (representación, indexación, adaptación, etc.) y su
+       arquitectura
+    7. Planificar el desarrollo incremental de la práctica a partir de los problemas escogidos y decidir el
+       objetivo del primer prototipo
+    8. Desarrollo de un prototipo inicial que resuelva un problema sencillo
+    9. Documentar los problemas escogidos y la planificación del desarrollo incremental
+
+
+
+
+                                                    11
+ Semana 4 (2h lab + 12 horas trabajo externo)
+   1. Extensión del prototipo inicial para solucionar algunos casos más
+   2. Refinar métodos de indexación, recuperación y adaptación
+ Semana 5 (2h lab + 12 horas trabajo externo)
+   1. Completar el prototipo
+   2. Generar juegos de prueba con los problemas usados para el desarrollo
+   3. Decidir juegos de prueba adicionales y probarlos
+   4. Documentar los resultados (justificación de los casos, explicación de su resolución)
+ Semana 6 (2h lab + 8 horas trabajo externo)
+    1. Completar la documentación de los juegos de prueba
+    2. Completar la documentación de la práctica
+
+    Las horas de laboratorio de las tres primeras semanas os servirán para centraros en aspectos de diseño
+de vuestro sistema CBR y probar diversas alternativas para sus diversos componentes así como anticipar su
+evaluación El resto de horas de laboratorio las deberéis dedicar para las consultas al profesor de laboratorio,
+sincronización entre los componentes del grupo y desarrollo de la práctica.
+    Es importante que os dividáis las tareas entre los tres miembros del grupo de manera adecuada. Muchas
+de las tareas se pueden hacer de manera paralela. Y recordad que tres personas delante de un PC durante
+una hora son una hora de trabajo, no tres.
+
+
+
+
+                                                      12
+Capı́tulo   6
+Rúbrica de evaluación
+
+    Esta es la rúbrica de evaluación de la práctica. La corrección se hará según estos criterios y siguiendo
+las pautas que se detallan para cada nivel de evaluación.
+   Deberéis seguir estos criterios a la hora de escribir vuestra documentación y explicar qué habéis hecho
+en el desarrollo de la práctica y cómo lo habéis hecho.
+
+Nota máxima (10): solo podrán alcanzarla aquellos trabajos que, además de cumplir todos los criterios de
+calidad establecidos, integren al menos una de las técnicas avanzadas propuestas en el enunciado,
+tales como:
+
+     Adaptación sofisticada mediante razonamiento complejo o agentes especializados (arquitectura EXAR
+     u otras);
+
+     Mejora de la función de similitud con modelos profundos o LLMs;
+
+     Aprendizaje y evolución de la base de casos mediante feedback y meta-aprendizaje.
+
+
+
+
+                                                    13
+                   Valoración
+                              Mal                                         Regular                                     Bien
+     Criterio
+     Aplicación de la metodología de diseño e implementación
+     Identificación
+                                   La descripción del problema es una          La descripción del problema amplía            La descripción del problema es ela-
+                                   copia literal del enunciado.                ligeramente la del enunciado.                 borada y contextualizada.
+
+                                                                               Se mencionan las fuentes de conoci-           Se analizan detalladamente las
+                                                                               miento sin analizarlas.                       fuentes de conocimiento (origen, ca-
+                                                                                                                             lidad, relevancia y aspectos éticos).
+                                                                               Se identifican objetivos generales
+                                                                               pero sin justificar su relevancia.            Los objetivos y resultados esperados
+                                                                                                                             están claramente definidos.
+     Conceptualización
+                                   No hay una descripción de los con-          Descripción parcial de los conceptos          Descripción completa de los concep-
+                                   ceptos del dominio ni de los subpro-        y subproblemas.                               tos del dominio, subproblemas y or-
+                                   blemas.                                                                                   ganización del conocimiento exper-
+                                                                                                                             to.
+
+
+
+
+14
+                                                                                                                             Se incluyen ejemplos representati-
+                                                                                                                             vos y una descripción informal del
+                                                                                                                             proceso de resolución.
+                  Valoración
+                                  Mal                                                 Regular                                          Bien
+     Criterio
+     Calidad de la práctica
+     Cobertura
+                                        Cobertura superficial, solo los casos más           Cobertura media, incluye casos típicos y          Cobertura avanzada, incluyendo excepcio-
+                                        simples.                                            algunos menos frecuentes.                         nes y casos límite.
+                                                                                                                                              El sistema demuestra una comprensión
+                                                                                                                                              profunda del dominio.
+                                                                                                                                              Para optar a la nota máxima (10):
+                                                                                                                                              el sistema integra una o varias de
+                                                                                                                                              las técnicas avanzadas propuestas
+                                                                                                                                              (adaptación compleja, similitud ba-
+                                                                                                                                              sada en LLMs o aprendizaje de la ba-
+                                                                                                                                              se de casos).
+     Documentación
+                                        Mal estructurada, difícil de seguir, con            Estructurada pero poco elaborada o im-            Clara, precisa, bien presentada y con ex-
+                                        errores frecuentes.                                 precisa.                                          plicaciones detalladas.
+                                                                                                                                              Incluye justificación metodológica y discu-
+                                                                                                                                              sión crítica de resultados.
+     Cumplimiento del enunciado
+                                        No se han considerado todas las restriccio-         Cumple parcialmente lo solicitado.                Cumple plenamente lo solicitado en el
+                                        nes o recomendaciones.                                                                                enunciado y añade valor con mejoras o in-
+
+
+
+
+15
+                                                                                                                                              novaciones.
+                                                                                                                                              El uso de técnicas avanzadas de CBR
+                                                                                                                                              es condición necesaria para obtener
+                                                                                                                                              un 10.
+Capı́tulo   7
+Competencia “Treball en equip”
+
+   Con esta práctica se evaluará la competencia de trabajo en equipo. Esto significa utilizar la planificación
+propuesta para ayudaros a planificar el trabajo y establecer una pautas entre el grupo de trabajo para
+desarrollar la práctica de manera eficaz.
+   Estas pautas incluyen el repartir el trabajo, establecer un calendario de plazos de entregas, realizar
+reuniones periódicas, establecer mecanismos de comunicación y participación entre los miembros del equipo
+y detectar y resolver conflictos.
+    No es trabajo en equipo el repartirse el trabajo la primera semana y no verse hasta la semana anterior
+a la entrega.
+   El formulario de evaluación que utilizaremos para la competencia es el que tenéis a continuación.
+
+
+                                               Treball en equip
+  Nivell 2: Contribuir a consolidar l’equip, planificant objectius, treballant amb
+                                                                                                  Alumnes
+ eficàcia i afavorint-hi la comunicació, la distribució de tasques i la cohesió.
+ Establir i mantenir les relacions cooperatives, i identificar i marcar pautes
+                                                                                              1     2       3
+ per superar-ne les dificultats
+ Ajuda en la creació de les pautes de treball per a resoldre els conflictes en l’equip
+ Té en compte els punts de vista dels altres i retroalimenta de manera constructiva
+ Actua constructivament per afrontar els conflictes interns de l’equip
+ Establir i planificar els objectius del grup, les responsabilitats i les tasques
+                                                                                              1     2       3
+ que s’han de dur a terme
+ Contribueix a l’establiment dels objectius de l’equip
+ Assumeix els objectius de l’equip com a propis
+ Proposa un repartiment igualitari de tasques i responsabilitats
+ Treballar amb eficàcia i crear oportunitats per motivar la participació dels
+                                                                                              1     2       3
+ altres
+ Compleix els terminis definits en la planificació del treball
+ Busca la participació de totes les persones en els debats i resultats
+ Intercanviar informació, aportar idees i modificar les propostes de treball                  1     2       3
+ Participa de forma activa en els moments de trobada, compartint la informació, els
+ coneixements i les experiències
+ Aporta idees i propostes amb afany de millora
+ Accepta i integra la crítica constructiva per a la millora del seu propi treball
+
+
+
+
+                                                     16
+Capı́tulo   8
+Competencia “Ús solvent dels recursos
+d’informació”
+
+    Con esta práctica se evaluará también la competencia ”Ús solvent dels recursos d’informació”. En esta
+asignatura la competencia tiene como objetivo el trabajar las siguientes capacidades:
+
+     Identificar las necesidades de información para un determinado problema o contexto.
+
+     Buscar y consultar las fuentes de información: buscadores, catálogos, bases de datos, Internet.
+
+     Seleccionar la información de forma eficiente
+
+     Organizar, analizar, sintetizar y evaluar la información, haciendo un uso razonable y ético de la misma.
+
+    La competencia se valorará a partir de la documentación de la práctica, en el apartado de análisis de
+las fuentes de información dentro de la fase de identificación del problema. Esta sección debe describir el
+proceso que habéis realizado de obtención, análisis y evaluación de las fuentes de información.
+    Hay dos tipos de fuentes de información a documentar: las que han sido identificadas en el proceso de
+búsqueda de información,y las que han sido finalmente escogidas. Para cada fuente de información se ha de
+incluir:
+
+     Descripción breve de la fuente de información: quien es el creador/dueño de la fuente de información
+     y que información contiene
+
+     Relevancia: ¿Porqué es interesante esta fuente de información en el proceso de identificación de esta
+     práctica? ¿Que tipo de información nos aporta para su resolución?
+
+     Calidad de la información: ¿es una buena fuente de información? ¿contiene datos fidedignos y comple-
+     tos? ¿puede haber algún tipo de sesgo en los datos?
+
+     (solo para las fuentes de información escogidas finalmente) Análisis ético de la fuente de información:
+     ¿Como se ha obtenido la fuente de información? ¿Se han vulnerado los derechos de autor de otras
+     fuentes? En el caso de información personal o de perfilado de usuarios ¿se ha pedido el consentimiento
+     a las personas de las que se tiene información o se ha construido un perfil?
+
+     (solo para las fuentes de información escogidas finalmente) Análisis ético del uso de la información:
+     ¿Está protegida por algún tipo de copyright? ¿El uso de la información en esta práctica infringe el
+     copyright?
+
+
+
+
+                                                     17
+Uso ético de la información
+    En la práctica 1 teneis que consultar varias fuentes de información para obtener conocimiento sobre
+como se estructuran los museos, las colecciones y sobre como recomendar diferents rutas. Este tipo de 20
+conocimiento es información que suele tener derechos de autor que pueden estar protegidos por licencias. Os
+recomendamos leer un recurso del Servei de Biblioteques de la UPC sobre el tema: https://bibliotecnica.
+upc.edu/es/propietat-intellectual/us-etic-informacio#tipus-drets-autor
+
+
+Uso ético de los datos
+    Opcionalmente en la práctica 1 podeis decidir el usar datos que encontreis en Internet sobre pla-
+tos y menús. Para eso es importante que adquirais conocimientos sobre el uso ético de los datos, tan-
+to de la organización que ha recopilado los datos como de vosotros/as que vais a hacer un uso de los
+datos. Hay muchísimo material online sobre el uso ético de los datos. El Open Data Institute (theo-
+di.org) organiza incluso cursos de formación y certificación en ética de los datos (no hace falta que los
+hagais). Tiene también recursos online para guiar a los usuarios. Uno de ellos es el Data Ethics Canvas
+(https://theodi.org/insights/tools/the-data-ethics-canvas-2021/) que está pensado para guiar a
+las empresas en la creación de su política de ética de datos. Tiene también una Guia de uso del Data Ethics
+Canvas (descargable desde la misma web). Aunque vosotros no sois una empresa que va a hacer una ex-
+plotación comercial de los datos, es interesante que veais los aspectos que se deben tener en cuenta, y los
+analiceis desde el punto de vista de la organización que ha recompilado la fuente de información que estais
+analizando (¿Qué partes de Data Ethics Canvas sospechamos que no ha cubierto?) y desde el punto de vista
+de vosotros/as, que vais a crear un mini-sistema de IA con esos datos (¿Qué aspectos del Data Ethics Canvas
+son aplicables en vuestro caso?).
+
+
+
+
+                                                    18
+

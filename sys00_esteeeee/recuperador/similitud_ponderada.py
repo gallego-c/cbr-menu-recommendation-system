@@ -15,18 +15,19 @@ from dataclasses import dataclass
 @dataclass
 class PesosSimilitud:
     """Configuración de pesos para el cálculo de similitud ponderada."""
-    tipo_evento: float = 0.25
-    restricciones: float = 0.20
+    tipo_evento: float = 0.22
+    restricciones: float = 0.18
     temporada: float = 0.15
     estilo: float = 0.15
     tradicion: float = 0.15
     menu_ingredientes: float = 0.10
+    rating_quality: float = 0.05  # Peso para el rating de calidad del caso
     
     def __post_init__(self):
         # Verificar que los pesos sumen aproximadamente 1.0
         total = sum([
             self.tipo_evento, self.restricciones, self.temporada,
-            self.estilo, self.tradicion, self.menu_ingredientes
+            self.estilo, self.tradicion, self.menu_ingredientes, self.rating_quality
         ])
         if abs(total - 1.0) > 0.01:
             raise ValueError(f"Los pesos deben sumar 1.0, actual: {total}")
@@ -39,14 +40,16 @@ class CalculadorSimilitudPonderada:
     Combina similitudes locales de cada atributo con pesos configurables.
     """
     
-    def __init__(self, pesos: PesosSimilitud = None):
+    def __init__(self, pesos: PesosSimilitud = None, enable_rating_boost: bool = True):
         """
         Inicializa el calculador.
         
         Args:
             pesos: Pesos para cada atributo
+            enable_rating_boost: Si activar boost/penalización por rating (default: True)
         """
         self.pesos = pesos or PesosSimilitud()
+        self.enable_rating_boost = enable_rating_boost
         self._cargar_conocimiento()
     
     def _cargar_conocimiento(self):
@@ -110,15 +113,26 @@ class CalculadorSimilitudPonderada:
             caso_base.get('menu', {})
         )
         
+        # Similitud de rating/calidad del caso base
+        sim_rating = self._similitud_rating(caso_base)
+        
         # Similitud global ponderada
-        similitud_total = (
+        similitud_base = (
             self.pesos.tipo_evento * sim_tipo +
             self.pesos.restricciones * sim_restricciones +
             self.pesos.temporada * sim_temporada +
             self.pesos.estilo * sim_estilo +
             self.pesos.tradicion * sim_tradicion +
-            self.pesos.menu_ingredientes * sim_menu
+            self.pesos.menu_ingredientes * sim_menu +
+            self.pesos.rating_quality * sim_rating
         )
+        
+        # Aplicar boost/penalización adicional basado en el rating si está habilitado
+        if self.enable_rating_boost:
+            boost_factor = self._calcular_boost_rating(caso_base)
+            similitud_total = similitud_base * boost_factor
+        else:
+            similitud_total = similitud_base
         
         return min(1.0, max(0.0, similitud_total))
     
@@ -225,9 +239,72 @@ class CalculadorSimilitudPonderada:
         categorias2.discard(None)
         return self._similitud_conjuntos(categorias1, categorias2)
     
+    def _similitud_rating(self, caso_base: Dict) -> float:
+        """
+        Calcula componente de similitud basado en el rating del caso base.
+        
+        Rating alto (4.0-5.0) -> similitud alta (0.8-1.0)
+        Rating medio (3.0-4.0) -> similitud media (0.5-0.8)
+        Rating bajo (1.0-3.0) -> similitud baja (0.0-0.5)
+        Sin rating -> neutral (0.6)
+        
+        Args:
+            caso_base: Diccionario del caso base
+            
+        Returns:
+            float: Similitud basada en rating (0.0-1.0)
+        """
+        rating = caso_base.get('satisfaction_score')
+        
+        if rating is None:
+            # Sin rating: valor neutral
+            return 0.6
+        
+        # Normalizar rating de escala 1-5 a 0-1
+        # Rating 5.0 -> 1.0, Rating 3.0 -> 0.5, Rating 1.0 -> 0.0
+        normalized = (rating - 1.0) / 4.0
+        
+        return max(0.0, min(1.0, normalized))
+    
+    def _calcular_boost_rating(self, caso_base: Dict) -> float:
+        """
+        Calcula factor de boost/penalización basado en el rating.
+        
+        Este factor multiplica la similitud base para dar preferencia
+        a casos con rating alto y penalizar casos con rating bajo.
+        
+        Ratings altos (>=4.5): boost +15% (factor 1.15)
+        Ratings buenos (4.0-4.5): boost +7% (factor 1.07)
+        Ratings medios (3.5-4.0): neutral (factor 1.0)
+        Ratings bajos (3.0-3.5): penalización -5% (factor 0.95)
+        Ratings muy bajos (<3.0): penalización -15% (factor 0.85)
+        Sin rating: neutral (factor 1.0)
+        
+        Args:
+            caso_base: Diccionario del caso base
+            
+        Returns:
+            float: Factor multiplicador (0.8-1.2)
+        """
+        rating = caso_base.get('satisfaction_score')
+        
+        if rating is None:
+            return 1.0  # Neutral
+        
+        if rating >= 4.5:
+            return 1.15  # Boost alto
+        elif rating >= 4.0:
+            return 1.07  # Boost moderado
+        elif rating >= 3.5:
+            return 1.0   # Neutral
+        elif rating >= 3.0:
+            return 0.95  # Penalización leve
+        else:
+            return 0.85  # Penalización moderada
+    
     def explicar_similitud(self, caso_nuevo: Dict, caso_base: Dict) -> Dict[str, float]:
         """Proporciona explicación detallada de la similitud."""
-        return {
+        explicacion = {
             'tipo_evento': self._similitud_tipo_evento(
                 caso_nuevo.get('tipo_evento'),
                 caso_base.get('tipo_evento')
@@ -251,5 +328,16 @@ class CalculadorSimilitudPonderada:
             'menu_ingredientes': self._similitud_menu_ingredientes(
                 caso_nuevo.get('menu', {}),
                 caso_base.get('menu', {})
-            )
+            ),
+            'rating_quality': self._similitud_rating(caso_base)
         }
+        
+        # Añadir información del boost si está habilitado
+        if self.enable_rating_boost:
+            explicacion['rating_boost_factor'] = self._calcular_boost_rating(caso_base)
+            rating = caso_base.get('satisfaction_score')
+            if rating:
+                explicacion['caso_rating'] = rating
+        
+        return explicacion
+

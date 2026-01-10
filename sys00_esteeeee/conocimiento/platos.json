@@ -4187,5 +4187,30 @@
     ],
     "sabor_dominante": "dulce",
     "ingrediente_sabor": "honey"
+  },
+  {
+    "nombre": "Fideuà De Mariscos",
+    "ingredientes": [
+      "sodium_soy_sauce",
+      "ginger",
+      "dry_mustard",
+      "green_beans",
+      "white_pepper",
+      "sesame_oil",
+      "scallions",
+      "canola_oil",
+      "sugar",
+      "shaoxing_wine",
+      "garlic",
+      "turkey",
+      "water",
+      "crushed_red_pepper_flakes",
+      "corn_starch"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "white_pepper"
   }
 ]

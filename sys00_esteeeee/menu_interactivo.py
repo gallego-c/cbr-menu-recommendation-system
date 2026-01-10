@@ -183,12 +183,69 @@ def mostrar_resultado(resultado):
         print(f"   Similitud: {resultado['similitud']:.1%}")
         if resultado.get('nuevo_caso'):
             print(f"   Nuevo caso guardado: {resultado['nuevo_caso']}")
+        
+        # Retornar True para indicar éxito (usado para pregunta de rating)
+        return True
     else:
         print("NO SE PUDO GENERAR EL MENU")
         print("="*60)
         print(f"\nMotivo: {resultado.get('mensaje', 'Error desconocido')}")
+        return False
     
     print("="*60 + "\n")
+
+
+def preguntar_rating_menu(menu, caso_id=None):
+    """
+    Pregunta al usuario si desea calificar el menú generado.
+    
+    Args:
+        menu: Diccionario con el menú generado
+        caso_id: ID del caso (opcional, para mostrar)
+        
+    Returns:
+        Rating (1-5) o None si se omite
+    """
+    print("\n" + "-"*60)
+    print("CALIFICACIÓN DEL MENÚ")
+    print("-"*60)
+    print("¿Te gustaría calificar este menú?")
+    print("Esto ayudará al sistema a mejorar futuras recomendaciones.")
+    print()
+    
+    respuesta = input("¿Calificar menú? (s/n) [s]: ").strip().lower()
+    
+    if respuesta == 'n' or respuesta == 'no':
+        print("Calificación omitida.")
+        return None
+    
+    print("\nCalifica el menú del 1 al 5:")
+    print("  1 - Muy malo")
+    print("  2 - Malo")
+    print("  3 - Regular")
+    print("  4 - Bueno")
+    print("  5 - Excelente")
+    print()
+    
+    max_intentos = 3
+    for intento in range(max_intentos):
+        try:
+            rating_str = input("Tu calificación (1-5): ").strip()
+            rating = float(rating_str)
+            
+            if 1 <= rating <= 5:
+                print(f"\n✓ Gracias por tu calificación: {rating}/5")
+                return rating
+            else:
+                print("Error: La calificación debe estar entre 1 y 5")
+        except ValueError:
+            print("Error: Por favor ingresa un número entre 1 y 5")
+        except (EOFError, KeyboardInterrupt):
+            print("\nCalificación cancelada")
+            return None
+    
+    print("Demasiados intentos. Calificación omitida.")
+    return None
 
 
 def preguntar_continuar():
@@ -197,6 +254,13 @@ def preguntar_continuar():
 
 
 def main():
+    from sistema_cbr import SistemaCBR, PreferenciasUsuario
+    
+    # Inicializar sistema CBR una sola vez
+    print("\nInicializando sistema CBR...")
+    sistema = SistemaCBR()
+    print("Sistema listo.\n")
+    
     continuar = True
     
     while continuar:
@@ -210,14 +274,15 @@ def main():
         
         mostrar_resumen_preferencias(tipo_evento, temporada, restricciones, estilo, tradicion)
         
-        confirmar = input("\nGenerar menu con estas preferencias? (s/n) [s]: ").strip().lower()
+        confirmar = input("\n¿Generar menú con estas preferencias? (s/n) [s]: ").strip().lower()
         if confirmar == 'n' or confirmar == 'no':
-            print("\nGeneracion cancelada. Volviendo al inicio...\n")
+            print("\nGeneración cancelada. Volviendo al inicio...\n")
             continue
         
-        print("\nGenerando menu... Por favor espera.\n")
+        print("\nGenerando menú... Por favor espera.\n")
         
-        resultado = generar_menu_simple(
+        # Crear preferencias y generar menú
+        preferencias = PreferenciasUsuario(
             tipo_evento=tipo_evento,
             temporada=temporada,
             restricciones=restricciones,
@@ -225,11 +290,39 @@ def main():
             tradicion=tradicion
         )
         
-        mostrar_resultado(resultado)
+        resultado_cbr = sistema.generar_menu(preferencias)
+        
+        # Convertir resultado a formato para mostrar
+        resultado = {
+            'exito': resultado_cbr.exito,
+            'menu': resultado_cbr.menu if resultado_cbr.exito else None,
+            'mensaje': resultado_cbr.mensaje,
+            'caso_base': resultado_cbr.caso_base_id,
+            'similitud': resultado_cbr.similitud_caso_base,
+            'nuevo_caso': resultado_cbr.nuevo_caso_id
+        }
+        
+        # Mostrar resultado
+        menu_exitoso = mostrar_resultado(resultado)
+        
+        # Si el menú fue exitoso, preguntar por rating
+        if menu_exitoso and resultado_cbr.menu:
+            rating = preguntar_rating_menu(
+                resultado_cbr.menu, 
+                caso_id=resultado_cbr.caso_base_id
+            )
+            
+            # Si se proporcionó un rating, guardarlo
+            if rating is not None and resultado_cbr.caso_base_id:
+                sistema.recolectar_y_guardar_rating(
+                    resultado_cbr.menu,
+                    caso_id=resultado_cbr.caso_base_id,
+                    guardar_en_base=True
+                )
         
         continuar = preguntar_continuar()
     
-    print("\nGracias por usar el Sistema de Generacion de Menus!\n")
+    print("\n¡Gracias por usar el Sistema de Generación de Menús!\n")
 
 
 if __name__ == "__main__":
