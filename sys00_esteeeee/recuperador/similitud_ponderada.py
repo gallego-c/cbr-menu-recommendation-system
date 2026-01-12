@@ -187,9 +187,14 @@ class CalculadorSimilitudPonderada:
         return 1.0 if estilo1 == estilo2 else 0.3
     
     def _similitud_tradicion(self, trad1: str, trad2: str) -> float:
-        """Calcula similitud entre tradiciones culturales."""
-        if not trad1 or not trad2:
-            return 0.0
+        """Calcula similitud entre tradiciones culturales.
+        
+        Si alguna tradición es None/null, se considera compatible con cualquier tradición (1.0).
+        Esto permite casos 'universales' que pueden adaptarse a cualquier tradición.
+        """
+        # Si alguna es None, son compatibles (tradición flexible/universal)
+        if trad1 is None or trad2 is None:
+            return 1.0
         return 1.0 if trad1 == trad2 else 0.2
     
     def _similitud_menu_ingredientes(self, menu1: Dict, menu2: Dict) -> float:

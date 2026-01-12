@@ -27,10 +27,10 @@ from conocimiento import Menu, Caso, cargador, Plato, Ingrediente
 class PreferenciasUsuario:
     """Representa las preferencias del usuario para generar un menú."""
     tipo_evento: str
-    temporada: str
+    temporada: Optional[str] = None  # None = sin preferencia de temporada
     restricciones: List[str] = field(default_factory=list)
     estilo: str = "clasico"
-    tradicion: str = "catalana"
+    tradicion: Optional[str] = None  # None = sin preferencia de tradición (compatible con cualquiera)
     presupuesto: Optional[float] = None
     num_comensales: Optional[int] = None
     preferencias_adicionales: List[str] = field(default_factory=list)

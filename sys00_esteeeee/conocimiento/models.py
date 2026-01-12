@@ -32,7 +32,7 @@ class TradicionCultural(Enum):
     INDIA = "india"
     FRANCESA = "francesa"
     CHINA = "china"
-    MEDITERRANEA = "mediterranea"
+    # UNIVERSAL = None  # Para casos sin tradición específica
 
 class Sabor(Enum):
     DULCE = "dulce"
@@ -190,11 +190,11 @@ class Caso:
     """
     id: str
     restricciones: List[str]
-    temporada: str
+    temporada: Optional[str]  # None significa cualquier temporada
     tipo_evento: str
     menu: Menu
     estilo: str
-    tradicion: str
+    tradicion: Optional[str] = None  # None significa compatible con cualquier tradición
     exito: bool = True
     fallos_detectados: List[str] = field(default_factory=list)
     reparaciones_aplicadas: List[Any] = field(default_factory=list)

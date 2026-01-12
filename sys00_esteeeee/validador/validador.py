@@ -102,8 +102,8 @@ class ValidadorCompleto:
             validador_temporada = self.fabrica.crear_validador_temporada()
             resultados['temporada'] = validador_temporada.validar(plato, contexto)
         
-        # Validar tradición
-        if 'tradicion' in contexto:
+        # Validar tradición (si está especificada y no es None)
+        if 'tradicion' in contexto and contexto['tradicion'] is not None:
             tradicion_str = contexto['tradicion']
             if hasattr(tradicion_str, 'value'):
                 tradicion_str = tradicion_str.value

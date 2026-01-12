@@ -55,7 +55,7 @@
       "postre": "Crema Catalana"
     },
     "estilo": "clasico",
-    "tradicion": "mediterranea",
+    "tradicion": null,
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
@@ -160,7 +160,7 @@
       "postre": "Crema Catalana"
     },
     "estilo": "molecular",
-    "tradicion": "mediterranea",
+    "tradicion": null,
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
@@ -343,7 +343,7 @@
       "postre": "Italian Mocha Mascarpone Torte"
     },
     "estilo": "clasico",
-    "tradicion": "mediterranea",
+    "tradicion": null,
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
@@ -887,5 +887,27 @@
     "satisfaction_score": 3.0,
     "rating_timestamp": "2026-01-12T20:43:11.466192",
     "modification_count": 3
+  },
+  {
+    "id": "C038",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": null,
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+      "principal": "Linguine Mediterr Neo Picante",
+      "postre": "Smores Mexicanos Con Canela"
+    },
+    "estilo": "clasico",
+    "tradicion": null,
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "timestamp": "2026-01-12T22:01:51.743130",
+    "feedback": null,
+    "satisfaction_score": 3.0,
+    "rating_timestamp": "2026-01-12T22:01:51.742539"
   }
 ]
