@@ -804,6 +804,90 @@
     "modification_count": 3
   },
   {
+    "id": "C039",
+    "restricciones": [
+      "vegetariano",
+      "vegano"
+    ],
+    "temporada": "invierno",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Salsa Fresca Mexicana Con Serrano",
+      "principal": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+      "postre": "Golden Spiced Fruit Slices"
+    },
+    "estilo": "molecular",
+    "tradicion": "mexicana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [
+      {
+        "tipo_plato": "entrante",
+        "plato_original": "Fenugreek Spiced Urad Dal With Aloo Rice",
+        "plato_nuevo": "Salsa Fresca Mexicana Con Serrano",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato completo substituido:",
+          "  Original: Fenugreek Spiced Urad Dal With Aloo Rice",
+          "  Nuevo: Salsa Fresca Mexicana Con Serrano",
+          "Plato substituido con similitud: 0.45",
+          "Resuelve problema: tradicion - entrante (Fenugreek Spiced Urad Dal With Aloo Rice): El plato 'Fenugreek Spiced Urad Dal With Aloo Rice' pertenece a la tradición india, no a mexicana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "entrante (Fenugreek Spiced Urad Dal With Aloo Rice): El plato 'Fenugreek Spiced Urad Dal With Aloo Rice' pertenece a la tradición india, no a mexicana"
+        ],
+        "plato_modificado_obj": "Salsa Fresca Mexicana Con Serrano"
+      },
+      {
+        "tipo_plato": "principal",
+        "plato_original": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
+        "plato_nuevo": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato completo substituido:",
+          "  Original: Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
+          "  Nuevo: Bowl Mexicano De Quinoa Y Frijoles Negros",
+          "Plato substituido con similitud: 0.28",
+          "Resuelve problema: tradicion - principal (Curry Indio De Lentejas Rojas Con Batata Y Espinacas): El plato 'Curry Indio De Lentejas Rojas Con Batata Y Espinacas' pertenece a la tradición india, no a mexicana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "principal (Curry Indio De Lentejas Rojas Con Batata Y Espinacas): El plato 'Curry Indio De Lentejas Rojas Con Batata Y Espinacas' pertenece a la tradición india, no a mexicana"
+        ],
+        "plato_modificado_obj": "Bowl Mexicano De Quinoa Y Frijoles Negros"
+      },
+      {
+        "tipo_plato": "postre",
+        "plato_original": "Golden Spiced Fruit Slices",
+        "plato_nuevo": "Golden Spiced Fruit Slices",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato reparado sustituyendo ingredientes:",
+          "  Plato: Golden Spiced Fruit Slices",
+          "Sustituciones exitosas: 2",
+          "egg_whites -> tofu",
+          "butter -> olive_oil"
+        ],
+        "errores_resueltos": [
+          "postre (Golden Spiced Fruit Slices): Ingrediente prohibido para vegano: egg_whites",
+          "postre (Golden Spiced Fruit Slices): Ingrediente prohibido para vegano: butter"
+        ],
+        "plato_modificado_obj": "Golden Spiced Fruit Slices"
+      }
+    ],
+    "timestamp": "2026-01-12T21:14:55.443962",
+    "feedback": null,
+    "satisfaction_score": 3.6666666666666665,
+    "satisfaction_per_menu": {
+      "entrante": 2.0,
+      "principal": 5.0,
+      "postre": 4.0
+    },
+    "rating_timestamp": "2026-01-12T21:14:37.326363",
+    "modification_count": 3
+  },
+  {
     "id": "C037",
     "restricciones": [
       "vegetariano",
@@ -887,5 +971,86 @@
     "satisfaction_score": 3.0,
     "rating_timestamp": "2026-01-12T20:43:11.466192",
     "modification_count": 3
+  },
+  {
+    "id": "C041",
+    "restricciones": [],
+    "temporada": null,
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Suquet De Peix",
+      "principal": "Linguine Mediterr Neo Picante",
+      "postre": "Crema Catalana"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [
+      {
+        "tipo_plato": "entrante",
+        "plato_original": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+        "plato_nuevo": "Suquet De Peix",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato completo substituido:",
+          "  Original: Bowl Mexicano De Quinoa Y Frijoles Negros",
+          "  Nuevo: Suquet De Peix",
+          "Plato substituido con similitud: 0.46",
+          "Resuelve problema: tradicion - entrante (Bowl Mexicano De Quinoa Y Frijoles Negros): El plato 'Bowl Mexicano De Quinoa Y Frijoles Negros' pertenece a la tradición mexicana, no a catalana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "entrante (Bowl Mexicano De Quinoa Y Frijoles Negros): El plato 'Bowl Mexicano De Quinoa Y Frijoles Negros' pertenece a la tradición mexicana, no a catalana"
+        ],
+        "plato_modificado_obj": "Suquet De Peix"
+      },
+      {
+        "tipo_plato": "postre",
+        "plato_original": "Smores Mexicanos Con Canela",
+        "plato_nuevo": "Crema Catalana",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato completo substituido:",
+          "  Original: Smores Mexicanos Con Canela",
+          "  Nuevo: Crema Catalana",
+          "Plato substituido con similitud: 0.43",
+          "Resuelve problema: tradicion - postre (Smores Mexicanos Con Canela): El plato 'Smores Mexicanos Con Canela' pertenece a la tradición mexicana, no a catalana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "postre (Smores Mexicanos Con Canela): El plato 'Smores Mexicanos Con Canela' pertenece a la tradición mexicana, no a catalana"
+        ],
+        "plato_modificado_obj": "Crema Catalana"
+      }
+    ],
+    "timestamp": "2026-01-12T21:54:54.865333",
+    "feedback": null,
+    "modification_count": 2
+  },
+  {
+    "id": "C038",
+    "restricciones": [],
+    "temporada": null,
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Pa Amb Tomaquet",
+      "principal": "Escalivada Catalana",
+      "postre": "Mel I Mató"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "timestamp": "2026-01-12T21:05:31.334427",
+    "feedback": null,
+    "satisfaction_score": 4.0,
+    "satisfaction_per_menu": {
+      "entrante": 4.0,
+      "principal": 4.0,
+      "postre": 4.0
+    },
+    "rating_timestamp": "2026-01-12T21:04:28.461508"
   }
 ]

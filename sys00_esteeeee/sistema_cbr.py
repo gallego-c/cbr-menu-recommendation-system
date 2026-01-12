@@ -122,7 +122,7 @@ class SistemaCBR:
         except Exception as e:
             raise Exception(f"Error inicializando módulos: {e}")
     
-    def generar_menu(self, preferencias: PreferenciasUsuario) -> ResultadoCBR:
+    def generar_menu(self, preferencias: PreferenciasUsuario, collect_rating: bool = True) -> ResultadoCBR:
         """
         Genera un menú basado en las preferencias del usuario.
         
@@ -133,6 +133,8 @@ class SistemaCBR:
         4. Actualización de la base de conocimiento
         
         Args:
+            preferencias: Preferencias del usuario
+            collect_rating: Si True, pide rating por consola (False para GUI)
             preferencias: Preferencias del usuario
             
         Returns:
@@ -378,7 +380,7 @@ class SistemaCBR:
                 exito=True,
                 reparaciones_aplicadas=reparaciones,
                 feedback=None,
-                collect_rating=True,  # Recolectar satisfacción del usuario
+                collect_rating=collect_rating,  # False para GUI, True para consola
                 crear_backup=False
             )
             

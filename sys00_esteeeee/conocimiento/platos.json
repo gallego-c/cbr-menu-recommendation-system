@@ -4605,5 +4605,75 @@
     ],
     "sabor_dominante": "dulce",
     "ingrediente_sabor": "chocolate_bars"
+  },
+  {
+    "nombre": "Salsa Fresca Mexicana Con Serrano",
+    "ingredientes": [
+      "coarse_salt",
+      "fenugreek",
+      "urad_dal",
+      "potatoes",
+      "white_rice",
+      "vegetable_oil"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "coarse_salt"
+  },
+  {
+    "nombre": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+    "ingredientes": [
+      "tumeric",
+      "vegetable_stock",
+      "tomatoes",
+      "garam_masala",
+      "naan",
+      "red_lentils",
+      "red_chili_peppers",
+      "onions",
+      "spinach",
+      "sweet_potatoes"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "vegetable_stock"
+  },
+  {
+    "nombre": "Suquet De Peix",
+    "ingredientes": [
+      "black_beans",
+      "quinoa",
+      "garlic",
+      "lime",
+      "diced_tomatoes",
+      "cilantro_fresh",
+      "kosher_salt",
+      "jalapeno_chilies",
+      "frozen_corn",
+      "olive_oil",
+      "vegetable_broth"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "diced_tomatoes"
+  },
+  {
+    "nombre": "Crema Catalana",
+    "ingredientes": [
+      "chocolate_bars",
+      "marshmallows",
+      "cinnamon_graham_crackers"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "chocolate_bars"
   }
 ]
