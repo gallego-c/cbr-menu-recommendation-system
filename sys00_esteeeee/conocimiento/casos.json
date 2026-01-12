@@ -5,9 +5,9 @@
     "temporada": "primavera",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Curried Chicken Quinoa With Granny Smith Apple",
-      "principal": "Gambas Con Chorizo Tropical Al Ron",
-      "postre": "Italian Mocha Mascarpone Torte"
+      "entrante": "Cajun Mango Red Chili Stew",
+      "principal": "Salteado Thai De Pollo Y Tofu Con Papaya Verde Y Cacahuetes",
+      "postre": "Delicia Japonesa De Matcha Y Nueces"
     },
     "estilo": "molecular",
     "tradicion": "italiana",
@@ -15,7 +15,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.5,
-    "rating_timestamp": "2025-11-17T12:48:00"
+    "rating_timestamp": "2025-11-22T12:05:00"
   },
   {
     "id": "C002",
@@ -23,9 +23,9 @@
     "temporada": "primavera",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Enchiladas Cremosas De Pollo Y Frijoles Negros",
-      "principal": "Manicotti Horneado De Espinacas Y Tres Quesos",
-      "postre": "Suspiros Dulces Mexicanos"
+      "entrante": "Traditional Chinese Pork And Vegetable Egg Rolls",
+      "principal": "Masala Chickpea Spinach Burgers",
+      "postre": "Flan De Coco Tropical"
     },
     "estilo": "molecular",
     "tradicion": "francesa",
@@ -33,7 +33,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.6,
-    "rating_timestamp": "2025-11-07T13:36:00"
+    "rating_timestamp": "2025-12-19T17:43:00"
   },
   {
     "id": "C003",
@@ -43,9 +43,9 @@
     "temporada": "primavera",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Golden British Skillet Drops",
-      "principal": "Zuppa Contadina Di Ceci E Semolino",
-      "postre": "Smores Mexicanos Con Canela"
+      "entrante": "Fenugreek Spiced Urad Dal With Aloo Rice",
+      "principal": "Greek Lemon Oregano Pork Chops",
+      "postre": "Arroz Con Leche Cremoso"
     },
     "estilo": "clasico",
     "tradicion": "catalana",
@@ -53,7 +53,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.7,
-    "rating_timestamp": "2025-11-03T18:20:00"
+    "rating_timestamp": "2025-12-13T16:12:00"
   },
   {
     "id": "C004",
@@ -61,9 +61,9 @@
     "temporada": "primavera",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Moroccan Aromatic Spice Blend",
-      "principal": "Pico De Gallo Fresco",
-      "postre": "Jamaican Spiced Ginger Cake"
+      "entrante": "Southern Sweet Tangy Dressing",
+      "principal": "Ternera China Al Coco Y Curry Con Jengibre",
+      "postre": "Southern Chocolate Butterscotch Dream"
     },
     "estilo": "molecular",
     "tradicion": "mexicana",
@@ -71,7 +71,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.8,
-    "rating_timestamp": "2025-11-11T17:34:00"
+    "rating_timestamp": "2025-11-13T18:28:00"
   },
   {
     "id": "C005",
@@ -79,9 +79,9 @@
     "temporada": "verano",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Greek Lemon Oregano Pork Chops",
-      "principal": "Creamy Old Bay Cod And Potato Bake",
-      "postre": "Caf Helado Vietnamita Tradicional"
+      "entrante": "Jajangmyeon De Cerdo Con Bok Choy Y Patata",
+      "principal": "Pozole Rojo De Pollo Con Aguacate",
+      "postre": "Southern Red Velvet Dream Cake"
     },
     "estilo": "molecular",
     "tradicion": "italiana",
@@ -89,7 +89,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.9,
-    "rating_timestamp": "2025-11-26T17:08:00"
+    "rating_timestamp": "2025-12-09T14:17:00"
   },
   {
     "id": "C006",
@@ -99,9 +99,9 @@
     "temporada": "verano",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Pita Mexicana De Berenjena Y Pimientos Frescos",
-      "principal": "Zesty Italian Herb Roasted Chicken",
-      "postre": "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille"
+      "entrante": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
+      "principal": "Indian Spiced Salmon With Ginger Cilantro",
+      "postre": "Jamaican Spiced Ginger Cake"
     },
     "estilo": "molecular",
     "tradicion": "india",
@@ -109,7 +109,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 5.0,
-    "rating_timestamp": "2025-12-16T20:25:00"
+    "rating_timestamp": "2025-12-03T16:05:00"
   },
   {
     "id": "C007",
@@ -117,9 +117,9 @@
     "temporada": "verano",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Tacos Al Pastor De Cerdo Con Pi A Y Chiles Frescos",
-      "principal": "Zesty Creole Shrimp With Green Tomato Remoulade",
-      "postre": "British Lemon Raspberry Yogurt Fool"
+      "entrante": "Cajun Bayou Blue Cheese Burger Con Pecanas Caramelizadas",
+      "principal": "Salsa Bals Mica Italiana De Ajo Y Albahaca",
+      "postre": "Southern Homestyle Sweet Bread"
     },
     "estilo": "molecular",
     "tradicion": "francesa",
@@ -127,7 +127,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.7,
-    "rating_timestamp": "2025-11-09T20:53:00"
+    "rating_timestamp": "2025-12-06T09:34:00"
   },
   {
     "id": "C008",
@@ -135,9 +135,9 @@
     "temporada": "verano",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Miyeokguk Sopa Coreana De Algas Y Carne",
-      "principal": "Guacamole Fresco Picante",
-      "postre": "Irish Spiced Fruit Tea Cake"
+      "entrante": "Classic Southern Fried Catfish",
+      "principal": "Aromatic Italian Herb Garlic Infusion",
+      "postre": "Tarta De Santiago Con Almendra"
     },
     "estilo": "molecular",
     "tradicion": "china",
@@ -145,7 +145,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.8,
-    "rating_timestamp": "2025-12-11T15:58:00"
+    "rating_timestamp": "2025-11-05T18:07:00"
   },
   {
     "id": "C009",
@@ -155,9 +155,9 @@
     "temporada": "verano",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Salsa Mediterr Nea De Tomate Y Hierbas",
-      "principal": "Muslos De Pollo Japoneses Glaseados Con Jengibre Y Sake",
-      "postre": "Agua Fresca De Jamaica Especiada Con Piloncillo"
+      "entrante": "Salteado Picante De Tofu Con Pimientos Tricolor Br Coli Jengibre Y S Samo",
+      "principal": "Filipino Grilled Chicken And Liver Sisig With Egg",
+      "postre": "Cheesecake De Lima Y Menta"
     },
     "estilo": "molecular",
     "tradicion": "mexicana",
@@ -165,7 +165,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.6,
-    "rating_timestamp": "2025-11-27T17:59:00"
+    "rating_timestamp": "2025-11-14T16:54:00"
   },
   {
     "id": "C010",
@@ -173,9 +173,9 @@
     "temporada": "otoño",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Brazilian Lime Rum Sparkler",
-      "principal": "Wontons De Camarones Y Jengibre Picantes",
-      "postre": "Southern Red Velvet Dream Cake"
+      "entrante": "Southern Style Sweet And Tangy Green Beans With Bacon",
+      "principal": "Bistec Mexicano Con Salsa Fresca De Aguacate",
+      "postre": "Golden Spiced Fruit Slices"
     },
     "estilo": "molecular",
     "tradicion": "catalana",
@@ -183,7 +183,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.9,
-    "rating_timestamp": "2025-11-20T19:00:00"
+    "rating_timestamp": "2025-12-21T18:05:00"
   },
   {
     "id": "C011",
@@ -193,9 +193,9 @@
     "temporada": "otoño",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Penne Alla Marinara Con Mozzarella Y Albahaca Fresca",
-      "principal": "Moroccan Spiced Lamb Penne Bake",
-      "postre": "Southern Chocolate Butterscotch Dream"
+      "entrante": "Rollitos Imperiales De Cerdo Y Verduras Con Salsa Agridulce",
+      "principal": "Alitas De Pollo Coreanas Glaseadas Con Miel Y Soja",
+      "postre": "Panna Cotta Con Frutos Rojos"
     },
     "estilo": "clasico",
     "tradicion": "india",
@@ -203,7 +203,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.7,
-    "rating_timestamp": "2025-12-11T20:37:00"
+    "rating_timestamp": "2025-12-11T13:50:00"
   },
   {
     "id": "C012",
@@ -211,9 +211,9 @@
     "temporada": "otoño",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Cajun Chicken Shrimp Andouille Stew",
-      "principal": "Italian Deli Meat Hoagie",
-      "postre": "Biscotti Italianos De Pistacho Y Ar Ndanos Rojos Con Almendra"
+      "entrante": "Salsiccia Piccante E Broccoletti Al Forno Con Fontina",
+      "principal": "Sabzi De Patatas Y Chiriv As Con Garam Masala",
+      "postre": "Greek Zinfandel Fig Gel E Con Crema De Yogurt Y Azahar"
     },
     "estilo": "molecular",
     "tradicion": "china",
@@ -221,7 +221,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 5.0,
-    "rating_timestamp": "2025-11-23T09:23:00"
+    "rating_timestamp": "2025-11-03T11:31:00"
   },
   {
     "id": "C013",
@@ -229,9 +229,9 @@
     "temporada": "primavera",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Spicy Southern Cheesy Grits Bake",
-      "principal": "Crispy Garlic Chili Prawns Japanese Style",
-      "postre": "French Chocolate Raspberry Mousse"
+      "entrante": "Hearty Irish Leek Potato Bake",
+      "principal": "Southern Okra And Bell Pepper Saut",
+      "postre": "Tarta Tatin De Manzana Caramelizada"
     },
     "estilo": "clasico",
     "tradicion": "italiana",
@@ -239,7 +239,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 3.8,
-    "rating_timestamp": "2025-12-12T19:54:00"
+    "rating_timestamp": "2025-11-18T16:43:00"
   },
   {
     "id": "C014",
@@ -249,9 +249,9 @@
     "temporada": "primavera",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Italian Sausage And Fava Bean Pasta With Pecorino",
-      "principal": "Pasta Mexicana Picante",
-      "postre": "Delizia Di Castagne Al Caff E Mascarpone"
+      "entrante": "Salsa Picante De Frijol De Ojo Negro Y Queso Monterey",
+      "principal": "Moroccan Aromatic Spice Blend",
+      "postre": "Irish Spiced Fruit Tea Cake"
     },
     "estilo": "clasico",
     "tradicion": "india",
@@ -259,7 +259,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-12-11T14:13:00"
+    "rating_timestamp": "2025-11-21T16:28:00"
   },
   {
     "id": "C015",
@@ -267,9 +267,9 @@
     "temporada": "primavera",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
-      "principal": "Southern Okra And Bell Pepper Saut",
-      "postre": "Kahl A Espresso Mascarpone Angel Cake"
+      "entrante": "Moroccan Saffron Chickpea And Tomato Stew",
+      "principal": "Zesty Italian Herb Roasted Chicken",
+      "postre": "Saffron Rose Pistachio Phirni"
     },
     "estilo": "clasico",
     "tradicion": "catalana",
@@ -277,7 +277,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-12-11T12:52:00"
+    "rating_timestamp": "2025-12-12T14:34:00"
   },
   {
     "id": "C016",
@@ -287,8 +287,8 @@
     "temporada": "verano",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Hearty Irish Leek Potato Bake",
-      "principal": "Enchiladas Verdes De Acelgas Y Queso Fresco",
+      "entrante": "Salmone Al Pesto E Limone",
+      "principal": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
       "postre": "Atole Cremoso De Caf Con Kahl A"
     },
     "estilo": "clasico",
@@ -297,7 +297,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 3.6,
-    "rating_timestamp": "2025-11-13T09:53:00"
+    "rating_timestamp": "2025-12-06T13:26:00"
   },
   {
     "id": "C017",
@@ -305,9 +305,9 @@
     "temporada": "verano",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Curry Rojo Tailand S Cremoso Con Tofu Y Berenjena",
-      "principal": "Thai Sweet Spicy Lime Dipping Sauce",
-      "postre": "Golden Mandarin Orange Liqueur Cake"
+      "entrante": "Scaloppine Di Vitello Ai Funghi E Pomodoro Con Rosmarino",
+      "principal": "Spaghetti Cremoso Con Pollo Y Champi Ones",
+      "postre": "Torta Cremosa Al Ricotta Pistacchio E Cioccolato"
     },
     "estilo": "clasico",
     "tradicion": "mexicana",
@@ -315,7 +315,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-12-13T17:16:00"
+    "rating_timestamp": "2025-11-02T20:26:00"
   },
   {
     "id": "C018",
@@ -325,9 +325,9 @@
     "temporada": "verano",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Scaloppine Di Vitello Ai Funghi E Pomodoro Con Rosmarino",
-      "principal": "Aromatic Spiced Pea Kachori",
-      "postre": "Greek Zinfandel Fig Gel E Con Crema De Yogurt Y Azahar"
+      "entrante": "Zesty Italian Tortellini With Spinach And Cherry Tomatoes",
+      "principal": "Curry Cremoso De Pollo Con Garam Masala",
+      "postre": "Brownie De Chocolate Con Nueces"
     },
     "estilo": "clasico",
     "tradicion": "china",
@@ -335,7 +335,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.3,
-    "rating_timestamp": "2025-11-28T17:24:00"
+    "rating_timestamp": "2025-12-06T10:32:00"
   },
   {
     "id": "C019",
@@ -343,9 +343,9 @@
     "temporada": "otoño",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Paella De Mar Y Tierra Con Azafr N",
-      "principal": "Salsa Picante De Frijol De Ojo Negro Y Queso Monterey",
-      "postre": "Torta Cremosa Al Ricotta Pistacchio E Cioccolato"
+      "entrante": "Italian Sausage And Fava Bean Pasta With Pecorino",
+      "principal": "Aut Ntico Curry De Pollo Al Garam Masala Con Jengibre",
+      "postre": "Tiramisu Clasico Italiano"
     },
     "estilo": "clasico",
     "tradicion": "italiana",
@@ -353,7 +353,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-12-03T13:07:00"
+    "rating_timestamp": "2025-12-24T18:56:00"
   },
   {
     "id": "C020",
@@ -363,9 +363,9 @@
     "temporada": "otoño",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Buttered Savoy Cabbage With Baked Potatoes",
-      "principal": "Huevos Rotos Con Patatas Jam N Y Pimientos",
-      "postre": "Delicia Japonesa De Matcha Y Nueces"
+      "entrante": "Salsa Pomodoro E Basilico Fresco",
+      "principal": "Manicotti Horneado De Espinacas Y Tres Quesos",
+      "postre": "Suspiros Dulces Mexicanos"
     },
     "estilo": "clasico",
     "tradicion": "catalana",
@@ -373,7 +373,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.4,
-    "rating_timestamp": "2025-12-17T18:20:00"
+    "rating_timestamp": "2025-11-10T10:27:00"
   },
   {
     "id": "C021",
@@ -381,9 +381,9 @@
     "temporada": "otoño",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Pozole Verde De Pollo Tradicional",
-      "principal": "Pastel Cremoso De Pollo Sure O Con Verduras",
-      "postre": "Crema Catalana"
+      "entrante": "Italian Deli Meat Hoagie",
+      "principal": "Gyukatsu Crujiente",
+      "postre": "Kahl A Espresso Mascarpone Angel Cake"
     },
     "estilo": "clasico",
     "tradicion": "india",
@@ -391,7 +391,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 3.9,
-    "rating_timestamp": "2025-11-13T09:37:00"
+    "rating_timestamp": "2025-12-12T19:48:00"
   },
   {
     "id": "C022",
@@ -401,9 +401,9 @@
     "temporada": "invierno",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Spicy Jack Bean Dip",
-      "principal": "Southern Cheesy Black Eyed Pea Dip",
-      "postre": "Saffron Rose Pistachio Phirni"
+      "entrante": "Costillas Thai Glaseadas Con Lemongrass Y Coco",
+      "principal": "Paella De Mar Y Tierra Con Azafr N",
+      "postre": "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille"
     },
     "estilo": "clasico",
     "tradicion": "francesa",
@@ -411,7 +411,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-12-10T10:29:00"
+    "rating_timestamp": "2025-11-19T13:21:00"
   },
   {
     "id": "C023",
@@ -419,9 +419,9 @@
     "temporada": "invierno",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Cajun Bayou Blue Cheese Burger Con Pecanas Caramelizadas",
-      "principal": "Salteado Thai De Pollo Y Tofu Con Papaya Verde Y Cacahuetes",
-      "postre": "Mel I Mató"
+      "entrante": "Risotto Primavera Cremoso Con Asparagi Y Verduras Frescas",
+      "principal": "Indian Garlic Shrimp Spinach Curry With Naan",
+      "postre": "Crema Catalana"
     },
     "estilo": "clasico",
     "tradicion": "mexicana",
@@ -429,7 +429,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-12-08T19:28:00"
+    "rating_timestamp": "2025-11-08T20:52:00"
   },
   {
     "id": "C024",
@@ -439,9 +439,9 @@
     "temporada": "invierno",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Vietnamese Zesty Chicken Stir Fry With Broccolini Squash",
-      "principal": "Salteado Picante De Tofu Con Pimientos Tricolor Br Coli Jengibre Y S Samo",
-      "postre": "Southern Homestyle Sweet Bread"
+      "entrante": "Mezcla De Especias Arom Ticas Indias Para Masala",
+      "principal": "Chinese Ginger Garlic Shrimp And Snow Pea Stir Fry",
+      "postre": "Italian Mocha Mascarpone Torte"
     },
     "estilo": "clasico",
     "tradicion": "china",
@@ -449,7 +449,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 3.5,
-    "rating_timestamp": "2025-12-27T16:36:00"
+    "rating_timestamp": "2025-12-16T10:36:00"
   },
   {
     "id": "C025",
@@ -459,9 +459,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Pasta Integral Con Espinacas Tomates Cherry Y Champi Ones Al Asiago",
-      "principal": "Rollitos Imperiales De Cerdo Y Verduras Con Salsa Agridulce",
-      "postre": "Golden Spiced Fruit Slices"
+      "entrante": "Penne Alla Marinara Con Mozzarella Y Albahaca Fresca",
+      "principal": "Curry Rojo Tailand S Cremoso Con Tofu Y Berenjena",
+      "postre": "French Chocolate Raspberry Mousse"
     },
     "estilo": "clasico",
     "tradicion": "italiana",
@@ -469,7 +469,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-12-08T20:29:00"
+    "rating_timestamp": "2025-12-28T13:38:00"
   },
   {
     "id": "C026",
@@ -479,9 +479,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Irish Cherry Hazelnut Oatmeal",
-      "principal": "Creamy Southern Crawfish Dip",
-      "postre": "Cr Me P Tissi Re Classique La Vanille"
+      "entrante": "Curried Pearl Barley Pilaf With Almonds And Raisins",
+      "principal": "Estofado De Costillas De Cerdo Con Daikon Ostras Y Bayas Goji",
+      "postre": "Mousse De Mango Y Maracuyá"
     },
     "estilo": "clasico",
     "tradicion": "francesa",
@@ -489,7 +489,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.3,
-    "rating_timestamp": "2025-12-11T09:11:00"
+    "rating_timestamp": "2025-12-26T14:01:00"
   },
   {
     "id": "C027",
@@ -499,9 +499,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Lasagna Cremosa De Pollo Con Ranch",
-      "principal": "Curry Cremoso De Pollo Con Garam Masala",
-      "postre": "Italian Mocha Mascarpone Torte"
+      "entrante": "Spicy Southern Homestyle Potato Egg Salad",
+      "principal": "Cajun Chicken Shrimp Andouille Stew",
+      "postre": "Tiramisú Clásico Italiano"
     },
     "estilo": "clasico",
     "tradicion": "catalana",
@@ -509,7 +509,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-11-01T15:42:00"
+    "rating_timestamp": "2025-12-03T18:44:00"
   },
   {
     "id": "C028",
@@ -519,9 +519,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Pollo Jamaicano Picante Con Coco Y Arroz De Frijoles Rojos",
-      "principal": "Rang N De Cangrejo Cremoso",
-      "postre": "Suspiros Dulces Mexicanos"
+      "entrante": "Fideuà De Mariscos",
+      "principal": "Pa Amb Tomaquet",
+      "postre": "Golden Mandarin Orange Liqueur Cake"
     },
     "estilo": "clasico",
     "tradicion": "mexicana",
@@ -529,7 +529,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.4,
-    "rating_timestamp": "2025-12-24T11:30:00"
+    "rating_timestamp": "2025-11-25T17:21:00"
   },
   {
     "id": "C029",
@@ -539,9 +539,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Aromatic Japanese Beef Daikon Stew",
-      "principal": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
-      "postre": "Smores Mexicanos Con Canela"
+      "entrante": "Wafu Steak Con Esp Rragos Y Shiitake",
+      "principal": "Muffin Pizzas Italianas De Verduras",
+      "postre": "Cr Me P Tissi Re Classique La Vanille"
     },
     "estilo": "clasico",
     "tradicion": "india",
@@ -549,7 +549,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-11-16T17:09:00"
+    "rating_timestamp": "2025-11-01T13:25:00"
   },
   {
     "id": "C030",
@@ -560,9 +560,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Aut Ntico Curry De Pollo Al Garam Masala Con Jengibre",
-      "principal": "Suquet De Peix",
-      "postre": "Jamaican Spiced Ginger Cake"
+      "entrante": "Gambas Con Chorizo Tropical Al Ron",
+      "principal": "Mexican Breakfast Sausage Egg Quesadillas",
+      "postre": "Caf Helado Vietnamita Tradicional"
     },
     "estilo": "clasico",
     "tradicion": "china",
@@ -570,7 +570,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.5,
-    "rating_timestamp": "2025-12-28T14:57:00"
+    "rating_timestamp": "2025-12-21T13:00:00"
   },
   {
     "id": "C031",
@@ -581,9 +581,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Zesty Italian Tortellini With Spinach And Cherry Tomatoes",
-      "principal": "Indian Garlic Shrimp Spinach Curry With Naan",
-      "postre": "Caf Helado Vietnamita Tradicional"
+      "entrante": "Sukiyaki De Solomillo Con Fideos De Cristal",
+      "principal": "Muslos De Pollo Japoneses Glaseados Con Jengibre Y Sake",
+      "postre": "Smores Mexicanos Con Canela"
     },
     "estilo": "clasico",
     "tradicion": "italiana",
@@ -591,7 +591,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-11-20T09:29:00"
+    "rating_timestamp": "2025-11-25T09:03:00"
   },
   {
     "id": "C032",
@@ -602,9 +602,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Muffin Pizzas Italianas De Verduras",
-      "principal": "Sabzi De Patatas Y Chiriv As Con Garam Masala",
-      "postre": "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille"
+      "entrante": "Butifarra Con Mongetes",
+      "principal": "Tyropita Griega Tradicional Con Tres Quesos Y Eneldo",
+      "postre": "Delizia Di Castagne Al Caff E Mascarpone"
     },
     "estilo": "clasico",
     "tradicion": "francesa",
@@ -612,7 +612,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.3,
-    "rating_timestamp": "2025-12-23T18:57:00"
+    "rating_timestamp": "2025-11-04T19:02:00"
   },
   {
     "id": "C033",
@@ -622,9 +622,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Curry Fresco De Moong Dal Con Mango Verde Y Verduras",
-      "principal": "Hamburguesa Griega De Cordero Con Feta Y Menta",
-      "postre": "British Lemon Raspberry Yogurt Fool"
+      "entrante": "Salsa Fresca Mexicana Con Serrano",
+      "principal": "Filipino Spicy Cucumber Onion Relish",
+      "postre": "Mel I Mató"
     },
     "estilo": "clasico",
     "tradicion": "mexicana",
@@ -632,7 +632,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-11-11T20:24:00"
+    "rating_timestamp": "2025-12-18T10:59:00"
   },
   {
     "id": "C034",
@@ -643,9 +643,9 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Tyropita Griega Tradicional Con Tres Quesos Y Eneldo",
-      "principal": "Pizza Italiana De Pesto Y Tomates Ciruela",
-      "postre": "Irish Spiced Fruit Tea Cake"
+      "entrante": "Foie Gras Sellado Con Persim N Y Reducci N Al Madeira",
+      "principal": "Estofado De Pollo Adobado Con Chipotle Y Ma Z",
+      "postre": "Biscotti Italianos De Pistacho Y Ar Ndanos Rojos Con Almendra"
     },
     "estilo": "clasico",
     "tradicion": "india",
@@ -653,7 +653,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.4,
-    "rating_timestamp": "2025-11-23T10:55:00"
+    "rating_timestamp": "2025-12-01T17:31:00"
   },
   {
     "id": "C035",
@@ -663,8 +663,8 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Thai Garlic Pepper Chicken",
-      "principal": "Salsa Fresca Mexicana Con Serrano",
+      "entrante": "Enchiladas De Pollo Con Salsa Roja Y Queso Monterey",
+      "principal": "Aromatic Spiced Pea Kachori",
       "postre": "Agua Fresca De Jamaica Especiada Con Piloncillo"
     },
     "estilo": "clasico",
@@ -673,6 +673,6 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-12-10T11:26:00"
+    "rating_timestamp": "2025-12-18T19:20:00"
   }
 ]

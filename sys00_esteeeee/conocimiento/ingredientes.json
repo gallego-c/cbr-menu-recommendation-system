@@ -8471,5 +8471,374 @@
       "invierno"
     ],
     "sabor": "umami"
+  },
+  {
+    "nombre": "almendra",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "azúcar",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "huevo",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "limón",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "coco",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "leche condensada",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "vainilla",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "café",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "bizcocho",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "cacao",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "nata",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "gelatina",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "frutos rojos",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "arroz",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "leche",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "canela",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "chocolate",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "mantequilla",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "nuez",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "queso crema",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "lima",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "menta",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "galleta",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "maracuyá",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "manzana",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "masa hojaldre",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "egg",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "coconut",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "condensed milk",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "coffee",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "ladyfinger",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "cocoa",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "cream",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "gelatin",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "raspberry",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "walnut",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "cream cheese",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "graham cracker",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "passion fruit",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "apple",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
+  },
+  {
+    "nombre": "puff pastry",
+    "temporada": [],
+    "categoria": "otro",
+    "sabor": "dulce",
+    "tradicion": [
+      "general"
+    ]
   }
 ]

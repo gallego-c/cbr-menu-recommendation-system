@@ -4440,5 +4440,336 @@
     "tradicion": "francesa",
     "temporada": [],
     "es_postre": true
+  },
+  {
+    "nombre": "Tarta De Santiago Con Almendra",
+    "ingredientes": [
+      "almendra",
+      "azúcar",
+      "huevo",
+      "limón"
+    ],
+    "tecnica_coccion": [
+      "hornear"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "almendra",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Flan De Coco Tropical",
+    "ingredientes": [
+      "coco",
+      "leche condensada",
+      "huevo",
+      "azúcar",
+      "vainilla"
+    ],
+    "tecnica_coccion": [
+      "hornear",
+      "baño maría"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "coco",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Tiramisú Clásico Italiano",
+    "ingredientes": [
+      "mascarpone",
+      "café",
+      "bizcocho",
+      "cacao",
+      "huevo"
+    ],
+    "tecnica_coccion": [
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "café",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Panna Cotta Con Frutos Rojos",
+    "ingredientes": [
+      "nata",
+      "azúcar",
+      "gelatina",
+      "vainilla",
+      "frutos rojos"
+    ],
+    "tecnica_coccion": [
+      "hervir",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "nata",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Arroz Con Leche Cremoso",
+    "ingredientes": [
+      "arroz",
+      "leche",
+      "azúcar",
+      "canela",
+      "limón"
+    ],
+    "tecnica_coccion": [
+      "hervir"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "canela",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Brownie De Chocolate Con Nueces",
+    "ingredientes": [
+      "chocolate",
+      "mantequilla",
+      "azúcar",
+      "huevo",
+      "nuez"
+    ],
+    "tecnica_coccion": [
+      "hornear"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "chocolate",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Cheesecake De Lima Y Menta",
+    "ingredientes": [
+      "queso crema",
+      "azúcar",
+      "lima",
+      "menta",
+      "galleta"
+    ],
+    "tecnica_coccion": [
+      "hornear",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "lima",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Mousse De Mango Y Maracuyá",
+    "ingredientes": [
+      "mango",
+      "maracuyá",
+      "nata",
+      "azúcar",
+      "gelatina"
+    ],
+    "tecnica_coccion": [
+      "batir",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "mango",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Tarta Tatin De Manzana Caramelizada",
+    "ingredientes": [
+      "manzana",
+      "azúcar",
+      "mantequilla",
+      "masa hojaldre",
+      "canela"
+    ],
+    "tecnica_coccion": [
+      "caramelizar",
+      "hornear"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "manzana",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Tarta De Santiago Con Almendra",
+    "ingredientes": [
+      "almendra",
+      "sugar",
+      "egg",
+      "lemon"
+    ],
+    "tecnica_coccion": [
+      "hornear"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "almendra",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Flan De Coco Tropical",
+    "ingredientes": [
+      "coconut",
+      "condensed milk",
+      "egg",
+      "sugar",
+      "vanilla"
+    ],
+    "tecnica_coccion": [
+      "hornear"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "coconut",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Tiramisu Clasico Italiano",
+    "ingredientes": [
+      "mascarpone",
+      "coffee",
+      "ladyfinger",
+      "cocoa",
+      "egg"
+    ],
+    "tecnica_coccion": [
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "coffee",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Panna Cotta Con Frutos Rojos",
+    "ingredientes": [
+      "cream",
+      "sugar",
+      "gelatin",
+      "vanilla",
+      "raspberry"
+    ],
+    "tecnica_coccion": [
+      "hervir",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cream",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Arroz Con Leche Cremoso",
+    "ingredientes": [
+      "rice",
+      "milk",
+      "sugar",
+      "cinnamon",
+      "lemon"
+    ],
+    "tecnica_coccion": [
+      "hervir"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Brownie De Chocolate Con Nueces",
+    "ingredientes": [
+      "chocolate",
+      "butter",
+      "sugar",
+      "egg",
+      "walnut"
+    ],
+    "tecnica_coccion": [
+      "hornear"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "chocolate",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Cheesecake De Lima Y Menta",
+    "ingredientes": [
+      "cream cheese",
+      "sugar",
+      "lime",
+      "mint",
+      "graham cracker"
+    ],
+    "tecnica_coccion": [
+      "hornear",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "lime",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Mousse De Mango Y Maracuya",
+    "ingredientes": [
+      "mango",
+      "passion fruit",
+      "cream",
+      "sugar",
+      "gelatin"
+    ],
+    "tecnica_coccion": [
+      "batir",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "mango",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Tarta Tatin De Manzana Caramelizada",
+    "ingredientes": [
+      "apple",
+      "sugar",
+      "butter",
+      "puff pastry",
+      "cinnamon"
+    ],
+    "tecnica_coccion": [
+      "caramelizar",
+      "hornear"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "apple",
+    "tradicion": "general",
+    "temporada": [],
+    "es_postre": true
   }
 ]
