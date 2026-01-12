@@ -50,7 +50,8 @@ class SubstitutorPlatos:
         return self.food_bank.ingredientes_db
     
     def buscar_plato_substitucion(self, plato_problematico: Plato, menu: Menu,
-                                 tipo_problema: str, problema_especifico: str) -> Dict[str, Any]:
+                                 tipo_problema: str, problema_especifico: str,
+                                 tipo_plato: str = None) -> Dict[str, Any]:
         """
         Busca un plato alternativo que cumpla todas las preferencias del menú
         y que tenga al menos 2 ingredientes compatibles con el resto del menú
@@ -60,16 +61,16 @@ class SubstitutorPlatos:
             menu: Menú con todas las preferencias
             tipo_problema: Tipo de problema detectado
             problema_especifico: Descripción específica del problema
+            tipo_plato: Tipo de plato (entrante, principal, postre) para filtrar correctamente
             
         Returns:
             Resultado de la búsqueda con plato substitucion o fallo
         """
-        # DEBUG: Ver tradición del menú
-        # tradicion_menu = getattr(menu, 'tradicion', 'NO TIENE')
-        # print(f"[DEBUG] buscar_plato_substitucion: tipo_problema={tipo_problema}, tradicion_menu={tradicion_menu}")
+        # Detectar si es postre basado en tipo_plato o problema_especifico
+        es_postre = tipo_plato == 'postre' or 'postre' in problema_especifico.lower()
         
         # 1. Filtrar candidatos que cumplan TODAS las preferencias del menú
-        candidatos_validos = self._filtrar_candidatos_validos(menu)
+        candidatos_validos = self._filtrar_candidatos_validos(menu, solo_postres=es_postre)
         # print(f"[DEBUG] Candidatos válidos encontrados: {len(candidatos_validos)}")
         
         if not candidatos_validos:
@@ -159,13 +160,14 @@ class SubstitutorPlatos:
             'similitud': mejor_candidato['similitud']
         }
     
-    def _filtrar_candidatos_validos(self, menu: Menu) -> List[Plato]:
+    def _filtrar_candidatos_validos(self, menu: Menu, solo_postres: bool = False) -> List[Plato]:
         """
         Filtra platos candidatos que cumplan TODAS las preferencias del menú
         Usa directamente los platos de platos.json
         
         Args:
             menu: Menú con las preferencias a cumplir
+            solo_postres: Si True, solo devuelve platos marcados como postre (es_postre=True)
             
         Returns:
             Lista de platos que cumplen todas las preferencias
@@ -174,6 +176,14 @@ class SubstitutorPlatos:
         
         # Usar directamente los platos de platos.json
         for plato_data in self.platos_db:
+            # Filtrar por tipo de plato (postre o no postre)
+            es_postre_plato = plato_data.get('es_postre', False)
+            
+            if solo_postres and not es_postre_plato:
+                continue  # Si buscamos postre, saltar platos que no son postre
+            if not solo_postres and es_postre_plato:
+                continue  # Si NO buscamos postre, saltar platos que son postre
+                
             plato = self._json_a_plato(plato_data)
             if plato and self._cumple_todas_preferencias(plato, menu):
                 candidatos_validos.append(plato)

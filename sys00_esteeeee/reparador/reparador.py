@@ -53,7 +53,8 @@ class Reparador:
         self.modificador_platos = ModificadorPlatos(self.reglas_modificacion)
     
     def reparar_plato(self, plato_problematico: Plato, menu: Menu, 
-                     tipo_problema: str, problema_especifico: str) -> Dict[str, Any]:
+                     tipo_problema: str, problema_especifico: str,
+                     tipo_plato: str = None) -> Dict[str, Any]:
         """
         Método principal para reparar un plato problemático.
         Estrategia en cascada (orden de prioridad):
@@ -66,6 +67,7 @@ class Reparador:
             menu: El menú completo con todas las preferencias
             tipo_problema: Tipo de problema (restricciones, temporada, sabor, etc.)
             problema_especifico: Descripción específica del problema
+            tipo_plato: Tipo de plato (entrante, principal, postre) para filtrar correctamente
             
         Returns:
             Diccionario con el resultado de la reparación:
@@ -99,10 +101,10 @@ class Reparador:
                     'ingredientes_sustituidos': resultado_ingredientes['ingredientes_sustituidos']
                 }
             else:
-                # Si falla sustitución de ingredientes, intentar substitución del plato completo
+                # Si falla sustitución de ingredientes, intentar substitutión del plato completo
                 _debug_print(f"        [DEBUG] Ingredientes fallaron, intentando ESTRATEGIA 2 (plato completo)")
                 resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
-                    plato_problematico, menu, tipo_problema, problema_especifico
+                    plato_problematico, menu, tipo_problema, problema_especifico, tipo_plato
                 )
                 
                 if resultado_substitucion['exito']:
@@ -138,7 +140,7 @@ class Reparador:
                 # El plato es de otra tradición -> PRIMERO intentar sustituir el plato completo
                 _debug_print(f"        [DEBUG] Plato de tradición incorrecta - intentando ESTRATEGIA 1 (sustituir plato completo)")
                 resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
-                    plato_problematico, menu, tipo_problema, problema_especifico
+                    plato_problematico, menu, tipo_problema, problema_especifico, tipo_plato
                 )
                 
                 if resultado_substitucion['exito']:
@@ -188,7 +190,7 @@ class Reparador:
                     # Si falla ingredientes, intentar sustituir el plato completo
                     _debug_print(f"        [DEBUG] Ingredientes fallaron, intentando ESTRATEGIA 2 (plato completo)")
                     resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
-                        plato_problematico, menu, tipo_problema, problema_especifico
+                        plato_problematico, menu, tipo_problema, problema_especifico, tipo_plato
                     )
                     
                     if resultado_substitucion['exito']:
@@ -214,7 +216,7 @@ class Reparador:
         # Ventaja: Si hay un plato que cumple todo, es la solución más limpia
         # Validación: El nuevo plato debe tener al menos 2 ingredientes compatibles con el resto del menú
         resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
-            plato_problematico, menu, tipo_problema, problema_especifico
+            plato_problematico, menu, tipo_problema, problema_especifico, tipo_plato
         )
         
         if resultado_substitucion['exito']:
@@ -283,7 +285,7 @@ class Reparador:
     
     def reparar_por_nombre(self, plato_nombre: str, tipo_problema: str, 
                           problema_especifico: str, menu_dict: Dict, 
-                          preferencias: Dict) -> Dict[str, Any]:
+                          preferencias: Dict, tipo_plato: str = None) -> Dict[str, Any]:
         """
         Repara un plato dado solo su nombre (carga todos los datos internamente).
         Este método es la interfaz para sistema_cbr.py que no debe cargar datos.
@@ -294,6 +296,7 @@ class Reparador:
             problema_especifico: Descripción específica del problema
             menu_dict: Diccionario con el menú actual
             preferencias: Preferencias del usuario
+            tipo_plato: Tipo de plato (entrante, principal, postre) para filtrar correctamente
             
         Returns:
             Dict con 'exito', 'plato_resultado' o 'plato_modificado', 'mensajes', 'estrategia'
@@ -337,7 +340,7 @@ class Reparador:
                 menu_obj.estilo = preferencias['estilo']
             
             # Llamar al reparador principal
-            resultado = self.reparar_plato(plato_obj, menu_obj, tipo_problema, problema_especifico)
+            resultado = self.reparar_plato(plato_obj, menu_obj, tipo_problema, problema_especifico, tipo_plato)
             
             if resultado['exito']:
                 plato_resultado = resultado['plato_resultado']
@@ -538,7 +541,8 @@ class Reparador:
         return nuevo_nombre
     
     def reparar_plato_objeto(self, plato_obj: Plato, tipo_problema: str,
-                            problema_especifico: str, preferencias: Dict) -> Dict[str, Any]:
+                            problema_especifico: str, preferencias: Dict,
+                            tipo_plato: str = None) -> Dict[str, Any]:
         """
         Repara un objeto Plato que ya está en memoria (útil para reparaciones múltiples).
         No busca en la base de datos, trabaja directamente con el objeto proporcionado.
@@ -553,6 +557,7 @@ class Reparador:
             tipo_problema: Tipo de problema (restricciones, temporada, etc.)
             problema_especifico: Descripción del problema
             preferencias: Diccionario con preferencias del usuario
+            tipo_plato: Tipo de plato (entrante, principal, postre) para filtrar correctamente
             
         Returns:
             Dict con 'exito', 'plato_resultado' (objeto Plato), 'mensajes', 'estrategia'
@@ -587,7 +592,7 @@ class Reparador:
             if es_plato_tradicion_incorrecta:
                 _debug_print(f"        [DEBUG] Plato de tradición incorrecta - intentando sustitución de plato completo")
                 resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
-                    plato_obj, menu_obj, tipo_problema, problema_especifico
+                    plato_obj, menu_obj, tipo_problema, problema_especifico, tipo_plato
                 )
                 
                 if resultado_substitucion['exito']:
@@ -631,7 +636,7 @@ class Reparador:
             # ESTRATEGIA 2: Intentar sustituir el plato completo
             _debug_print(f"        [DEBUG] Ingredientes fallaron, intentando sustitución de plato completo")
             resultado_substitucion = self.substitutor_platos.buscar_plato_substitucion(
-                plato_obj, menu_obj, tipo_problema, problema_especifico
+                plato_obj, menu_obj, tipo_problema, problema_especifico, tipo_plato
             )
             
             if resultado_substitucion['exito']:

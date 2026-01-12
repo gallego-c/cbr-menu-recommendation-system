@@ -14,8 +14,10 @@ class RetentionConfig:
     """Configuration for the retention/retain module."""
     
     # Memory limits
-    max_cases: int = 25  # Maximum number of cases to store
-    min_cases: int = 20   # Minimum cases to keep (never drop below this)
+    # Base cases (C001-C035) are PROTECTED and never removed
+    # max_cases allows room for new cases beyond the 35 base cases
+    max_cases: int = 40  # Maximum total cases (35 base + 5 new)
+    min_cases: int = 35  # Minimum cases to keep (all base cases)
     
     # Retention weights (must sum to ~1.0)
     weight_satisfaction: float = 0.40  # User satisfaction score

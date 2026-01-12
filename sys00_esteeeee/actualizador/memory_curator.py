@@ -82,16 +82,17 @@ class MemoryCurator:
         else:
             return (False, f"Lower value than all existing cases ({candidate_score:.3f} <= {min_existing_score:.3f})", metrics)
     
-    def curate_memory(self, cases: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[str]]:
+    def curate_memory(self, cases: List[Dict[str, Any]], protected_prefix: str = "C0") -> Tuple[List[Dict[str, Any]], List[str]]:
         """
         Curate memory by removing low-value and redundant cases.
         
         Process:
         1. If below cap: no action
-        2. If above cap: remove near-duplicates first, then lowest-value cases
+        2. If above cap: only remove NEW cases (id > C035), never base cases
         
         Args:
             cases: List of case dictionaries
+            protected_prefix: Cases with IDs starting with this are protected (default "C0" protects C001-C035)
             
         Returns:
             Tuple of (curated_cases, removed_case_ids)
@@ -101,31 +102,85 @@ class MemoryCurator:
         
         print(f"\n[MEMORY CURATION] Memory above cap: {len(cases)} > {self.config.max_cases}")
         
-        # Convert to Caso objects for processing
-        casos_obj = [Caso.from_dict(c) for c in cases]
+        # Separate protected (base) cases from removable (new) cases
+        protected_cases = []
+        removable_cases = []
         
-        # Step 1: Remove near-duplicates
-        casos_obj, removed_dups = self._remove_near_duplicates(casos_obj)
-        print(f"  Removed {len(removed_dups)} near-duplicate cases")
+        for case in cases:
+            case_id = case.get('id', '')
+            # Protect cases C001-C035 (those with IDs like C0XX where XX is 01-35)
+            if self._is_protected_case(case_id):
+                protected_cases.append(case)
+            else:
+                removable_cases.append(case)
         
-        # Step 2: If still above cap, remove lowest-value cases
-        removed_low_value = []
-        if len(casos_obj) > self.config.max_cases:
-            casos_obj, removed_low_value = self._remove_lowest_value(casos_obj, self.config.max_cases)
-            print(f"  Removed {len(removed_low_value)} low-value cases")
+        print(f"  Protected base cases: {len(protected_cases)}")
+        print(f"  Removable new cases: {len(removable_cases)}")
         
-        # Ensure we never drop below minimum
-        if len(casos_obj) < self.config.min_cases:
-            print(f"  WARNING: Would drop below min_cases ({self.config.min_cases}). Keeping all cases.")
+        # Calculate how many we need to remove
+        total_allowed = self.config.max_cases
+        slots_for_new_cases = total_allowed - len(protected_cases)
+        
+        if slots_for_new_cases <= 0:
+            # No room for new cases, remove all removable
+            removed_ids = [c.get('id') for c in removable_cases]
+            print(f"  No slots available - removing all {len(removed_ids)} new cases")
+            return (protected_cases, removed_ids)
+        
+        if len(removable_cases) <= slots_for_new_cases:
+            # All new cases fit, no removal needed
+            print(f"  All new cases fit within memory cap")
             return (cases, [])
         
-        # Convert back to dicts
-        curated_cases = [c.to_dict() for c in casos_obj]
-        all_removed = removed_dups + removed_low_value
+        # Need to remove some new cases - keep the best ones
+        casos_obj = [Caso.from_dict(c) for c in removable_cases]
+        cases_as_dicts = removable_cases
         
+        # Score each removable case
+        scored_cases = []
+        for i, caso in enumerate(casos_obj):
+            metrics = self._compute_case_metrics(caso, cases_as_dicts)
+            scored_cases.append((removable_cases[i], metrics['keep_score']))
+        
+        # Sort by score (descending) - highest first
+        scored_cases.sort(key=lambda x: x[1], reverse=True)
+        
+        # Keep the top slots_for_new_cases
+        kept_new_cases = [c for c, _ in scored_cases[:slots_for_new_cases]]
+        removed_cases = [c for c, _ in scored_cases[slots_for_new_cases:]]
+        removed_ids = [c.get('id') for c in removed_cases]
+        
+        print(f"  Keeping {len(kept_new_cases)} best new cases")
+        print(f"  Removing {len(removed_ids)} low-value new cases")
+        
+        # Combine protected + kept new cases
+        curated_cases = protected_cases + kept_new_cases
         print(f"  Final memory size: {len(curated_cases)}")
         
-        return (curated_cases, all_removed)
+        return (curated_cases, removed_ids)
+    
+    def _is_protected_case(self, case_id: str) -> bool:
+        """
+        Check if a case ID is protected (base case that shouldn't be removed).
+        
+        Protected cases are C001-C035 (original knowledge base).
+        
+        Args:
+            case_id: Case ID to check
+            
+        Returns:
+            True if protected, False if can be removed
+        """
+        if not case_id or not case_id.startswith('C'):
+            return False
+        
+        try:
+            # Extract number from ID (e.g., "C035" -> 35)
+            num = int(case_id[1:])
+            # Protect cases 1-35
+            return num <= 35
+        except (ValueError, IndexError):
+            return False
     
     def _remove_near_duplicates(self, casos: List[Caso]) -> Tuple[List[Caso], List[str]]:
         """

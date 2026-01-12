@@ -8323,14 +8323,153 @@
     "sabor": "dulce"
   },
   {
-    "nombre": "passata",
+    "nombre": "artichoke_hearts",
     "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "boiling_water",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
       "otoño",
       "invierno"
     ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "bread",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "brewed_tea",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fish",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fresh_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ground_beef",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ground_pork",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "angel_food_cake",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "apple_cider",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño",
+      "invierno"
+    ],
     "sabor": "ácido"
+  },
+  {
+    "nombre": "baking_soda",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "neutro"
+  },
+  {
+    "nombre": "bread_dough",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "squid",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
   }
 ]

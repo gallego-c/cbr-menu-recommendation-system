@@ -16,7 +16,8 @@
       "crudo"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "grape_tomatoes"
+    "ingrediente_sabor": "grape_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Tomates Verdes Fritos Al Estilo Sure O",
@@ -37,7 +38,8 @@
       "frito"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Filipino Grilled Chicken And Liver Sisig With Egg",
@@ -59,7 +61,8 @@
       "asado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "grilled_chicken_breasts"
+    "ingrediente_sabor": "grilled_chicken_breasts",
+    "es_postre": false
   },
   {
     "nombre": "Basic Indian Roti",
@@ -73,7 +76,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salt"
+    "ingrediente_sabor": "salt",
+    "es_postre": false
   },
   {
     "nombre": "Curry Cremoso De Pollo Con Garam Masala",
@@ -103,7 +107,8 @@
       "guisado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Jamaican Spiced Ginger Cake",
@@ -125,7 +130,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
   },
   {
     "nombre": "Mar Y Tierra Espa Ol Con Chorizo Y Jalape O",
@@ -148,7 +154,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "pepper"
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
   },
   {
     "nombre": "Biscotti Italianos De Pistacho Y Ar Ndanos Rojos Con Almendra",
@@ -168,7 +175,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
   },
   {
     "nombre": "Tacos Al Pastor De Cerdo Con Pi A Y Chiles Frescos",
@@ -191,7 +199,8 @@
       "crudo"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "poblano_peppers"
+    "ingrediente_sabor": "poblano_peppers",
+    "es_postre": false
   },
   {
     "nombre": "Salsa Pomodoro E Basilico Fresco",
@@ -207,7 +216,8 @@
       "crudo"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Italian Sausage Three Cheese Bake",
@@ -230,7 +240,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "sharp_cheddar_cheese"
+    "ingrediente_sabor": "sharp_cheddar_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Salteado De Pavo Y Jud As Verdes Al Estilo Chino Con Jengibre Y S Samo",
@@ -255,7 +266,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "white_pepper"
+    "ingrediente_sabor": "white_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Trucha Italiana Con Pesto Picante De Perejil Y Nuez",
@@ -275,7 +287,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "hot_red_pepper_flakes"
+    "ingrediente_sabor": "hot_red_pepper_flakes",
+    "es_postre": false
   },
   {
     "nombre": "Bistec Mexicano Con Salsa Fresca De Aguacate",
@@ -302,7 +315,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "chili_powder"
+    "ingrediente_sabor": "chili_powder",
+    "es_postre": false
   },
   {
     "nombre": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
@@ -324,7 +338,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "parmesan_cheese"
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
@@ -344,7 +359,8 @@
       "guisado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "vegetable_stock"
+    "ingrediente_sabor": "vegetable_stock",
+    "es_postre": false
   },
   {
     "nombre": "British Lemon Raspberry Yogurt Fool",
@@ -358,7 +374,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "confectioners_sugar"
+    "ingrediente_sabor": "confectioners_sugar",
+    "es_postre": true
   },
   {
     "nombre": "Zesty Italian Herb Roasted Chicken",
@@ -372,7 +389,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "broiler_fryer_chicken"
+    "ingrediente_sabor": "broiler_fryer_chicken",
+    "es_postre": false
   },
   {
     "nombre": "Thai Sweet Spicy Lime Dipping Sauce",
@@ -386,7 +404,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Vietnamese Zesty Chicken Stir Fry With Broccolini Squash",
@@ -409,7 +428,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "soy_sauce"
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Fideos Thai De Cerdo Y Camarones Con Salsa Cremosa De Cacahuete Y Albahaca",
@@ -431,7 +451,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "pork_loin"
+    "ingrediente_sabor": "pork_loin",
+    "es_postre": false
   },
   {
     "nombre": "Pico De Gallo Fresco",
@@ -447,7 +468,8 @@
       "crudo"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "roma_tomatoes"
+    "ingrediente_sabor": "roma_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Spicy Southern Homestyle Potato Egg Salad",
@@ -463,7 +485,8 @@
       "crudo"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "pepper"
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
   },
   {
     "nombre": "Salteado Picante De Tofu Con Pimientos Tricolor Br Coli Jengibre Y S Samo",
@@ -485,7 +508,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "red_pepper"
+    "ingrediente_sabor": "red_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Linguine Mediterr Neo Picante",
@@ -504,7 +528,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "lemon_zest"
+    "ingrediente_sabor": "lemon_zest",
+    "es_postre": false
   },
   {
     "nombre": "Ternera Lo Mein Con Setas Y Brotes De Soja",
@@ -529,7 +554,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_broth"
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
   },
   {
     "nombre": "Cajun Mango Red Chili Stew",
@@ -549,7 +575,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Spaghetti Cremoso Con Pollo Y Champi Ones",
@@ -570,7 +597,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "mushrooms"
+    "ingrediente_sabor": "mushrooms",
+    "es_postre": false
   },
   {
     "nombre": "Rollitos Imperiales De Cerdo Y Verduras Con Salsa Agridulce",
@@ -594,7 +622,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "soy_sauce"
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Mexican Breakfast Sausage Egg Quesadillas",
@@ -608,7 +637,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cheese"
+    "ingrediente_sabor": "cheese",
+    "es_postre": false
   },
   {
     "nombre": "Creamy Parmesan Polenta",
@@ -623,7 +653,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "parmesan_cheese"
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Cajun Chicken Shrimp Andouille Stew",
@@ -649,7 +680,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_broth"
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
   },
   {
     "nombre": "Saz N Mexicano Cl Sico",
@@ -668,7 +700,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "chili_powder"
+    "ingrediente_sabor": "chili_powder",
+    "es_postre": false
   },
   {
     "nombre": "Salteado Thai De Pollo Y Tofu Con Papaya Verde Y Cacahuetes",
@@ -695,7 +728,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken"
+    "ingrediente_sabor": "chicken",
+    "es_postre": false
   },
   {
     "nombre": "Salsa Mediterr Nea De Tomate Y Hierbas",
@@ -713,7 +747,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "white_sugar"
+    "ingrediente_sabor": "white_sugar",
+    "es_postre": false
   },
   {
     "nombre": "Spicy Creole Shrimp And Sausage Jambalaya",
@@ -732,7 +767,8 @@
       "guisado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "diced_tomatoes"
+    "ingrediente_sabor": "diced_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Gamberi E Fagioli Allaglio E Salvia Con Crostini",
@@ -750,7 +786,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "pepper"
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
   },
   {
     "nombre": "Filipino Five Spice Chicken Adobo",
@@ -770,7 +807,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_broth"
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
   },
   {
     "nombre": "Southern Cheesy Black Eyed Pea Dip",
@@ -788,7 +826,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cream_cheese"
+    "ingrediente_sabor": "cream_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Southern Braised Ribs And Collard Greens With Smoky Ham Hock",
@@ -812,7 +851,8 @@
       "guisado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "freshly_pepper"
+    "ingrediente_sabor": "freshly_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Italian Deli Meat Hoagie",
@@ -830,7 +870,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "mozzarella_cheese"
+    "ingrediente_sabor": "mozzarella_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Brazilian Lime Rum Sparkler",
@@ -845,7 +886,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "lime"
+    "ingrediente_sabor": "lime",
+    "es_postre": false
   },
   {
     "nombre": "Enchiladas Cremosas De Pollo Y Frijoles Negros",
@@ -867,7 +909,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cooked_chicken"
+    "ingrediente_sabor": "cooked_chicken",
+    "es_postre": false
   },
   {
     "nombre": "Indian Spiced Salmon With Ginger Cilantro",
@@ -887,7 +930,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salmon_fillets"
+    "ingrediente_sabor": "salmon_fillets",
+    "es_postre": false
   },
   {
     "nombre": "Pechuga De Pollo Fresca A La Mexicana Con Ensalada De Aguacate",
@@ -908,7 +952,8 @@
       "crudo"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Golden Mandarin Orange Liqueur Cake",
@@ -926,7 +971,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "yelcake_mix"
+    "ingrediente_sabor": "yelcake_mix",
+    "es_postre": true
   },
   {
     "nombre": "Salade De Fenouil Aux Agrumes",
@@ -942,7 +988,8 @@
       "crudo"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Southern Buttermilk Cornbread With Savory Onions",
@@ -960,7 +1007,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Creamy Southern Crawfish Dip",
@@ -977,7 +1025,8 @@
       "crudo"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cream_cheese"
+    "ingrediente_sabor": "cream_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Southern Sweet Tangy Dressing",
@@ -993,7 +1042,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "white_vinegar"
+    "ingrediente_sabor": "white_vinegar",
+    "es_postre": false
   },
   {
     "nombre": "Sukiyaki De Solomillo Con Fideos De Cristal",
@@ -1015,7 +1065,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Spicy Southern Cheesy Grits Bake",
@@ -1035,7 +1086,8 @@
       "horneado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "red_pepper"
+    "ingrediente_sabor": "red_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Linguine Alle Cozze Con Salsa Fresca Di Pomodoro E Basilico",
@@ -1059,7 +1111,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "crushed_red_pepper"
+    "ingrediente_sabor": "crushed_red_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Southern Honey Buttermilk Cornbread",
@@ -1079,7 +1132,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Salmone Al Pesto E Limone",
@@ -1093,7 +1147,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "lemon"
+    "ingrediente_sabor": "lemon",
+    "es_postre": false
   },
   {
     "nombre": "Estofado De Res Jamaicano Especiado",
@@ -1125,7 +1180,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "sodium_beef_broth"
+    "ingrediente_sabor": "sodium_beef_broth",
+    "es_postre": false
   },
   {
     "nombre": "Delicia Japonesa De Matcha Y Nueces",
@@ -1144,7 +1200,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "white_sugar"
+    "ingrediente_sabor": "white_sugar",
+    "es_postre": true
   },
   {
     "nombre": "Fenugreek Spiced Urad Dal With Aloo Rice",
@@ -1160,7 +1217,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "coarse_salt"
+    "ingrediente_sabor": "coarse_salt",
+    "es_postre": false
   },
   {
     "nombre": "Pizza Italiana De Pesto Y Tomates Ciruela",
@@ -1174,7 +1232,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "plum_tomatoes"
+    "ingrediente_sabor": "plum_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Hearty Irish Leek Potato Bake",
@@ -1192,7 +1251,8 @@
       "horneado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Thai Garlic Pepper Chicken",
@@ -1208,7 +1268,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_thighs"
+    "ingrediente_sabor": "chicken_thighs",
+    "es_postre": false
   },
   {
     "nombre": "Costillas Thai Glaseadas Con Lemongrass Y Coco",
@@ -1230,7 +1291,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "unsweetened_coconut_milk"
+    "ingrediente_sabor": "unsweetened_coconut_milk",
+    "es_postre": false
   },
   {
     "nombre": "Aut Ntico Curry De Pollo Al Garam Masala Con Jengibre",
@@ -1254,7 +1316,8 @@
       "guisado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_legs"
+    "ingrediente_sabor": "chicken_legs",
+    "es_postre": false
   },
   {
     "nombre": "Estofado De Carne Picada Jamaicana Especiado",
@@ -1284,7 +1347,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "stock"
+    "ingrediente_sabor": "stock",
+    "es_postre": false
   },
   {
     "nombre": "Pappardelle Con Maiale Al Rosmarino",
@@ -1303,7 +1367,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "crushed_tomatoes"
+    "ingrediente_sabor": "crushed_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Curry Rojo Tailand S Cremoso Con Tofu Y Berenjena",
@@ -1321,7 +1386,8 @@
       "guisado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "coconut_milk"
+    "ingrediente_sabor": "coconut_milk",
+    "es_postre": false
   },
   {
     "nombre": "Bibimbap Picante De Ternera Gochujang",
@@ -1345,7 +1411,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Cr Me P Tissi Re Classique La Vanille",
@@ -1360,7 +1427,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "vanilla"
+    "ingrediente_sabor": "vanilla",
+    "es_postre": true
   },
   {
     "nombre": "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille",
@@ -1379,7 +1447,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "maple_syrup"
+    "ingrediente_sabor": "maple_syrup",
+    "es_postre": true
   },
   {
     "nombre": "Southern Style Sweet And Tangy Green Beans With Bacon",
@@ -1396,7 +1465,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "white_sugar"
+    "ingrediente_sabor": "white_sugar",
+    "es_postre": false
   },
   {
     "nombre": "Tostada Espa Ola De Jam N Serrano Manchego Y Huevo Con Membrillo",
@@ -1413,7 +1483,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "manchego_cheese"
+    "ingrediente_sabor": "manchego_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Masala Chickpea Spinach Burgers",
@@ -1445,7 +1516,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "chili_powder"
+    "ingrediente_sabor": "chili_powder",
+    "es_postre": false
   },
   {
     "nombre": "Moroccan Aromatic Spice Blend",
@@ -1463,7 +1535,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon"
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": false
   },
   {
     "nombre": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
@@ -1481,7 +1554,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Penne Piccante Con Salsiccia Miele E Peperoni Arrostiti",
@@ -1502,7 +1576,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "sausage_casings"
+    "ingrediente_sabor": "sausage_casings",
+    "es_postre": false
   },
   {
     "nombre": "Moroccan Saffron Chickpea And Tomato Stew",
@@ -1528,7 +1603,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomato_paste"
+    "ingrediente_sabor": "tomato_paste",
+    "es_postre": false
   },
   {
     "nombre": "Moroccan Spiced Couscous With Preserved Lemon And Olives",
@@ -1555,7 +1631,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomato_paste"
+    "ingrediente_sabor": "tomato_paste",
+    "es_postre": false
   },
   {
     "nombre": "Caf Helado Vietnamita Tradicional",
@@ -1568,7 +1645,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sweetened_condensed_milk"
+    "ingrediente_sabor": "sweetened_condensed_milk",
+    "es_postre": true
   },
   {
     "nombre": "Wafu Steak Con Esp Rragos Y Shiitake",
@@ -1584,7 +1662,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "soy_sauce"
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Guacamole Fresco Picante",
@@ -1600,7 +1679,8 @@
       "crudo"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "jalapeno_chilies"
+    "ingrediente_sabor": "jalapeno_chilies",
+    "es_postre": false
   },
   {
     "nombre": "Cajun Bayou Blue Cheese Burger Con Pecanas Caramelizadas",
@@ -1627,7 +1707,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "crumbled_blue_cheese"
+    "ingrediente_sabor": "crumbled_blue_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Southern Red Velvet Dream Cake",
@@ -1646,7 +1727,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
   },
   {
     "nombre": "Foie Gras Sellado Con Persim N Y Reducci N Al Madeira",
@@ -1666,7 +1748,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "sherry_vinegar"
+    "ingrediente_sabor": "sherry_vinegar",
+    "es_postre": false
   },
   {
     "nombre": "Spiced Spring Fingerling Potatoes With Fenugreek And Ramps",
@@ -1693,7 +1776,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Mezcla De Especias Arom Ticas Indias Para Masala",
@@ -1708,7 +1792,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon_sticks"
+    "ingrediente_sabor": "cinnamon_sticks",
+    "es_postre": false
   },
   {
     "nombre": "Pasta Integral Con Espinacas Tomates Cherry Y Champi Ones Al Asiago",
@@ -1726,7 +1811,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "grape_tomatoes"
+    "ingrediente_sabor": "grape_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Delizia Di Castagne Al Caff E Mascarpone",
@@ -1746,7 +1832,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "granulated_sugar"
+    "ingrediente_sabor": "granulated_sugar",
+    "es_postre": true
   },
   {
     "nombre": "Indian Garlic Shrimp Spinach Curry With Naan",
@@ -1764,7 +1851,8 @@
       "guisado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "unsalted_butter"
+    "ingrediente_sabor": "unsalted_butter",
+    "es_postre": false
   },
   {
     "nombre": "Boribap Coreano Simple",
@@ -1776,7 +1864,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "water"
+    "ingrediente_sabor": "water",
+    "es_postre": false
   },
   {
     "nombre": "Huevos Rotos Con Patatas Jam N Y Pimientos",
@@ -1794,7 +1883,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "bacon"
+    "ingrediente_sabor": "bacon",
+    "es_postre": false
   },
   {
     "nombre": "Gnocchi Di Patate Classici",
@@ -1808,7 +1898,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salt"
+    "ingrediente_sabor": "salt",
+    "es_postre": false
   },
   {
     "nombre": "Classic Southern Country Fried Sirloin Steak",
@@ -1827,7 +1918,8 @@
       "frito"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Southern Homestyle Sweet Bread",
@@ -1843,7 +1935,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "granulated_sugar"
+    "ingrediente_sabor": "granulated_sugar",
+    "es_postre": true
   },
   {
     "nombre": "Aromatic Greek Pork Parcels",
@@ -1859,7 +1952,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "pork"
+    "ingrediente_sabor": "pork",
+    "es_postre": false
   },
   {
     "nombre": "Atole Cremoso De Caf Con Kahl A",
@@ -1876,7 +1970,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon"
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": true
   },
   {
     "nombre": "Pozole Verde De Pollo Tradicional",
@@ -1903,7 +1998,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "lime"
+    "ingrediente_sabor": "lime",
+    "es_postre": false
   },
   {
     "nombre": "Classic Southern Fried Catfish",
@@ -1924,7 +2020,8 @@
       "frito"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Arom Tico Curry De Coliflor Y Patatas Al Coco Con Arroz Basmati",
@@ -1949,7 +2046,8 @@
       "guisado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "sea_salt"
+    "ingrediente_sabor": "sea_salt",
+    "es_postre": false
   },
   {
     "nombre": "Sicilian Fennel And Blood Orange Salad",
@@ -1965,7 +2063,8 @@
       "crudo"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "blood_orange"
+    "ingrediente_sabor": "blood_orange",
+    "es_postre": false
   },
   {
     "nombre": "Salsa Bals Mica Italiana De Ajo Y Albahaca",
@@ -1982,7 +2081,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "balsamic_vinegar"
+    "ingrediente_sabor": "balsamic_vinegar",
+    "es_postre": false
   },
   {
     "nombre": "Muffin Pizzas Italianas De Verduras",
@@ -2001,7 +2101,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomato_sauce"
+    "ingrediente_sabor": "tomato_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Crispy Garlic Chili Prawns Japanese Style",
@@ -2019,7 +2120,8 @@
       "crudo"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "seasoning_salt"
+    "ingrediente_sabor": "seasoning_salt",
+    "es_postre": false
   },
   {
     "nombre": "Lasagna Cremosa De Pollo Con Ranch",
@@ -2036,7 +2138,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cheddar_cheese"
+    "ingrediente_sabor": "cheddar_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Greek Lemon Oregano Pork Chops",
@@ -2052,7 +2155,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "red_wine_vinegar"
+    "ingrediente_sabor": "red_wine_vinegar",
+    "es_postre": false
   },
   {
     "nombre": "Tacos Coreanos De Bistec De Falda Picantes",
@@ -2074,7 +2178,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salt"
+    "ingrediente_sabor": "salt",
+    "es_postre": false
   },
   {
     "nombre": "Curried Pearl Barley Pilaf With Almonds And Raisins",
@@ -2094,7 +2199,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Smores Mexicanos Con Canela",
@@ -2107,7 +2213,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "chocolate_bars"
+    "ingrediente_sabor": "chocolate_bars",
+    "es_postre": true
   },
   {
     "nombre": "Creamy Old Bay Cod And Potato Bake",
@@ -2133,7 +2240,8 @@
       "horneado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Irish Spiced Fruit Tea Cake",
@@ -2160,7 +2268,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon"
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": true
   },
   {
     "nombre": "Jajangmyeon De Cerdo Con Bok Choy Y Patata",
@@ -2180,7 +2289,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Traditional Chinese Pork And Vegetable Egg Rolls",
@@ -2206,7 +2316,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "soy_sauce"
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Bowl Mexicano De Quinoa Y Frijoles Negros",
@@ -2227,7 +2338,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "diced_tomatoes"
+    "ingrediente_sabor": "diced_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Southern Okra And Bell Pepper Saut",
@@ -2244,7 +2356,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "red_bell_pepper"
+    "ingrediente_sabor": "red_bell_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Pato Chino Aromatizado Con Naranja Y Cinco Especias",
@@ -2267,7 +2380,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salt"
+    "ingrediente_sabor": "salt",
+    "es_postre": false
   },
   {
     "nombre": "Moroccan Spiced Lamb Penne Bake",
@@ -2294,7 +2408,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomato_paste"
+    "ingrediente_sabor": "tomato_paste",
+    "es_postre": false
   },
   {
     "nombre": "Irish Blue Cheese Scones",
@@ -2313,7 +2428,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Pollo Chino Picante Con Jengibre Y Col Napa",
@@ -2337,7 +2453,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_leg_quarters"
+    "ingrediente_sabor": "chicken_leg_quarters",
+    "es_postre": false
   },
   {
     "nombre": "Irish Farmhouse Bacon Sausage Skillet",
@@ -2357,7 +2474,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "smoked_streaky_bacon"
+    "ingrediente_sabor": "smoked_streaky_bacon",
+    "es_postre": false
   },
   {
     "nombre": "Agua Fresca De Jamaica Especiada Con Piloncillo",
@@ -2375,7 +2493,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon_sticks"
+    "ingrediente_sabor": "cinnamon_sticks",
+    "es_postre": true
   },
   {
     "nombre": "Aromatic Italian Herb Garlic Infusion",
@@ -2394,7 +2513,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "freshly_pepper"
+    "ingrediente_sabor": "freshly_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Italian Mocha Mascarpone Torte",
@@ -2418,7 +2538,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
   },
   {
     "nombre": "Risotto Primavera Cremoso Con Asparagi Y Verduras Frescas",
@@ -2443,7 +2564,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "grated_parmesan_cheese"
+    "ingrediente_sabor": "grated_parmesan_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Pollo Jamaicano Picante Con Coco Y Arroz De Frijoles Rojos",
@@ -2473,7 +2595,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "tomato_sauce"
+    "ingrediente_sabor": "tomato_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Creamy Taco Beef Corn Tortilla Bake",
@@ -2491,7 +2614,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "condensed_cream_of_chicken_soup"
+    "ingrediente_sabor": "condensed_cream_of_chicken_soup",
+    "es_postre": false
   },
   {
     "nombre": "Gyukatsu Crujiente",
@@ -2508,7 +2632,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "pepper"
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
   },
   {
     "nombre": "Gambas Con Chorizo Tropical Al Ron",
@@ -2528,7 +2653,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "lime"
+    "ingrediente_sabor": "lime",
+    "es_postre": false
   },
   {
     "nombre": "Estofado De Costillas De Cerdo Con Daikon Ostras Y Bayas Goji",
@@ -2549,7 +2675,8 @@
       "hervido"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Quesadillas Vegetarianas De Frijol Y Queso Cheddar",
@@ -2565,7 +2692,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "shredded_cheddar_cheese"
+    "ingrediente_sabor": "shredded_cheddar_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Golden Spiced Fruit Slices",
@@ -2583,7 +2711,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "demerara_sugar"
+    "ingrediente_sabor": "demerara_sugar",
+    "es_postre": true
   },
   {
     "nombre": "Sabzi De Patatas Y Chiriv As Con Garam Masala",
@@ -2605,7 +2734,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "garam_masala"
+    "ingrediente_sabor": "garam_masala",
+    "es_postre": false
   },
   {
     "nombre": "Thai Green Curry Cashew Chicken Stir Fry",
@@ -2627,7 +2757,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "light_soy_sauce"
+    "ingrediente_sabor": "light_soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Southern Creole Cheesy Shrimp Cauliflower",
@@ -2649,7 +2780,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "condensed_cheddar_cheese_soup"
+    "ingrediente_sabor": "condensed_cheddar_cheese_soup",
+    "es_postre": false
   },
   {
     "nombre": "Spicy Jack Bean Dip",
@@ -2663,7 +2795,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "grated_jack_cheese"
+    "ingrediente_sabor": "grated_jack_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Crema Catalana",
@@ -2679,7 +2812,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon"
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": true
   },
   {
     "nombre": "Asperges Et Lardons Avec Uf Au Parmesan",
@@ -2696,7 +2830,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "grated_parmesan_cheese"
+    "ingrediente_sabor": "grated_parmesan_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Zesty Italian Tortellini With Spinach And Cherry Tomatoes",
@@ -2716,7 +2851,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cheese_tortellini"
+    "ingrediente_sabor": "cheese_tortellini",
+    "es_postre": false
   },
   {
     "nombre": "Curried Chicken Quinoa With Granny Smith Apple",
@@ -2735,7 +2871,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_broth"
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
   },
   {
     "nombre": "Golden British Skillet Drops",
@@ -2750,7 +2887,8 @@
       "salteado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salt"
+    "ingrediente_sabor": "salt",
+    "es_postre": false
   },
   {
     "nombre": "Ensalada Mediterr Nea De Pimientos Olivas Y Pasas Doradas",
@@ -2771,7 +2909,8 @@
       "crudo"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "yelbell_pepper"
+    "ingrediente_sabor": "yelbell_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Italian Sausage And Fava Bean Pasta With Pecorino",
@@ -2791,7 +2930,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "pecorino_romano_cheese"
+    "ingrediente_sabor": "pecorino_romano_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Gyeran Guk Sopa Coreana Reconfortante De Huevo Y Caldo",
@@ -2806,7 +2946,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "fish_sauce"
+    "ingrediente_sabor": "fish_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Curry Hind De Batata Y Lentejas Rojas Con Espinacas Y Jengibre",
@@ -2830,7 +2971,8 @@
       "guisado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "lime_zest"
+    "ingrediente_sabor": "lime_zest",
+    "es_postre": false
   },
   {
     "nombre": "Pozole Rojo De Pollo Con Aguacate",
@@ -2858,7 +3000,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_stock"
+    "ingrediente_sabor": "chicken_stock",
+    "es_postre": false
   },
   {
     "nombre": "Suspiros Dulces Mexicanos",
@@ -2870,7 +3013,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "granulated_sugar"
+    "ingrediente_sabor": "granulated_sugar",
+    "es_postre": true
   },
   {
     "nombre": "Southern Chocolate Butterscotch Dream",
@@ -2888,7 +3032,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "chocolate_instant_pudding"
+    "ingrediente_sabor": "chocolate_instant_pudding",
+    "es_postre": true
   },
   {
     "nombre": "Haricots Blancs La Proven Ale",
@@ -2905,7 +3050,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "red_wine_vinegar"
+    "ingrediente_sabor": "red_wine_vinegar",
+    "es_postre": false
   },
   {
     "nombre": "Jambalaya Caj N De Camarones Y Salchicha",
@@ -2929,7 +3075,8 @@
       "guisado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_broth"
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
   },
   {
     "nombre": "Curry Fresco De Moong Dal Con Mango Verde Y Verduras",
@@ -2950,7 +3097,8 @@
       "crudo"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Aromatic Tofu And Shiitake Rice Bowl",
@@ -2970,7 +3118,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "sodium_soy_sauce"
+    "ingrediente_sabor": "sodium_soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Penne Alla Marinara Con Mozzarella Y Albahaca Fresca",
@@ -2984,7 +3133,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "shredded_mozzarella_cheese"
+    "ingrediente_sabor": "shredded_mozzarella_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Zuppa Contadina Di Ceci E Semolino",
@@ -3008,7 +3158,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "vine_ripened_tomatoes"
+    "ingrediente_sabor": "vine_ripened_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Kahl A Espresso Mascarpone Angel Cake",
@@ -3029,7 +3180,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
   },
   {
     "nombre": "Spicy Southern Buttermilk Fried Chicken",
@@ -3052,7 +3204,8 @@
       "frito"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Greek Zinfandel Fig Gel E Con Crema De Yogurt Y Azahar",
@@ -3075,7 +3228,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon_sticks"
+    "ingrediente_sabor": "cinnamon_sticks",
+    "es_postre": true
   },
   {
     "nombre": "Aromatic Japanese Beef Daikon Stew",
@@ -3102,7 +3256,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "reduced_sodium_soy_sauce"
+    "ingrediente_sabor": "reduced_sodium_soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Crispy Creole Catfish With Coleslaw",
@@ -3118,7 +3273,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "corn_flakes_cereal"
+    "ingrediente_sabor": "corn_flakes_cereal",
+    "es_postre": false
   },
   {
     "nombre": "Salsa Pomodoro Piccante Tradizionale",
@@ -3135,7 +3291,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "diced_tomatoes"
+    "ingrediente_sabor": "diced_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Cerdo Coreano Picante Con Marinada De Pera Y Kiwi",
@@ -3158,7 +3315,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "chili_paste"
+    "ingrediente_sabor": "chili_paste",
+    "es_postre": false
   },
   {
     "nombre": "Enchiladas Verdes De Acelgas Y Queso Fresco",
@@ -3178,7 +3336,8 @@
       "crudo"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_broth"
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
   },
   {
     "nombre": "Aromatic Prawn Masala",
@@ -3197,7 +3356,8 @@
       "crudo"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "garam_masala"
+    "ingrediente_sabor": "garam_masala",
+    "es_postre": false
   },
   {
     "nombre": "Scaloppine Di Vitello Ai Funghi E Pomodoro Con Rosmarino",
@@ -3216,7 +3376,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "mushrooms"
+    "ingrediente_sabor": "mushrooms",
+    "es_postre": false
   },
   {
     "nombre": "Pasta Mexicana Picante",
@@ -3233,7 +3394,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomato_sauce"
+    "ingrediente_sabor": "tomato_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Miyeokguk Sopa Coreana De Algas Y Carne",
@@ -3250,7 +3412,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "lean_beef"
+    "ingrediente_sabor": "lean_beef",
+    "es_postre": false
   },
   {
     "nombre": "Wontons De Camarones Y Jengibre Picantes",
@@ -3273,7 +3436,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Salade De Poulet Et Anchois La Proven Ale",
@@ -3299,7 +3463,8 @@
       "crudo"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Ternera China Al Coco Y Curry Con Jengibre",
@@ -3322,7 +3487,8 @@
       "guisado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "coconut_oil"
+    "ingrediente_sabor": "coconut_oil",
+    "es_postre": false
   },
   {
     "nombre": "Paella De Mar Y Tierra Con Azafr N",
@@ -3347,7 +3513,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_broth"
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
   },
   {
     "nombre": "Chinese Ginger Garlic Shrimp And Snow Pea Stir Fry",
@@ -3371,7 +3538,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "chicken_stock"
+    "ingrediente_sabor": "chicken_stock",
+    "es_postre": false
   },
   {
     "nombre": "Ensalada Templada De Espinacas Bacon Y Huevo Con Alcachofas",
@@ -3393,7 +3561,8 @@
       "crudo"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Aromatic Spiced Pea Kachori",
@@ -3416,7 +3585,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
   },
   {
     "nombre": "Pita Mexicana De Berenjena Y Pimientos Frescos",
@@ -3437,7 +3607,8 @@
       "crudo"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Gratin De Pommes De Terre Cr Meux Au Gruy Re",
@@ -3452,7 +3623,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "grated_gruy_re_cheese"
+    "ingrediente_sabor": "grated_gruy_re_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Sopa Japonesa De Udon Con Tofu Miso Y Jengibre",
@@ -3471,7 +3643,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "vegetable_broth"
+    "ingrediente_sabor": "vegetable_broth",
+    "es_postre": false
   },
   {
     "nombre": "Enchiladas De Pollo Con Salsa Roja Y Queso Monterey",
@@ -3496,7 +3669,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "jalapeno_chilies"
+    "ingrediente_sabor": "jalapeno_chilies",
+    "es_postre": false
   },
   {
     "nombre": "Salsiccia Piccante E Broccoletti Al Forno Con Fontina",
@@ -3520,7 +3694,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "parmigiano_reggiano_cheese"
+    "ingrediente_sabor": "parmigiano_reggiano_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Filipino Spicy Cucumber Onion Relish",
@@ -3539,7 +3714,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "thai_chile"
+    "ingrediente_sabor": "thai_chile",
+    "es_postre": false
   },
   {
     "nombre": "Pastel Cremoso De Pollo Sure O Con Verduras",
@@ -3558,7 +3734,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cream_of_chicken_soup"
+    "ingrediente_sabor": "cream_of_chicken_soup",
+    "es_postre": false
   },
   {
     "nombre": "Manicotti Horneado De Espinacas Y Tres Quesos",
@@ -3580,7 +3757,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "parmesan_cheese"
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Fettuccine Ai Gamberi Con Salsa Fresca Di Pomodoro E Basilico",
@@ -3605,7 +3783,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "mushrooms"
+    "ingrediente_sabor": "mushrooms",
+    "es_postre": false
   },
   {
     "nombre": "Kung Pao Chicken Stir Fry",
@@ -3631,7 +3810,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "soy_sauce"
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Tacos Mexicanos De Carnitas Con Salsa Verde Y Guacamole",
@@ -3658,7 +3838,8 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "cayenne_pepper"
+    "ingrediente_sabor": "cayenne_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Saffron Rose Pistachio Phirni",
@@ -3675,7 +3856,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "sugar"
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
   },
   {
     "nombre": "Alitas De Pollo Coreanas Glaseadas Con Miel Y Soja",
@@ -3695,7 +3877,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "soy_sauce"
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Estofado De Pollo Adobado Con Chipotle Y Ma Z",
@@ -3720,7 +3903,8 @@
       "hervido"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "black_pepper"
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Tacos De Costillas De Res Con Glaseado Picante De Ar Ndano Y Sriracha",
@@ -3746,7 +3930,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cheddar_cheese"
+    "ingrediente_sabor": "cheddar_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Traditional Tofu Wakame Miso Soup",
@@ -3762,7 +3947,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "miso_paste"
+    "ingrediente_sabor": "miso_paste",
+    "es_postre": false
   },
   {
     "nombre": "Tyropita Griega Tradicional Con Tres Quesos Y Eneldo",
@@ -3784,7 +3970,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "cheese"
+    "ingrediente_sabor": "cheese",
+    "es_postre": false
   },
   {
     "nombre": "Salsa Picante De Frijol De Ojo Negro Y Queso Monterey",
@@ -3804,7 +3991,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "shredded_monterey_jack_cheese"
+    "ingrediente_sabor": "shredded_monterey_jack_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Okra Frita Sure A Cl Sica Con Suero De Mantequilla",
@@ -3821,7 +4009,8 @@
       "frito"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salt"
+    "ingrediente_sabor": "salt",
+    "es_postre": false
   },
   {
     "nombre": "Rang N De Cangrejo Cremoso",
@@ -3837,7 +4026,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "philadelphia_cream_cheese"
+    "ingrediente_sabor": "philadelphia_cream_cheese",
+    "es_postre": false
   },
   {
     "nombre": "Buttered Savoy Cabbage With Baked Potatoes",
@@ -3852,7 +4042,8 @@
       "horneado"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "salt"
+    "ingrediente_sabor": "salt",
+    "es_postre": false
   },
   {
     "nombre": "Muslos De Pollo Japoneses Glaseados Con Jengibre Y Sake",
@@ -3870,7 +4061,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "boneless_chicken_thighs"
+    "ingrediente_sabor": "boneless_chicken_thighs",
+    "es_postre": false
   },
   {
     "nombre": "Torta Cremosa Al Ricotta Pistacchio E Cioccolato",
@@ -3895,7 +4087,8 @@
       "horneado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "vanilla_extract"
+    "ingrediente_sabor": "vanilla_extract",
+    "es_postre": true
   },
   {
     "nombre": "Salsa Fresca Mexicana Con Serrano",
@@ -3911,7 +4104,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Irish Cherry Hazelnut Oatmeal",
@@ -3929,7 +4123,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon"
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": false
   },
   {
     "nombre": "Hamburguesa Griega De Cordero Con Feta Y Menta",
@@ -3950,7 +4145,8 @@
       "salteado"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "cinnamon"
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": false
   },
   {
     "nombre": "Estofado Criollo De Andouille Y Frijoles Rojos Ahumados",
@@ -3965,7 +4161,8 @@
       "hervido"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "fire_roasted_diced_tomatoes"
+    "ingrediente_sabor": "fire_roasted_diced_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Salm N Fresco Con Aderezo Japon S De Wasabi Y S Samo",
@@ -3985,7 +4182,8 @@
       "crudo"
     ],
     "sabor_dominante": "salado",
-    "ingrediente_sabor": "japanese_soy_sauce"
+    "ingrediente_sabor": "japanese_soy_sauce",
+    "es_postre": false
   },
   {
     "nombre": "Brasato Di Manzo Ai Funghi Porcini",
@@ -4009,7 +4207,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "dried_porcini_mushrooms"
+    "ingrediente_sabor": "dried_porcini_mushrooms",
+    "es_postre": false
   },
   {
     "nombre": "Zesty Creole Shrimp With Green Tomato Remoulade",
@@ -4036,7 +4235,8 @@
       "salteado"
     ],
     "sabor_dominante": "ácido",
-    "ingrediente_sabor": "green_tomatoes"
+    "ingrediente_sabor": "green_tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Escalivada Catalana",
@@ -4054,7 +4254,8 @@
       "asado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "red_bell_pepper"
+    "ingrediente_sabor": "red_bell_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Pa Amb Tomaquet",
@@ -4069,7 +4270,8 @@
       "crudo"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "tomatoes"
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
   },
   {
     "nombre": "Suquet De Peix",
@@ -4091,7 +4293,8 @@
       "guisado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "fish"
+    "ingrediente_sabor": "fish",
+    "es_postre": false
   },
   {
     "nombre": "Butifarra Con Mongetes",
@@ -4109,7 +4312,8 @@
       "asado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "sausages"
+    "ingrediente_sabor": "sausages",
+    "es_postre": false
   },
   {
     "nombre": "Cannelloni A La Catalana",
@@ -4133,7 +4337,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "ground_beef"
+    "ingrediente_sabor": "ground_beef",
+    "es_postre": false
   },
   {
     "nombre": "Fideuà De Mariscos",
@@ -4157,7 +4362,8 @@
       "salteado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "shrimp"
+    "ingrediente_sabor": "shrimp",
+    "es_postre": false
   },
   {
     "nombre": "Coca De Recapte",
@@ -4173,7 +4379,8 @@
       "horneado"
     ],
     "sabor_dominante": "umami",
-    "ingrediente_sabor": "red_bell_pepper"
+    "ingrediente_sabor": "red_bell_pepper",
+    "es_postre": false
   },
   {
     "nombre": "Mel I Mató",
@@ -4186,10 +4393,11 @@
       "crudo"
     ],
     "sabor_dominante": "dulce",
-    "ingrediente_sabor": "honey"
+    "ingrediente_sabor": "honey",
+    "es_postre": true
   },
   {
-    "nombre": "Fideuà De Mariscos",
+    "nombre": "Salteado De Pavo Asiático",
     "ingredientes": [
       "sodium_soy_sauce",
       "ginger",
@@ -4211,6 +4419,26 @@
       "salteado"
     ],
     "sabor_dominante": "picante",
-    "ingrediente_sabor": "white_pepper"
+    "ingrediente_sabor": "white_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "French Chocolate Raspberry Mousse",
+    "ingredientes": [
+      "chocolate",
+      "raspberry",
+      "cream",
+      "sugar",
+      "eggs"
+    ],
+    "tecnica_coccion": [
+      "batir",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "chocolate",
+    "tradicion": "francesa",
+    "temporada": [],
+    "es_postre": true
   }
 ]

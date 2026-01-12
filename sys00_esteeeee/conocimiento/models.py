@@ -209,6 +209,27 @@ class Caso:
 
     def to_dict(self) -> Dict[str, Any]:
         """Convierte el caso a diccionario para JSON"""
+        # Serializar reparaciones - convertir objetos Plato a strings si es necesario
+        reparaciones_serializables = []
+        for rep in self.reparaciones_aplicadas:
+            if isinstance(rep, dict):
+                # Si es un dict, asegurar que los valores sean serializables
+                rep_clean = {}
+                for k, v in rep.items():
+                    if hasattr(v, 'nombre'):  # Es un objeto Plato
+                        rep_clean[k] = v.nombre
+                    elif hasattr(v, 'to_dict'):
+                        rep_clean[k] = v.to_dict()
+                    else:
+                        rep_clean[k] = v
+                reparaciones_serializables.append(rep_clean)
+            elif hasattr(rep, 'nombre'):  # Es un objeto Plato
+                reparaciones_serializables.append(rep.nombre)
+            elif hasattr(rep, 'to_dict'):
+                reparaciones_serializables.append(rep.to_dict())
+            else:
+                reparaciones_serializables.append(rep)
+        
         result = {
             'id': self.id,
             'restricciones': self.restricciones,
@@ -219,7 +240,7 @@ class Caso:
             'tradicion': self.tradicion,
             'exito': self.exito,
             'fallos_detectados': self.fallos_detectados,
-            'reparaciones_aplicadas': self.reparaciones_aplicadas,
+            'reparaciones_aplicadas': reparaciones_serializables,
             'timestamp': self.timestamp,
             'feedback': self.feedback
         }

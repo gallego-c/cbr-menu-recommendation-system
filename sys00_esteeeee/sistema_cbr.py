@@ -356,30 +356,42 @@ class SistemaCBR:
             else:
                 print("[OK] El menú seleccionado es completamente válido")
             
-            # Paso 4.3: Verificar duplicado y actualizar base de casos
-            # ACTUALIZACIÓN DESACTIVADA - No se guardan nuevos casos
-            # print("\n--- Actualizando base de casos ---")
-            # # Verificar duplicado usando actualizador
-            # menu_obj = Menu(
-            #     entrante=menu_final.get('entrante', ''),
-            #     principal=menu_final.get('principal', ''),
-            #     postre=menu_final.get('postre', '')
-            # )
-            # es_duplicado_final = self.actualizador.verificar_duplicado(
-            #     menu_obj,
-            #     preferencias.tipo_evento,
-            #     preferencias.temporada,
-            #     preferencias.restricciones,
-            #     preferencias.estilo,
-            #     preferencias.tradicion
-            # )
-            # if es_duplicado_final:
-            #     nuevo_caso_id = None
-            #     print("\n[!] El menú generado ya existe en la base de casos")
-            #     print("   No se agregará como caso nuevo")
-            # else:
-            #     nuevo_caso_id = self._fase_actualizacion_interna(menu_final, preferencias, True, reparaciones)
-            nuevo_caso_id = None  # No se guardan nuevos casos
+            # Paso 4.3: RETENCIÓN - Evaluar y guardar caso si procede
+            print("\n" + "="*70)
+            print("FASE 5: RETENCIÓN DEL CASO")
+            print("="*70)
+            
+            menu_obj = Menu(
+                entrante=menu_final.get('entrante', ''),
+                principal=menu_final.get('principal', ''),
+                postre=menu_final.get('postre', '')
+            )
+            
+            # Usar el sistema de retención inteligente
+            nuevo_caso_id, resultado_retencion = self.actualizador.procesar_caso_con_retencion(
+                menu=menu_obj,
+                tipo_evento=preferencias.tipo_evento,
+                temporada=preferencias.temporada,
+                restricciones=preferencias.restricciones,
+                estilo=preferencias.estilo,
+                tradicion=preferencias.tradicion,
+                exito=True,
+                reparaciones_aplicadas=reparaciones,
+                feedback=None,
+                collect_rating=True,  # Recolectar satisfacción del usuario
+                crear_backup=False
+            )
+            
+            # Mostrar resultado de retención
+            if resultado_retencion.get('retained'):
+                print(f"\n✓ Caso guardado exitosamente: {nuevo_caso_id}")
+                print(f"  Razón: {resultado_retencion.get('reason', 'N/A')}")
+                if resultado_retencion.get('casos_eliminados'):
+                    print(f"  Casos eliminados por curación: {len(resultado_retencion['casos_eliminados'])}")
+                print(f"  Memoria actual: {resultado_retencion.get('memoria_final', 'N/A')} casos")
+            else:
+                print(f"\n✗ Caso NO guardado")
+                print(f"  Razón: {resultado_retencion.get('reason', 'N/A')}")
             
             # Crear resultado exitoso
             resultado = ResultadoCBR(
@@ -662,7 +674,8 @@ class SistemaCBR:
                         plato_obj_actual,
                         tipo_problema,
                         error_actual,
-                        prefs_dict
+                        prefs_dict,
+                        tipo_plato_busqueda  # Pasar tipo de plato para filtrar postres correctamente
                     )
                 else:
                     # Primera reparación, buscar por nombre
@@ -671,7 +684,8 @@ class SistemaCBR:
                         tipo_problema,
                         error_actual,
                         menu_original,  # Pasar el menú completo
-                        prefs_dict      # Y las preferencias
+                        prefs_dict,     # Y las preferencias
+                        tipo_plato_busqueda  # Pasar tipo de plato para filtrar postres correctamente
                     )
                 
                 if resultado_reparacion['exito']:
