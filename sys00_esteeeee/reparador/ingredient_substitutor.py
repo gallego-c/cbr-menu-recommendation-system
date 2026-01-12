@@ -423,6 +423,7 @@ class IngredientSubstitutor:
         if restricciones:
             es_vegano = False
             es_vegetariano = False
+            es_sin_gluten = False
             
             for restriccion in menu.restricciones:
                 restriccion_str = restriccion if isinstance(restriccion, str) else str(restriccion).lower()
@@ -430,6 +431,8 @@ class IngredientSubstitutor:
                     es_vegano = True
                 elif 'vegetarian' in restriccion_str or 'vegetariano' in restriccion_str:
                     es_vegetariano = True
+                if 'gluten' in restriccion_str or 'sin_gluten' in restriccion_str:
+                    es_sin_gluten = True
             
             # Verificar si el ingrediente original es de origen animal
             info_original = self.ingredientes_db.get(nombre_ingrediente_original)
@@ -447,6 +450,29 @@ class IngredientSubstitutor:
                                    'sardine', 'mackerel', 'trout', 'bass', 'halibut']
                 es_animal = any(palabra in nombre_lower for palabra in palabras_carne + palabras_pescado)
             
+            # SIN GLUTEN: buscar sustitutos sin gluten para ingredientes con gluten
+            if es_sin_gluten:
+                # Verificar si el ingrediente viola restricción sin gluten
+                if self.food_bank.ingrediente_viola_restriccion(nombre_ingrediente_original, 'sin_gluten'):
+                    candidatos_gf = self.food_bank.encontrar_sustitutos_sin_gluten(
+                        nombre_ingrediente_original,
+                        otros_ingredientes
+                    )
+                    if candidatos_gf:
+                        # Filtrar candidatos que también cumplan con otras restricciones
+                        for cand_nombre, cand_puntuacion in candidatos_gf:
+                            cumple_todas = True
+                            for restr in restricciones:
+                                if self.food_bank.ingrediente_viola_restriccion(cand_nombre, restr):
+                                    cumple_todas = False
+                                    break
+                            if cumple_todas:
+                                return {
+                                    'exito': True,
+                                    'sustituto': cand_nombre,
+                                    'puntuacion': cand_puntuacion
+                                }
+            
             # VEGANO: sustituir carne, pescado, lácteos, huevos, miel
             if es_vegano:
                 # Buscar sustitutos veganos en food_bank
@@ -455,15 +481,19 @@ class IngredientSubstitutor:
                     otros_ingredientes
                 )
                 if candidatos_veganos:
-                    candidatos.extend(candidatos_veganos)
-                    # Retornar inmediatamente el mejor sustituto vegano
-                    # Ya que tenemos alta prioridad para resolver restricciones
-                    mejor_candidato = candidatos_veganos[0]
-                    return {
-                        'exito': True,
-                        'sustituto': mejor_candidato[0],
-                        'puntuacion': mejor_candidato[1]
-                    }
+                    # Filtrar candidatos que también cumplan con sin_gluten si es necesario
+                    for cand_nombre, cand_puntuacion in candidatos_veganos:
+                        cumple_todas = True
+                        for restr in restricciones:
+                            if self.food_bank.ingrediente_viola_restriccion(cand_nombre, restr):
+                                cumple_todas = False
+                                break
+                        if cumple_todas:
+                            return {
+                                'exito': True,
+                                'sustituto': cand_nombre,
+                                'puntuacion': cand_puntuacion
+                            }
             
             # VEGETARIANO: solo sustituir carne/pescado
             elif es_vegetariano and es_animal:
@@ -473,15 +503,19 @@ class IngredientSubstitutor:
                     otros_ingredientes
                 )
                 if candidatos_vegetarianos:
-                    candidatos.extend(candidatos_vegetarianos)
-                    # Retornar inmediatamente el mejor sustituto vegetariano
-                    # Ya que tenemos alta prioridad para resolver restricciones
-                    mejor_candidato = candidatos_vegetarianos[0]
-                    return {
-                        'exito': True,
-                        'sustituto': mejor_candidato[0],
-                        'puntuacion': mejor_candidato[1]
-                    }
+                    # Filtrar candidatos que también cumplan con sin_gluten si es necesario
+                    for cand_nombre, cand_puntuacion in candidatos_vegetarianos:
+                        cumple_todas = True
+                        for restr in restricciones:
+                            if self.food_bank.ingrediente_viola_restriccion(cand_nombre, restr):
+                                cumple_todas = False
+                                break
+                        if cumple_todas:
+                            return {
+                                'exito': True,
+                                'sustituto': cand_nombre,
+                                'puntuacion': cand_puntuacion
+                            }
         
         # 1b. PRIORIDAD: Si es problema de tradición, buscar sustitutos de la tradición correcta
         if hasattr(menu, 'tradicion') and menu.tradicion:

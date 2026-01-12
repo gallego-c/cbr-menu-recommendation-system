@@ -11,7 +11,8 @@
       "Suquet De Peix",
       "Butifarra Con Mongetes",
       "Fideuà De Mariscos",
-      "Mel I Mató"
+      "Mel I Mató",
+      "Cannelloni A La Catalana"
     ],
     "tecnicas_preferidas": ["asado", "guisado", "horneado"],
     "coherencia_minima": 0.2
@@ -86,7 +87,16 @@
       "Curry Cremoso De Pollo Con Garam Masala",
       "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
       "Indian Spiced Salmon With Ginger Cilantro",
-      "Indian Garlic Shrimp Spinach Curry With Naan"
+      "Indian Garlic Shrimp Spinach Curry With Naan",
+      "Fenugreek Spiced Urad Dal With Aloo Rice",
+      "Aut Ntico Curry De Pollo Al Garam Masala Con Jengibre",
+      "Masala Chickpea Spinach Burgers",
+      "Mezcla De Especias Arom Ticas Indias Para Masala",
+      "Arom Tico Curry De Coliflor Y Patatas Al Coco Con Arroz Basmati",
+      "Sabzi De Patatas Y Chiriv As Con Garam Masala",
+      "Curry Hind De Batata Y Lentejas Rojas Con Espinacas Y Jengibre",
+      "Curry Fresco De Moong Dal Con Mango Verde Y Verduras",
+      "Aromatic Prawn Masala"
     ],
     "tecnicas_preferidas": ["guisado", "hervido", "frito"],
     "coherencia_minima": 0.2
@@ -101,7 +111,10 @@
       "Asperges Et Lardons Avec Uf Au Parmesan",
       "Haricots Blancs La Proven Ale",
       "Salade De Poulet Et Anchois La Proven Ale",
-      "Gratin De Pommes De Terre Cr Meux Au Gruy Re"
+      "Gratin De Pommes De Terre Cr Meux Au Gruy Re",
+      "Salade De Fenouil Aux Agrumes",
+      "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille",
+      "French Chocolate Raspberry Mousse"
     ],
     "tecnicas_preferidas": ["salteado", "horneado", "guisado"],
     "coherencia_minima": 0.2
@@ -116,7 +129,17 @@
       "Traditional Chinese Pork And Vegetable Egg Rolls",
       "Pato Chino Aromatizado Con Naranja Y Cinco Especias",
       "Pollo Chino Picante Con Jengibre Y Col Napa",
-      "Chinese Ginger Garlic Shrimp And Snow Pea Stir Fry"
+      "Chinese Ginger Garlic Shrimp And Snow Pea Stir Fry",
+      "Ternera Lo Mein Con Setas Y Brotes De Soja",
+      "Rollitos Imperiales De Cerdo Y Verduras Con Salsa Agridulce",
+      "Salteado Picante De Tofu Con Pimientos Tricolor Br Coli Jengibre Y S Samo",
+      "Aromatic Tofu And Shiitake Rice Bowl",
+      "Sopa Japonesa De Udon Con Tofu Miso Y Jengibre",
+      "Traditional Tofu Wakame Miso Soup",
+      "Delicia Japonesa De Matcha Y Nueces",
+      "Golden Mandarin Orange Liqueur Cake",
+      "Caf Helado Vietnamita Tradicional",
+      "Saffron Rose Pistachio Phirni"
     ],
     "tecnicas_preferidas": ["salteado", "al_vapor", "frito"],
     "coherencia_minima": 0.2

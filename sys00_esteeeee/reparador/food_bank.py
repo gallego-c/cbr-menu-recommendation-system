@@ -405,6 +405,37 @@ class FoodBank:
         candidatos.sort(key=lambda x: x[1], reverse=True)
         return candidatos[:max_sustitutos]
 
+    def encontrar_sustitutos_sin_gluten(self, ingrediente_original: str,
+                                        ingredientes_contexto: List[str],
+                                        max_sustitutos: int = 5) -> List[Tuple[str, float]]:
+        """
+        Encuentra sustitutos sin gluten para ingredientes que contienen gluten.
+        
+        Args:
+            ingrediente_original: Ingrediente con gluten a sustituir
+            ingredientes_contexto: Otros ingredientes del plato
+            max_sustitutos: Número máximo de sustitutos a retornar
+            
+        Returns:
+            Lista de tuplas (ingrediente_sustituto, puntuacion) ordenadas por puntuación
+        """
+        candidatos = []
+        
+        # Buscar en sustituciones sin gluten específicas
+        sustituciones_gf = self.compatibilidades.get('sustituciones_sin_gluten', {})
+        
+        if ingrediente_original in sustituciones_gf:
+            for sustituto in sustituciones_gf[ingrediente_original]:
+                # Evaluar compatibilidad con el contexto
+                puntuacion = self._evaluar_sustituto(sustituto, ingredientes_contexto)
+                # Dar puntuación extra por ser sustituto directo
+                puntuacion = min(1.0, puntuacion + 0.2)
+                candidatos.append((sustituto, puntuacion))
+        
+        # Ordenar por puntuación y retornar los mejores
+        candidatos.sort(key=lambda x: x[1], reverse=True)
+        return candidatos[:max_sustitutos]
+
     # ==========================================================================
     # MÉTODOS CENTRALIZADOS DE VERIFICACIÓN DE RESTRICCIONES
     # ==========================================================================

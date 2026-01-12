@@ -214,6 +214,30 @@
       "egg_roll_wrappers": ["rice_paper"],
       "gelatin": ["agar_agar"]
     },
+    "sustituciones_sin_gluten": {
+      "soy_sauce": ["tamari", "coconut_aminos", "fish_sauce"],
+      "sodium_soy_sauce": ["tamari", "coconut_aminos", "fish_sauce"],
+      "light_soy_sauce": ["tamari", "coconut_aminos"],
+      "dark_soy_sauce": ["tamari", "coconut_aminos"],
+      "reduced_sodium_soy_sauce": ["tamari", "coconut_aminos"],
+      "teriyaki_sauce": ["gluten_free_teriyaki", "tamari_honey_mix"],
+      "hoisin_sauce": ["gluten_free_hoisin", "tamari"],
+      "oyster_sauce": ["gluten_free_oyster_sauce", "fish_sauce"],
+      "flour": ["rice_flour", "almond_flour", "coconut_flour", "tapioca_flour"],
+      "all_purpose_flour": ["rice_flour", "almond_flour", "coconut_flour", "gluten_free_flour"],
+      "bread": ["gluten_free_bread", "rice_cakes", "corn_tortillas"],
+      "bread_crumbs": ["gluten_free_breadcrumbs", "crushed_rice_cereal", "almond_flour"],
+      "panko_breadcrumbs": ["gluten_free_panko", "crushed_rice_cereal"],
+      "pasta": ["rice_noodles", "gluten_free_pasta", "zucchini_noodles"],
+      "spaghetti": ["rice_noodles", "gluten_free_spaghetti", "zucchini_noodles"],
+      "noodles": ["rice_noodles", "glass_noodles", "zucchini_noodles"],
+      "udon": ["rice_noodles", "glass_noodles"],
+      "ramen_noodles": ["rice_noodles", "glass_noodles"],
+      "couscous": ["quinoa", "rice", "cauliflower_rice"],
+      "barley": ["rice", "quinoa", "buckwheat"],
+      "wheat": ["rice", "quinoa", "corn"],
+      "seitan": ["tofu", "tempeh", "mushrooms"]
+    },
     "sustituciones_por_temporada": {
       "descripcion": "Sustituciones de ingredientes de una temporada a otra manteniendo función culinaria similar",
       "verano_a_invierno": {

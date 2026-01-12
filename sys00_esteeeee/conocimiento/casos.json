@@ -1,95 +1,109 @@
 [
   {
     "id": "C001",
-    "restricciones": [],
-    "temporada": "primavera",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": "verano",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Cajun Mango Red Chili Stew",
-      "principal": "Salteado Thai De Pollo Y Tofu Con Papaya Verde Y Cacahuetes",
-      "postre": "Delicia Japonesa De Matcha Y Nueces"
+      "entrante": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+      "principal": "Salsa Pomodoro E Basilico Fresco",
+      "postre": "Crema Catalana"
     },
-    "estilo": "molecular",
+    "estilo": "clasico",
     "tradicion": "italiana",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.5,
-    "rating_timestamp": "2025-11-22T12:05:00"
+    "satisfaction_score": 4.0,
+    "rating_timestamp": "2025-11-23T23:10:00",
+    "modification_count": 0
   },
   {
     "id": "C002",
-    "restricciones": [],
-    "temporada": "primavera",
+    "restricciones": [
+      "sin_gluten"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Indian Spiced Salmon With Ginger Cilantro",
+      "principal": "Curry Cremoso De Pollo Con Garam Masala",
+      "postre": "Saffron Rose Pistachio Phirni"
+    },
+    "estilo": "clasico",
+    "tradicion": "india",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 3.6,
+    "rating_timestamp": "2025-12-22T10:31:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C003",
+    "restricciones": [
+      "vegano",
+      "sin_gluten"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Pico De Gallo Fresco",
+      "principal": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
+      "postre": "Crema Catalana"
+    },
+    "estilo": "clasico",
+    "tradicion": "mediterranea",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.5,
+    "rating_timestamp": "2025-11-07T16:04:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C004",
+    "restricciones": [
+      "sin_lactosa"
+    ],
+    "temporada": "otoño",
     "tipo_evento": "boda",
     "menu": {
-      "entrante": "Traditional Chinese Pork And Vegetable Egg Rolls",
-      "principal": "Masala Chickpea Spinach Burgers",
-      "postre": "Flan De Coco Tropical"
+      "entrante": "Salade De Fenouil Aux Agrumes",
+      "principal": "Salmone Al Pesto E Limone",
+      "postre": "Cr Me P Tissi Re Classique La Vanille"
     },
     "estilo": "molecular",
     "tradicion": "francesa",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.6,
-    "rating_timestamp": "2025-12-19T17:43:00"
-  },
-  {
-    "id": "C003",
-    "restricciones": [
-      "sin_gluten"
-    ],
-    "temporada": "primavera",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Fenugreek Spiced Urad Dal With Aloo Rice",
-      "principal": "Greek Lemon Oregano Pork Chops",
-      "postre": "Arroz Con Leche Cremoso"
-    },
-    "estilo": "clasico",
-    "tradicion": "catalana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.7,
-    "rating_timestamp": "2025-12-13T16:12:00"
-  },
-  {
-    "id": "C004",
-    "restricciones": [],
-    "temporada": "primavera",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Southern Sweet Tangy Dressing",
-      "principal": "Ternera China Al Coco Y Curry Con Jengibre",
-      "postre": "Southern Chocolate Butterscotch Dream"
-    },
-    "estilo": "molecular",
-    "tradicion": "mexicana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.8,
-    "rating_timestamp": "2025-11-13T18:28:00"
+    "satisfaction_score": 4.0,
+    "rating_timestamp": "2025-11-17T06:58:00",
+    "modification_count": 0
   },
   {
     "id": "C005",
-    "restricciones": [],
-    "temporada": "verano",
-    "tipo_evento": "boda",
+    "restricciones": [
+      "sin_huevo"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Jajangmyeon De Cerdo Con Bok Choy Y Patata",
-      "principal": "Pozole Rojo De Pollo Con Aguacate",
-      "postre": "Southern Red Velvet Dream Cake"
+      "entrante": "Salteado De Pavo Y Jud As Verdes Al Estilo Chino Con Jengibre Y S Samo",
+      "principal": "Ternera Lo Mein Con Setas Y Brotes De Soja",
+      "postre": "Golden Mandarin Orange Liqueur Cake"
     },
-    "estilo": "molecular",
-    "tradicion": "italiana",
+    "estilo": "clasico",
+    "tradicion": "china",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.9,
-    "rating_timestamp": "2025-12-09T14:17:00"
+    "rating_timestamp": "2025-12-24T23:16:00",
+    "modification_count": 0
   },
   {
     "id": "C006",
@@ -97,371 +111,466 @@
       "vegetariano"
     ],
     "temporada": "verano",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
-      "principal": "Indian Spiced Salmon With Ginger Cilantro",
-      "postre": "Jamaican Spiced Ginger Cake"
-    },
-    "estilo": "molecular",
-    "tradicion": "india",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 5.0,
-    "rating_timestamp": "2025-12-03T16:05:00"
-  },
-  {
-    "id": "C007",
-    "restricciones": [],
-    "temporada": "verano",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Cajun Bayou Blue Cheese Burger Con Pecanas Caramelizadas",
-      "principal": "Salsa Bals Mica Italiana De Ajo Y Albahaca",
-      "postre": "Southern Homestyle Sweet Bread"
-    },
-    "estilo": "molecular",
-    "tradicion": "francesa",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.7,
-    "rating_timestamp": "2025-12-06T09:34:00"
-  },
-  {
-    "id": "C008",
-    "restricciones": [],
-    "temporada": "verano",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Classic Southern Fried Catfish",
-      "principal": "Aromatic Italian Herb Garlic Infusion",
-      "postre": "Tarta De Santiago Con Almendra"
-    },
-    "estilo": "molecular",
-    "tradicion": "china",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.8,
-    "rating_timestamp": "2025-11-05T18:07:00"
-  },
-  {
-    "id": "C009",
-    "restricciones": [
-      "sin_lactosa"
-    ],
-    "temporada": "verano",
-    "tipo_evento": "boda",
+    "tipo_evento": "congreso",
     "menu": {
       "entrante": "Salteado Picante De Tofu Con Pimientos Tricolor Br Coli Jengibre Y S Samo",
-      "principal": "Filipino Grilled Chicken And Liver Sisig With Egg",
-      "postre": "Cheesecake De Lima Y Menta"
-    },
-    "estilo": "molecular",
-    "tradicion": "mexicana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.6,
-    "rating_timestamp": "2025-11-14T16:54:00"
-  },
-  {
-    "id": "C010",
-    "restricciones": [],
-    "temporada": "otoño",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Southern Style Sweet And Tangy Green Beans With Bacon",
-      "principal": "Bistec Mexicano Con Salsa Fresca De Aguacate",
-      "postre": "Golden Spiced Fruit Slices"
-    },
-    "estilo": "molecular",
-    "tradicion": "catalana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.9,
-    "rating_timestamp": "2025-12-21T18:05:00"
-  },
-  {
-    "id": "C011",
-    "restricciones": [
-      "sin_huevo"
-    ],
-    "temporada": "otoño",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Rollitos Imperiales De Cerdo Y Verduras Con Salsa Agridulce",
-      "principal": "Alitas De Pollo Coreanas Glaseadas Con Miel Y Soja",
-      "postre": "Panna Cotta Con Frutos Rojos"
-    },
-    "estilo": "clasico",
-    "tradicion": "india",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.7,
-    "rating_timestamp": "2025-12-11T13:50:00"
-  },
-  {
-    "id": "C012",
-    "restricciones": [],
-    "temporada": "otoño",
-    "tipo_evento": "boda",
-    "menu": {
-      "entrante": "Salsiccia Piccante E Broccoletti Al Forno Con Fontina",
-      "principal": "Sabzi De Patatas Y Chiriv As Con Garam Masala",
-      "postre": "Greek Zinfandel Fig Gel E Con Crema De Yogurt Y Azahar"
-    },
-    "estilo": "molecular",
-    "tradicion": "china",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 5.0,
-    "rating_timestamp": "2025-11-03T11:31:00"
-  },
-  {
-    "id": "C013",
-    "restricciones": [],
-    "temporada": "primavera",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Hearty Irish Leek Potato Bake",
-      "principal": "Southern Okra And Bell Pepper Saut",
-      "postre": "Tarta Tatin De Manzana Caramelizada"
+      "principal": "Linguine Mediterr Neo Picante",
+      "postre": "Crema Catalana"
     },
     "estilo": "clasico",
     "tradicion": "italiana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 3.8,
-    "rating_timestamp": "2025-11-18T16:43:00"
-  },
-  {
-    "id": "C014",
-    "restricciones": [
-      "vegetariano"
-    ],
-    "temporada": "primavera",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Salsa Picante De Frijol De Ojo Negro Y Queso Monterey",
-      "principal": "Moroccan Aromatic Spice Blend",
-      "postre": "Irish Spiced Fruit Tea Cake"
-    },
-    "estilo": "clasico",
-    "tradicion": "india",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-11-21T16:28:00"
-  },
-  {
-    "id": "C015",
-    "restricciones": [],
-    "temporada": "primavera",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Moroccan Saffron Chickpea And Tomato Stew",
-      "principal": "Zesty Italian Herb Roasted Chicken",
-      "postre": "Saffron Rose Pistachio Phirni"
-    },
-    "estilo": "clasico",
-    "tradicion": "catalana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-12-12T14:34:00"
-  },
-  {
-    "id": "C016",
-    "restricciones": [
-      "sin_gluten"
-    ],
-    "temporada": "verano",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Salmone Al Pesto E Limone",
-      "principal": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
-      "postre": "Atole Cremoso De Caf Con Kahl A"
-    },
-    "estilo": "clasico",
-    "tradicion": "francesa",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 3.6,
-    "rating_timestamp": "2025-12-06T13:26:00"
-  },
-  {
-    "id": "C017",
-    "restricciones": [],
-    "temporada": "verano",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Scaloppine Di Vitello Ai Funghi E Pomodoro Con Rosmarino",
-      "principal": "Spaghetti Cremoso Con Pollo Y Champi Ones",
-      "postre": "Torta Cremosa Al Ricotta Pistacchio E Cioccolato"
-    },
-    "estilo": "clasico",
-    "tradicion": "mexicana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-11-02T20:26:00"
-  },
-  {
-    "id": "C018",
-    "restricciones": [
-      "sin_lactosa"
-    ],
-    "temporada": "verano",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Zesty Italian Tortellini With Spinach And Cherry Tomatoes",
-      "principal": "Curry Cremoso De Pollo Con Garam Masala",
-      "postre": "Brownie De Chocolate Con Nueces"
-    },
-    "estilo": "clasico",
-    "tradicion": "china",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.3,
-    "rating_timestamp": "2025-12-06T10:32:00"
-  },
-  {
-    "id": "C019",
-    "restricciones": [],
-    "temporada": "otoño",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Italian Sausage And Fava Bean Pasta With Pecorino",
-      "principal": "Aut Ntico Curry De Pollo Al Garam Masala Con Jengibre",
-      "postre": "Tiramisu Clasico Italiano"
-    },
-    "estilo": "clasico",
-    "tradicion": "italiana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-12-24T18:56:00"
-  },
-  {
-    "id": "C020",
-    "restricciones": [
-      "sin_huevo"
-    ],
-    "temporada": "otoño",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Salsa Pomodoro E Basilico Fresco",
-      "principal": "Manicotti Horneado De Espinacas Y Tres Quesos",
-      "postre": "Suspiros Dulces Mexicanos"
-    },
-    "estilo": "clasico",
-    "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.4,
-    "rating_timestamp": "2025-11-10T10:27:00"
+    "rating_timestamp": "2025-12-17T09:48:00",
+    "modification_count": 0
   },
   {
-    "id": "C021",
-    "restricciones": [],
-    "temporada": "otoño",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Italian Deli Meat Hoagie",
-      "principal": "Gyukatsu Crujiente",
-      "postre": "Kahl A Espresso Mascarpone Angel Cake"
-    },
-    "estilo": "clasico",
-    "tradicion": "india",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 3.9,
-    "rating_timestamp": "2025-12-12T19:48:00"
-  },
-  {
-    "id": "C022",
-    "restricciones": [
-      "vegetariano"
-    ],
-    "temporada": "invierno",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Costillas Thai Glaseadas Con Lemongrass Y Coco",
-      "principal": "Paella De Mar Y Tierra Con Azafr N",
-      "postre": "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille"
-    },
-    "estilo": "clasico",
-    "tradicion": "francesa",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-11-19T13:21:00"
-  },
-  {
-    "id": "C023",
-    "restricciones": [],
-    "temporada": "invierno",
-    "tipo_evento": "familiar",
-    "menu": {
-      "entrante": "Risotto Primavera Cremoso Con Asparagi Y Verduras Frescas",
-      "principal": "Indian Garlic Shrimp Spinach Curry With Naan",
-      "postre": "Crema Catalana"
-    },
-    "estilo": "clasico",
-    "tradicion": "mexicana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-11-08T20:52:00"
-  },
-  {
-    "id": "C024",
+    "id": "C007",
     "restricciones": [
       "sin_gluten"
     ],
     "temporada": "invierno",
     "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Mezcla De Especias Arom Ticas Indias Para Masala",
-      "principal": "Chinese Ginger Garlic Shrimp And Snow Pea Stir Fry",
-      "postre": "Italian Mocha Mascarpone Torte"
+      "entrante": "Fenugreek Spiced Urad Dal With Aloo Rice",
+      "principal": "Aut Ntico Curry De Pollo Al Garam Masala Con Jengibre",
+      "postre": "Jamaican Spiced Ginger Cake"
+    },
+    "estilo": "clasico",
+    "tradicion": "india",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 3.6,
+    "rating_timestamp": "2025-11-21T15:34:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C008",
+    "restricciones": [
+      "vegano"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Pico De Gallo Fresco",
+      "principal": "Basic Indian Roti",
+      "postre": "Crema Catalana"
+    },
+    "estilo": "molecular",
+    "tradicion": "mediterranea",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.9,
+    "rating_timestamp": "2025-11-09T07:57:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C009",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Salade De Fenouil Aux Agrumes",
+      "principal": "Foie Gras Sellado Con Persim N Y Reducci N Al Madeira",
+      "postre": "Cr Me P Tissi Re Classique La Vanille"
+    },
+    "estilo": "molecular",
+    "tradicion": "francesa",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.7,
+    "rating_timestamp": "2025-12-17T16:32:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C010",
+    "restricciones": [
+      "sin_lactosa"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Salteado De Pavo Y Jud As Verdes Al Estilo Chino Con Jengibre Y S Samo",
+      "principal": "Sukiyaki De Solomillo Con Fideos De Cristal",
+      "postre": "Delicia Japonesa De Matcha Y Nueces"
     },
     "estilo": "clasico",
     "tradicion": "china",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.9,
+    "rating_timestamp": "2025-12-31T11:08:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C011",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Pico De Gallo Fresco",
+      "principal": "Enchiladas Cremosas De Pollo Y Frijoles Negros",
+      "postre": "Suspiros Dulces Mexicanos"
+    },
+    "estilo": "clasico",
+    "tradicion": "mexicana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 3.3,
+    "rating_timestamp": "2025-12-03T05:14:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C012",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+      "principal": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
+      "postre": "Italian Mocha Mascarpone Torte"
+    },
+    "estilo": "clasico",
+    "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.7,
+    "rating_timestamp": "2025-11-14T10:57:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C013",
+    "restricciones": [
+      "vegano"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Fenugreek Spiced Urad Dal With Aloo Rice",
+      "principal": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
+      "postre": "Golden Spiced Fruit Slices"
+    },
+    "estilo": "clasico",
+    "tradicion": "india",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.9,
+    "rating_timestamp": "2025-12-29T11:45:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C014",
+    "restricciones": [
+      "sin_gluten"
+    ],
+    "temporada": "primavera",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Salade De Fenouil Aux Agrumes",
+      "principal": "Salmone Al Pesto E Limone",
+      "postre": "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille"
+    },
+    "estilo": "molecular",
+    "tradicion": "francesa",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.1,
+    "rating_timestamp": "2025-12-23T21:31:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C015",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+      "principal": "Linguine Mediterr Neo Picante",
+      "postre": "Italian Mocha Mascarpone Torte"
+    },
+    "estilo": "clasico",
+    "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.6,
+    "rating_timestamp": "2025-12-13T18:55:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C016",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Rollitos Imperiales De Cerdo Y Verduras Con Salsa Agridulce",
+      "principal": "Ternera Lo Mein Con Setas Y Brotes De Soja",
+      "postre": "Golden Mandarin Orange Liqueur Cake"
+    },
+    "estilo": "clasico",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.4,
+    "rating_timestamp": "2025-11-16T01:07:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C017",
+    "restricciones": [
+      "sin_lactosa"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Ensalada Griega Fresca Con Garbanzos Y Feta",
+      "principal": "Trucha Italiana Con Pesto Picante De Perejil Y Nuez",
+      "postre": "Italian Mocha Mascarpone Torte"
+    },
+    "estilo": "clasico",
+    "tradicion": "mediterranea",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.0,
+    "rating_timestamp": "2025-11-09T11:54:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C018",
+    "restricciones": [
+      "vegano",
+      "sin_gluten"
+    ],
+    "temporada": "otoño",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Fenugreek Spiced Urad Dal With Aloo Rice",
+      "principal": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
+      "postre": "Golden Spiced Fruit Slices"
+    },
+    "estilo": "molecular",
+    "tradicion": "india",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
     "satisfaction_score": 3.5,
-    "rating_timestamp": "2025-12-16T10:36:00"
+    "rating_timestamp": "2025-12-09T06:56:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C019",
+    "restricciones": [
+      "sin_huevo"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Pico De Gallo Fresco",
+      "principal": "Bistec Mexicano Con Salsa Fresca De Aguacate",
+      "postre": "Agua Fresca De Jamaica Especiada Con Piloncillo"
+    },
+    "estilo": "clasico",
+    "tradicion": "mexicana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.4,
+    "rating_timestamp": "2025-11-15T05:05:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C020",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Salade De Fenouil Aux Agrumes",
+      "principal": "Foie Gras Sellado Con Persim N Y Reducci N Al Madeira",
+      "postre": "Cr Me P Tissi Re Classique La Vanille"
+    },
+    "estilo": "molecular",
+    "tradicion": "francesa",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.8,
+    "rating_timestamp": "2025-11-18T18:39:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C021",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Pa Amb Tomaquet",
+      "principal": "Escalivada Catalana",
+      "postre": "Mel I Mató"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 2.8,
+    "rating_timestamp": "2025-11-09T06:25:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C022",
+    "restricciones": [],
+    "temporada": "otoño",
+    "tipo_evento": "boda",
+    "menu": {
+      "entrante": "Escalivada Catalana",
+      "principal": "Suquet De Peix",
+      "postre": "Crema Catalana"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.2,
+    "rating_timestamp": "2025-11-25T18:42:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C023",
+    "restricciones": [
+      "sin_gluten"
+    ],
+    "temporada": "primavera",
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Escalivada Catalana",
+      "principal": "Butifarra Con Mongetes",
+      "postre": "Mel I Mató"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.8,
+    "rating_timestamp": "2025-12-31T17:19:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C024",
+    "restricciones": [],
+    "temporada": "invierno",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Pa Amb Tomaquet",
+      "principal": "Cannelloni A La Catalana",
+      "postre": "Crema Catalana"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 2.0,
+    "rating_timestamp": "2026-01-10T01:08:52.057627",
+    "modification_count": 0,
+    "satisfaction_per_menu": {
+      "entrante": 2.0,
+      "principal": 2.0,
+      "postre": 2.0
+    }
   },
   {
     "id": "C025",
+    "restricciones": [],
+    "temporada": "verano",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Pa Amb Tomaquet",
+      "principal": "Escalivada Catalana",
+      "postre": "Mel I Mató"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "timestamp": "2025-12-19T15:28:13.513660",
+    "feedback": "Generado por sistema CBR - Exitoso",
+    "satisfaction_score": 3.5,
+    "rating_timestamp": "2025-12-04T21:24:00",
+    "modification_count": 0
+  },
+  {
+    "id": "C026",
     "restricciones": [
       "vegano"
     ],
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Penne Alla Marinara Con Mozzarella Y Albahaca Fresca",
+      "entrante": "Salteado Picante De Tofu Con Pimientos Tricolor Br Coli Jengibre Y S Samo",
       "principal": "Curry Rojo Tailand S Cremoso Con Tofu Y Berenjena",
-      "postre": "French Chocolate Raspberry Mousse"
+      "postre": "Saffron Rose Pistachio Phirni"
+    },
+    "estilo": "clasico",
+    "tradicion": "india",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.3,
+    "rating_timestamp": "2025-12-02T10:15:00"
+  },
+  {
+    "id": "C027",
+    "restricciones": [
+      "sin_gluten"
+    ],
+    "temporada": null,
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Zesty Italian Tortellini With Spinach And Cherry Tomatoes",
+      "principal": "Spaghetti Cremoso Con Pollo Y Champi Ones",
+      "postre": "Italian Mocha Mascarpone Torte"
+    },
+    "estilo": "clasico",
+    "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.4,
+    "rating_timestamp": "2025-11-21T11:00:00"
+  },
+  {
+    "id": "C028",
+    "restricciones": [
+      "vegetariano",
+      "sin_lactosa"
+    ],
+    "temporada": null,
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Italian Sausage And Fava Bean Pasta With Pecorino",
+      "principal": "Lasagna Cremosa De Pollo Con Ranch",
+      "postre": "Italian Mocha Mascarpone Torte"
     },
     "estilo": "clasico",
     "tradicion": "italiana",
@@ -469,67 +578,7 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-12-28T13:38:00"
-  },
-  {
-    "id": "C026",
-    "restricciones": [
-      "sin_gluten"
-    ],
-    "temporada": null,
-    "tipo_evento": "congreso",
-    "menu": {
-      "entrante": "Curried Pearl Barley Pilaf With Almonds And Raisins",
-      "principal": "Estofado De Costillas De Cerdo Con Daikon Ostras Y Bayas Goji",
-      "postre": "Mousse De Mango Y Maracuyá"
-    },
-    "estilo": "clasico",
-    "tradicion": "francesa",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.3,
-    "rating_timestamp": "2025-12-26T14:01:00"
-  },
-  {
-    "id": "C027",
-    "restricciones": [
-      "vegetariano"
-    ],
-    "temporada": null,
-    "tipo_evento": "congreso",
-    "menu": {
-      "entrante": "Spicy Southern Homestyle Potato Egg Salad",
-      "principal": "Cajun Chicken Shrimp Andouille Stew",
-      "postre": "Tiramisú Clásico Italiano"
-    },
-    "estilo": "clasico",
-    "tradicion": "catalana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-12-03T18:44:00"
-  },
-  {
-    "id": "C028",
-    "restricciones": [
-      "sin_lactosa"
-    ],
-    "temporada": null,
-    "tipo_evento": "congreso",
-    "menu": {
-      "entrante": "Fideuà De Mariscos",
-      "principal": "Pa Amb Tomaquet",
-      "postre": "Golden Mandarin Orange Liqueur Cake"
-    },
-    "estilo": "clasico",
-    "tradicion": "mexicana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.4,
-    "rating_timestamp": "2025-11-25T17:21:00"
+    "rating_timestamp": "2025-12-09T14:30:00"
   },
   {
     "id": "C029",
@@ -539,72 +588,29 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Wafu Steak Con Esp Rragos Y Shiitake",
-      "principal": "Muffin Pizzas Italianas De Verduras",
+      "entrante": "Moroccan Saffron Chickpea And Tomato Stew",
+      "principal": "Moroccan Spiced Couscous With Preserved Lemon And Olives",
       "postre": "Cr Me P Tissi Re Classique La Vanille"
     },
     "estilo": "clasico",
-    "tradicion": "india",
+    "tradicion": "francesa",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-11-01T13:25:00"
+    "satisfaction_score": 4.1,
+    "rating_timestamp": "2025-11-29T10:45:00"
   },
   {
     "id": "C030",
     "restricciones": [
-      "vegano",
-      "sin_gluten"
-    ],
-    "temporada": null,
-    "tipo_evento": "congreso",
-    "menu": {
-      "entrante": "Gambas Con Chorizo Tropical Al Ron",
-      "principal": "Mexican Breakfast Sausage Egg Quesadillas",
-      "postre": "Caf Helado Vietnamita Tradicional"
-    },
-    "estilo": "clasico",
-    "tradicion": "china",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.5,
-    "rating_timestamp": "2025-12-21T13:00:00"
-  },
-  {
-    "id": "C031",
-    "restricciones": [
-      "vegetariano",
-      "sin_lactosa"
-    ],
-    "temporada": null,
-    "tipo_evento": "congreso",
-    "menu": {
-      "entrante": "Sukiyaki De Solomillo Con Fideos De Cristal",
-      "principal": "Muslos De Pollo Japoneses Glaseados Con Jengibre Y Sake",
-      "postre": "Smores Mexicanos Con Canela"
-    },
-    "estilo": "clasico",
-    "tradicion": "italiana",
-    "exito": true,
-    "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.2,
-    "rating_timestamp": "2025-11-25T09:03:00"
-  },
-  {
-    "id": "C032",
-    "restricciones": [
-      "sin_gluten",
       "sin_huevo"
     ],
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Butifarra Con Mongetes",
-      "principal": "Tyropita Griega Tradicional Con Tres Quesos Y Eneldo",
-      "postre": "Delizia Di Castagne Al Caff E Mascarpone"
+      "entrante": "Asperges Et Lardons Avec Uf Au Parmesan",
+      "principal": "Gratin De Pommes De Terre Cr Meux Au Gruy Re",
+      "postre": "Cr Me P Tissi Re Classique La Vanille"
     },
     "estilo": "clasico",
     "tradicion": "francesa",
@@ -612,30 +618,91 @@
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
     "satisfaction_score": 4.3,
-    "rating_timestamp": "2025-11-04T19:02:00"
+    "rating_timestamp": "2025-12-03T14:00:00"
   },
   {
-    "id": "C033",
+    "id": "C031",
+    "restricciones": [
+      "sin_lactosa"
+    ],
+    "temporada": null,
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Ternera China Al Coco Y Curry Con Jengibre",
+      "principal": "Thai Green Curry Cashew Chicken Stir Fry",
+      "postre": "Golden Mandarin Orange Liqueur Cake"
+    },
+    "estilo": "clasico",
+    "tradicion": "china",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.3,
+    "rating_timestamp": "2025-11-16T15:00:00"
+  },
+  {
+    "id": "C032",
     "restricciones": [
       "vegano"
     ],
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Salsa Fresca Mexicana Con Serrano",
-      "principal": "Filipino Spicy Cucumber Onion Relish",
-      "postre": "Mel I Mató"
+      "entrante": "Quesadillas Vegetarianas De Frijol Y Queso Cheddar",
+      "principal": "Enchiladas Verdes De Acelgas Y Queso Fresco",
+      "postre": "Suspiros Dulces Mexicanos"
     },
     "estilo": "clasico",
     "tradicion": "mexicana",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.1,
-    "rating_timestamp": "2025-12-18T10:59:00"
+    "satisfaction_score": 4.2,
+    "rating_timestamp": "2025-12-06T11:30:00"
+  },
+  {
+    "id": "C033",
+    "restricciones": [
+      "sin_gluten",
+      "sin_huevo"
+    ],
+    "temporada": null,
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Pechuga De Pollo Fresca A La Mexicana Con Ensalada De Aguacate",
+      "principal": "Enchiladas Cremosas De Pollo Y Frijoles Negros",
+      "postre": "Smores Mexicanos Con Canela"
+    },
+    "estilo": "clasico",
+    "tradicion": "mexicana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.4,
+    "rating_timestamp": "2025-11-23T10:00:00"
   },
   {
     "id": "C034",
+    "restricciones": [
+      "vegetariano"
+    ],
+    "temporada": null,
+    "tipo_evento": "congreso",
+    "menu": {
+      "entrante": "Ensalada Templada De Espinacas Bacon Y Huevo Con Alcachofas",
+      "principal": "Linguine Alle Cozze Con Salsa Fresca Di Pomodoro E Basilico",
+      "postre": "Crema Catalana"
+    },
+    "estilo": "clasico",
+    "tradicion": "catalana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [],
+    "satisfaction_score": 4.1,
+    "rating_timestamp": "2025-12-11T13:45:00"
+  },
+  {
+    "id": "C035",
     "restricciones": [
       "sin_lactosa",
       "sin_gluten"
@@ -643,36 +710,182 @@
     "temporada": null,
     "tipo_evento": "congreso",
     "menu": {
-      "entrante": "Foie Gras Sellado Con Persim N Y Reducci N Al Madeira",
-      "principal": "Estofado De Pollo Adobado Con Chipotle Y Ma Z",
-      "postre": "Biscotti Italianos De Pistacho Y Ar Ndanos Rojos Con Almendra"
+      "entrante": "Fideos Thai De Cerdo Y Camarones Con Salsa Cremosa De Cacahuete Y Albahaca",
+      "principal": "Zesty Italian Herb Roasted Chicken",
+      "postre": "Mel I Mató"
     },
     "estilo": "clasico",
-    "tradicion": "india",
+    "tradicion": "catalana",
     "exito": true,
     "fallos_detectados": [],
     "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.4,
-    "rating_timestamp": "2025-12-01T17:31:00"
+    "satisfaction_score": 4.5,
+    "rating_timestamp": "2025-11-19T14:00:00"
   },
   {
-    "id": "C035",
+    "id": "C036",
     "restricciones": [
       "vegetariano"
     ],
-    "temporada": null,
-    "tipo_evento": "congreso",
+    "temporada": "verano",
+    "tipo_evento": "familiar",
     "menu": {
-      "entrante": "Enchiladas De Pollo Con Salsa Roja Y Queso Monterey",
-      "principal": "Aromatic Spiced Pea Kachori",
-      "postre": "Agua Fresca De Jamaica Especiada Con Piloncillo"
+      "entrante": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+      "principal": "Linguine Mediterr Neo Picante",
+      "postre": "Smores Mexicanos Con Canela"
     },
     "estilo": "clasico",
-    "tradicion": "china",
+    "tradicion": "mexicana",
     "exito": true,
     "fallos_detectados": [],
-    "reparaciones_aplicadas": [],
-    "satisfaction_score": 4.0,
-    "rating_timestamp": "2025-12-18T19:20:00"
+    "reparaciones_aplicadas": [
+      {
+        "tipo_plato": "entrante",
+        "plato_original": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+        "plato_nuevo": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato completo substituido:",
+          "  Original: Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+          "  Nuevo: Bowl Mexicano De Quinoa Y Frijoles Negros",
+          "Plato substituido con similitud: 0.47",
+          "Resuelve problema: tradicion - entrante (Bruschetta De Verano Con Tomate Pimiento Y Albahaca): El plato 'Bruschetta De Verano Con Tomate Pimiento Y Albahaca' pertenece a la tradición italiana, no a mexicana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "entrante (Bruschetta De Verano Con Tomate Pimiento Y Albahaca): El plato 'Bruschetta De Verano Con Tomate Pimiento Y Albahaca' pertenece a la tradición italiana, no a mexicana"
+        ],
+        "plato_modificado_obj": "Bowl Mexicano De Quinoa Y Frijoles Negros"
+      },
+      {
+        "tipo_plato": "principal",
+        "plato_original": "Linguine Mediterr Neo Picante",
+        "plato_nuevo": "Linguine Mediterr Neo Picante",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato reparado sustituyendo ingredientes:",
+          "  Plato: Linguine Mediterr Neo Picante",
+          "Sustituciones exitosas: 1",
+          "lemon_zest -> calimyrna_figs"
+        ],
+        "errores_resueltos": [
+          "principal (Linguine Mediterr Neo Picante): Ingrediente fuera de temporada: lemon_zest (disponible en: invierno, primavera)"
+        ],
+        "plato_modificado_obj": "Linguine Mediterr Neo Picante"
+      },
+      {
+        "tipo_plato": "postre",
+        "plato_original": "Italian Mocha Mascarpone Torte",
+        "plato_nuevo": "Smores Mexicanos Con Canela",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato completo substituido:",
+          "  Original: Italian Mocha Mascarpone Torte",
+          "  Nuevo: Smores Mexicanos Con Canela",
+          "Plato substituido con similitud: 0.40",
+          "Resuelve problema: tradicion - postre (Italian Mocha Mascarpone Torte): El plato 'Italian Mocha Mascarpone Torte' pertenece a la tradición italiana, no a mexicana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "postre (Italian Mocha Mascarpone Torte): El plato 'Italian Mocha Mascarpone Torte' pertenece a la tradición italiana, no a mexicana"
+        ],
+        "plato_modificado_obj": "Smores Mexicanos Con Canela"
+      }
+    ],
+    "timestamp": "2026-01-12T20:16:37.514720",
+    "feedback": null,
+    "satisfaction_score": 5.0,
+    "satisfaction_per_menu": {
+      "entrante": 5.0,
+      "principal": 5.0,
+      "postre": 5.0
+    },
+    "rating_timestamp": "2026-01-12T20:15:58.418898",
+    "modification_count": 3
+  },
+  {
+    "id": "C037",
+    "restricciones": [
+      "vegetariano",
+      "sin_gluten"
+    ],
+    "temporada": "verano",
+    "tipo_evento": "familiar",
+    "menu": {
+      "entrante": "Aromatic Italian Herb Garlic Infusion",
+      "principal": "Linguine Mediterr Neo Picante",
+      "postre": "Italian Mocha Mascarpone Torte"
+    },
+    "estilo": "clasico",
+    "tradicion": "italiana",
+    "exito": true,
+    "fallos_detectados": [],
+    "reparaciones_aplicadas": [
+      {
+        "tipo_plato": "entrante",
+        "plato_original": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+        "plato_nuevo": "Aromatic Italian Herb Garlic Infusion",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato reparado sustituyendo ingredientes:",
+          "  Plato: Bowl Mexicano De Quinoa Y Frijoles Negros",
+          "Sustituciones exitosas: 1",
+          "italian_bread -> oregano",
+          "[OK] Plato completo substituido:",
+          "  Original: Bowl Mexicano De Quinoa Y Frijoles Negros",
+          "  Nuevo: Aromatic Italian Herb Garlic Infusion",
+          "Plato substituido con similitud: 0.53",
+          "Resuelve problema: tradicion - entrante (Bowl Mexicano De Quinoa Y Frijoles Negros): El plato 'Bowl Mexicano De Quinoa Y Frijoles Negros' pertenece a la tradición mexicana, no a italiana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "entrante (Bowl Mexicano De Quinoa Y Frijoles Negros): Ingrediente con categoría no permitida para sin_gluten: quinoa (categoría: cereal)",
+          "entrante (Bowl Mexicano De Quinoa Y Frijoles Negros): El plato 'Bowl Mexicano De Quinoa Y Frijoles Negros' pertenece a la tradición mexicana, no a italiana"
+        ],
+        "plato_modificado_obj": "Aromatic Italian Herb Garlic Infusion"
+      },
+      {
+        "tipo_plato": "principal",
+        "plato_original": "Linguine Mediterr Neo Picante",
+        "plato_nuevo": "Linguine Mediterr Neo Picante",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato reparado sustituyendo ingredientes:",
+          "  Plato: Linguine Mediterr Neo Picante",
+          "Sustituciones exitosas: 1",
+          "linguine -> basil",
+          "Sustituciones exitosas: 1",
+          "lemon_zest -> calimyrna_figs"
+        ],
+        "errores_resueltos": [
+          "principal (Linguine Mediterr Neo Picante): Ingrediente prohibido para sin_gluten: linguine",
+          "principal (Linguine Mediterr Neo Picante): Ingrediente fuera de temporada: lemon_zest (disponible en: invierno, primavera)"
+        ],
+        "plato_modificado_obj": "Linguine Mediterr Neo Picante"
+      },
+      {
+        "tipo_plato": "postre",
+        "plato_original": "Smores Mexicanos Con Canela",
+        "plato_nuevo": "Italian Mocha Mascarpone Torte",
+        "accion": "modificacion",
+        "modificaciones": [
+          "[OK] Plato completo substituido:",
+          "  Original: Smores Mexicanos Con Canela",
+          "  Nuevo: Italian Mocha Mascarpone Torte",
+          "Plato substituido con similitud: 1.00",
+          "Resuelve problema: tradicion - postre (Smores Mexicanos Con Canela): El plato 'Smores Mexicanos Con Canela' pertenece a la tradición mexicana, no a italiana",
+          "Ingredientes compatibles: N/A"
+        ],
+        "errores_resueltos": [
+          "postre (Smores Mexicanos Con Canela): El plato 'Smores Mexicanos Con Canela' pertenece a la tradición mexicana, no a italiana"
+        ],
+        "plato_modificado_obj": "Italian Mocha Mascarpone Torte"
+      }
+    ],
+    "timestamp": "2026-01-12T20:43:22.405764",
+    "feedback": null,
+    "satisfaction_score": 3.0,
+    "rating_timestamp": "2026-01-12T20:43:11.466192",
+    "modification_count": 3
   }
 ]

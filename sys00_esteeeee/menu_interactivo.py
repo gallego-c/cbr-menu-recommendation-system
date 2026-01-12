@@ -17,17 +17,16 @@ def preguntar_tipo_evento():
     print("Que tipo de evento es?")
     opciones = {
         '1': 'familiar',
-        '2': 'formal',
-        '3': 'casual',
-        '4': 'romantico',
-        '5': 'celebracion'
+        '2': 'boda',
+        '3': 'congreso'
     }
     
-    for key, value in opciones.items():
-        print(f"   {key}. {value.capitalize()}")
+    print("   1. Familiar")
+    print("   2. Boda")
+    print("   3. Congreso")
     
     while True:
-        respuesta = input("\nSelecciona una opcion (1-5) [1]: ").strip()
+        respuesta = input("\nSelecciona una opcion (1-3) [1]: ").strip()
         if respuesta == '':
             return 'familiar'
         if respuesta in opciones:
@@ -102,20 +101,14 @@ def preguntar_estilo():
     print("\nQue estilo culinario prefieres?")
     opciones = {
         '1': 'clasico',
-        '2': 'moderno',
-        '3': 'fusion',
-        '4': 'tradicional',
-        '5': 'gourmet'
+        '2': 'molecular'
     }
     
     print("   1. Clasico")
-    print("   2. Moderno")
-    print("   3. Fusion")
-    print("   4. Tradicional")
-    print("   5. Gourmet")
+    print("   2. Molecular")
     
     while True:
-        respuesta = input("\nSelecciona una opcion (1-5) [1]: ").strip()
+        respuesta = input("\nSelecciona una opcion (1-2) [1]: ").strip()
         if respuesta == '':
             return 'clasico'
         if respuesta in opciones:
@@ -305,20 +298,8 @@ def main():
         # Mostrar resultado
         menu_exitoso = mostrar_resultado(resultado)
         
-        # Si el menú fue exitoso, preguntar por rating
-        if menu_exitoso and resultado_cbr.menu:
-            rating = preguntar_rating_menu(
-                resultado_cbr.menu, 
-                caso_id=resultado_cbr.caso_base_id
-            )
-            
-            # Si se proporcionó un rating, guardarlo
-            if rating is not None and resultado_cbr.caso_base_id:
-                sistema.recolectar_y_guardar_rating(
-                    resultado_cbr.menu,
-                    caso_id=resultado_cbr.caso_base_id,
-                    guardar_en_base=True
-                )
+        # Nota: El rating ya se recolecta automáticamente en la fase de retención
+        # (procesar_caso_con_retencion con collect_rating=True)
         
         continuar = preguntar_continuar()
     
