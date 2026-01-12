@@ -1,0 +1,30 @@
+[
+  {
+    "nombre": "molecular",
+    "descripcion": "Gastronomía molecular - técnicas innovadoras y científicas",
+    "tecnicas_requeridas": ["esferificacion"],
+    "tecnicas_preferidas": ["esferificacion", "crudo"],
+    "tecnicas_excluidas": [],
+    "ingredientes_tipicos": ["alginato", "lecitina", "agar", "nitrógeno_liquido"],
+    "caracteristicas": [
+      "Técnicas científicas avanzadas",
+      "Presentación innovadora",
+      "Texturas y formas sorprendentes",
+      "Uso de aditivos alimentarios"
+    ]
+  },
+  {
+    "nombre": "clasico",
+    "descripcion": "Cocina tradicional - técnicas convencionales y probadas",
+    "tecnicas_requeridas": [],
+    "tecnicas_preferidas": ["horneado", "hervido"],
+    "tecnicas_excluidas": ["esferificacion"],
+    "ingredientes_tipicos": [],
+    "caracteristicas": [
+      "Técnicas tradicionales",
+      "Recetas establecidas",
+      "Ingredientes convencionales",
+      "Sin técnicas moleculares"
+    ]
+  }
+]

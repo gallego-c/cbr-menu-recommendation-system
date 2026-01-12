@@ -1,0 +1,580 @@
+{
+  "_nota": "Las reglas de restricciones dietéticas se gestionan en restricciones.json y FoodBank",
+  "reglas_temporada": {
+    "fuera_temporada": [
+      [
+        "Otoño",
+        "Verano",
+        {
+          "modo_aplicacion": "por_ingrediente_una_opcion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "calabaza",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "calabaza",
+                    "por": "tomate"
+                  }
+                },
+                {
+                  "quitar": "calabaza"
+                }
+              ]
+            },
+            {
+              "ingrediente": "setas",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "setas",
+                    "por": "pimiento"
+                  }
+                },
+                {
+                  "quitar": "setas"
+                }
+              ]
+            },
+            {
+              "ingrediente": "manzana",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "manzana",
+                    "por": "melon"
+                  }
+                },
+                {
+                  "quitar": "manzana"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "Verano",
+        "Otoño",
+        {
+          "modo_aplicacion": "por_ingrediente_una_opcion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "tomate",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "tomate",
+                    "por": "calabaza"
+                  }
+                },
+                {
+                  "quitar": "tomate"
+                }
+              ]
+            },
+            {
+              "ingrediente": "melon",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "melon",
+                    "por": "manzana"
+                  }
+                },
+                {
+                  "quitar": "melon"
+                }
+              ]
+            },
+            {
+              "ingrediente": "sandia",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "sandia",
+                    "por": "manzana"
+                  }
+                },
+                {
+                  "quitar": "sandia"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "reglas_sabor": {
+    "cambio_sabor": [
+      [
+        "any",
+        "salado",
+        {
+          "modo_aplicacion": "todos_los_ingredientes",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "azucar",
+              "opciones": [
+                {
+                  "quitar": "azucar"
+                }
+              ]
+            },
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "sal"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "umami",
+        {
+          "modo_aplicacion": "por_ingrediente_una_opcion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "setas",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "setas",
+                    "por": "arroz"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "dulce",
+        {
+          "modo_aplicacion": "todos_los_ingredientes",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "sal",
+              "opciones": [
+                {
+                  "quitar": "sal"
+                }
+              ]
+            },
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "azucar"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "dulce",
+        {
+          "modo_aplicacion": "por_ingrediente_una_opcion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "tomate",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "tomate",
+                    "por": "calabaza"
+                  }
+                }
+              ]
+            },
+            {
+              "ingrediente": "limon",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "limon",
+                    "por": "coco"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "umami",
+        {
+          "modo_aplicacion": "por_ingrediente_una_opcion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "chile",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "chile",
+                    "por": "ajo"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "reglas_tradicion": {
+    "reforzar_tradicion": [
+      [
+        "any",
+        "catalana",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "olive_oil"
+                },
+                {
+                  "añadir": "garlic"
+                },
+                {
+                  "añadir": "tomatoes"
+                },
+                {
+                  "añadir": "almonds"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "mexicana",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "chili_powder"
+                },
+                {
+                  "añadir": "cilantro"
+                },
+                {
+                  "añadir": "lime"
+                },
+                {
+                  "añadir": "avocado"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "italiana",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "olive_oil"
+                },
+                {
+                  "añadir": "basil"
+                },
+                {
+                  "añadir": "parmesan_cheese"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "india",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "garam_masala"
+                },
+                {
+                  "añadir": "cumin"
+                },
+                {
+                  "añadir": "ginger"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "francesa",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "butter"
+                },
+                {
+                  "añadir": "cream"
+                },
+                {
+                  "añadir": "wine"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "china",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "soy_sauce"
+                },
+                {
+                  "añadir": "ginger"
+                },
+                {
+                  "añadir": "sesame_oil"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "mediterranea",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "olive_oil"
+                },
+                {
+                  "añadir": "lemon"
+                },
+                {
+                  "añadir": "garlic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    ],
+    "cambio_tradicion": [
+      [
+        "catalana",
+        "mexicana",
+        {
+          "modo_aplicacion": "todos_los_ingredientes",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "olive_oil",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "olive_oil",
+                    "por": "chili_powder"
+                  }
+                },
+                {
+                  "quitar": "olive_oil"
+                }
+              ]
+            },
+            {
+              "ingrediente": "garlic",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "garlic",
+                    "por": "cilantro"
+                  }
+                },
+                {
+                  "quitar": "garlic"
+                }
+              ]
+            },
+            {
+              "ingrediente": "salt",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "salt",
+                    "por": "lime"
+                  }
+                }
+              ]
+            },
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "chili_powder"
+                },
+                {
+                  "añadir": "cilantro"
+                },
+                {
+                  "añadir": "avocado"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "mexicana",
+        "catalana",
+        {
+          "modo_aplicacion": "todos_los_ingredientes",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "chili_powder",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "chili_powder",
+                    "por": "olive_oil"
+                  }
+                },
+                {
+                  "quitar": "chili_powder"
+                }
+              ]
+            },
+            {
+              "ingrediente": "cilantro",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "cilantro",
+                    "por": "garlic"
+                  }
+                },
+                {
+                  "quitar": "cilantro"
+                }
+              ]
+            },
+            {
+              "ingrediente": "lime",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "lime",
+                    "por": "salt"
+                  }
+                }
+              ]
+            },
+            {
+              "ingrediente": "avocado",
+              "opciones": [
+                {
+                  "quitar": "avocado"
+                }
+              ]
+            },
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "olive_oil"
+                },
+                {
+                  "añadir": "garlic"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  },
+  "reglas_coherencia": {
+    "estilo_tradicion": [
+      [
+        "classico",
+        "molecular",
+        {
+          "modo_aplicacion": "por_ingrediente_una_opcion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "horneado",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "horneado",
+                    "por": "esferificacion"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "molecular",
+        "clasico",
+        {
+          "modo_aplicacion": "por_ingrediente_una_opcion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "esferificacion",
+              "opciones": [
+                {
+                  "substituir": {
+                    "de": "esferificacion",
+                    "por": "horneado"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}

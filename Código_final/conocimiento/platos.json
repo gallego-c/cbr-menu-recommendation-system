@@ -1,0 +1,4821 @@
+[
+  {
+    "nombre": "Ensalada Griega Fresca Con Garbanzos Y Feta",
+    "ingredientes": [
+      "romaine_lettuce",
+      "black_olives",
+      "grape_tomatoes",
+      "garlic",
+      "pepper",
+      "purple_onion",
+      "seasoning",
+      "garbanzo_beans",
+      "feta_cheese_crumbles"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "grape_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Tomates Verdes Fritos Al Estilo Sure O",
+    "ingredientes": [
+      "plain_flour",
+      "pepper",
+      "salt",
+      "tomatoes",
+      "black_pepper",
+      "thyme",
+      "eggs",
+      "green_tomatoes",
+      "yelcorn_meal",
+      "milk",
+      "vegetable_oil"
+    ],
+    "tecnica_coccion": [
+      "frito"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Filipino Grilled Chicken And Liver Sisig With Egg",
+    "ingredientes": [
+      "eggs",
+      "pepper",
+      "salt",
+      "mayonaise",
+      "cooking_oil",
+      "green_chilies",
+      "grilled_chicken_breasts",
+      "garlic_powder",
+      "yelonion",
+      "soy_sauce",
+      "butter",
+      "chicken_livers"
+    ],
+    "tecnica_coccion": [
+      "asado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "grilled_chicken_breasts",
+    "es_postre": false
+  },
+  {
+    "nombre": "Basic Indian Roti",
+    "ingredientes": [
+      "water",
+      "vegetable_oil",
+      "wheat",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Curry Cremoso De Pollo Con Garam Masala",
+    "ingredientes": [
+      "black_pepper",
+      "shallots",
+      "cornflour",
+      "cayenne_pepper",
+      "onions",
+      "garlic_paste",
+      "milk",
+      "butter",
+      "salt",
+      "lemon_juice",
+      "water",
+      "chili_powder",
+      "passata",
+      "oil",
+      "cumin",
+      "boneless_chicken_skinless_thigh",
+      "garam_masala",
+      "double_cream",
+      "natural_yogurt",
+      "bay_leaf"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Jamaican Spiced Ginger Cake",
+    "ingredientes": [
+      "plain_flour",
+      "sugar",
+      "butter",
+      "eggs",
+      "ginger_root",
+      "salt",
+      "cinnamon",
+      "milk",
+      "vanilla_extract",
+      "ginger",
+      "powdered_sugar",
+      "baking_powder"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Mar Y Tierra Espa Ol Con Chorizo Y Jalape O",
+    "ingredientes": [
+      "olive_oil",
+      "salt",
+      "shrimp",
+      "pepper",
+      "garlic",
+      "cilantro",
+      "jalapeno_chilies",
+      "flat_leaf_parsley",
+      "skirt_steak",
+      "white_vinegar",
+      "sea_salt",
+      "bay_leaf",
+      "chorizo_sausage"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Biscotti Italianos De Pistacho Y Ar Ndanos Rojos Con Almendra",
+    "ingredientes": [
+      "sugar",
+      "pistachio_nuts",
+      "white_almond_bark",
+      "flour",
+      "vanilla_extract",
+      "olive_oil",
+      "almond_extract",
+      "eggs",
+      "baking_powder",
+      "dried_cranberries"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Tacos Al Pastor De Cerdo Con Pi A Y Chiles Frescos",
+    "ingredientes": [
+      "olive_oil",
+      "purple_onion",
+      "pineapple",
+      "pork",
+      "poblano_peppers",
+      "corn_tortillas",
+      "cheddar_cheese",
+      "black_pepper",
+      "salt",
+      "iceberg_lettuce",
+      "lime",
+      "jalapeno_chilies",
+      "cilantro_fresh"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "poblano_peppers",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salsa Pomodoro E Basilico Fresco",
+    "ingredientes": [
+      "tomatoes",
+      "basil",
+      "garlic",
+      "virgin_olive_oil",
+      "kosher_salt",
+      "flat_leaf_parsley"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Italian Sausage Three Cheese Bake",
+    "ingredientes": [
+      "pimentos",
+      "sweet_pepper",
+      "dried_oregano",
+      "olive_oil",
+      "garlic",
+      "sharp_cheddar_cheese",
+      "pepper",
+      "swiss_cheese",
+      "provolone_cheese",
+      "canola_oil",
+      "mushrooms",
+      "black_olives",
+      "sausages"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "sharp_cheddar_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salteado De Pavo Y Jud As Verdes Al Estilo Chino Con Jengibre Y S Samo",
+    "ingredientes": [
+      "sodium_soy_sauce",
+      "ginger",
+      "dry_mustard",
+      "green_beans",
+      "white_pepper",
+      "sesame_oil",
+      "scallions",
+      "canola_oil",
+      "sugar",
+      "shaoxing_wine",
+      "garlic",
+      "turkey",
+      "water",
+      "crushed_red_pepper_flakes",
+      "corn_starch"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "white_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Trucha Italiana Con Pesto Picante De Perejil Y Nuez",
+    "ingredientes": [
+      "italian_parsley_leaves",
+      "walnuts",
+      "hot_red_pepper_flakes",
+      "virgin_olive_oil",
+      "lemon_juice",
+      "trout_fillet",
+      "garlic_cloves",
+      "chipotle_chile",
+      "fine_sea_salt",
+      "flat_leaf_parsley"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "hot_red_pepper_flakes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Bistec Mexicano Con Salsa Fresca De Aguacate",
+    "ingredientes": [
+      "cinnamon",
+      "cilantro",
+      "chili_powder",
+      "coriander",
+      "kosher_salt",
+      "black_pepper",
+      "garlic",
+      "plum_tomatoes",
+      "avocado",
+      "lime_juice",
+      "flank_steak",
+      "salt",
+      "cumin",
+      "black_pepper",
+      "olive_oil",
+      "crushed_red_pepper_flakes",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "chili_powder",
+    "es_postre": false
+  },
+  {
+    "nombre": "Gnocchi Con Pancetta E Salsa Cremosa Ai Due Formaggi",
+    "ingredientes": [
+      "parmesan_cheese",
+      "butter",
+      "all_purpose_flour",
+      "free_less_sodium_chicken_broth",
+      "chives",
+      "gruyere_cheese",
+      "black_pepper",
+      "bacon_slices",
+      "gnocchi",
+      "free_milk",
+      "cooking_spray",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Curry Indio De Lentejas Rojas Con Batata Y Espinacas",
+    "ingredientes": [
+      "tumeric",
+      "vegetable_stock",
+      "tomatoes",
+      "garam_masala",
+      "naan",
+      "red_lentils",
+      "red_chili_peppers",
+      "onions",
+      "spinach",
+      "sweet_potatoes"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "vegetable_stock",
+    "es_postre": false
+  },
+  {
+    "nombre": "British Lemon Raspberry Yogurt Fool",
+    "ingredientes": [
+      "greek_yogurt",
+      "lemon_curd",
+      "confectioners_sugar",
+      "raspberries"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "confectioners_sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Zesty Italian Herb Roasted Chicken",
+    "ingredientes": [
+      "italian_seasoning",
+      "broiler_fryer_chicken",
+      "mayonaise",
+      "zesty_italian_dressing"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "broiler_fryer_chicken",
+    "es_postre": false
+  },
+  {
+    "nombre": "Thai Sweet Spicy Lime Dipping Sauce",
+    "ingredientes": [
+      "sugar",
+      "hot_chili",
+      "asian_fish_sauce",
+      "lime_juice"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Vietnamese Zesty Chicken Stir Fry With Broccolini Squash",
+    "ingredientes": [
+      "soy_sauce",
+      "vegetable_oil",
+      "red_bell_pepper",
+      "chicken_broth",
+      "yelsquash",
+      "garlic_chili_sauce",
+      "green_onions",
+      "broccolini",
+      "salt",
+      "lime_juice",
+      "cooked_rice",
+      "chicken_breasts",
+      "corn_starch"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Fideos Thai De Cerdo Y Camarones Con Salsa Cremosa De Cacahuete Y Albahaca",
+    "ingredientes": [
+      "pork_loin",
+      "roasted_peanuts",
+      "cilantro_fresh",
+      "hoisin_sauce",
+      "creamy_peanut_butter",
+      "mint",
+      "thai_basil",
+      "rice",
+      "shrimp",
+      "water",
+      "rice_noodles",
+      "beansprouts"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "pork_loin",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pico De Gallo Fresco",
+    "ingredientes": [
+      "roma_tomatoes",
+      "kosher_salt",
+      "purple_onion",
+      "jalapeno_chilies",
+      "lime",
+      "cilantro"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "roma_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Spicy Southern Homestyle Potato Egg Salad",
+    "ingredientes": [
+      "mayonnaise",
+      "pepper",
+      "salt",
+      "baking_potatoes",
+      "eggs",
+      "spicy_brown_mustard"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salteado Picante De Tofu Con Pimientos Tricolor Br Coli Jengibre Y S Samo",
+    "ingredientes": [
+      "sesame_seeds",
+      "red_pepper",
+      "yelpeppers",
+      "water",
+      "firm_tofu",
+      "broccoli",
+      "soy_sauce",
+      "orange_bell_pepper",
+      "arrowroot_powder",
+      "ginger",
+      "sesame_oil",
+      "red_curry_paste"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "red_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Linguine Mediterr Neo Picante",
+    "ingredientes": [
+      "marinara_sauce",
+      "flat_leaf_parsley",
+      "olive_oil",
+      "linguine",
+      "capers",
+      "crushed_red_pepper_flakes",
+      "olives",
+      "lemon_zest",
+      "garlic"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "lemon_zest",
+    "es_postre": false
+  },
+  {
+    "nombre": "Ternera Lo Mein Con Setas Y Brotes De Soja",
+    "ingredientes": [
+      "sugar",
+      "lo_mein_noodles",
+      "salt",
+      "chicken_broth",
+      "light_soy_sauce",
+      "flank_steak",
+      "beansprouts",
+      "dried_black_mushrooms",
+      "pepper",
+      "chives",
+      "oyster_sauce",
+      "dark_soy_sauce",
+      "peanuts",
+      "sesame_oil",
+      "cabbage"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Cajun Mango Red Chili Stew",
+    "ingredientes": [
+      "herbs",
+      "lemon_juice",
+      "tomatoes",
+      "paprika",
+      "mango",
+      "stock",
+      "chile_pepper",
+      "onions",
+      "red_chili_peppers",
+      "oil"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Spaghetti Cremoso Con Pollo Y Champi Ones",
+    "ingredientes": [
+      "black_pepper",
+      "butter",
+      "mushrooms",
+      "sherry",
+      "salt",
+      "grated_parmesan_cheese",
+      "heavy_cream",
+      "spaghetti",
+      "chicken_broth",
+      "cooked_chicken",
+      "all_purpose_flour"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "mushrooms",
+    "es_postre": false
+  },
+  {
+    "nombre": "Rollitos Imperiales De Cerdo Y Verduras Con Salsa Agridulce",
+    "ingredientes": [
+      "green_bell_pepper",
+      "egg_roll_wrappers",
+      "sweet_and_sour_sauce",
+      "corn_starch",
+      "molasses",
+      "vegetable_oil",
+      "oil",
+      "soy_sauce",
+      "shredded_cabbage",
+      "garlic",
+      "onions",
+      "ginger_root",
+      "pork",
+      "carrots"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Mexican Breakfast Sausage Egg Quesadillas",
+    "ingredientes": [
+      "flour_tortillas",
+      "cheese",
+      "breakfast_sausages",
+      "eggs"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Creamy Parmesan Polenta",
+    "ingredientes": [
+      "yelcorn_meal",
+      "boiling_water",
+      "butter",
+      "parmesan_cheese",
+      "sea_salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Cajun Chicken Shrimp Andouille Stew",
+    "ingredientes": [
+      "chicken_broth",
+      "chicken_breasts",
+      "hot_sauce",
+      "red_bell_pepper",
+      "potatoes",
+      "bacon",
+      "garlic_cloves",
+      "parsley",
+      "andouille_sausage",
+      "cajun_seasoning",
+      "peanut_oil",
+      "celery",
+      "red_pepper",
+      "all_purpose_flour",
+      "shrimp",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Saz N Mexicano Cl Sico",
+    "ingredientes": [
+      "chili_powder",
+      "crushed_red_pepper_flakes",
+      "garlic_powder",
+      "sea_salt",
+      "cumin",
+      "onion_powder",
+      "dried_oregano",
+      "black_pepper",
+      "paprika"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "chili_powder",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salteado Thai De Pollo Y Tofu Con Papaya Verde Y Cacahuetes",
+    "ingredientes": [
+      "eggs",
+      "shallots",
+      "firm_tofu",
+      "beansprouts",
+      "turnips",
+      "palm_sugar",
+      "vegetable_oil",
+      "garlic_cloves",
+      "chicken",
+      "fish_sauce",
+      "lime_wedges",
+      "roasted_peanuts",
+      "green_papaya",
+      "chile_powder",
+      "black_pepper",
+      "tamarind_paste",
+      "chinese_chives"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salsa Mediterr Nea De Tomate Y Hierbas",
+    "ingredientes": [
+      "olive_oil",
+      "onions",
+      "crushed_garlic",
+      "dried_oregano",
+      "green_onions",
+      "white_sugar",
+      "dried_basil",
+      "diced_tomatoes"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "white_sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Spicy Creole Shrimp And Sausage Jambalaya",
+    "ingredientes": [
+      "olive_oil",
+      "diced_tomatoes",
+      "johnsonville_andouille_dinner_sausage",
+      "parsley",
+      "shrimp",
+      "jambalaya_rice_mix",
+      "worcestershire_sauce",
+      "hot_pepper_sauce",
+      "creole_seasoning"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "diced_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Gamberi E Fagioli Allaglio E Salvia Con Crostini",
+    "ingredientes": [
+      "olive_oil",
+      "bread_slices",
+      "great_northern_beans",
+      "garlic_cloves",
+      "pepper",
+      "shrimp",
+      "sage_leaves",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Filipino Five Spice Chicken Adobo",
+    "ingredientes": [
+      "chicken_broth",
+      "cooking_oil",
+      "chinese_five_spice_powder",
+      "black_pepper",
+      "salt",
+      "sugar",
+      "crushed_garlic",
+      "chicken_thighs",
+      "soy_sauce",
+      "star_anise"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Cheesy Black Eyed Pea Dip",
+    "ingredientes": [
+      "green_onions",
+      "cream_cheese",
+      "shredded_cheddar_cheese",
+      "cayenne_pepper",
+      "chili_powder",
+      "garlic_cloves",
+      "black_eyed_peas",
+      "tortilla_chips"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cream_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Braised Ribs And Collard Greens With Smoky Ham Hock",
+    "ingredientes": [
+      "collard_greens",
+      "virgin_olive_oil",
+      "ham_hock",
+      "chicken_stock",
+      "apple_cider",
+      "freshly_pepper",
+      "chile_powder",
+      "bay_leaves",
+      "salt",
+      "rib",
+      "light_brown_sugar",
+      "garlic_cloves",
+      "cayenne_pepper",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "freshly_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Italian Deli Meat Hoagie",
+    "ingredientes": [
+      "oscar_mayer_deli_smoked_ham",
+      "hoagie_rolls",
+      "salami",
+      "giardiniera",
+      "mozzarella_cheese",
+      "pepperoni",
+      "butter",
+      "italian_seasoning"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "mozzarella_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Brazilian Lime Rum Sparkler",
+    "ingredientes": [
+      "ice_cubes",
+      "club_soda",
+      "white_rum",
+      "lime",
+      "turbinado"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "lime",
+    "es_postre": false
+  },
+  {
+    "nombre": "Enchiladas Cremosas De Pollo Y Frijoles Negros",
+    "ingredientes": [
+      "cooked_chicken",
+      "enchilada_sauce",
+      "green_onions",
+      "picante_sauce",
+      "green_pepper",
+      "corn_tortillas",
+      "canned_black_beans",
+      "shredded_lettuce",
+      "sour_cream",
+      "shredded_cheddar_cheese",
+      "garlic_cloves",
+      "canola_oil"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cooked_chicken",
+    "es_postre": false
+  },
+  {
+    "nombre": "Indian Spiced Salmon With Ginger Cilantro",
+    "ingredientes": [
+      "salmon_fillets",
+      "shallots",
+      "cumin_seed",
+      "cilantro",
+      "salt",
+      "curry_powder",
+      "vegetable_oil",
+      "serrano_chile",
+      "ginger",
+      "sauce"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salmon_fillets",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pechuga De Pollo Fresca A La Mexicana Con Ensalada De Aguacate",
+    "ingredientes": [
+      "tomatoes",
+      "chicken_breast_halves",
+      "cilantro_fresh",
+      "white_vinegar",
+      "jalapeno_chilies",
+      "salt",
+      "black_pepper",
+      "vegetable_oil",
+      "avocado",
+      "lettuce_leaves",
+      "onion"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Golden Mandarin Orange Liqueur Cake",
+    "ingredientes": [
+      "eggs",
+      "mandarin_oranges",
+      "water",
+      "orange_liqueur",
+      "yelcake_mix",
+      "frosting",
+      "vegetable_oil",
+      "white_sugar"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "yelcake_mix",
+    "es_postre": true
+  },
+  {
+    "nombre": "Southern Buttermilk Cornbread With Savory Onions",
+    "ingredientes": [
+      "sugar",
+      "all_purpose_flour",
+      "vegetable_oil",
+      "white_cornmeal",
+      "baking_powder",
+      "onions",
+      "bacon_drippings",
+      "buttermilk"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Creamy Southern Crawfish Dip",
+    "ingredientes": [
+      "butter",
+      "crab_boil",
+      "garlic",
+      "old_bay_seasoning",
+      "cream_cheese",
+      "crawfish",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cream_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Sweet Tangy Dressing",
+    "ingredientes": [
+      "mayonaise",
+      "white_sugar",
+      "black_pepper",
+      "salt",
+      "white_vinegar",
+      "lemon_juice"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "white_vinegar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Sukiyaki De Solomillo Con Fideos De Cristal",
+    "ingredientes": [
+      "sirloin",
+      "mirin",
+      "yelonion",
+      "sodium_soy_sauce",
+      "water",
+      "corn_oil",
+      "sugar",
+      "green_onions",
+      "glass_noodles",
+      "sake",
+      "shiitake",
+      "napa_cabbage"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Spicy Southern Cheesy Grits Bake",
+    "ingredientes": [
+      "eggs",
+      "whipping_cream",
+      "chicken_broth",
+      "red_pepper",
+      "sharp_cheddar_cheese",
+      "quickcooking_grits",
+      "hot_sauce",
+      "black_pepper",
+      "worcestershire_sauce",
+      "monterey_jack"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "red_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Linguine Alle Cozze Con Salsa Fresca Di Pomodoro E Basilico",
+    "ingredientes": [
+      "basil",
+      "bay_leaves",
+      "crushed_red_pepper",
+      "mussels",
+      "olive_oil",
+      "basil",
+      "garlic_cloves",
+      "black_pepper",
+      "dry_white_wine",
+      "salt",
+      "tomatoes",
+      "finely_onion",
+      "linguine",
+      "flat_leaf_parsley"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "crushed_red_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Honey Buttermilk Cornbread",
+    "ingredientes": [
+      "sugar",
+      "eggs",
+      "all_purpose_flour",
+      "baking_soda",
+      "buttermilk",
+      "honey",
+      "corn_oil",
+      "yelcorn_meal",
+      "unsalted_butter",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salmone Al Pesto E Limone",
+    "ingredientes": [
+      "lemon",
+      "pesto",
+      "salmon_fillets",
+      "white_wine"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "lemon",
+    "es_postre": false
+  },
+  {
+    "nombre": "Estofado De Res Jamaicano Especiado",
+    "ingredientes": [
+      "bread_crumbs",
+      "unsalted_butter",
+      "onion_powder",
+      "curry",
+      "sodium_beef_broth",
+      "pickapeppa_sauce",
+      "curry_powder",
+      "bay_leaves",
+      "garlic",
+      "cayenne_pepper",
+      "cold_water",
+      "pepper",
+      "eggs",
+      "virgin_olive_oil",
+      "yelonion",
+      "allspice",
+      "white_vinegar",
+      "kosher_salt",
+      "thyme",
+      "worcestershire_sauce",
+      "all_purpose_flour",
+      "beef"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "sodium_beef_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Delicia Japonesa De Matcha Y Nueces",
+    "ingredientes": [
+      "melted_butter",
+      "matcha_green_tea_powder",
+      "white_sugar",
+      "milk",
+      "all_purpose_flour",
+      "eggs",
+      "salt",
+      "baking_powder",
+      "walnuts"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "white_sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Fenugreek Spiced Urad Dal With Aloo Rice",
+    "ingredientes": [
+      "coarse_salt",
+      "fenugreek",
+      "urad_dal",
+      "potatoes",
+      "white_rice",
+      "vegetable_oil"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "coarse_salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pizza Italiana De Pesto Y Tomates Ciruela",
+    "ingredientes": [
+      "pizza_crust",
+      "plum_tomatoes",
+      "pesto",
+      "part_skim_mozzarella_cheese"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "plum_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Hearty Irish Leek Potato Bake",
+    "ingredientes": [
+      "cooking_spray",
+      "salt",
+      "black_pepper",
+      "yukon_gold_potatoes",
+      "sour_cream",
+      "leeks",
+      "olive_oil",
+      "1_milk"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Thai Garlic Pepper Chicken",
+    "ingredientes": [
+      "sugar",
+      "chicken_thighs",
+      "cooking_oil",
+      "fish_sauce",
+      "garlic",
+      "black_pepper"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_thighs",
+    "es_postre": false
+  },
+  {
+    "nombre": "Costillas Thai Glaseadas Con Lemongrass Y Coco",
+    "ingredientes": [
+      "lemongrass",
+      "garlic_cloves",
+      "rice",
+      "unsweetened_coconut_milk",
+      "ginger",
+      "peanut_sauce",
+      "spareribs",
+      "sesame_oil",
+      "tamari_soy_sauce",
+      "golden_brown_sugar",
+      "dry_sherry",
+      "boiling_water"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "unsweetened_coconut_milk",
+    "es_postre": false
+  },
+  {
+    "nombre": "Aut Ntico Curry De Pollo Al Garam Masala Con Jengibre",
+    "ingredientes": [
+      "chicken_legs",
+      "chile_pepper",
+      "ghee",
+      "tomato_paste",
+      "ginger_root",
+      "garlic",
+      "cilantro_fresh",
+      "water",
+      "vegetable_oil",
+      "onions",
+      "tomatoes",
+      "garam_masala",
+      "cumin_seed",
+      "turmeric"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_legs",
+    "es_postre": false
+  },
+  {
+    "nombre": "Estofado De Carne Picada Jamaicana Especiado",
+    "ingredientes": [
+      "stock",
+      "curry_powder",
+      "cracked_black_pepper",
+      "minced_beef",
+      "onions",
+      "plain_flour",
+      "bread_crumbs",
+      "butter",
+      "garlic",
+      "celery",
+      "cold_water",
+      "tumeric",
+      "dried_thyme",
+      "ginger",
+      "oil",
+      "tomatoes",
+      "water",
+      "paprika",
+      "salt",
+      "chillies"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "stock",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pappardelle Con Maiale Al Rosmarino",
+    "ingredientes": [
+      "crushed_tomatoes",
+      "garlic",
+      "rosemary",
+      "black_pepper",
+      "onions",
+      "olive_oil",
+      "boneless_pork_loin",
+      "kosher_salt",
+      "pappardelle"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "crushed_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Curry Rojo Tailand S Cremoso Con Tofu Y Berenjena",
+    "ingredientes": [
+      "firm_tofu",
+      "coconut_milk",
+      "basil",
+      "red_curry_paste",
+      "eggplant",
+      "red_bell_pepper",
+      "vegetable_oil",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "coconut_milk",
+    "es_postre": false
+  },
+  {
+    "nombre": "Bibimbap Picante De Ternera Gochujang",
+    "ingredientes": [
+      "jasmine_rice",
+      "garlic",
+      "scallions",
+      "sugar",
+      "shiitake",
+      "gochujang_base",
+      "beansprouts",
+      "top_round_steak",
+      "sesame_seeds",
+      "rice_vinegar",
+      "carrots",
+      "soy_sauce",
+      "sesame_oil",
+      "taiwanese_bok_choy"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Cr Me P Tissi Re Classique La Vanille",
+    "ingredientes": [
+      "vanilla",
+      "milk",
+      "egg_yolks",
+      "sugar",
+      "corn_starch"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "vanilla",
+    "es_postre": true
+  },
+  {
+    "nombre": "Cr Meux Dautomne Pic Aux Noix De P Can Et Citrouille",
+    "ingredientes": [
+      "orange_juice_concentrate",
+      "pumpkin_pur_e",
+      "marshmalcreme",
+      "toasted_pecans",
+      "maple_syrup",
+      "cinnamon",
+      "gingersnap",
+      "nutmeg",
+      "cream_cheese"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "maple_syrup",
+    "es_postre": true
+  },
+  {
+    "nombre": "Southern Style Sweet And Tangy Green Beans With Bacon",
+    "ingredientes": [
+      "black_pepper",
+      "white_sugar",
+      "white_vinegar",
+      "salt",
+      "bacon",
+      "brown_sugar",
+      "green_beans"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "white_sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Tostada Espa Ola De Jam N Serrano Manchego Y Huevo Con Membrillo",
+    "ingredientes": [
+      "eggs",
+      "serrano_ham",
+      "manchego_cheese",
+      "butter",
+      "dijon_mustard",
+      "sourdough",
+      "membrillo"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "manchego_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Masala Chickpea Spinach Burgers",
+    "ingredientes": [
+      "burger_buns",
+      "cilantro",
+      "chili_powder",
+      "garlic_cloves",
+      "panko_breadcrumbs",
+      "chickpea_flour",
+      "pepper",
+      "sriracha",
+      "chickpeas",
+      "carrots",
+      "flaxseed",
+      "soy_sauce",
+      "olive_oil",
+      "salt",
+      "lemon_juice",
+      "greens",
+      "spinach",
+      "curry_powder",
+      "tahini",
+      "scallions",
+      "onions",
+      "cumin"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "chili_powder",
+    "es_postre": false
+  },
+  {
+    "nombre": "Moroccan Aromatic Spice Blend",
+    "ingredientes": [
+      "cloves",
+      "whole_nutmegs",
+      "ginger",
+      "coriander",
+      "cinnamon",
+      "cardamom",
+      "black_pepper",
+      "cumin"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": false
+  },
+  {
+    "nombre": "Bruschetta De Verano Con Tomate Pimiento Y Albahaca",
+    "ingredientes": [
+      "tomatoes",
+      "red_pepper",
+      "olive_oil",
+      "italian_bread",
+      "balsamic_vinegar",
+      "onions",
+      "basil",
+      "garlic"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Penne Piccante Con Salsiccia Miele E Peperoni Arrostiti",
+    "ingredientes": [
+      "sausage_casings",
+      "black_pepper",
+      "garlic",
+      "honey",
+      "grated_parmesan_cheese",
+      "shredded_mozzarella_cheese",
+      "kosher_salt",
+      "roasted_red_peppers",
+      "penne_pasta",
+      "olive_oil",
+      "crushed_red_pepper_flakes"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "sausage_casings",
+    "es_postre": false
+  },
+  {
+    "nombre": "Moroccan Saffron Chickpea And Tomato Stew",
+    "ingredientes": [
+      "tumeric",
+      "olive_oil",
+      "lemon",
+      "saffron",
+      "tomato_paste",
+      "pepper",
+      "flour",
+      "chickpeas",
+      "chicken_stock",
+      "warm_water",
+      "ginger",
+      "salt",
+      "tomatoes",
+      "cilantro",
+      "shallots",
+      "parsley"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomato_paste",
+    "es_postre": false
+  },
+  {
+    "nombre": "Moroccan Spiced Couscous With Preserved Lemon And Olives",
+    "ingredientes": [
+      "pepper",
+      "paprika",
+      "cardamom",
+      "cilantro_fresh",
+      "preserved_lemon",
+      "harissa",
+      "salt",
+      "couscous",
+      "tomato_paste",
+      "cayenne",
+      "garlic",
+      "skimmed_chicken_broth",
+      "turmeric",
+      "pitted_kalamata_olives",
+      "diced_tomatoes",
+      "fat",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomato_paste",
+    "es_postre": false
+  },
+  {
+    "nombre": "Caf Helado Vietnamita Tradicional",
+    "ingredientes": [
+      "sweetened_condensed_milk",
+      "ice",
+      "espresso"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sweetened_condensed_milk",
+    "es_postre": true
+  },
+  {
+    "nombre": "Wafu Steak Con Esp Rragos Y Shiitake",
+    "ingredientes": [
+      "top_round_steak",
+      "vegetable_oil",
+      "shiitake",
+      "soy_sauce",
+      "asparagus",
+      "green_onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Guacamole Fresco Picante",
+    "ingredientes": [
+      "avocado",
+      "cilantro_fresh",
+      "jalapeno_chilies",
+      "finely_onion",
+      "plum_tomatoes",
+      "green_chilies"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "jalapeno_chilies",
+    "es_postre": false
+  },
+  {
+    "nombre": "Cajun Bayou Blue Cheese Burger Con Pecanas Caramelizadas",
+    "ingredientes": [
+      "pecans",
+      "golden_brown_sugar",
+      "crumbled_blue_cheese",
+      "garlic_cloves",
+      "chuck",
+      "hamburger_buns",
+      "hot_pepper_sauce",
+      "creole_seasoning",
+      "onions",
+      "mayonaise",
+      "black_pepper",
+      "salt",
+      "okra_pods",
+      "andouille_sausage",
+      "olive_oil",
+      "watercress",
+      "lemon_juice"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "crumbled_blue_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Red Velvet Dream Cake",
+    "ingredientes": [
+      "sugar",
+      "vanilla",
+      "eggs",
+      "self_rising_flour",
+      "confectioners_sugar",
+      "milk",
+      "softened_butter",
+      "food_colouring",
+      "butter"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Foie Gras Sellado Con Persim N Y Reducci N Al Madeira",
+    "ingredientes": [
+      "madeira",
+      "foie_gras",
+      "demi_glace",
+      "sherry_vinegar",
+      "whipping_cream",
+      "white_bread",
+      "fuyu_persimmons",
+      "salt",
+      "egg_bread",
+      "watercress"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "sherry_vinegar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Spiced Spring Fingerling Potatoes With Fenugreek And Ramps",
+    "ingredientes": [
+      "fenugreek_leaves",
+      "olive_oil",
+      "garlic",
+      "black_mustard_seeds",
+      "cumin",
+      "amchur",
+      "lime_wedges",
+      "scallions",
+      "coriander",
+      "sugar",
+      "fingerling_potatoes",
+      "green_chilies",
+      "cilantro",
+      "tumeric",
+      "ginger_root",
+      "salt",
+      "ramps"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Mezcla De Especias Arom Ticas Indias Para Masala",
+    "ingredientes": [
+      "black_peppercorns",
+      "cinnamon_sticks",
+      "cardamom_pods",
+      "cumin_seed",
+      "coriander_seeds"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon_sticks",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pasta Integral Con Espinacas Tomates Cherry Y Champi Ones Al Asiago",
+    "ingredientes": [
+      "spinach",
+      "asiago",
+      "whole_wheat_pasta",
+      "olive_oil",
+      "sweet_onion",
+      "garlic",
+      "grape_tomatoes",
+      "mushrooms"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "grape_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Delizia Di Castagne Al Caff E Mascarpone",
+    "ingredientes": [
+      "chestnuts",
+      "granulated_sugar",
+      "whole_milk_ricotta_cheese",
+      "coffee_ice_cream",
+      "eggs",
+      "mascarpone",
+      "rum",
+      "powdered_sugar",
+      "semisweet_chocolate",
+      "chestnut_flour"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "granulated_sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Indian Garlic Shrimp Spinach Curry With Naan",
+    "ingredientes": [
+      "baby_spinach_leaves",
+      "naan",
+      "unsalted_butter",
+      "garlic",
+      "water",
+      "shrimp",
+      "tomatoes",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "unsalted_butter",
+    "es_postre": false
+  },
+  {
+    "nombre": "Boribap Coreano Simple",
+    "ingredientes": [
+      "water",
+      "barley"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "water",
+    "es_postre": false
+  },
+  {
+    "nombre": "Huevos Rotos Con Patatas Jam N Y Pimientos",
+    "ingredientes": [
+      "cooked_ham",
+      "red_bell_pepper",
+      "seasoning",
+      "potatoes",
+      "olive_oil",
+      "onions",
+      "eggs",
+      "bacon"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "bacon",
+    "es_postre": false
+  },
+  {
+    "nombre": "Gnocchi Di Patate Classici",
+    "ingredientes": [
+      "salt",
+      "starchy_potatoes",
+      "grated_nutmeg",
+      "flour"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Classic Southern Country Fried Sirloin Steak",
+    "ingredientes": [
+      "black_pepper",
+      "all_purpose_flour",
+      "milk",
+      "buttermilk",
+      "sirloin_tip_roast",
+      "coarse_salt",
+      "steak",
+      "vegetable_oil",
+      "cayenne_pepper"
+    ],
+    "tecnica_coccion": [
+      "frito"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Homestyle Sweet Bread",
+    "ingredientes": [
+      "granulated_sugar",
+      "all_purpose_flour",
+      "vegetable_shortening",
+      "baking_powder",
+      "milk",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "granulated_sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Aromatic Greek Pork Parcels",
+    "ingredientes": [
+      "pork",
+      "finely_parsley",
+      "onions",
+      "salt",
+      "vinegar",
+      "caul_fat"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "pork",
+    "es_postre": false
+  },
+  {
+    "nombre": "Atole Cremoso De Caf Con Kahl A",
+    "ingredientes": [
+      "cinnamon",
+      "whole_milk",
+      "golden_brown_sugar",
+      "heavy_whipping_cream",
+      "kahl_a",
+      "corn_starch",
+      "instant_espresso_powder"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": true
+  },
+  {
+    "nombre": "Pozole Verde De Pollo Tradicional",
+    "ingredientes": [
+      "boneless_chicken_skinless_thigh",
+      "lime",
+      "epazote",
+      "bay_leaf",
+      "lime_juice",
+      "radishes",
+      "salt",
+      "oregano",
+      "white_onion",
+      "hominy",
+      "garlic",
+      "cilantro",
+      "avocado",
+      "cilantro",
+      "tomatillos",
+      "pepitas",
+      "canola_oil"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "lime",
+    "es_postre": false
+  },
+  {
+    "nombre": "Classic Southern Fried Catfish",
+    "ingredientes": [
+      "catfish_fillets",
+      "black_pepper",
+      "salt",
+      "dried_thyme",
+      "red_pepper",
+      "peanut_oil",
+      "yelcorn_meal",
+      "eggs",
+      "all_purpose_flour",
+      "garlic_powder",
+      "buttermilk"
+    ],
+    "tecnica_coccion": [
+      "frito"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Arom Tico Curry De Coliflor Y Patatas Al Coco Con Arroz Basmati",
+    "ingredientes": [
+      "olive_oil",
+      "sea_salt",
+      "coconut_milk",
+      "water",
+      "garam_masala",
+      "coriander",
+      "basmati_rice",
+      "cauliflower",
+      "ginger",
+      "green_chilies",
+      "onions",
+      "cilantro",
+      "potatoes",
+      "scallions",
+      "cumin"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "sea_salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Sicilian Fennel And Blood Orange Salad",
+    "ingredientes": [
+      "olive_oil",
+      "olives",
+      "salt",
+      "blood_orange",
+      "freshly_pepper",
+      "fennel_bulb"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "blood_orange",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salsa Bals Mica Italiana De Ajo Y Albahaca",
+    "ingredientes": [
+      "balsamic_vinegar",
+      "salt_chicken_broth",
+      "dijon_mustard",
+      "corn_starch",
+      "dried_basil",
+      "garlic_cloves",
+      "white_wine_vinegar"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "balsamic_vinegar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Muffin Pizzas Italianas De Verduras",
+    "ingredientes": [
+      "tomato_sauce",
+      "shredded_carrots",
+      "spinach",
+      "part_skim_mozzarella_cheese",
+      "italian_seasoning",
+      "english_muffins_split_and_toasted",
+      "onion",
+      "vegetable_oil_cooking_spray",
+      "green_bell_pepper"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomato_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Crispy Garlic Chili Prawns Japanese Style",
+    "ingredientes": [
+      "prawns",
+      "rice_flour",
+      "seasoning_salt",
+      "salt",
+      "vegetable_oil",
+      "club_soda",
+      "garlic_powder",
+      "cayenne_pepper"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "seasoning_salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Lasagna Cremosa De Pollo Con Ranch",
+    "ingredientes": [
+      "cheddar_cheese",
+      "lasagna_noodles",
+      "pepper",
+      "ranch_dressing",
+      "mozzarella_cheese",
+      "cooked_chicken",
+      "evaporated_milk"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cheddar_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Greek Lemon Oregano Pork Chops",
+    "ingredientes": [
+      "minced_garlic",
+      "dried_oregano",
+      "red_wine_vinegar",
+      "olive_oil",
+      "boneless_chop_pork",
+      "lemon_juice"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "red_wine_vinegar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Tacos Coreanos De Bistec De Falda Picantes",
+    "ingredientes": [
+      "cooking_spray",
+      "garlic_cloves",
+      "green_onions",
+      "chile_paste",
+      "salt",
+      "lime_juice",
+      "sugar",
+      "flank_steak",
+      "corn_tortillas",
+      "lower_sodium_soy_sauce",
+      "dark_sesame_oil",
+      "cabbage"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Curried Pearl Barley Pilaf With Almonds And Raisins",
+    "ingredientes": [
+      "minced_garlic",
+      "raisins",
+      "onions",
+      "olive_oil",
+      "pearl_barley",
+      "curry_powder",
+      "salt",
+      "slivered_almonds",
+      "black_pepper",
+      "flat_leaf_parsley"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Smores Mexicanos Con Canela",
+    "ingredientes": [
+      "chocolate_bars",
+      "marshmallows",
+      "cinnamon_graham_crackers"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "chocolate_bars",
+    "es_postre": true
+  },
+  {
+    "nombre": "Creamy Old Bay Cod And Potato Bake",
+    "ingredientes": [
+      "milk",
+      "grated_parmesan_cheese",
+      "celery",
+      "mustard_powder",
+      "cod",
+      "minced_onion",
+      "butter",
+      "all_purpose_flour",
+      "black_pepper",
+      "potatoes",
+      "salt",
+      "red_bell_pepper",
+      "water",
+      "green_bell_pepper",
+      "old_bay_seasoning",
+      "dry_bread_crumbs"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Irish Spiced Fruit Tea Cake",
+    "ingredientes": [
+      "vegetable_oil_cooking_spray",
+      "golden_raisins",
+      "salt",
+      "margarine",
+      "eggs",
+      "mace",
+      "brewed_tea",
+      "all_purpose_flour",
+      "candied_orange_peel",
+      "nutmeg",
+      "raisins",
+      "grated_lemon_zest",
+      "cinnamon",
+      "dried_currants",
+      "baking_powder",
+      "rum_extract",
+      "dark_brown_sugar"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": true
+  },
+  {
+    "nombre": "Jajangmyeon De Cerdo Con Bok Choy Y Patata",
+    "ingredientes": [
+      "sugar",
+      "water",
+      "noodles",
+      "pork",
+      "corn_starch",
+      "baby_bok_choy",
+      "black_bean_sauce",
+      "red_potato",
+      "kosher_salt",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Traditional Chinese Pork And Vegetable Egg Rolls",
+    "ingredientes": [
+      "chinese_rice_wine",
+      "shiitake",
+      "sesame_oil",
+      "oil",
+      "soy_sauce",
+      "egg_roll_wrappers",
+      "garlic",
+      "corn_starch",
+      "sugar",
+      "black_pepper",
+      "pork",
+      "carrots",
+      "ginger",
+      "cooking_oil",
+      "salt",
+      "cabbage"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Bowl Mexicano De Quinoa Y Frijoles Negros",
+    "ingredientes": [
+      "black_beans",
+      "quinoa",
+      "garlic",
+      "lime",
+      "diced_tomatoes",
+      "cilantro_fresh",
+      "kosher_salt",
+      "jalapeno_chilies",
+      "frozen_corn",
+      "olive_oil",
+      "vegetable_broth"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "diced_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Okra And Bell Pepper Saut",
+    "ingredientes": [
+      "salt",
+      "butter",
+      "red_bell_pepper",
+      "black_pepper",
+      "okra_pods",
+      "yelbell_pepper",
+      "cilantro_fresh"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "red_bell_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pato Chino Aromatizado Con Naranja Y Cinco Especias",
+    "ingredientes": [
+      "water",
+      "salt",
+      "garlic_cloves",
+      "cold_water",
+      "orange",
+      "sauce",
+      "onions",
+      "soy_sauce",
+      "star_anise",
+      "chinese_five_spice_powder",
+      "brown_sugar",
+      "ginger",
+      "duck"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Moroccan Spiced Lamb Penne Bake",
+    "ingredientes": [
+      "tomato_paste",
+      "unsalted_butter",
+      "dried_mint_flakes",
+      "purple_onion",
+      "cumin",
+      "olive_oil",
+      "grated_parmesan_cheese",
+      "diced_tomatoes",
+      "penne_rigate",
+      "feta_cheese",
+      "whole_milk",
+      "ras_el_hanout",
+      "lamb",
+      "cinnamon",
+      "eggs",
+      "garlic_cloves",
+      "all_purpose_flour"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomato_paste",
+    "es_postre": false
+  },
+  {
+    "nombre": "Irish Blue Cheese Scones",
+    "ingredientes": [
+      "crumbled_blue_cheese",
+      "salt",
+      "egg_whites",
+      "vegetable_oil",
+      "sugar",
+      "cooking_spray",
+      "all_purpose_flour",
+      "eggs",
+      "2_reduced_milk"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pollo Chino Picante Con Jengibre Y Col Napa",
+    "ingredientes": [
+      "sugar",
+      "napa_cabbage_leaves",
+      "garlic",
+      "chicken_leg_quarters",
+      "soy_sauce",
+      "butter",
+      "rice_vinegar",
+      "red_chili_peppers",
+      "sesame_oil",
+      "salt",
+      "cucumber",
+      "pepper",
+      "ginger",
+      "long_grain_rice"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_leg_quarters",
+    "es_postre": false
+  },
+  {
+    "nombre": "Irish Farmhouse Bacon Sausage Skillet",
+    "ingredientes": [
+      "crusty_bread",
+      "salt",
+      "baby_potatoes",
+      "olive_oil",
+      "parsley",
+      "smoked_streaky_bacon",
+      "sausages",
+      "chicken_stock",
+      "black_pepper",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "smoked_streaky_bacon",
+    "es_postre": false
+  },
+  {
+    "nombre": "Agua Fresca De Jamaica Especiada Con Piloncillo",
+    "ingredientes": [
+      "piloncillo",
+      "allspice",
+      "water",
+      "hibiscus",
+      "cloves",
+      "cinnamon_sticks",
+      "nutmeg",
+      "white_sugar"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon_sticks",
+    "es_postre": true
+  },
+  {
+    "nombre": "Aromatic Italian Herb Garlic Infusion",
+    "ingredientes": [
+      "olive_oil",
+      "freshly_pepper",
+      "rosemary",
+      "salt",
+      "parsley",
+      "basil",
+      "oregano",
+      "crushed_red_pepper",
+      "garlic_cloves"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "freshly_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Italian Mocha Mascarpone Torte",
+    "ingredientes": [
+      "cold_water",
+      "sugar",
+      "butter",
+      "chocolate_morsels",
+      "cream_sweeten_whip",
+      "instant_espresso_granules",
+      "whipping_cream",
+      "boiling_water",
+      "kahl_a",
+      "eggs",
+      "chocolate_covered_coffee_beans",
+      "unflavored_gelatin",
+      "mascarpone",
+      "pound_cake"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Risotto Primavera Cremoso Con Asparagi Y Verduras Frescas",
+    "ingredientes": [
+      "pinenuts",
+      "zucchini",
+      "baby_carrots",
+      "basil_leaves",
+      "olive_oil",
+      "dry_white_wine",
+      "asparagus_spears",
+      "white_onion",
+      "grated_parmesan_cheese",
+      "carrots",
+      "frozen_peas",
+      "arborio_rice",
+      "yelcrookneck_squash",
+      "butter",
+      "salt_chicken_broth"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "grated_parmesan_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pollo Jamaicano Picante Con Coco Y Arroz De Frijoles Rojos",
+    "ingredientes": [
+      "tomato_sauce",
+      "black_pepper",
+      "garlic",
+      "scallions",
+      "chipotles_in_adobo",
+      "avocado",
+      "dried_thyme",
+      "instant_white_rice",
+      "cilantro_leaves",
+      "coconut_milk",
+      "water",
+      "red_beans",
+      "celery",
+      "skinless_chicken_thighs",
+      "onions",
+      "lime_zest",
+      "lime_juice",
+      "lime_wedges",
+      "salt",
+      "carrots"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "tomato_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Creamy Taco Beef Corn Tortilla Bake",
+    "ingredientes": [
+      "water",
+      "condensed_cream_of_mushroom_soup",
+      "condensed_cream_of_chicken_soup",
+      "lean_beef",
+      "mexican_cheese_blend",
+      "chunky_salsa",
+      "taco_seasoning_mix",
+      "corn_tortillas"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "condensed_cream_of_chicken_soup",
+    "es_postre": false
+  },
+  {
+    "nombre": "Gyukatsu Crujiente",
+    "ingredientes": [
+      "pepper",
+      "panko_breadcrumbs",
+      "plain_flour",
+      "oil",
+      "salt",
+      "eggs",
+      "steak"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Gambas Con Chorizo Tropical Al Ron",
+    "ingredientes": [
+      "minced_garlic",
+      "chorizo_spanish",
+      "red_bell_pepper",
+      "olive_oil",
+      "pineapple_juice",
+      "lime",
+      "cilantro_leaves",
+      "shrimp",
+      "dark_rum",
+      "lemon_juice"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "lime",
+    "es_postre": false
+  },
+  {
+    "nombre": "Estofado De Costillas De Cerdo Con Daikon Ostras Y Bayas Goji",
+    "ingredientes": [
+      "water",
+      "daikon",
+      "sugar",
+      "pork_ribs",
+      "oil",
+      "soy_sauce",
+      "shallots",
+      "goji_berries",
+      "chinese_rice_wine",
+      "oysters",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Quesadillas Vegetarianas De Frijol Y Queso Cheddar",
+    "ingredientes": [
+      "shredded_cheddar_cheese",
+      "corn_tortillas",
+      "salsa",
+      "vegetable_oil",
+      "black_beans",
+      "sour_cream"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "shredded_cheddar_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Golden Spiced Fruit Slices",
+    "ingredientes": [
+      "demerara_sugar",
+      "egg_whites",
+      "fruit",
+      "butter",
+      "dried_currants",
+      "frozen_pastry_puff_sheets",
+      "mixed_spice",
+      "white_sugar"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "demerara_sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Sabzi De Patatas Y Chiriv As Con Garam Masala",
+    "ingredientes": [
+      "parsnips",
+      "garam_masala",
+      "chili_oil",
+      "olive_oil",
+      "brown_mustard_seeds",
+      "cilantro_fresh",
+      "sugar",
+      "cooking_spray",
+      "salt",
+      "coriander_seeds",
+      "yukon_gold_potatoes",
+      "cumin"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "garam_masala",
+    "es_postre": false
+  },
+  {
+    "nombre": "Thai Green Curry Cashew Chicken Stir Fry",
+    "ingredientes": [
+      "sriracha",
+      "unsalted_cashews",
+      "thai_green_curry_paste",
+      "light_soy_sauce",
+      "kecap_manis",
+      "garlic",
+      "frozen_broad_beans",
+      "basil_leaves",
+      "yelonion",
+      "chili_flakes",
+      "cooking_oil",
+      "chicken_tenderloin"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "light_soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Southern Creole Cheesy Shrimp Cauliflower",
+    "ingredientes": [
+      "butter",
+      "creole_style_seasoning",
+      "parsley",
+      "black_pepper",
+      "cayenne_pepper",
+      "shrimp",
+      "cauliflower",
+      "paprika",
+      "condensed_cheddar_cheese_soup",
+      "whole_milk",
+      "onion",
+      "mushrooms"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "condensed_cheddar_cheese_soup",
+    "es_postre": false
+  },
+  {
+    "nombre": "Spicy Jack Bean Dip",
+    "ingredientes": [
+      "refried_beans",
+      "grated_jack_cheese",
+      "hot_sauce",
+      "sour_cream"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "grated_jack_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Crema Catalana",
+    "ingredientes": [
+      "cinnamon",
+      "cornflour",
+      "milk",
+      "egg_yolks",
+      "sugar",
+      "cinnamon_sticks"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": true
+  },
+  {
+    "nombre": "Asperges Et Lardons Avec Uf Au Parmesan",
+    "ingredientes": [
+      "grated_parmesan_cheese",
+      "asparagus",
+      "bacon_slices",
+      "black_pepper",
+      "green_onions",
+      "eggs",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "grated_parmesan_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Zesty Italian Tortellini With Spinach And Cherry Tomatoes",
+    "ingredientes": [
+      "leav_spinach",
+      "cheese_tortellini",
+      "basil",
+      "cherry_tomatoes",
+      "lemon_juice",
+      "capers",
+      "parmesan_cheese",
+      "navy_beans",
+      "pepper",
+      "virgin_olive_oil"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cheese_tortellini",
+    "es_postre": false
+  },
+  {
+    "nombre": "Curried Chicken Quinoa With Granny Smith Apple",
+    "ingredientes": [
+      "quinoa",
+      "nonmilk",
+      "granny_smith_apples",
+      "paprika",
+      "chicken_broth",
+      "chicken_breasts",
+      "onion",
+      "curry_powder",
+      "celery"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Golden British Skillet Drops",
+    "ingredientes": [
+      "milk",
+      "salt",
+      "flour",
+      "eggs",
+      "lard"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Ensalada Mediterr Nea De Pimientos Olivas Y Pasas Doradas",
+    "ingredientes": [
+      "tomatoes",
+      "golden_raisins",
+      "salt",
+      "olive_oil",
+      "yelbell_pepper",
+      "olives",
+      "pepper",
+      "white_wine_vinegar",
+      "green_bell_pepper",
+      "green_onions",
+      "basil_leaves"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "yelbell_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Italian Sausage And Fava Bean Pasta With Pecorino",
+    "ingredientes": [
+      "pecorino_romano_cheese",
+      "fava_bean",
+      "finely_onion",
+      "virgin_olive_oil",
+      "plum_tomatoes",
+      "italian_sausage",
+      "garlic_cloves",
+      "pasta_sheets",
+      "dry_white_wine",
+      "crushed_red_pepper"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "pecorino_romano_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Gyeran Guk Sopa Coreana Reconfortante De Huevo Y Caldo",
+    "ingredientes": [
+      "fish_sauce",
+      "chicken_broth",
+      "sesame_oil",
+      "green_onions",
+      "eggs"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "fish_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Curry Hind De Batata Y Lentejas Rojas Con Espinacas Y Jengibre",
+    "ingredientes": [
+      "lime_zest",
+      "sweet_potatoes",
+      "purple_onion",
+      "boiling_water",
+      "spinach_leaves",
+      "ginger",
+      "natural_yogurt",
+      "red_lentils",
+      "vegetable_stock",
+      "carrots",
+      "basmati_rice",
+      "lime",
+      "flora_cuisine",
+      "curry_paste"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "lime_zest",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pozole Rojo De Pollo Con Aguacate",
+    "ingredientes": [
+      "kosher_salt",
+      "radishes",
+      "garlic_cloves",
+      "dried_oregano",
+      "chicken_stock",
+      "black_pepper",
+      "bone_in_chicken_breasts",
+      "red_bell_pepper",
+      "canola_oil",
+      "tomato_paste",
+      "white_hominy",
+      "tortilla_chips",
+      "onions",
+      "avocado",
+      "lime",
+      "cilantro_leaves",
+      "dried_chile_peppers",
+      "cabbage"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_stock",
+    "es_postre": false
+  },
+  {
+    "nombre": "Suspiros Dulces Mexicanos",
+    "ingredientes": [
+      "granulated_sugar",
+      "egg_whites"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "granulated_sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Southern Chocolate Butterscotch Dream",
+    "ingredientes": [
+      "frozen_whipped_topping",
+      "chocolate_instant_pudding",
+      "instant_butterscotch_pudding_mix",
+      "cream_cheese",
+      "milk",
+      "butter",
+      "graham_cracker_crumbs",
+      "white_sugar"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "chocolate_instant_pudding",
+    "es_postre": true
+  },
+  {
+    "nombre": "Haricots Blancs La Proven Ale",
+    "ingredientes": [
+      "fennel_seeds",
+      "kalamata",
+      "capers",
+      "dried_oregano",
+      "great_northern_beans",
+      "salt",
+      "red_wine_vinegar"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "red_wine_vinegar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Jambalaya Caj N De Camarones Y Salchicha",
+    "ingredientes": [
+      "kosher_salt",
+      "kielbasa",
+      "red_bell_pepper",
+      "celery_ribs",
+      "garlic_cloves",
+      "long_grain_rice",
+      "parsley",
+      "olive_oil",
+      "cayenne_pepper",
+      "shrimp",
+      "chicken_broth",
+      "diced_tomatoes",
+      "ham",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Curry Fresco De Moong Dal Con Mango Verde Y Verduras",
+    "ingredientes": [
+      "moong_dal",
+      "cilantro_leaves",
+      "onions",
+      "tomatoes",
+      "capsicum",
+      "lemon_juice",
+      "green_mango",
+      "oil",
+      "garlic_paste",
+      "salt",
+      "carrots"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Aromatic Tofu And Shiitake Rice Bowl",
+    "ingredientes": [
+      "ginger",
+      "garlic",
+      "sodium_soy_sauce",
+      "mirin",
+      "toasted_sesame_oil",
+      "tofu",
+      "short_grain_rice",
+      "dried_shiitake_mushrooms",
+      "gari",
+      "green_onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "sodium_soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Penne Alla Marinara Con Mozzarella Y Albahaca Fresca",
+    "ingredientes": [
+      "shredded_mozzarella_cheese",
+      "marinara_sauce",
+      "basil_leaves",
+      "penne_pasta"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "shredded_mozzarella_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Zuppa Contadina Di Ceci E Semolino",
+    "ingredientes": [
+      "water",
+      "virgin_olive_oil",
+      "carrots",
+      "hot_red_pepper_flakes",
+      "turkish_bay_leaves",
+      "dried_chickpeas",
+      "onions",
+      "celery_ribs",
+      "semolina",
+      "fine_sea_salt",
+      "flat_leaf_parsley",
+      "warm_water",
+      "vine_ripened_tomatoes",
+      "garlic_cloves"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "vine_ripened_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Kahl A Espresso Mascarpone Angel Cake",
+    "ingredientes": [
+      "sugar",
+      "mascarpone",
+      "bittersweet_chocolate",
+      "free_yogurt",
+      "vanilla_extract",
+      "skim_milk",
+      "angel_food_cake",
+      "unsweetened_cocoa_powder",
+      "kahl_a",
+      "water",
+      "instant_espresso"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Spicy Southern Buttermilk Fried Chicken",
+    "ingredientes": [
+      "water",
+      "onion_powder",
+      "peanut_oil",
+      "black_pepper",
+      "garlic_powder",
+      "salt",
+      "eggs",
+      "organic_chicken",
+      "buttermilk",
+      "corn_starch",
+      "pepper",
+      "flour",
+      "cayenne_pepper"
+    ],
+    "tecnica_coccion": [
+      "frito"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Greek Zinfandel Fig Gel E Con Crema De Yogurt Y Azahar",
+    "ingredientes": [
+      "orange",
+      "anise",
+      "cinnamon_sticks",
+      "unflavored_gelatin",
+      "zinfandel",
+      "orange_blossom_honey",
+      "sugar",
+      "lemon",
+      "calimyrna_figs",
+      "clove",
+      "honey",
+      "whipping_cream",
+      "plain_whole_milk_yogurt"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon_sticks",
+    "es_postre": true
+  },
+  {
+    "nombre": "Aromatic Japanese Beef Daikon Stew",
+    "ingredientes": [
+      "pepper",
+      "flour",
+      "garlic",
+      "onions",
+      "ginger",
+      "mirin",
+      "daikon",
+      "corn_starch",
+      "olive_oil",
+      "reduced_sodium_soy_sauce",
+      "beef_stock",
+      "salt",
+      "green_onions",
+      "shiitake",
+      "chuck_roast",
+      "star_anise",
+      "cilantro"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "reduced_sodium_soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Crispy Creole Catfish With Coleslaw",
+    "ingredientes": [
+      "corn_flakes_cereal",
+      "yelcorn_meal",
+      "coleslaw",
+      "catfish_fillets",
+      "creole_seasoning",
+      "cooking_spray"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "corn_flakes_cereal",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salsa Pomodoro Piccante Tradizionale",
+    "ingredientes": [
+      "diced_tomatoes",
+      "sugar",
+      "garlic_salt",
+      "tomato_paste",
+      "crushed_red_pepper",
+      "dried_basil",
+      "dried_oregano"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "diced_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Cerdo Coreano Picante Con Marinada De Pera Y Kiwi",
+    "ingredientes": [
+      "soy_sauce",
+      "chili_paste",
+      "oil",
+      "brown_sugar",
+      "honey",
+      "red_pepper_flakes",
+      "kiwi",
+      "pepper",
+      "asian_pear",
+      "garlic_cloves",
+      "pork",
+      "ginger",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "chili_paste",
+    "es_postre": false
+  },
+  {
+    "nombre": "Enchiladas Verdes De Acelgas Y Queso Fresco",
+    "ingredientes": [
+      "chicken_broth",
+      "chees_fresco_queso",
+      "corn_tortillas",
+      "swiss_chard",
+      "salt",
+      "olive_oil",
+      "garlic",
+      "onions",
+      "red_pepper_flakes",
+      "salsa"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Aromatic Prawn Masala",
+    "ingredientes": [
+      "chili_powder",
+      "coriander",
+      "garam_masala",
+      "salt",
+      "tumeric",
+      "vegetable_oil",
+      "cumin",
+      "prawns",
+      "sauce"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "garam_masala",
+    "es_postre": false
+  },
+  {
+    "nombre": "Scaloppine Di Vitello Ai Funghi E Pomodoro Con Rosmarino",
+    "ingredientes": [
+      "mushrooms",
+      "all_purpose_flour",
+      "rosemary",
+      "veal_cutlets",
+      "plum_tomatoes",
+      "dry_white_wine",
+      "salt_chicken_broth",
+      "olive_oil",
+      "garlic_cloves"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "mushrooms",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pasta Mexicana Picante",
+    "ingredientes": [
+      "tomato_sauce",
+      "garlic_salt",
+      "chili_powder",
+      "water",
+      "cumin",
+      "pasta",
+      "vegetable_oil"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomato_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Miyeokguk Sopa Coreana De Algas Y Carne",
+    "ingredientes": [
+      "wakame",
+      "lean_beef",
+      "minced_garlic",
+      "salt",
+      "water",
+      "soy_sauce",
+      "sesame_oil"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "lean_beef",
+    "es_postre": false
+  },
+  {
+    "nombre": "Wontons De Camarones Y Jengibre Picantes",
+    "ingredientes": [
+      "scallion_greens",
+      "sriracha",
+      "carrots",
+      "soy_sauce",
+      "wonton_wrappers",
+      "toasted_sesame_oil",
+      "sugar",
+      "peeled_ginger",
+      "nonstick_spray",
+      "white_vinegar",
+      "egg_whites",
+      "scallions",
+      "shrimp"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salade De Poulet Et Anchois La Proven Ale",
+    "ingredientes": [
+      "tomatoes",
+      "olive_oil",
+      "thyme",
+      "salt",
+      "chicken_bones",
+      "green_bell_pepper_slice",
+      "black_olives",
+      "lemon_juice",
+      "eggs",
+      "black_pepper",
+      "garlic",
+      "anchovy_fillets",
+      "dried_thyme",
+      "lettuce_leaves",
+      "purple_onion",
+      "crusty_rolls"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Ternera China Al Coco Y Curry Con Jengibre",
+    "ingredientes": [
+      "coconut_oil",
+      "red_pepper",
+      "scallions",
+      "curry_powder",
+      "salt",
+      "coconut_milk",
+      "pepper",
+      "sesame_oil",
+      "carrots",
+      "ginger",
+      "almond_flour",
+      "coconut_aminos",
+      "beef"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "coconut_oil",
+    "es_postre": false
+  },
+  {
+    "nombre": "Paella De Mar Y Tierra Con Azafr N",
+    "ingredientes": [
+      "olive_oil",
+      "white_rice",
+      "onions",
+      "chicken_broth",
+      "crushed_garlic",
+      "all_purpose_flour",
+      "saffron",
+      "pepper",
+      "green_peas",
+      "shrimp",
+      "chorizo_sausage",
+      "clams",
+      "tomatoes",
+      "salt",
+      "boneless_skinless_chicken_breast_halves"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Chinese Ginger Garlic Shrimp And Snow Pea Stir Fry",
+    "ingredientes": [
+      "chicken_stock",
+      "minced_garlic",
+      "seasoned_rice_wine_vinegar",
+      "snow_peas",
+      "soy_sauce",
+      "vegetable_oil",
+      "garlic_cloves",
+      "sugar",
+      "ginger_root",
+      "rice_vinegar",
+      "shrimp",
+      "white_pepper",
+      "garlic",
+      "corn_starch"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "chicken_stock",
+    "es_postre": false
+  },
+  {
+    "nombre": "Ensalada Templada De Espinacas Bacon Y Huevo Con Alcachofas",
+    "ingredientes": [
+      "olive_oil",
+      "paprika",
+      "onion",
+      "sugar",
+      "hard_boiled_egg",
+      "bacon_slices",
+      "spinach_leaves",
+      "artichoke_hearts",
+      "dry_mustard",
+      "black_pepper",
+      "red_wine_vinegar",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Aromatic Spiced Pea Kachori",
+    "ingredientes": [
+      "water",
+      "chili_powder",
+      "oil",
+      "stuffing",
+      "salt",
+      "ghee",
+      "coriander_powder",
+      "maida_flour",
+      "cardamom",
+      "sugar",
+      "baking_powder",
+      "cumin_seed",
+      "frozen_peas"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pita Mexicana De Berenjena Y Pimientos Frescos",
+    "ingredientes": [
+      "pepper",
+      "pita_bread_rounds",
+      "red_bell_pepper",
+      "olive_oil",
+      "garlic",
+      "tomatoes",
+      "eggplant",
+      "salt",
+      "lime",
+      "butter",
+      "cilantro_fresh"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Gratin De Pommes De Terre Cr Meux Au Gruy Re",
+    "ingredientes": [
+      "pepper",
+      "grated_gruy_re_cheese",
+      "heavy_cream",
+      "salt",
+      "potatoes"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "grated_gruy_re_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Sopa Japonesa De Udon Con Tofu Miso Y Jengibre",
+    "ingredientes": [
+      "ginger",
+      "vegetable_broth",
+      "sake",
+      "green_onions",
+      "carrots",
+      "udon",
+      "red_miso",
+      "silken_tofu",
+      "button_mushrooms"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "vegetable_broth",
+    "es_postre": false
+  },
+  {
+    "nombre": "Enchiladas De Pollo Con Salsa Roja Y Queso Monterey",
+    "ingredientes": [
+      "cooked_chicken",
+      "cilantro_leaves",
+      "lime_juice",
+      "whole_peeled_tomatoes",
+      "coarse_salt",
+      "sour_cream",
+      "canola_oil",
+      "jalapeno_chilies",
+      "garlic",
+      "corn_tortillas",
+      "shredded_monterey_jack_cheese",
+      "pickled_jalapenos",
+      "chili_powder",
+      "freshly_pepper",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "jalapeno_chilies",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salsiccia Piccante E Broccoletti Al Forno Con Fontina",
+    "ingredientes": [
+      "hot_red_pepper_flakes",
+      "broccoli_rabe",
+      "whole_milk",
+      "garlic_cloves",
+      "black_pepper",
+      "parmigiano_reggiano_cheese",
+      "all_purpose_flour",
+      "sausage_casings",
+      "olive_oil",
+      "eggs",
+      "dry_bread_crumbs",
+      "fontina",
+      "unsalted_butter",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "parmigiano_reggiano_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Filipino Spicy Cucumber Onion Relish",
+    "ingredientes": [
+      "sesame_oil",
+      "cucumber",
+      "sugar",
+      "purple_onion",
+      "fish_sauce",
+      "thai_chile",
+      "peppercorns",
+      "vinegar",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "thai_chile",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pastel Cremoso De Pollo Sure O Con Verduras",
+    "ingredientes": [
+      "dry_white_wine",
+      "corn_starch",
+      "herbs",
+      "refrigerated_piecrusts",
+      "cream_of_chicken_soup",
+      "cooked_chicken",
+      "frozen_peas_and_carrots",
+      "sodium_chicken_broth",
+      "buttermilk"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cream_of_chicken_soup",
+    "es_postre": false
+  },
+  {
+    "nombre": "Manicotti Horneado De Espinacas Y Tres Quesos",
+    "ingredientes": [
+      "pasta_sauce",
+      "parmesan_cheese",
+      "olive_oil_flavored_cooking_spray",
+      "frozen_spinach",
+      "egg_whites",
+      "part_skim_ricotta_cheese",
+      "pepper",
+      "eggs",
+      "italian_seasoning",
+      "manicotti_shells",
+      "part_skim_mozzarella_cheese",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Fettuccine Ai Gamberi Con Salsa Fresca Di Pomodoro E Basilico",
+    "ingredientes": [
+      "vegetable_oil_cooking_spray",
+      "dry_white_wine",
+      "mushrooms",
+      "fettucine",
+      "olive_oil",
+      "oregano",
+      "onions",
+      "basil",
+      "parmesan_cheese",
+      "corn_starch",
+      "shrimp",
+      "tomatoes",
+      "chicken_bouillon",
+      "garlic",
+      "flat_leaf_parsley"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "mushrooms",
+    "es_postre": false
+  },
+  {
+    "nombre": "Kung Pao Chicken Stir Fry",
+    "ingredientes": [
+      "soy_sauce",
+      "egg_whites",
+      "red_wine_vinegar",
+      "peanut_oil",
+      "chicken_stock",
+      "peanuts",
+      "chicken_breasts",
+      "chili_paste_with_garlic",
+      "ginger",
+      "green_onions",
+      "red_pepper_flakes",
+      "corn_starch",
+      "sugar",
+      "veget",
+      "sesame_oil",
+      "rice_vinegar"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Tacos Mexicanos De Carnitas Con Salsa Verde Y Guacamole",
+    "ingredientes": [
+      "taco_sauce",
+      "milk",
+      "guacamole",
+      "garlic",
+      "water",
+      "salsa_verde",
+      "shredded_cabbage",
+      "dried_oregano",
+      "kosher_salt",
+      "sweet_onion",
+      "condiments",
+      "cayenne_pepper",
+      "avocado",
+      "pork_shoulder_roast",
+      "tortillas",
+      "chili_powder",
+      "cumin"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "cayenne_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Saffron Rose Pistachio Phirni",
+    "ingredientes": [
+      "rose_petals",
+      "almonds",
+      "rice",
+      "sugar",
+      "whole_milk",
+      "pistachios",
+      "saffron"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true
+  },
+  {
+    "nombre": "Alitas De Pollo Coreanas Glaseadas Con Miel Y Soja",
+    "ingredientes": [
+      "soy_sauce",
+      "ginger",
+      "canola_oil",
+      "flour",
+      "rice_vinegar",
+      "honey",
+      "garlic",
+      "chicken_wings",
+      "sesame_oil",
+      "corn_starch"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Estofado De Pollo Adobado Con Chipotle Y Ma Z",
+    "ingredientes": [
+      "chicken_stock",
+      "drumstick",
+      "black_pepper",
+      "cilantro",
+      "green_chile",
+      "peeled_tomatoes",
+      "salt",
+      "chicken",
+      "chiles",
+      "olive_oil",
+      "adobo_sauce",
+      "yelcorn_meal",
+      "chipotle_chile",
+      "ancho_powder",
+      "chipotle_chile_powder"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "black_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Tacos De Costillas De Res Con Glaseado Picante De Ar Ndano Y Sriracha",
+    "ingredientes": [
+      "cheddar_cheese",
+      "taco_seasoning_mix",
+      "salt",
+      "old_el_paso_flour_tortillas",
+      "cranberry_sauce",
+      "cilantro",
+      "sriracha",
+      "beer",
+      "avocado",
+      "soy_sauce",
+      "olive_oil",
+      "chili_sauce",
+      "brown_sugar",
+      "lime",
+      "jalapeno_chilies",
+      "beef_rib_short"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cheddar_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Traditional Tofu Wakame Miso Soup",
+    "ingredientes": [
+      "miso_paste",
+      "water",
+      "seaweed",
+      "tofu",
+      "green_onions",
+      "dashi"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "miso_paste",
+    "es_postre": false
+  },
+  {
+    "nombre": "Tyropita Griega Tradicional Con Tres Quesos Y Eneldo",
+    "ingredientes": [
+      "dill",
+      "yoghurt",
+      "salt",
+      "myzithra",
+      "eggs",
+      "cheese",
+      "feta_cheese",
+      "phyllo",
+      "kefalotyri",
+      "black_pepper",
+      "virgin_olive_oil",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salsa Picante De Frijol De Ojo Negro Y Queso Monterey",
+    "ingredientes": [
+      "sea_salt",
+      "cilantro",
+      "black_eyed_peas",
+      "purple_onion",
+      "shredded_monterey_jack_cheese",
+      "lime",
+      "garlic",
+      "canola_oil",
+      "sriracha",
+      "tortilla_chips"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "shredded_monterey_jack_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Okra Frita Sure A Cl Sica Con Suero De Mantequilla",
+    "ingredientes": [
+      "buttermilk",
+      "okra",
+      "eggs",
+      "all_purpose_flour",
+      "salt",
+      "cracker_crumbs",
+      "peanut_oil"
+    ],
+    "tecnica_coccion": [
+      "frito"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Rang N De Cangrejo Cremoso",
+    "ingredientes": [
+      "philadelphia_cream_cheese",
+      "powdered_sugar",
+      "oil",
+      "crab_meat",
+      "salt",
+      "wonton_wrappers"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "philadelphia_cream_cheese",
+    "es_postre": false
+  },
+  {
+    "nombre": "Buttered Savoy Cabbage With Baked Potatoes",
+    "ingredientes": [
+      "savoy_cabbage",
+      "salt",
+      "unsalted_butter",
+      "baking_potatoes",
+      "black_pepper"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "salt",
+    "es_postre": false
+  },
+  {
+    "nombre": "Muslos De Pollo Japoneses Glaseados Con Jengibre Y Sake",
+    "ingredientes": [
+      "sake",
+      "sesame_oil",
+      "boneless_chicken_thighs",
+      "peanut_oil",
+      "soy_sauce",
+      "vegetable_oil",
+      "potato_starch",
+      "ginger"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "boneless_chicken_thighs",
+    "es_postre": false
+  },
+  {
+    "nombre": "Torta Cremosa Al Ricotta Pistacchio E Cioccolato",
+    "ingredientes": [
+      "cream_of_tartar",
+      "pistachio_nuts",
+      "salt",
+      "orange_liqueur",
+      "eggs",
+      "vanilla_extract",
+      "heavy_whipping_cream",
+      "semi_sweet_chocolate_morsels",
+      "water",
+      "cake_flour",
+      "confectioners_sugar",
+      "cinnamon",
+      "ricotta_cheese",
+      "cream_cheese",
+      "white_sugar"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "vanilla_extract",
+    "es_postre": true
+  },
+  {
+    "nombre": "Salsa Fresca Mexicana Con Serrano",
+    "ingredientes": [
+      "tomatoes",
+      "coarse_salt",
+      "water",
+      "white_onion",
+      "serrano",
+      "cilantro"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Irish Cherry Hazelnut Oatmeal",
+    "ingredientes": [
+      "steel_cut_oats",
+      "salt",
+      "cinnamon",
+      "water",
+      "hazelnuts",
+      "hazelnut_oil",
+      "brown_sugar",
+      "sweet_cherries"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": false
+  },
+  {
+    "nombre": "Hamburguesa Griega De Cordero Con Feta Y Menta",
+    "ingredientes": [
+      "olive_oil",
+      "salt",
+      "hamburger_buns",
+      "paprika",
+      "mint",
+      "cinnamon",
+      "balsamic_vinegar",
+      "feta_cheese_crumbles",
+      "baby_spinach_leaves",
+      "purple_onion",
+      "lamb"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cinnamon",
+    "es_postre": false
+  },
+  {
+    "nombre": "Estofado Criollo De Andouille Y Frijoles Rojos Ahumados",
+    "ingredientes": [
+      "celery",
+      "fire_roasted_diced_tomatoes",
+      "andouille_sausage",
+      "sweet_pepper",
+      "red_kidnei_beans_rins_and_drain"
+    ],
+    "tecnica_coccion": [
+      "hervido"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "fire_roasted_diced_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Salm N Fresco Con Aderezo Japon S De Wasabi Y S Samo",
+    "ingredientes": [
+      "gari",
+      "rice_vinegar",
+      "wasabi_paste",
+      "black_sesame_seeds",
+      "scallions",
+      "japanese_soy_sauce",
+      "salmon",
+      "sugar",
+      "ginger",
+      "garlic_cloves"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "salado",
+    "ingrediente_sabor": "japanese_soy_sauce",
+    "es_postre": false
+  },
+  {
+    "nombre": "Brasato Di Manzo Ai Funghi Porcini",
+    "ingredientes": [
+      "dried_porcini_mushrooms",
+      "thyme",
+      "beef_rib_short",
+      "tomato_paste",
+      "kosher_salt",
+      "dry_red_wine",
+      "hot_water",
+      "black_pepper",
+      "free_less_sodium_beef_broth",
+      "garlic_cloves",
+      "cremini_mushrooms",
+      "olive_oil",
+      "all_purpose_flour",
+      "onions"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "dried_porcini_mushrooms",
+    "es_postre": false
+  },
+  {
+    "nombre": "Zesty Creole Shrimp With Green Tomato Remoulade",
+    "ingredientes": [
+      "creole_mustard",
+      "minced_garlic",
+      "green_tomatoes",
+      "creole_seasoning",
+      "canola_oil",
+      "mayonaise",
+      "prepared_horseradish",
+      "paprika",
+      "shrimp",
+      "celery_salt",
+      "water",
+      "buttermilk",
+      "lemon_juice",
+      "shrimp_and_crab_boil_seasoning",
+      "shallots",
+      "salt",
+      "shrimp"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "ácido",
+    "ingrediente_sabor": "green_tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Escalivada Catalana",
+    "ingredientes": [
+      "red_bell_pepper",
+      "eggplant",
+      "onions",
+      "tomatoes",
+      "olive_oil",
+      "garlic",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "asado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "red_bell_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Pa Amb Tomaquet",
+    "ingredientes": [
+      "bread",
+      "tomatoes",
+      "olive_oil",
+      "garlic",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false
+  },
+  {
+    "nombre": "Suquet De Peix",
+    "ingredientes": [
+      "fish",
+      "potatoes",
+      "onions",
+      "tomatoes",
+      "garlic",
+      "olive_oil",
+      "almonds",
+      "parsley",
+      "white_wine",
+      "saffron",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "guisado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "fish",
+    "es_postre": false
+  },
+  {
+    "nombre": "Butifarra Con Mongetes",
+    "ingredientes": [
+      "sausages",
+      "white_beans",
+      "onions",
+      "garlic",
+      "olive_oil",
+      "bay_leaf",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "asado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "sausages",
+    "es_postre": false
+  },
+  {
+    "nombre": "Cannelloni A La Catalana",
+    "ingredientes": [
+      "pasta",
+      "ground_beef",
+      "ground_pork",
+      "onions",
+      "tomatoes",
+      "milk",
+      "butter",
+      "flour",
+      "cheese",
+      "olive_oil",
+      "garlic",
+      "nutmeg",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "ground_beef",
+    "es_postre": false
+  },
+  {
+    "nombre": "Fideuà De Mariscos",
+    "ingredientes": [
+      "pasta",
+      "shrimp",
+      "mussels",
+      "squid",
+      "fish",
+      "onions",
+      "tomatoes",
+      "garlic",
+      "olive_oil",
+      "fish_stock",
+      "saffron",
+      "paprika",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "shrimp",
+    "es_postre": false
+  },
+  {
+    "nombre": "Coca De Recapte",
+    "ingredientes": [
+      "bread_dough",
+      "red_bell_pepper",
+      "eggplant",
+      "onions",
+      "olive_oil",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "horneado"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "red_bell_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "Mel I Mató",
+    "ingredientes": [
+      "fresh_cheese",
+      "honey",
+      "walnuts"
+    ],
+    "tecnica_coccion": [
+      "crudo"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "honey",
+    "es_postre": true
+  },
+  {
+    "nombre": "Salteado De Pavo Asiático",
+    "ingredientes": [
+      "sodium_soy_sauce",
+      "ginger",
+      "dry_mustard",
+      "green_beans",
+      "white_pepper",
+      "sesame_oil",
+      "scallions",
+      "canola_oil",
+      "sugar",
+      "shaoxing_wine",
+      "garlic",
+      "turkey",
+      "water",
+      "crushed_red_pepper_flakes",
+      "corn_starch"
+    ],
+    "tecnica_coccion": [
+      "salteado"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "white_pepper",
+    "es_postre": false
+  },
+  {
+    "nombre": "French Chocolate Raspberry Mousse",
+    "ingredientes": [
+      "chocolate",
+      "raspberry",
+      "cream",
+      "sugar",
+      "eggs"
+    ],
+    "tecnica_coccion": [
+      "batir",
+      "refrigerar"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "chocolate",
+    "tradicion": "francesa",
+    "temporada": [],
+    "es_postre": true
+  },
+  {
+    "nombre": "Esferificacion De Tomate Y Albahaca",
+    "ingredientes": [
+      "tomatoes",
+      "basil",
+      "olive_oil",
+      "salt",
+      "garlic"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false,
+    "tradicion": "italiana"
+  },
+  {
+    "nombre": "Caviar De Aceite De Oliva Molecular",
+    "ingredientes": [
+      "olive_oil",
+      "salt",
+      "herbs"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "olive_oil",
+    "es_postre": false,
+    "tradicion": "italiana"
+  },
+  {
+    "nombre": "Aire De Parmesano Con Tomate Confitado",
+    "ingredientes": [
+      "parmesan_cheese",
+      "tomatoes",
+      "olive_oil",
+      "garlic",
+      "basil"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false,
+    "tradicion": "italiana"
+  },
+  {
+    "nombre": "Ravioli Liquido De Trufa",
+    "ingredientes": [
+      "olive_oil",
+      "parmesan_cheese",
+      "salt",
+      "pepper"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "parmesan_cheese",
+    "es_postre": false,
+    "tradicion": "italiana"
+  },
+  {
+    "nombre": "Espuma De Foie Gras Con Manzana",
+    "ingredientes": [
+      "apple",
+      "butter",
+      "cream",
+      "shallots",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "butter",
+    "es_postre": false,
+    "tradicion": "francesa"
+  },
+  {
+    "nombre": "Caviar De Vino Tinto Con Queso Brie",
+    "ingredientes": [
+      "brie_cheese",
+      "honey",
+      "walnuts",
+      "herbs"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "honey",
+    "es_postre": false,
+    "tradicion": "francesa"
+  },
+  {
+    "nombre": "Esfera De Champan Con Fresas",
+    "ingredientes": [
+      "strawberries",
+      "sugar",
+      "mint"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "strawberries",
+    "es_postre": true,
+    "tradicion": "francesa"
+  },
+  {
+    "nombre": "Consomme Clarificado Con Perlas De Hierbas",
+    "ingredientes": [
+      "herbs",
+      "vegetable_stock",
+      "salt",
+      "pepper",
+      "thyme"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "vegetable_stock",
+    "es_postre": false,
+    "tradicion": "francesa"
+  },
+  {
+    "nombre": "Gel De Cava Con Esferificacion De Miel",
+    "ingredientes": [
+      "honey",
+      "almonds",
+      "fresh_cheese",
+      "mint"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "honey",
+    "es_postre": true,
+    "tradicion": "catalana"
+  },
+  {
+    "nombre": "Espuma De Escalivada Molecular",
+    "ingredientes": [
+      "eggplant",
+      "red_bell_pepper",
+      "olive_oil",
+      "garlic",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "eggplant",
+    "es_postre": false,
+    "tradicion": "catalana"
+  },
+  {
+    "nombre": "Caviar De Romesco Molecular",
+    "ingredientes": [
+      "tomatoes",
+      "almonds",
+      "hazelnuts",
+      "olive_oil",
+      "garlic",
+      "paprika"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "tomatoes",
+    "es_postre": false,
+    "tradicion": "catalana"
+  },
+  {
+    "nombre": "Crema Catalana Deconstruida",
+    "ingredientes": [
+      "sugar",
+      "cinnamon",
+      "lemon_zest",
+      "vanilla_extract"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true,
+    "tradicion": "catalana"
+  },
+  {
+    "nombre": "Esferificacion De Guacamole",
+    "ingredientes": [
+      "avocado",
+      "lime",
+      "cilantro",
+      "onions",
+      "jalapeno_chilies",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "avocado",
+    "es_postre": false,
+    "tradicion": "mexicana"
+  },
+  {
+    "nombre": "Aire De Chile Ancho Con Maiz",
+    "ingredientes": [
+      "corn",
+      "chili_powder",
+      "lime",
+      "cilantro",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "picante",
+    "ingrediente_sabor": "chili_powder",
+    "es_postre": false,
+    "tradicion": "mexicana"
+  },
+  {
+    "nombre": "Caviar De Mezcal Con Citricos",
+    "ingredientes": [
+      "lime",
+      "orange",
+      "salt",
+      "cilantro"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "acido",
+    "ingrediente_sabor": "lime",
+    "es_postre": false,
+    "tradicion": "mexicana"
+  },
+  {
+    "nombre": "Gel De Mango Y Chile Molecular",
+    "ingredientes": [
+      "mango",
+      "chili_powder",
+      "lime",
+      "sugar",
+      "salt"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "mango",
+    "es_postre": true,
+    "tradicion": "mexicana"
+  },
+  {
+    "nombre": "Esferificacion De Curry Y Mango",
+    "ingredientes": [
+      "mango",
+      "curry_powder",
+      "coconut_milk",
+      "cilantro",
+      "ginger"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "curry_powder",
+    "es_postre": false,
+    "tradicion": "india"
+  },
+  {
+    "nombre": "Espuma De Garam Masala Con Yogurt",
+    "ingredientes": [
+      "garam_masala",
+      "mint",
+      "cilantro",
+      "cumin"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "garam_masala",
+    "es_postre": false,
+    "tradicion": "india"
+  },
+  {
+    "nombre": "Caviar De Tamarindo Molecular",
+    "ingredientes": [
+      "sugar",
+      "cumin",
+      "salt",
+      "cilantro"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "acido",
+    "ingrediente_sabor": "sugar",
+    "es_postre": false,
+    "tradicion": "india"
+  },
+  {
+    "nombre": "Kheer Deconstruido Con Esferificacion De Cardamomo",
+    "ingredientes": [
+      "basmati_rice",
+      "cardamom",
+      "almonds",
+      "pistachios",
+      "sugar"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "cardamom",
+    "es_postre": true,
+    "tradicion": "india"
+  },
+  {
+    "nombre": "Esferificacion De Salsa De Soja Y Jengibre",
+    "ingredientes": [
+      "ginger",
+      "garlic",
+      "green_onions",
+      "sesame_oil"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "ginger",
+    "es_postre": false,
+    "tradicion": "china"
+  },
+  {
+    "nombre": "Aire De Te Verde Con Citricos",
+    "ingredientes": [
+      "green_tea",
+      "orange",
+      "honey",
+      "ginger"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "honey",
+    "es_postre": false,
+    "tradicion": "china"
+  },
+  {
+    "nombre": "Caviar De Hoisin Molecular",
+    "ingredientes": [
+      "garlic",
+      "ginger",
+      "sesame_oil",
+      "green_onions"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "umami",
+    "ingrediente_sabor": "garlic",
+    "es_postre": false,
+    "tradicion": "china"
+  },
+  {
+    "nombre": "Lychee Deconstruido Con Esferificacion De Rosa",
+    "ingredientes": [
+      "sugar",
+      "ginger",
+      "mint"
+    ],
+    "tecnica_coccion": [
+      "esferificacion"
+    ],
+    "sabor_dominante": "dulce",
+    "ingrediente_sabor": "sugar",
+    "es_postre": true,
+    "tradicion": "china"
+  }
+]
