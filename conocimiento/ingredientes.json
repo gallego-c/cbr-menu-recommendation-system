@@ -1,14 +1,28 @@
 [
   {
-    "nombre": "tomate",
-    "categoria": "vegetal",
+    "nombre": "1_milk",
+    "categoria": "lacteo",
     "temporada": [
-      "verano"
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
     ],
-    "sabor": "ácido"
+    "sabor": "dulce"
   },
   {
-    "nombre": "aceite_oliva",
+    "nombre": "2_reduced_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "adobo_sauce",
     "categoria": "condimento",
     "temporada": [
       "primavera",
@@ -19,18 +33,7 @@
     "sabor": "umami"
   },
   {
-    "nombre": "sal",
-    "categoria": "condimento",
-    "temporada": [
-      "primavera",
-      "verano",
-      "otoño",
-      "invierno"
-    ],
-    "sabor": "salado"
-  },
-  {
-    "nombre": "arroz",
+    "nombre": "all_purpose_flour",
     "categoria": "cereal",
     "temporada": [
       "primavera",
@@ -41,16 +44,8 @@
     "sabor": "umami"
   },
   {
-    "nombre": "pimiento",
-    "categoria": "vegetal",
-    "temporada": [
-      "verano"
-    ],
-    "sabor": "dulce"
-  },
-  {
-    "nombre": "cebolla",
-    "categoria": "vegetal",
+    "nombre": "allspice",
+    "categoria": "condimento",
     "temporada": [
       "primavera",
       "verano",
@@ -60,31 +55,62 @@
     "sabor": "umami"
   },
   {
-    "nombre": "melon",
-    "categoria": "fruta",
+    "nombre": "almond_extract",
+    "categoria": "fruto_seco",
     "temporada": [
-      "verano"
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
     ],
     "sabor": "dulce"
   },
   {
-    "nombre": "sandia",
-    "categoria": "fruta",
+    "nombre": "almond_flour",
+    "categoria": "fruto_seco",
     "temporada": [
-      "verano"
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
     ],
     "sabor": "dulce"
   },
   {
-    "nombre": "calabaza",
-    "categoria": "vegetal",
+    "nombre": "almonds",
+    "categoria": "fruto_seco",
     "temporada": [
-      "otoño"
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
     ],
     "sabor": "dulce"
   },
   {
-    "nombre": "pollo",
+    "nombre": "amchur",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ancho_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "anchovy_fillets",
     "categoria": "animal",
     "temporada": [
       "primavera",
@@ -95,15 +121,18 @@
     "sabor": "umami"
   },
   {
-    "nombre": "setas",
-    "categoria": "hongo",
+    "nombre": "andouille_sausage",
+    "categoria": "animal",
     "temporada": [
-      "otoño"
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
     ],
     "sabor": "umami"
   },
   {
-    "nombre": "ajo",
+    "nombre": "anise",
     "categoria": "condimento",
     "temporada": [
       "primavera",
@@ -114,54 +143,391 @@
     "sabor": "umami"
   },
   {
-    "nombre": "manzana",
-    "categoria": "fruta",
-    "temporada": [
-      "otoño"
-    ],
-    "sabor": "dulce"
-  },
-  {
-    "nombre": "canela",
-    "categoria": "condimento",
+    "nombre": "arborio_rice",
+    "categoria": "cereal",
     "temporada": [
       "primavera",
       "verano",
       "otoño",
       "invierno"
-    ],
-    "sabor": "dulce"
-  },
-  {
-    "nombre": "azucar",
-    "categoria": "condimento",
-    "temporada": [
-      "primavera",
-      "verano",
-      "otoño",
-      "invierno"
-    ],
-    "sabor": "dulce"
-  },
-  {
-    "nombre": "aguacate",
-    "categoria": "fruta",
-    "temporada": [
-      "primavera",
-      "verano"
     ],
     "sabor": "umami"
   },
   {
-    "nombre": "limon",
+    "nombre": "arrowroot_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vegetable",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "asiago",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "asian_fish_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "asian_pear",
     "categoria": "fruta",
+    "temporada": [
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "asparagus",
+    "categoria": "vegetal",
     "temporada": [
       "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "asparagus_spears",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "avocado",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "baby_bok_choy",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "baby_carrots",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "baby_potatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "baby_spinach_leaves",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bacon",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bacon_drippings",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bacon_slices",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "baking_potatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "baking_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "balsamic_vinegar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
     ],
     "sabor": "ácido"
   },
   {
-    "nombre": "chile",
+    "nombre": "barley",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "basil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "basil_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "basmati_rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bay_leaf",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bay_leaves",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "beansprouts",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "beef",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "beef_rib_short",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "beef_stock",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bittersweet_chocolate",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "black_bean_sauce",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "black_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "black_eyed_peas",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "black_mustard_seeds",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "black_olives",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "black_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "black_peppercorns",
     "categoria": "condimento",
     "temporada": [
       "verano"
@@ -169,8 +535,952 @@
     "sabor": "amargo"
   },
   {
-    "nombre": "tortilla_maiz",
+    "nombre": "black_sesame_seeds",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "blood_orange",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "bone_in_chicken_breasts",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "boneless_chicken_skinless_thigh",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "boneless_chicken_thighs",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "boneless_chop_pork",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "boneless_pork_loin",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "boneless_skinless_chicken_breast_halves",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bread_crumbs",
     "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "bread_slices",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "breakfast_sausages",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "broccoli",
+    "categoria": "vegetal",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "broccoli_rabe",
+    "categoria": "vegetal",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "broccolini",
+    "categoria": "vegetal",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "broiler_fryer_chicken",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "brown_mustard_seeds",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "brown_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "burger_buns",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "butter",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "buttermilk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "button_mushrooms",
+    "categoria": "vegetal",
+    "temporada": [
+      "autum"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cabbage",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cajun_seasoning",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cake_flour",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "calimyrna_figs",
+    "categoria": "fruta",
+    "temporada": [
+      "verano",
+      "otoño"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "candied_orange_peel",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "canned_black_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "canola_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "capers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "capsicum",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cardamom",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "cardamom_pods",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "carrots",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "catfish_fillets",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "caul_fat",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cauliflower",
+    "categoria": "vegetal",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cayenne",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "cayenne_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "celery",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "celery_ribs",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "celery_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "cheddar_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "chees_fresco_queso",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cheese_tortellini",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cherry_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "chestnut_flour",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "chestnuts",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "chicken",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_bones",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_bouillon",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_breast_halves",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_breasts",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_broth",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_leg_quarters",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_legs",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_livers",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_stock",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_tenderloin",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_thighs",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chicken_wings",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chickpea_flour",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chickpeas",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chile_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chile_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chile_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chiles",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chili_flakes",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chili_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chili_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chili_paste_with_garlic",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chili_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chili_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chillies",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chinese_chives",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chinese_five_spice_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chinese_rice_wine",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chipotle_chile",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chipotle_chile_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chipotles_in_adobo",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "chives",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chocolate_bars",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "chocolate_covered_coffee_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "chocolate_instant_pudding",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "chocolate_morsels",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "chorizo_sausage",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chorizo_spanish",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chuck",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chuck_roast",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "chunky_salsa",
+    "categoria": "animal",
     "temporada": [
       "primavera",
       "verano",
@@ -183,12 +1493,1745 @@
     "nombre": "cilantro",
     "categoria": "condimento",
     "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "cilantro_fresh",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "cilantro_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "cinnamon",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cinnamon_graham_crackers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cinnamon_sticks",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "clams",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "clove",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cloves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "club_soda",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "coarse_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "coconut_aminos",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "coconut_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "coconut_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cod",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "coffee_ice_cream",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cold_water",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "coleslaw",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "collard_greens",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "condensed_cheddar_cheese_soup",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "condensed_cream_of_chicken_soup",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "condensed_cream_of_mushroom_soup",
+    "categoria": "lacteo",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "condiments",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "confectioners_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cooked_chicken",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cooked_ham",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cooked_rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cooking_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cooking_spray",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "coriander",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "coriander_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "coriander_seeds",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "corn_flakes_cereal",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "corn_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "corn_starch",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "corn_tortillas",
+    "categoria": "cereal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cornflour",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "couscous",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "crab_boil",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "crab_meat",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cracked_black_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "cracker_crumbs",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cranberry_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "crawfish",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cream_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cream_of_chicken_soup",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cream_of_tartar",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cream_sweeten_whip",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "creamy_peanut_butter",
+    "categoria": "lacteo",
+    "temporada": [
       "primavera"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "cremini_mushrooms",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "creole_mustard",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "creole_seasoning",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "creole_style_seasoning",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "crumbled_blue_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "crushed_garlic",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "crushed_red_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "crushed_red_pepper_flakes",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "crushed_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
     ],
     "sabor": "ácido"
   },
   {
-    "nombre": "coco",
+    "nombre": "crusty_bread",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "crusty_rolls",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cucumber",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cumin",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "cumin_seed",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "curry",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "curry_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "curry_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "daikon",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dark_brown_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "dark_rum",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dark_sesame_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dark_soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dashi",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "demerara_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "demi_glace",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "diced_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "dijon_mustard",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "dill",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "double_cream",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "dried_basil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "dried_black_mushrooms",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dried_chickpeas",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dried_chile_peppers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "dried_cranberries",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dried_currants",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dried_mint_flakes",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "dried_oregano",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "dried_porcini_mushrooms",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dried_shiitake_mushrooms",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dried_thyme",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "drumstick",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dry_bread_crumbs",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dry_mustard",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "dry_red_wine",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "dry_sherry",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "dry_white_wine",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "duck",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "egg_bread",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "egg_roll_wrappers",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "egg_whites",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "egg_yolks",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "eggplant",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "eggs",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "enchilada_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "english_muffins_split_and_toasted",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "epazote",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "espresso",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "evaporated_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "fat",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fava_bean",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fennel_bulb",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fennel_seeds",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fenugreek",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fenugreek_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "feta_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "feta_cheese_crumbles",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "fettucine",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fine_sea_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "finely_onion",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "finely_parsley",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "fingerling_potatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fire_roasted_diced_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "firm_tofu",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fish_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "flank_steak",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "flat_leaf_parsley",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "flaxseed",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "flora_cuisine",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "flour",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "flour_tortillas",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "foie_gras",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fontina",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "food_colouring",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "free_less_sodium_beef_broth",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "free_less_sodium_chicken_broth",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "free_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "free_yogurt",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "freshly_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "frosting",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "frozen_broad_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "frozen_corn",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "frozen_pastry_puff_sheets",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "frozen_peas",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "frozen_peas_and_carrots",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "frozen_spinach",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "frozen_whipped_topping",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fruit",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fuyu_persimmons",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "garam_masala",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "garbanzo_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "gari",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "garlic",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "garlic_chili_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "garlic_cloves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "garlic_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "garlic_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "garlic_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "ghee",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "giardiniera",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ginger",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ginger_root",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "gingersnap",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "glass_noodles",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "gnocchi",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "gochujang_base",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "goji_berries",
     "categoria": "fruta",
     "temporada": [
       "primavera",
@@ -199,7 +3242,75 @@
     "sabor": "dulce"
   },
   {
-    "nombre": "leche",
+    "nombre": "golden_brown_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "golden_raisins",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "graham_cracker_crumbs",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "granny_smith_apples",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "granulated_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "grape_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "grapefruit_juice",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "grated_gruy_re_cheese",
     "categoria": "lacteo",
     "temporada": [
       "primavera",
@@ -208,5 +3319,5185 @@
       "invierno"
     ],
     "sabor": "dulce"
+  },
+  {
+    "nombre": "grated_jack_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "grated_lemon_zest",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno",
+      "primavera"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "grated_nutmeg",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "grated_parmesan_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "great_northern_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "greek_yogurt",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "green_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "green_bell_pepper",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "green_bell_pepper_slice",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "green_chile",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "green_chilies",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "green_mango",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "green_onions",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "green_papaya",
+    "categoria": "fruta",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "green_peas",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "green_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "green_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "greens",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "grilled_chicken_breasts",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "gruyere_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "guacamole",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ham",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ham_hock",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hamburger_buns",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hard_boiled_egg",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "harissa",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hazelnut_oil",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "hazelnuts",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "heavy_cream",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "heavy_whipping_cream",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "herbs",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hibiscus",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hoagie_rolls",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hoisin_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hominy",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "honey",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "hot_chili",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hot_pepper_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "hot_red_pepper_flakes",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "hot_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "hot_water",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "ice",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ice_cubes",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "iceberg_lettuce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "instant_butterscotch_pudding_mix",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "instant_espresso",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "instant_espresso_granules",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "instant_espresso_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "instant_white_rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "italian_bread",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "italian_parsley_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "italian_sausage",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "italian_seasoning",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "jalapeno_chilies",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "jambalaya_rice_mix",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "japanese_soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "jasmine_rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "johnsonville_andouille_dinner_sausage",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "kahl_a",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "kalamata",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "kecap_manis",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "kefalotyri",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "kielbasa",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "kiwi",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "kosher_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "lamb",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "lard",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "lasagna_noodles",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "lean_beef",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "leav_spinach",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "leeks",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "lemon",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno",
+      "primavera"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lemon_curd",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno",
+      "primavera"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lemon_juice",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno",
+      "primavera",
+      "verano",
+      "otoño"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lemon_olive_oil",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno",
+      "primavera",
+      "verano",
+      "otoño"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lemon_zest",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno",
+      "primavera",
+      "verano",
+      "otoño"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lemongrass",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno",
+      "primavera"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lettuce_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "light_brown_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "light_soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "lime",
+    "categoria": "fruta",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lime_juice",
+    "categoria": "fruta",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lime_wedges",
+    "categoria": "fruta",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "lime_zest",
+    "categoria": "fruta",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "linguine",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "lo_mein_noodles",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "long_grain_rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "lower_sodium_soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mace",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "madeira",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "maida_flour",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "manchego_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "mandarin_oranges",
+    "categoria": "fruta",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "mango",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "manicotti_shells",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "maple_syrup",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "margarine",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "marinara_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "marshmalcreme",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "marshmallows",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mascarpone",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "matcha_green_tea_powder",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "mayonaise",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mayonnaise",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "melted_butter",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "membrillo",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mexican_cheese_blend",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "minced_beef",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "minced_garlic",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "minced_onion",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mint",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "mirin",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "miso_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mixed_spice",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "molasses",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "monterey_jack",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "moong_dal",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mozzarella_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "mushrooms",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mussels",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mustard_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "myzithra",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "naan",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "napa_cabbage",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "napa_cabbage_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "natural_yogurt",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "navy_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "nonmilk",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "nonstick_spray",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "noodles",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "nutmeg",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "okra",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "okra_pods",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "old_bay_seasoning",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "old_el_paso_flour_tortillas",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "olive_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "olive_oil_flavored_cooking_spray",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "olives",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "onion",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "onion_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "onions",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "orange",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "orange_bell_pepper",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "orange_blossom_honey",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "orange_juice_concentrate",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "orange_liqueur",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "oregano",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "organic_chicken",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "oscar_mayer_deli_smoked_ham",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "oyster_sauce",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "oysters",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "palm_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "panko_breadcrumbs",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pappardelle",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "paprika",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "parmesan_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "parmigiano_reggiano_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "parsley",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "parsnips",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "part_skim_mozzarella_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "part_skim_ricotta_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "passata",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pasta",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pasta_sauce",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pasta_sheets",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "peanut_oil",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "peanut_sauce",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "peanuts",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pearl_barley",
+    "categoria": "cereal",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pecans",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pecorino_romano_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "peeled_ginger",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "peeled_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "penne_pasta",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "penne_rigate",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pepitas",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "peppercorns",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "pepperoni",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "pesto",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "philadelphia_cream_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "phyllo",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "picante_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pickapeppa_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pickled_jalapenos",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "piloncillo",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pimentos",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pineapple",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pineapple_juice",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pinenuts",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pistachio_nuts",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pistachios",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pita_bread_rounds",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pitted_kalamata_olives",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pizza_crust",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "plain_flour",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "plain_whole_milk_yogurt",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "plum_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "poblano_peppers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "pork",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pork_loin",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pork_ribs",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pork_shoulder_roast",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "potato_starch",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "potatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "pound_cake",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "powdered_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "prawns",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "prepared_horseradish",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "preserved_lemon",
+    "categoria": "fruta",
+    "temporada": [
+      "invierno",
+      "primavera"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "provolone_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "pumpkin_pur_e",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "purple_onion",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "quickcooking_grits",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "quinoa",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "radishes",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "raisins",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ramps",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ranch_dressing",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ras_el_hanout",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "raspberries",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "red_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "red_bell_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "red_chili_peppers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "red_curry_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "red_kidnei_beans_rins_and_drain",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "red_lentils",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "red_miso",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "red_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "red_pepper_flakes",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "red_potato",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "red_wine_vinegar",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "reduced_sodium_soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "refried_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "refrigerated_piecrusts",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rib",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rice_flour",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rice_noodles",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rice_vinegar",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "ricotta_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "roasted_peanuts",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "roasted_red_peppers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "roma_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "romaine_lettuce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rose_petals",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rosemary",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "rum",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "rum_extract",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "saffron",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "sage_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sake",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "salami",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "salmon",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "salmon_fillets",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "salsa",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "salsa_verde",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "salt_chicken_broth",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sausage_casings",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sausages",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "savoy_cabbage",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "scallion_greens",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "scallions",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sea_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "seasoned_rice_wine_vinegar",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "seasoning",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "seasoning_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "seaweed",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "self_rising_flour",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "semi_sweet_chocolate_morsels",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "semisweet_chocolate",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "semolina",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "serrano",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "serrano_chile",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "serrano_ham",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "sesame_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sesame_seeds",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "shallots",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "shaoxing_wine",
+    "categoria": "liquido",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "sharp_cheddar_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "sherry",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sherry_vinegar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "shiitake",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "short_grain_rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "shredded_cabbage",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "shredded_carrots",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "shredded_cheddar_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "shredded_lettuce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "shredded_monterey_jack_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "shredded_mozzarella_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "shrimp",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "shrimp_and_crab_boil_seasoning",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "silken_tofu",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sirloin",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sirloin_tip_roast",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "skim_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "skimmed_chicken_broth",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "skinless_chicken_thighs",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "skirt_steak",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "slivered_almonds",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "smoked_streaky_bacon",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "snow_peas",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sodium_beef_broth",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sodium_chicken_broth",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sodium_soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "softened_butter",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "sour_cream",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "sourdough",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "spaghetti",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "spareribs",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "spicy_brown_mustard",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "spinach",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "spinach_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sriracha",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "star_anise",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "starchy_potatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "steak",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "steel_cut_oats",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "stock",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "stuffing",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "sweet_and_sour_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sweet_cherries",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sweet_onion",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sweet_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "sweet_potatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sweetened_condensed_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "swiss_chard",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "swiss_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "taco_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "taco_seasoning_mix",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tahini",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "taiwanese_bok_choy",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tamari_soy_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tamarind_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "thai_basil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "thai_chile",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "thai_green_curry_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "thyme",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "toasted_pecans",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "toasted_sesame_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tofu",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tomatillos",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tomato_paste",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "tomato_sauce",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano",
+      "otoño",
+      "primavera",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "top_round_steak",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tortilla_chips",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tortillas",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "trout_fillet",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tumeric",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "turbinado",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "turkey",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "turkish_bay_leaves",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "turmeric",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "turnips",
+    "categoria": "condimento",
+    "temporada": [
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "udon",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "unflavored_gelatin",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "unsalted_butter",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "unsalted_cashews",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "unsweetened_cocoa_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "unsweetened_coconut_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "urad_dal",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vanilla",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "vanilla_extract",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "veal_cutlets",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "veget",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vegetable_broth",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vegetable_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vegetable_oil_cooking_spray",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vegetable_shortening",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vegetable_stock",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "vine_ripened_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "vinegar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "virgin_olive_oil",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "wakame",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "walnuts",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "warm_water",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "wasabi_paste",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "water",
+    "categoria": "liquido",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "watercress",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "wheat",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "whipping_cream",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "white_almond_bark",
+    "categoria": "fruto_seco",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "white_bread",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_cornmeal",
+    "categoria": "cereal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_hominy",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_onion",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "white_rice",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_rum",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_sugar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "white_vinegar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "white_wine",
+    "categoria": "liquido",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "white_wine_vinegar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "whole_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "whole_milk_ricotta_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "whole_nutmegs",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "whole_peeled_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "whole_wheat_pasta",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "wonton_wrappers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "worcestershire_sauce",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "yelbell_pepper",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "yelcake_mix",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "yelcorn_meal",
+    "categoria": "condimento",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "yelcrookneck_squash",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "yelonion",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "yelpeppers",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "yelsquash",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "yoghurt",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "yukon_gold_potatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "zesty_italian_dressing",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "zinfandel",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "zucchini",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sea_bass",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cod_fillet",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "hake",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "tuna_steak",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "sea_bream",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_fish",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fish_stock",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "clam_juice",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "aji_amarillo",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "amargo"
+  },
+  {
+    "nombre": "sweet_potato",
+    "categoria": "vegetal",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "corn",
+    "categoria": "vegetal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "swordfish",
+    "categoria": "animal",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "beer",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "coarse_sea_salt",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "sardines",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mackerel",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "cocoa_powder",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "almond_milk",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "dark_chocolate",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "apples",
+    "categoria": "fruta",
+    "temporada": [
+      "otoño"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "oats",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "mixed_berries",
+    "categoria": "fruta",
+    "temporada": [
+      "verano"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "coconut_cream",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "agar_agar",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "caramel",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "ladyfinger_cookies",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "nutritional_yeast",
+    "categoria": "condimento",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "vegan_cheese",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "vegan_parmesan",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "italiana"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "vegan_mozzarella",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "italiana"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "vegan_cheddar",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "tofu_ricotta",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "italiana"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "vegan_cream_cheese",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "tofu_feta",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "cashew_cream",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "vegan_butter",
+    "categoria": "grasa_vegetal",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "soy_milk",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "oat_milk",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "coconut_yogurt",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "soy_yogurt",
+    "categoria": "lacteo_vegano",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "flax_eggs",
+    "categoria": "sustituto_huevo",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "chia_eggs",
+    "categoria": "sustituto_huevo",
+    "tradicion": [
+      "universal"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "agave_nectar",
+    "categoria": "condimento",
+    "tradicion": [
+      "mexicana"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "tamari",
+    "categoria": "condimento",
+    "tradicion": [
+      "china",
+      "india"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "rice_paper",
+    "categoria": "carbohidrato",
+    "tradicion": [
+      "china"
+    ],
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "tipo_coccion": []
+  },
+  {
+    "nombre": "canned_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "sun_dried_tomatoes",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "roasted_peppers",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "artichoke_hearts",
+    "categoria": "vegetal",
+    "temporada": [
+      "primavera",
+      "otoño"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "boiling_water",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "salado"
+  },
+  {
+    "nombre": "bread",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "brewed_tea",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fish",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "fresh_cheese",
+    "categoria": "lacteo",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ground_beef",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "ground_pork",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "white_beans",
+    "categoria": "legumbre",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "angel_food_cake",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "dulce"
+  },
+  {
+    "nombre": "apple_cider",
+    "categoria": "condimento",
+    "temporada": [
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "ácido"
+  },
+  {
+    "nombre": "baking_soda",
+    "categoria": "condimento",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "neutro"
+  },
+  {
+    "nombre": "bread_dough",
+    "categoria": "cereal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "squid",
+    "categoria": "animal",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "umami"
+  },
+  {
+    "nombre": "gluten_free_bread",
+    "categoria": "carbohidrato",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "neutro"
+  },
+  {
+    "nombre": "rice_cakes",
+    "categoria": "carbohidrato",
+    "temporada": [
+      "primavera",
+      "verano",
+      "otoño",
+      "invierno"
+    ],
+    "sabor": "neutro"
   }
 ]

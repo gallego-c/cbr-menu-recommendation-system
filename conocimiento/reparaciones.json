@@ -1,95 +1,5 @@
 {
-  "reglas_restricciones": {
-    "vegetariano": [
-      [
-        "any",
-        "vegetariano",
-        {
-          "modo_aplicacion": "todos_los_ingredientes",
-          "acciones_por_ingrediente": [
-            {
-              "ingrediente": "pollo",
-              "opciones": [
-                {
-                  "substituir": {
-                    "de": "pollo",
-                    "por": "setas"
-                  }
-                },
-                {
-                  "quitar": "pollo"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    ],
-    "vegano": [
-      [
-        "any",
-        "vegano",
-        {
-          "modo_aplicacion": "todos_los_ingredientes",
-          "acciones_por_ingrediente": [
-            {
-              "ingrediente": "pollo",
-              "opciones": [
-                {
-                  "substituir": {
-                    "de": "pollo",
-                    "por": "setas"
-                  }
-                },
-                {
-                  "quitar": "pollo"
-                }
-              ]
-            },
-            {
-              "ingrediente": "leche",
-              "opciones": [
-                {
-                  "substituir": {
-                    "de": "leche",
-                    "por": "coco"
-                  }
-                },
-                {
-                  "quitar": "leche"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    ],
-    "sin_lactosa": [
-      [
-        "any",
-        "sin_lactosa",
-        {
-          "modo_aplicacion": "todos_los_ingredientes",
-          "acciones_por_ingrediente": [
-            {
-              "ingrediente": "leche",
-              "opciones": [
-                {
-                  "substituir": {
-                    "de": "leche",
-                    "por": "coco"
-                  }
-                },
-                {
-                  "quitar": "leche"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    ]
-  },
+  "_nota": "Las reglas de restricciones dietéticas se gestionan en restricciones.json y FoodBank",
   "reglas_temporada": {
     "fuera_temporada": [
       [
@@ -333,13 +243,16 @@
               "ingrediente": "cualquiera",
               "opciones": [
                 {
-                  "añadir": "aceite_oliva"
+                  "añadir": "olive_oil"
                 },
                 {
-                  "añadir": "ajo"
+                  "añadir": "garlic"
                 },
                 {
-                  "añadir": "tomate"
+                  "añadir": "tomatoes"
+                },
+                {
+                  "añadir": "almonds"
                 }
               ]
             }
@@ -356,13 +269,131 @@
               "ingrediente": "cualquiera",
               "opciones": [
                 {
-                  "añadir": "chile"
+                  "añadir": "chili_powder"
                 },
                 {
                   "añadir": "cilantro"
                 },
                 {
-                  "añadir": "limon"
+                  "añadir": "lime"
+                },
+                {
+                  "añadir": "avocado"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "italiana",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "olive_oil"
+                },
+                {
+                  "añadir": "basil"
+                },
+                {
+                  "añadir": "parmesan_cheese"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "india",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "garam_masala"
+                },
+                {
+                  "añadir": "cumin"
+                },
+                {
+                  "añadir": "ginger"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "francesa",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "butter"
+                },
+                {
+                  "añadir": "cream"
+                },
+                {
+                  "añadir": "wine"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "china",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "soy_sauce"
+                },
+                {
+                  "añadir": "ginger"
+                },
+                {
+                  "añadir": "sesame_oil"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      [
+        "any",
+        "mediterranea",
+        {
+          "modo_aplicacion": "una_sola_accion",
+          "acciones_por_ingrediente": [
+            {
+              "ingrediente": "cualquiera",
+              "opciones": [
+                {
+                  "añadir": "olive_oil"
+                },
+                {
+                  "añadir": "lemon"
+                },
+                {
+                  "añadir": "garlic"
                 }
               ]
             }
@@ -378,40 +409,40 @@
           "modo_aplicacion": "todos_los_ingredientes",
           "acciones_por_ingrediente": [
             {
-              "ingrediente": "aceite_oliva",
+              "ingrediente": "olive_oil",
               "opciones": [
                 {
                   "substituir": {
-                    "de": "aceite_oliva",
-                    "por": "chile"
+                    "de": "olive_oil",
+                    "por": "chili_powder"
                   }
                 },
                 {
-                  "quitar": "aceite_oliva"
+                  "quitar": "olive_oil"
                 }
               ]
             },
             {
-              "ingrediente": "ajo",
+              "ingrediente": "garlic",
               "opciones": [
                 {
                   "substituir": {
-                    "de": "ajo",
+                    "de": "garlic",
                     "por": "cilantro"
                   }
                 },
                 {
-                  "quitar": "ajo"
+                  "quitar": "garlic"
                 }
               ]
             },
             {
-              "ingrediente": "sal",
+              "ingrediente": "salt",
               "opciones": [
                 {
                   "substituir": {
-                    "de": "sal",
-                    "por": "limon"
+                    "de": "salt",
+                    "por": "lime"
                   }
                 }
               ]
@@ -420,13 +451,13 @@
               "ingrediente": "cualquiera",
               "opciones": [
                 {
-                  "añadir": "chile"
+                  "añadir": "chili_powder"
                 },
                 {
                   "añadir": "cilantro"
                 },
                 {
-                  "añadir": "tortilla_maiz"
+                  "añadir": "avocado"
                 }
               ]
             }
@@ -440,16 +471,16 @@
           "modo_aplicacion": "todos_los_ingredientes",
           "acciones_por_ingrediente": [
             {
-              "ingrediente": "chile",
+              "ingrediente": "chili_powder",
               "opciones": [
                 {
                   "substituir": {
-                    "de": "chile",
-                    "por": "aceite_oliva"
+                    "de": "chili_powder",
+                    "por": "olive_oil"
                   }
                 },
                 {
-                  "quitar": "chile"
+                  "quitar": "chili_powder"
                 }
               ]
             },
@@ -459,7 +490,7 @@
                 {
                   "substituir": {
                     "de": "cilantro",
-                    "por": "ajo"
+                    "por": "garlic"
                   }
                 },
                 {
@@ -468,21 +499,21 @@
               ]
             },
             {
-              "ingrediente": "limon",
+              "ingrediente": "lime",
               "opciones": [
                 {
                   "substituir": {
-                    "de": "limon",
-                    "por": "sal"
+                    "de": "lime",
+                    "por": "salt"
                   }
                 }
               ]
             },
             {
-              "ingrediente": "tortilla_maiz",
+              "ingrediente": "avocado",
               "opciones": [
                 {
-                  "quitar": "tortilla_maiz"
+                  "quitar": "avocado"
                 }
               ]
             },
@@ -490,10 +521,10 @@
               "ingrediente": "cualquiera",
               "opciones": [
                 {
-                  "añadir": "aceite_oliva"
+                  "añadir": "olive_oil"
                 },
                 {
-                  "añadir": "ajo"
+                  "añadir": "garlic"
                 }
               ]
             }
