@@ -9,7 +9,7 @@ A full implementation of a **Case-Based Reasoning (CBR)** system for automatic r
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The system acts as an intelligent menu generator. Given a set of user preferences (event type, season, dietary restrictions, culinary style, cultural tradition), the CBR engine retrieves the most similar historical case from its knowledge base, adapts the menu to the current requirements, validates the proposal, and optionally retains the experience as a new case for future use.
 
@@ -24,9 +24,9 @@ The system acts as an intelligent menu generator. Given a set of user preference
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
-```directory
+```
 cbr-menu-recommendation-system/
 ├── actualizador/            # Case retention logic (Retain phase)
 ├── conocimiento/            # Domain knowledge base & case library
@@ -42,7 +42,7 @@ cbr-menu-recommendation-system/
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 ### Interactive GUI Mode
 ```bash
@@ -70,7 +70,7 @@ print(result['menu'])
 
 ---
 
-## 🧠 System Parameters
+## System Parameters
 
 | Parameter | Options |
 | :--- | :--- |
@@ -82,7 +82,7 @@ print(result['menu'])
 
 ---
 
-## 👥 Authors & License
+## Authors & License
 
-Developed as part of the **Knowledge-Based Systems (SBC)** course.  
+Developed as part of the **Knowledge-Based Systems (SBC)** course.
 Distributed under the **MIT License**.
